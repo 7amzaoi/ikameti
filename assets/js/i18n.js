@@ -3,6 +3,14 @@
  * Complete multi-language support with RTL/LTR handling
  */
 
+// Resolve the site base from this script's own URL so the app works whether
+// served from the domain root or a subpath (e.g. GitHub Pages /<repo>/).
+const I18N_BASE = (function () {
+  const s = document.currentScript;
+  if (s && s.src) return s.src.replace(/assets\/js\/i18n\.js.*$/, '');
+  return '/';
+})();
+
 class I18n {
   constructor() {
     this.languages = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af'];
@@ -74,7 +82,7 @@ class I18n {
     }
 
     try {
-      const response = await fetch(`/assets/lang/${lang}.json`);
+      const response = await fetch(`${I18N_BASE}assets/lang/${lang}.json`);
       if (!response.ok) throw new Error(`Failed to load ${lang}`);
       
       this.translations = await response.json();
