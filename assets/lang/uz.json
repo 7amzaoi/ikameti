@@ -1,0 +1,830 @@
+{
+  "lang": "uz",
+  "direction": "ltr",
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqida",
+    "blog": "Blog",
+    "faq": "Savol-javob",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "title": "Mukammal fuqarolik va uy-joy yechimlariga kirish",
+    "subtitle": "Immigratsiya, fuqarolik va uy shartnomalariga oid sifatli maslahat. Minglab odamlarning ishonchi. Tez, professionel, xavfsiz.",
+    "cta_primary": "Boshlash",
+    "cta_secondary": "Batafsil"
+  },
+  "services": {
+    "title": "Biz taqdim etadigan asosiy xizmatlar",
+    "subtitle": "Fuqarolik va uy-joy xizmatlarini oson, xavfsiz va muammosiz qilib yuborish uchun to'la yechimlar.",
+    "housing": {
+      "title": "Uy-joy yechimlarni",
+      "description": "Mulk tekshiruvi, shartnoma ko'rib chiqish, muzokaralar va huquqiy hujjatlar sizning ideal uyinggiz uchun.",
+      "features": [
+        "Mulkni tekshirish",
+        "Shartnomani ko'rib chiqish",
+        "Huquqiy yordamchi"
+      ],
+      "cta": "Batafsil"
+    },
+    "residency": {
+      "title": "Fuqarolik dasturlari",
+      "description": "Murakkab fuqarolik talablarini har bir bosqichda sifatli maslahat orqali yengib chiqing.",
+      "features": [
+        "Arizani qo'llash",
+        "Hujjat tayyorlash",
+        "Suhbat mashq"
+      ],
+      "cta": "Ko'rish"
+    },
+    "legal": {
+      "title": "Huquqiy va mexnat",
+      "description": "Barcha xizmatlarning to'la huquqiy ta'minoti va xalqaro qoidalarga mos holda faoliyat.",
+      "features": [
+        "Huquqiy ko'rib chiqish",
+        "Muvofiqlik tekshiruvi",
+        "24/7 yordamchi"
+      ],
+      "cta": "Maslahat"
+    }
+  },
+  "why_choose": {
+    "title": "Nima uchun IKAMETI?"
+  },
+  "trust_indicators": {
+    "clients": {
+      "value": "5000+",
+      "label": "Xursand mijozlar"
+    },
+    "success_rate": {
+      "value": "98%",
+      "label": "Muvaffaqiyat stavkasi"
+    },
+    "years_experience": {
+      "value": "15+",
+      "label": "Yillik tajriba"
+    },
+    "support": {
+      "value": "24/7",
+      "label": "Doimiy yordamchi"
+    }
+  },
+  "testimonials": {
+    "title": "Mijozlar nima deyishadi",
+    "quote_1": "IKAMETI fuqarolik jarayonini soddalashtirdi va xotirjamlikni yo'q qildi. Chuqur tavsiya qilaman!",
+    "author_1": "Ahmed M.",
+    "quote_2": "Professionel, ishonchli va juda foydalanuvchi. Ular bizga juda ko'p qilib berdilar.",
+    "author_2": "Sarah K.",
+    "quote_3": "Eng yaxshi qaror. Ular hamma narsani boshidan oxirigacha juda yaxshi boshqardilar.",
+    "author_3": "James T."
+  },
+  "wizard": {
+    "title": "Turkiya'da fuqarolikni daqiqalar ichida oling",
+    "subtitle": "Bir nechta savollarga javob bering va biz sizga darhol yordam beramiz",
+    "steps": {
+      "step_1": {
+        "label": "Fuqarolik turi",
+        "question": "Qanday turdagi fuqarolikga qiziqasiz?"
+      },
+      "step_2": {
+        "label": "Hozirgi holat",
+        "question": "Sizda allaqachon Turkiya fuqarolik ruxsati bormi?"
+      },
+      "step_3": {
+        "label": "Davomiylik",
+        "question": "Qancha vaqt qolmoqchi?"
+      },
+      "step_4": {
+        "label": "Qo'shimcha ma'lumot",
+        "question": "Sizning vaziyatingiz haqida batafsil ayt"
+      },
+      "step_5": {
+        "label": "Aloqa ma'lumoti",
+        "question": "Aloqa ma'lumotlari"
+      }
+    },
+    "residency_options": {
+      "tourist": {
+        "title": "Turist fuqarolik",
+        "description": "Qisqa muddatli vizas (30-90 kun)"
+      },
+      "student": {
+        "title": "Talaba fuqarolik",
+        "description": "O'quv ruxsati va yashash huquqlari"
+      },
+      "realestate": {
+        "title": "Mulk investitsiya fuqarolik",
+        "description": "Mulk investitsiya vizasi (€250K+)"
+      },
+      "family": {
+        "title": "Oilani biriktirish",
+        "description": "Oilani biriktirish vizas programasi"
+      }
+    },
+    "form": {
+      "has_residency_yes": "Ha, menda fuqarolik bor",
+      "has_residency_yes_desc": "Yangilash yoki yuksaltirish kerak",
+      "has_residency_no": "Yo'q, birinchi marta",
+      "has_residency_no_desc": "Birinchi marta arizalayotirman",
+      "duration_1year": "1 yillik fuqarolik",
+      "duration_1year_desc": "Bir yillik yashaash ruxsati",
+      "duration_2year": "2 yillik fuqarolik",
+      "duration_2year_desc": "Ikki yillik yashash ruxsati",
+      "rental_contract": "Ijaraning shartnomasi bormi?",
+      "rental_contract_desc": "Ko'pchilik fuqarolik ariza uchun talab",
+      "family_members": "Qo'shilishi kerak bo'lgan oila a'zolari soni:",
+      "family_members_opt_1": "Faqat men (1 kishi)",
+      "family_members_opt_2": "2 kishi",
+      "family_members_opt_3": "3 kishi",
+      "family_members_opt_4": "4 kishi",
+      "family_members_opt_5": "5 va undan ko'p kishi",
+      "full_name": "To'liq ism *",
+      "full_name_placeholder": "To'liq ismni kiriting",
+      "phone": "Telefon raqami *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "privacy_notice": "Sizning ma'lumotlari xavfsiz va sizga shaxsiy maslahat berishda ishlatiladi",
+      "prev_button": "← Orqaga",
+      "next_button": "Keyingi →",
+      "submit_button": "Bepul maslahat oling"
+    },
+    "success": {
+      "title": "Ma'lumotingiz uchun rahmat!",
+      "message": "Bizning jamoa sizning ma'lumotlarni ko'rib chiqadi va 24 soat ichida shaxsiy maslahat rejalari bilan bog'lanaradi.",
+      "whatsapp": "💬 WhatsApp: +90 530 905 21 04",
+      "email": "📧 Email: info@ikameti.com"
+    }
+  },
+  "articles_section": {
+    "title": "Maqolalar & Yangiliklar",
+    "subtitle": "Fuqarolik, uy-joy va immigratsiya yechimlarining so'nggi maqolalarini va yangilikların bilan yangilaning.",
+    "article_1": {
+      "title": "Fuqarolik bo'yicha to'la qo'llanma",
+      "icon": "📰",
+      "description": "Fuqarolik jarayonining barcha bosqichlarini boshidan oxirigacha muhim maslahatlar bilan o'rganib chiqing."
+    },
+    "article_2": {
+      "title": "Mulk sotib olinganda amaliy maslahatlar",
+      "icon": "🏡",
+      "description": "O'zingizning ideal mulkni tanlash va sotib olganda e'tibor berilishi kerak bo'lgan muhim nuqtalarni bilib oling."
+    },
+    "article_3": {
+      "title": "Huquqiy himoya",
+      "icon": "⚖️",
+      "description": "Uy shartnomalarida va fuqarolik shartnomalarida mavjud bo'lgan o'z huquqlaringiz va huquqiy himoyani tushunib oling."
+    },
+    "read_more": "Davomini o'qish"
+  },
+  "final_cta": {
+    "title": "Boshlashga tayoqmi?",
+    "description": "Fuqarolik va uy-joy maqsadlarini amalga oshirishning birinchi qadamni qo'ying. Bizning sifatli jamoa sizni yondaması uchun tayyor.",
+    "button": "Bugun bog'laning"
+  },
+  "newsletter": {
+    "title": "Yangiliklarga obuna bo'ling",
+    "subtitle": "Eng so'nggi maqolalar va yangiliklar to'g'ridan-to'g'ri sizning elektron pochashiga yetib boring. Yangiliklar jurnalına obuna bo'ling.",
+    "placeholder": "Elektron pochtangizni kiriting",
+    "cta": "Obuna bo'ling"
+  },
+  "footer": {
+    "company": "IKAMETI",
+    "tagline": "Immigratsiya va uy-joy xizmatlarida ishonchli hamkasbingiz.",
+    "quick_links": "Tez havolalar",
+    "services": "Xizmatlar",
+    "contact": "Aloqa",
+    "housing_solutions": "Uy-joy yechimlarni",
+    "residency_programs": "Fuqarolik dasturlari",
+    "legal_consultation": "Huquqiy maslahat",
+    "support": "Yordamchi",
+    "copyright": "© 2024 IKAMETI. Barcha huquqlar himoyalangan.",
+    "privacy_policy": "Maxfiylik siyosati",
+    "terms_of_service": "Xizmat shartlari"
+  },
+  "about_page": {
+    "hero": {
+      "title": "IKAMETI haqida",
+      "subtitle": "15 yildan ortiqni fuqarolik va uy-joy yechimlarida ishonchli hamkasblingiz, dunyoning minglab xursand mijozlari xizmat ko'rgan."
+    },
+    "story": {
+      "title": "Bizning hikoya",
+      "paragraph_1": "2009 yilda tuzilgan IKAMETI immigratsiya va uy-joy jarayonlarini xalqaro mijozlar uchun osonlashtirish maqsadi bilan paydo bo'ldi. Kichik huquqiy konsultatsiyasi sifatida boshlangan bu tashkilot minglab odamlarning ishonchi qozonga oladigan to'la xizmat beruvchiga aylanib o'tti.",
+      "paragraph_2": "Bizning tejaribali jamoa yangi davlatga ko'chib borishning og'irliklarini tushunadi. Biz jarayonni soddalashtirish, ochiq va xotirjam qilishga o'zimizni bag'isladik."
+    },
+    "mission": {
+      "title": "Bizning maqsad",
+      "description": "Shaxslarni va oilalarni o'z kelajagini ishoqlik bilan qurish uchun kasb-hunarmand immigratsiya va uy-joy xizmatlarni taqdim etish."
+    },
+    "values": {
+      "title": "Bizning asosiy qiymatlar",
+      "integrity": {
+        "title": "Halollik",
+        "description": "Biz barcha muomalalarimizda to'liq ochiqlik va halollik bilan faoliyat olib boramiz."
+      },
+      "excellence": {
+        "title": "Muhtamliklik",
+        "description": "Taqdim etadigan har bir xizmatda muhtamliklashga intilishlik uchun kurashishlik."
+      },
+      "client_first": {
+        "title": "Mijozni birinchi",
+        "description": "Sizning ehtiyojlaringiz birinchi. Biz xizmatlarni sizning talabingizga mos qilishlik."
+      },
+      "innovation": {
+        "title": "Yangilanish",
+        "description": "Biz jarayonlarni doimiy rivojlantiramiz va texnologiyani qabul qilamiz."
+      },
+      "reliability": {
+        "title": "Ishonchlilik",
+        "description": "Siz bizga tayanalikingiz mumkin. Biz doimiy natija beramiz."
+      },
+      "community": {
+        "title": "Jamoa",
+        "description": "Biz turli xil xalqalarni qo'llash va ijobiy ta'sir yaratamiz."
+      }
+    },
+    "trusted": {
+      "title": "Minglab odamlarning ishonchi",
+      "clients": {
+        "value": "5000+",
+        "label": "Xursand mijozlar"
+      },
+      "success_rate": {
+        "value": "98%",
+        "label": "Muvaffaqiyat stavkasi"
+      },
+      "experience": {
+        "value": "15+",
+        "label": "Yillik tajriba"
+      },
+      "countries": {
+        "value": "20+",
+        "label": "Davlatlar"
+      }
+    },
+    "cta": {
+      "title": "IKAMETI bilan hamkorlik qiling",
+      "description": "Bizga ishongan minglab xursand mijozlarning qatoriga qo'shiling ularning immigratsiya va uy-joy ehtiyojlarining uchun.",
+      "button": "Bugun boshlang"
+    }
+  },
+  "blog_page": {
+    "hero": {
+      "title": "Bizning Blog & Manbalar",
+      "subtitle": "Immigratsiya, uy-joy va huquqiy masalalar bo'yicha sifatli maslahatlar, amaliy qo'llanmalar va eng so'nggi yangiliklar."
+    },
+    "filter": {
+      "all": "Barcha maqolalar",
+      "immigration": "Immigratsiya",
+      "housing": "Uy-joy",
+      "legal": "Huquqiy"
+    },
+    "newsletter": {
+      "title": "Yangiliklarga obuna bo'ling",
+      "description": "Eng so'nggi maqolalar va yangiliklar to'g'ridan-to'g'ri sizning elektron pochashiga yetib boring. Yangiliklar jurnalına obuna bo'ling.",
+      "button": "Obuna bo'ling",
+      "placeholder": "Elektron pochtangizni kiriting"
+    },
+    "read_article": "Maqolani o'qish →"
+  },
+  "blog_details_page": {
+    "article": {
+      "helpful_label": "Bu maqola sizga yordam berdi mi?",
+      "helpful_button": "👍 Ha, foydali",
+      "not_helpful_button": "👎 Yo'q, foydali emas",
+      "get_help_button": "Sifatli yordamni oling"
+    },
+    "questions": {
+      "title": "Hali savol qoldimoqmi?",
+      "description": "Bizning sifatli jamoa sizning xususiy vaziyatingizga moslashtirilgan maslahatni berishga tayyor. Bugun bepul maslahat uchun bog'laning.",
+      "schedule_button": "Maslahat belgilang",
+      "whatsapp_button": "WhatsApp orqali gaplashish"
+    },
+    "related_articles": {
+      "title": "Bog'liq maqolalar",
+      "no_related": "Bog'liq maqolalar topilmadi."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Biz bilan bog'laning",
+      "subtitle": "Sizning savollarga yordam berishga biz shunga tayyorman"
+    },
+    "phone": {
+      "title": "Telefon",
+      "availability": "24/7 Doimiy"
+    },
+    "email": {
+      "title": "Elektron pochta",
+      "response_time": "2 soat ichida javob"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "support": "Tez chat yordamchi"
+    },
+    "form": {
+      "title": "Bizga xabar yuboring",
+      "full_name_label": "To'liq ism *",
+      "full_name_placeholder": "Sizning ismingiz",
+      "email_label": "Elektron pochta *",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Telefon raqami *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "subject_label": "Mavzu *",
+      "subject_placeholder": "Biz sizga qanday yordam bera olamiz?",
+      "message_label": "Xabar *",
+      "message_placeholder": "Sizning xabaringiz...",
+      "submit_button": "Xabar yuboring"
+    },
+    "benefits": {
+      "title": "Nima uchun biz bilan bog'lanish?",
+      "consultation": {
+        "title": "✓ Sifatli maslahat",
+        "description": "Tejaribali jamoanining kasb-hunarmand maslahat"
+      },
+      "fast_response": {
+        "title": "✓ Tez javob",
+        "description": "Ish vaqtida 2 soat ichida javob"
+      },
+      "free_consultation": {
+        "title": "✓ Bepul dastlabki maslahat",
+        "description": "Majburiyatsiz shaxsiy maslahat oling"
+      },
+      "multilingual": {
+        "title": "✓ Ko'p tilni yordamchi",
+        "description": "Sizning tanlovingiz tilida muloqot qiling"
+      }
+    },
+    "final_cta": {
+      "title": "Bepul maslahat oling",
+      "description": "Bugun bizning jamoa bilan suhbat qiling va fuqarolik variantlarini aniqlang",
+      "button": "WhatsApp orqali chat boshlang"
+    }
+  },
+  "faq_page": {
+    "hero": {
+      "title": "Tez-tez so'raladigan savollar",
+      "subtitle": "Turkiya fuqarolik haqida bilib olishingiz kerak bo'lgan hamma narsalar. Keng so'raladigan savollarga darhol javoblar."
+    },
+    "residency_section": {
+      "title": "🏘️ Fuqarolik savollari"
+    },
+    "work_section": {
+      "title": "💼 Ish & Kompaniyalar"
+    },
+    "insurance_section": {
+      "title": "🛡️ Sug'urta & Boshqa masalalar"
+    },
+    "residency_q1": {
+      "question": "Turkiya'da asosiy fuqarolik ruxsati turlari nima?",
+      "intro": "Turkiya bir nechta fuqarolik variantlarini taqdim etadi:",
+      "option_1": "Turist fuqarolik (30-90 kun)",
+      "option_2": "Talaba fuqarolik (yillik yana tuziladigan)",
+      "option_3": "Mulk fuqarolik (€250,000+ investitsiya)",
+      "option_4": "Oilani biriktirish",
+      "option_5": "Ish vizasi"
+    },
+    "residency_q2": {
+      "question": "Fuqarolik ariza jarayoni qancha vaqt ketadi?",
+      "intro": "Jarayonning davomiyligi fuqarolik turiga qarab o'zgaradi:",
+      "option_1": "Turist vizasi: Kelishda (Schengen-buysiz kirish 90 kun uchun)",
+      "option_2": "Uzoq muddatli fuqarolik: Hujjat tekshirish uchun 15-30 kun",
+      "option_3": "Mulk fuqarolik: 5-7 ish kuni",
+      "closing": "Bizning xizmati odatda buni 10-15 ish kuni ichida tezlatadi."
+    },
+    "residency_q3": {
+      "question": "Fuqarolik ariza uchun qanday hujjatlar kerak?",
+      "intro": "Asosiy talablar odatda quyidagilarni kiradi:",
+      "item_1": "Amal qilayotgan pasport (eng kam 6 oy amal qilish muddati)",
+      "item_2": "Yashash joyining isboti (ijaraning shartnomasi yoki mulk hujjati)",
+      "item_3": "Daromad yoki moliyaviy qobiliyatning isboti",
+      "item_4": "Sog'liq sug'urta qoplamasi",
+      "item_5": "Jinoyat imloshi sertifikati",
+      "item_6": "To'ldirilgan ariza shakli",
+      "closing": "Biz sizning xususiy vaziyatingizga moslashtirilgan to'liq tekshiruv ro'yxatini taqdim etamiz."
+    },
+    "residency_q4": {
+      "question": "Fuqarolik ruxsati bilan ish qilish mumkinmi?",
+      "intro": "Ish ruxsati sizning fuqarolik turingizga bog'liq:",
+      "option_1": "Turist fuqarolik: Alohida ish ruxsati kerak",
+      "option_2": "Talaba fuqarolik: Cheklangan ish soatlari (haftasiga 20 soat)",
+      "option_3": "Mulk fuqarolik: Biznes tuzish yoki mustaqil ish",
+      "option_4": "Ish vizasi: Ishchi tomonidan homiylik bilan to'la ish huquqlari",
+      "closing": "Biz fuqarolik bilan birga ish ruxsatini olishda sizni yordamlab beramiz."
+    },
+    "residency_q5": {
+      "question": "Turkiya fuqarolikni olish qancha turadi?",
+      "intro": "Hujjat fuqarolik turiga qarab turadi:",
+      "option_1": "Turist fuqarolik: Bepul (90 kun avtomatik)",
+      "option_2": "Qisqa muddatli fuqarolik: Yilda ₺1,200-2,000",
+      "option_3": "Mulk investitsiyasi: €250,000+ mulk sotib olish",
+      "option_4": "Xizmat to'lovlari: Bizning kasb-hunarmand yordami odatda €500-1,500 turadi murakkablikligi qarab",
+      "closing": "Sizning vaziyatingizga mos aniq narx uchun bepul maslahat oling."
+    },
+    "work_q1": {
+      "question": "Fuqarolik bilan Turkiya'da biznes boshlash mumkinmi?",
+      "intro": "Ha! Ko'pchilik fuqarolik turlari biznes egallashga ruxsat beradi:",
+      "item_1": "Mustaqil xodim yoki cheklangan kompaniya tuzish",
+      "item_2": "Ish vizasi xodimlari ro'yxamlashtirilgan kompaniya uchun ish qilishlari mumkin",
+      "item_3": "Mulk vizasi xodimlari biznes egallashi va boshqarishi mumkin",
+      "item_4": "Mustaqil xodimlari mustaqil mutaxassislar sifatida faoliyat olib borishi mumkin",
+      "closing": "Biz kompaniyani ro'yxamla qilish va ish ruxsatini olishda yordam beramiz."
+    },
+    "work_q2": {
+      "question": "Turkiya'da xodim homiy qilish uchun nima kerak?",
+      "intro": "Ishchi sifatida quyidagilar kerak:",
+      "item_1": "Ro'yxamlashtirilgan Turkiya kompaniyasi bo'lish",
+      "item_2": "Moliyaviy barqarorlikning ko'rsatishlik",
+      "item_3": "Ish shartnomasini taqdim etish",
+      "item_4": "Majbur ijtimoiy sug'urta to'lovlarini to'lash",
+      "item_5": "Mehnat va Ijtimoiy Xavfsizlik Vazirligi orqali ariza berish",
+      "closing": "Jarayon odatda 2-4 hafta ketadi."
+    },
+    "work_q3": {
+      "question": "Fuqarolik uchun soliq talablochari nima?",
+      "intro": "Soliq turligiz fuqarolik holatiga qarab turadi:",
+      "option_1": "Cheklangan fuqarolik: Faqat Turkiya daromadi soligi",
+      "option_2": "Cheksiz fuqarolik: Jami daromadi soligi",
+      "item_3": "Fuqarolik soliq shartnomalari foydasini ko'rish mumkin",
+      "item_4": "Yil davomida Turkiya hokimiyatiga soliq hisob berish kerak",
+      "closing": "Shaxsiy maslahat uchun soliq mutaxassisiga murojaat qilishni tavsiya qilamiz."
+    },
+    "insurance_q1": {
+      "question": "Fuqarolik uchun sog'liq sug'urta majburi mi?",
+      "intro": "Ha, sog'liq sug'urta talabdir:",
+      "item_1": "Turkiya Ijtimoiy Xavfsizlik Sug'urtasi (SGK) ishchi fuqaroliklari uchun majburi",
+      "item_2": "Shaxsiy sug'urta ishsiz fuqarolik uchun qabul",
+      "item_3": "Minimal qoplama favqulodda tibbiy yordam kiritishi kerak",
+      "item_4": "Yil davomida hujjat taxminan ₺1,200-3,000",
+      "closing": "Biz mos sug'urta qoplamani sozlab beramiz."
+    },
+    "insurance_q2": {
+      "question": "Fuqarolik bo'lib mulk sotib olish mumkinmi?",
+      "intro": "Ha, ba'zi cheklovlar bilan:",
+      "item_1": "Xorijiy fuqarolik moliyaviy isboti bilan mulk sotib olishi mumkin",
+      "item_2": "Mulk sotib olish fuqarolik sarflashiga olib kelishi mumkin",
+      "item_3": "Ba'zi viloyatlarning ko'yshaharida cheklovo bo'lishi mumkin (qishloq joylar)",
+      "item_4": "Mabasi davlatdan soliq sertifikati kerak",
+      "item_5": "Umumiy mulk qiymatiy Anqara qiymatining 30% dan ko'p emas",
+      "closing": "Biz ishonchli mulk hamkorlarini bilan bog'lantiramiz."
+    },
+    "insurance_q3": {
+      "question": "Fuqarolik muddati tugasa nima bo'ladi?",
+      "intro": "Fuqarolikni yana tuzilib olish sodda:",
+      "item_1": "Ko'pchilik fuqarolik yillik yana tuziladigan",
+      "item_2": "Tugallanishidan 30-60 kun oldin arizani berish",
+      "item_3": "Talablar dastlabki ariza bilan o'xshash",
+      "item_4": "Yana tuzilib olish jarayoni tezroq bo'ladi",
+      "item_5": "Cheklangan turistlar chiqib ketishi va boshqa 90 kun uchun qaytishi mumkin",
+      "closing": "Biz yana tuzilib olish xabarinomalarini yuboramiz va barcha hujjatlarni hal qilamiz."
+    },
+    "insurance_q4": {
+      "question": "Oila a'zolari mening ruxsatim asosida fuqarolik olishi mumkinmi?",
+      "intro": "Bog'liq oila sizga qo'shilishi mumkin:",
+      "item_1": "Rafiq va bolalar bog'liq sifatida arizani berishi mumkin",
+      "item_2": "Urinma hujjat isboti talabdir",
+      "item_3": "Bog'liqlar uchun moliyaviy qo'llash isboti kerak",
+      "item_4": "Bolalar avtomatik bog'liliklar huquqini oladi",
+      "closing": "Oilaviy biriktirish vizalari tezlashtirilgan jarayoniga ega."
+    },
+    "insurance_q5": {
+      "question": "Fuqarolikdan Turkiya fuqarolik olish mumkinmi?",
+      "intro": "Ha, fuqarolik orqali fuqarolik olish mumkin:",
+      "item_1": "Doimiy fuqarolik 5+ yil talabdir",
+      "item_2": "Til talabi (asosiy Turkcha)",
+      "item_3": "Xarakter tekshiruvi o'tib ketgan",
+      "item_4": "€250K+ mulk investitsiyasi 3 yil yo'liga mos",
+      "item_5": "Hozirgi fuqarolikni bekor qilish shart emas",
+      "closing": "Ikkita fuqarolik Turkiya qonunida ruxsat beradi."
+    },
+    "cta": {
+      "title": "Javobingiz topilmadi?",
+      "description": "Fuqarolik savollari bo'yicha shaxsiy yordam uchun sifatli jamoa bilan bog'laning.",
+      "button": "Bog'lanish"
+    },
+    "tax_section": {
+      "title": "💰 Fuqarolikka ko'ra yashash solig'i"
+    },
+    "tax_common": {
+      "exempt_title": "Soliqdan ozod qilish:",
+      "exempt_1": "Talaba va insonparvarlik yashash ruxsatnomalari barcha fuqaroliklar uchun soliqdan ozod.",
+      "exempt_2": "Ba'zi fuqaroliklar barcha turdagi yashash solig'idan ozod, ya'ni (Falastin - Suriya - va ba'zi boshqa arab bo'lmagan fuqaroliklar).",
+      "exempt_3": "Soliqdan ozod qilingan taqdirda, faqat 964 turk lirasi miqdoridagi yashash karti to'lovi to'lanadi."
+    },
+    "tax_q1": {
+      "question": "Turkiyada yashash solig'i qancha?",
+      "intro": "Qisqa muddatli yashash ruxsatnomalari (turistik - ko'chmas mulk - davolanish - va h.k.) uchun soliq fuqarolikka qarab farq qiladi va quyidagicha:",
+      "rate_1": "Marokash: 2 000 turk lirasi"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "O'zingizning ideal fuqarolik va uyni xavfsiz qiling",
+      "subtitle": "Har bir bosqichda sifatli maslahat. IKAMETI bilan fuqarolikni amalga oshirgan 5000+ oilani qo'shilishingizga tavsiya.",
+      "badge_1": "✓ 98% Muvaffaqiyat stavkasi",
+      "badge_2": "✓ 24/7 Yordamchi",
+      "badge_3": "✓ Tez jarayon",
+      "highlights": "✓ 98% Muvaffaqiyat stavkasi • ✓ 24/7 Yordamchi • ✓ Tez jarayon",
+      "apply_button": "Hozir arizala",
+      "whatsapp_button": "WhatsApp orqali gaplashish"
+    },
+    "problem": {
+      "title": "Siz duch keladigan muammo",
+      "item_1": {
+        "title": "Murakkab jarayon",
+        "description": "Chalkash talablar, doimiy o'zgaruvchi hujjatlar va noaniq jadvallar sizni bezovta qilib ketadi."
+      },
+      "item_2": {
+        "title": "Qimmatli xatolar",
+        "description": "Bitta xato hujjat yoki o'tkazib ketgan muddatlar vaqt, pul va sizning fuqarolik orzugini yo'q qiladi."
+      },
+      "item_3": {
+        "title": "Yordamchi yo'q",
+        "description": "Yolg'iz jarayondan o'tish sizni chalkashlik, xavotirlik va ishonchsizlik qiladi."
+      }
+    },
+    "solution": {
+      "title": "Bizning yechim",
+      "main_heading": "Biz hamma narsani qilamiz",
+      "item_1": {
+        "title": "Sifatli maslahat",
+        "description": "Bizning 15+ yillik mutaxassislari talablarni yengib chiqadi, imkoniyatlarni topadi va qimmatli xatolarni oldini oladi."
+      },
+      "item_2": {
+        "title": "To'liq hujjatlar",
+        "description": "Biz barcha hujjatlarni tayyorlab va topshiramiz. Muammo yo'q, chalkashlik yo'q, kechikish yo'q."
+      },
+      "item_3": {
+        "title": "24/7 yordamchi",
+        "description": "Sizning shaxsiy maslahatchi savollarga tez javob beradi va har bir bosqichda sizi yangilaydi."
+      },
+      "item_4": {
+        "title": "Huquqiy himoya",
+        "description": "Sertifikatsiyalangan advokatlar muvofiqlik ta'minini va sizning huquqlarini to'liq himoyalashni ta'minlaydi."
+      }
+    },
+    "stats_box": {
+      "title": "✨ Raqamlar asosida",
+      "approval_time": {
+        "label": "Qabul edilish vaqti",
+        "value": "45",
+        "unit": "kun o'rtacha"
+      },
+      "success_rate": {
+        "label": "Muvaffaqiyat stavkasi",
+        "value": "98%",
+        "unit": "qabul qilingan"
+      },
+      "clients": {
+        "label": "Xursand mijozlar",
+        "value": "5000+",
+        "unit": "qoniqtirgan"
+      }
+    },
+    "benefits": {
+      "title": "Siz nima olasiz",
+      "item_1": {
+        "title": "Tez jarayon",
+        "description": "Maslahatdan qabul edilishgacha o'rtacha 45 kun"
+      },
+      "item_2": {
+        "title": "Ochiq narx",
+        "description": "Yashirin to'lovlar yo'q. Aniq nima to'lashini bilib oling"
+      },
+      "item_3": {
+        "title": "100% xavfsiz",
+        "description": "Korxona darajasidagi xavfsizlik va huquqiy himoya"
+      },
+      "item_4": {
+        "title": "Kafolatlangan natija",
+        "description": "98% muvaffaqiyat stavkasi isbotlangan usuli bilan"
+      }
+    },
+    "process": {
+      "title": "4-bosqichli jarayon",
+      "step_1": {
+        "title": "1-bosqich",
+        "description": "Sizning maqsad va samaradorligini tushunish uchun bepul maslahat"
+      },
+      "step_2": {
+        "title": "2-bosqich",
+        "description": "Sifatli tekshirish va eng yaxshi yechimning tavsiyasi"
+      },
+      "step_3": {
+        "title": "3-bosqich",
+        "description": "Biz barcha hujjatlarni tayyorlab va topshiramiz"
+      },
+      "step_4": {
+        "title": "4-bosqich",
+        "description": "Qabul qilish va doimiy ko'chish yordamchas"
+      }
+    },
+    "testimonials": {
+      "title": "Haqiqiy muvaffaqiyat hikoyalari",
+      "quote_1": "Ular butun jarayonni xotirjam qildilar. 6 haftada qabul qilinganman! Eng yaxshi qaror. Bugun yangi uyimda yashamoqchiman.",
+      "client_1_name": "Ahmed M.",
+      "client_1_location": "Dubai, BAA • Fuqarolik qabul qilindi",
+      "quote_2": "Kasb-hunarmand jamoa, aniq muloqot va ochiq narx. Ular hamma narsani juda yaxshi boshqardilar. Chuqur tavsiya qilaman!",
+      "client_2_name": "Sarah J.",
+      "client_2_location": "Istanbul, Turkiya • Uy-joy + fuqarolik",
+      "quote_3": "Har bir bosqichda menga yordam berdilar. Ularning tajribasi meni vaqt va pul to'qatdi. Shundayma minnatdor. Bu haqiqati.",
+      "client_3_name": "James T.",
+      "client_3_location": "London, Angliya • Fuqarolik qabul qilindi"
+    },
+    "form": {
+      "title": "Bepul maslahat boshlang",
+      "subtitle": "Majburiyat yo'q. Bosim yo'q. Faqat halol maslahat.",
+      "full_name_label": "To'liq ism *",
+      "full_name_placeholder": "Sizning to'liq ismingiz",
+      "phone_label": "Telefon raqami *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "nationality_label": "Millati *",
+      "select_option": "-- Tanlang --",
+      "nationality_egyptian": "Misriy",
+      "nationality_saudi": "Saudiya Arabistoni",
+      "nationality_uae": "BAA fuqarosi",
+      "nationality_other": "Boshqasi",
+      "interest_label": "Qiziqish *",
+      "select_service": "-- Xizmatni tanlang --",
+      "interest_housing": "Uy-joy yechimlarni",
+      "interest_residency": "Fuqarolik dasturi",
+      "interest_both": "Uy-joy va fuqarolik",
+      "interest_legal": "Huquqiy maslahat",
+      "submit_button": "Bepul maslahat boshlang",
+      "privacy_text": "Ariza berish orqali siz bizning",
+      "privacy_link": "Maxfiylik siyosatiga"
+    },
+    "final_cta": {
+      "title": "Harakat qilishga tayoqmi?",
+      "description": "Sizning ideal fuqarolik va uy kutmoqda. Bugun boshlaylik.",
+      "apply_button": "Hozir arizala",
+      "whatsapp_button": "Bizga WhatsApp orqali yuboring",
+      "note": "1 soat ichida javob • Spam yo'q"
+    },
+    "articles": {
+      "title": "Maqolalar & Yangiliklar",
+      "subtitle": "Fuqarolik, uy-joy va immigratsiya yechimlarining so'nggi maqolalarini va yangilikların bilan yangilaning.",
+      "article_1": {
+        "title": "Fuqarolik bo'yicha to'la qo'llanma",
+        "description": "Fuqarolik jarayonining barcha bosqichlarini boshidan oxirigacha muhim maslahatlar bilan o'rganib chiqing."
+      },
+      "article_2": {
+        "title": "Mulk sotib olinganda amaliy maslahatlar",
+        "description": "O'zingizning ideal mulkni tanlash va sotib olganda e'tibor berilishi kerak bo'lgan muhim nuqtalarni bilib oling."
+      },
+      "article_3": {
+        "title": "Huquqiy himoya",
+        "description": "Uy shartnomalarida va fuqarolik shartnomalarida mavjud bo'lgan o'z huquqlaringiz va huquqiy himoyani tushunib oling."
+      },
+      "read_more_button": "Davomini o'qish"
+    }
+  },
+  "blog_articles": {
+    "article_1": {
+      "id": 1,
+      "title": "Turk Qoʻnish Ruxsatnomasi Qoʻllanmasi",
+      "slug": "turkish-residency-permit",
+      "description": "Turk qoʻnish ruxsatnomalarini olish uchun bosqichma-bosqich qoʻllanma.",
+      "image": "https://images.unsplash.com/photo-1554224311-beee415c15c7?w=800&h=400&fit=crop",
+      "date": "2026-04-01",
+      "category": "immigration",
+      "author": "Ahmed Al-Mansouri",
+      "content": "<h2>Kirish</h2><p>Turk qoʻnish ruxsatnomalarini xorijiy mutaxassislar va investorlar oʻta izlab oladi. Ushbu keng qoʻllanma sizni butun jarayon, talablar va vaqt jadvalida rahbarlik qiladi.</p><h2>Turk Qoʻnish Ruxsatnomalarining Turlari</h2><p>Turkiya turli maqsadlar uchun qoʻnish ruxsatnomasining bir nechta turini taqdim etadi.</p><h3>Qoʻnishning Qisqa Muddatli Ruxsatnomasi (IKY)</h3><p>1 yil uchun amal qiladi va yangilan olishi mumkin. Bu Turkiya qoʻnishini boshlaydigan chuqurlarganing eng koʻp uchraydigan turi. Talab qiladi:</p><ul><li>Amal qilayotgan pasport</li><li>Sogliq sug'urtasi</li><li>Qoʻnish sertifikati</li><li>Toza jinoiy rekord</li></ul><h3>Qoʻnishning Uzoq Muddatli Ruxsatnomasi (LKY)</h3><p>2 yil uchun amal qiladi va qisqa muddatli ruxsatnoma bilan kamida 1 yil doimiy qoʻnish talab qiladi. Talablar yuqorida keltirilgan hujjatlarga oʻxshash.</p><h2>Ariza Topshirish Jarayoni</h2><p>Ariza topshirish jarayoni oddiy va mahalliy Migratsiya Boshqarmasi'nda tugatilishi mumkin. Hujjatlarni tayyorlang, uchrashuvni belgilang va arizangizni topshiring.</p><h2>Vaqt Jadvali</h2><p>Tipik qayta ishlash vaqti 1-3 oydir. Siz amaliyoti tugashdan oldin ruxsatnomasini yangila olishingiz mumkin.</p><h2>Xarajat</h2><p>Xarajat valyuta va almashtirish kursiga qarab farq qiladi, odatda Turk Lirasi'nda 50-150 AQSh dollari.</p>"
+    },
+    "article_2": {
+      "id": 2,
+      "title": "Istanbulda Mükammal Xonani Topish",
+      "slug": "perfect-apartment-istanbul",
+      "description": "Istanbulning raqobatbardosh uy bozoridagi ideal xonani topish uchun mutaxassis maslahatlar.",
+      "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=400&fit=crop",
+      "date": "2026-03-28",
+      "category": "housing",
+      "author": "Fatima Hassan",
+      "content": "<h2>Kirish</h2><p>Istanbulda xona topish qiyin lekin foydali boʻlishi mumkin. Milyonlab aholisi va doimiy oʻsishi bilan bozor dinamik va raqobatbardosh. Ushbu qoʻllanma sizga jarayonni samarali boshqarishga yordam beradi.</p><h2>Chuqurlarga Eng Yaxshi Mahallalar</h2><p>Istanbul turli mahallalarni, har biri oʻziga xos xususiyatlar bilan taqdim etadi. Chuqurlaragain tashlaydigan eng yaxshi mahallalar:</p><h3>Beyoğlu</h3><p>Zamonaviy Istanbulning markazidir, jonli kechka hayoti, restoranlari va madaniyat maskanlari bilan mashhur. Yosh mutaxassislar uchun ideal.</p><h3>Beşiktaş</h3><p>Yaxshi transport, ziynotli tayyorlashlar va kuchli chuqur jamiyati bilan koʻproq turar joy mahal. Oilalar va oʻrnatilgan mutaxassislar uchun ideal.</p><h3>Kadıköy</h3><p>Osiyo tomonida joylashgan, mashhur va arzonlama narxlarda, chuqurlaragain oʻta mashhur. Yosh va badiiy atmosferasi boʻylab izlayotganlar uchun ajoyib.</p><h2>Qayerdan Izlash Kerak</h2><p>Keng izlash natijalari uchun bir nechta platformalardan foydalaning. Har birining oʻz afzalliklari bor.</p><h2>Nima Kutish Kerak</h2><p>Koʻpchilik uy egalari birinchi oyni, oxirgi oyni va omonatni istaydi. Xonalar odatda mebelsiz. Narxlar joyga va oʻlchamga qarab 1500 TL dan 10000+ TL gacha boʻlgan.</p><h2>Muzokaralar Maslahatları</h2><p>Birinchi taklifni qabul qilmang. Uy egallari odatda muzokaralarni kutadi. So'ralgan narxdan 10-20% kamaytirish, ayniqsa uzoq muddatli ijara uchun koʻp uchraydi.</p>"
+    },
+    "article_3": {
+      "id": 3,
+      "title": "Turk Mehnat Qonuni Tushunish",
+      "slug": "turkish-labor-law",
+      "description": "Turkiyada ishchi shartnomasi va ishchilarga oid huquqlar boʻyicha muhim maʻlumotlar.",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+      "date": "2026-03-20",
+      "category": "legal",
+      "author": "Mehmet Kaya",
+      "content": "<h2>Kirish</h2><p>Turk mehnat qonunini tushunish ish beruvchilar va ishchilar uchun juda muhimdir. Turkiya ishchilarga huquqlarni himoya qiladigan lekin biznes moslashuviga ruxsat beradigan keng qoʻllanmalarni roʻyxatda oldi.</p><h2>Ishchi Shartnomasi Talablari</h2><p>Turkiyada har bir ish munosabati yozma shartnoma bilan tasdiqlanishi kerak. Shartnoma quyidagilarni oʻz ichiga olishi kerak:</p><ul><li>Ish unvoni va mas'uliyatlari</li><li>Maosh va toʻlov shartlari</li><li>Ish vaqti (haftaga 45 soat maksimum)</li><li>Yillik ta'til huquqi (oyiga kamida 2-2,5 kun)</li><li>Sinov davri (maksimum 2 oy)</li><li>Tugatish shartlari</li></ul><h2>Ishchilar Huquqlari</h2><p>Turk qonuni shartnoma turi yoki vazifasidan qatʻi nazar, barcha ishchilar uchun asosiy huquqlarni kafolatlaydi.</p><h3>Minimum Maosh</h3><p>Oylik minimum maosh har yili hukumat tomonidan oʻrnatiladi va barcha ishchilarga taʻdbiq etiladi. Ish beruvchi bu summa ostida toʻlay olmaydi.</p><h3>Ish Vaqti</h3><p>Standart ish haftasi 5 kun ichida tarqatilgan 45 soatdir. Qoʻshimcha ish odatiy maoshning 1,5 barabari bilan toʻlanadi.</p><h3>Ta'til va Bayramlar</h3><p>Ishchilar toʻlanayotgan yillik ta'lilga huquqlidir. Rasmiy bayramlar ham toʻlanayotgan ta'til kunlaridir.</p><h2>Umumiy Muammolar</h2><p>Maosh toʻlanmasligi, nosoʻz ishdan chiqarilish yoki xavfsiz boʻlmagan ish sharoiti kabi muammolar bilan duch kelsangiz, mahalliy Mehnat Boshqarmasi'ni chaqiring.</p>"
+    },
+    "article_4": {
+      "id": 4,
+      "title": "Turkiyada Sarmoyavoy Imkoniyatlari",
+      "slug": "investment-opportunities",
+      "description": "Turkiyada xorijiy sarmoyavoylar uchun mavjud boʻlgan biznes va sarmoya imkoniyatlarini koʻrib chiqing.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
+      "date": "2026-03-15",
+      "category": "business",
+      "author": "Sarah Thompson",
+      "content": "<h2>Kirish</h2><p>Turkiya oʻsib borayotgan iqtisodiyoti, strategik joylashuvi va biznesga koʻnul siyosati tufayli jozibali sarmoya imkoniyatlarini taqdim etadi. Hukumat xorijiy sarmoyavoyni faol ravishda rag'batlantiradi.</p><h2>Asosiy Sarmoya Sohalari</h2><p>Turkiya iqtisodiyoti bir nechta sohalarda turli sarmoya imkoniyatlarini taqdim etadi.</p><h3>Koʻchmas Mulk</h3><p>Turk koʻchmas mulk bozori doimiy oʻsish bilan kuchli qoladi. Tijorat va turar joy mulklari, ayniqsa Istanbul va Ankaradan yaxshi daromadni taqdim etadi.</p><h3>Turizm</h3><p>Turkiya dunyo turizmi uchun eng mashhur nishonalaridan biri. Mehmonxonalar, tur operatorlari va konok eʻtibori bizneslar kuchli daromadni koʻrsatadi.</p><h3>Texnologiya</h3><p>Istanbulning texnologiya sahnasi startaplar va innovatsion markazlar bilan tez oʻsmoqda. Texnologiya sarmoyalari global ravishda riskali kapitallarni tortadi.</p><h3>Ishlab Chiqarish</h3><p>Yevropa va Osiyo oʻrtasidagi strategik joylashuvni Turkiyani ishlab chiqarish va eksport operatsiyalari uchun jozibali qiladi.</p><h2>Sarmoyavoy Vizasi Talablari</h2><p>Xorijiy sarmoyavoylar minimal miqdorini sarmoya qilib qoʻnish ruxsatini olishi mumkin (odatda 250000 AQSh dollari). Sarmoya variantlari koʻchmas mulk sotib olish yoki biznes tuzishni oʻz ichiga oladi.</p><h2>Soliq Imtiyozlari</h2><p>Turkiya muayyan sohalarda va hududlarda xorijiy sarmoyavoylar uchun soliq rag'batlashlarini taqdim etadi. Aniq imtiyozlar uchun mahalliy soliq maslahatchilariga murojaat qiling.</p><h2>Roʻyxatdan Oʻtish Jarayoni</h2><p>Biznesni Savdo Palatasi orqali tuzing, soliq raqamini oling va ijtimoiy sug'urtaga roʻyxatdan oʻting. Aksar jarayonlarni 1-2 haftada tugatish mumkin.</p>"
+    },
+    "article_5": {
+      "id": 5,
+      "title": "Viza Turlari: Qaysi Biri Kerak?",
+      "slug": "turkish-visa-types",
+      "description": "Turk vizalari turlari va toʻgʻrisini tanlash boʻyicha keng maʻlumot.",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=400&fit=crop",
+      "date": "2026-03-10",
+      "category": "immigration",
+      "author": "Elena Rodriguez",
+      "content": "<h2>Kirish</h2><p>Turkiya sizning tashrif maqsadingizga qarab turli viza variantlarini taqdim etadi. Farqlarni tushunish mamlakat uchun xintamlangan kirish uchun muhimdir.</p><h2>Turist Vizasi (E-Viza)</h2><p>Qisqa muddatli turizm uchun eng koʻp uchraydigan viza turi. Turk e-vizalari 90 kun amal qiladi va daqiqalar ichida onlayn olish mumkin.</p><h3>Talablar</h3><ul><li>Amal qilayotgan pasport (6+ oy amal qilayotgan)</li><li>Toʻlov uchun kredit/debet kartasi</li><li>Pochtali manzil</li></ul><h3>Xarajat va Amaliyoti</h3><p>Xarajat taxminan 20 AQSh dollari. Viza bitta kirish uchun amal qiladi va 180 kunlik davr ichida 90 kuniga qoʻnishni qoplaydi.</p><h2>Biznes Vizasi</h2><p>Turkiyada biznes tuzishni istayotgan tadbirkorlar va biznes mutaxassislari uchun.</p><h3>Talablar</h3><ul><li>Turk kompaniyasi yoki tashkilot tomonidan taklif nomasi</li><li>Oʻz mamlakatingizda biznes roʻyxatlanishining isboti</li><li>Moliyaviy barqarorlikni koʻrsatadigan bank varaqlari</li><li>Amal qilayotgan pasport</li></ul><h2>Talabaga Vizasi</h2><p>Turk ta'lim muassasalarida oʻqiydigan talabalar uchun. Muddati sizning oʻqish dasturingizga toʻg'ri keladi.</p><h3>Talablar</h3><ul><li>Turk universitetidan qabul nomasi</li><li>Moliyaviy qoʻllab-quvvatlash isboti</li><li>Sogliq sug'urtasi</li><li>Amal qilayotgan pasport</li></ul><h2>Ish Vizasi</h2><p>Turkiya kompaniyasi tomonidan mustahdam boʻlsangiz kerak. Ish beruvchi homiylik hujjatlarini taqdim etishi kerak.</p><h3>Talablar</h3><ul><li>Ish ruxsati (ish beruvchi tomonidan olingan)</li><li>Ish shartnomasi</li><li>Malakalarni isboti</li><li>Amal qilayotgan pasport</li></ul><h2>Uzoq Muddatli Qoʻnish Vizasi</h2><p>Uzoq muddat uchun qoʻnishni rejalashtiruvchilar uchun. Qoʻnish ruxsati olishga huquqli boʻlish uchun oʻtkazadi.</p>"
+    }
+  },
+  "pricing": {
+    "title": "Mukammal Rezidentlik Rejani Tanlang",
+    "subtitle": "Shaffof narxlar, yashirin to'lovlar yo'q. Bugun Turkiya rezidentligiga boshlang",
+    "cta": "Hozir Boshlang",
+    "basic": {
+      "title": "Rezidentlik boshlanishi",
+      "price": "99$",
+      "price_note": "Bir martalik to'lov",
+      "description": "Birinchi marta ariza beruvchilar uchun ideal, to'liq boshlang'ich qo'llab-quvvatlash.",
+      "features": [
+        "1 boshlang'ich maslahat",
+        "Rezidentlik turini baholash",
+        "Hujjatlar ro'yxati",
+        "Ariza shakli bo'yicha yordam"
+      ]
+    },
+    "standard": {
+      "title": "To'liq rezidentlik",
+      "price": "199$",
+      "price_note": "Yashirin to'lovlar yo'q",
+      "description": "To'liq qo'llab-quvvatlash, doimiy yordam bilan. Bizning eng mashhur tanlov.",
+      "badge": "Eng mashhur",
+      "features": [
+        "Boshlang'ichning hamma narsasi",
+        "3 maslahat sedansesi",
+        "Ariza kuzatuv",
+        "Sog'liq sug'urtasi yordami",
+        "Asosiy hujjat tarjimasi",
+        "WhatsApp qo'llab-quvvatlash"
+      ]
+    },
+    "premium": {
+      "title": "Turar-joy to'plami",
+      "price": "299$",
+      "price_note": "Eng yaxshi narx",
+      "description": "Yuridik yo'l-yo'riq va turar-joy yordami bilan to'liq qo'llab-quvvatlash.",
+      "features": [
+        "To'liq rezidentlikdan hamma narsa",
+        "Ijarа shartnomasi ko'rikni o'tkazish",
+        "Manzil ro'yxatga olish",
+        "Rezidentlik yangilash yordami",
+        "Yuridik maslahat",
+        "Ustuvor telefon qo'llab-quvvatlash"
+      ]
+    },
+    "addons_title": "Ixtiyoriy Qo'shimcha Xizmatlar",
+    "addons_subtitle": "Qo'shimcha professional xizmatlar bilan paketingizni yaxshilang",
+    "addon_1_title": "🏥 Sog'liq sug'urtasi",
+    "addon_1_desc": "Rezidentligingiz uchun tasdiqlangan sog'liq sug'urtasini oling",
+    "addon_1_price": "50$",
+    "addon_2_title": "📋 Hujjat tarjimasi",
+    "addon_2_desc": "Rasmiy hujjatlar uchun sertifikatlangan tarjima",
+    "addon_2_price": "30$",
+    "addon_3_title": "📅 Uchrashuvni bronirovalish",
+    "addon_3_desc": "Biz sizning immigratsiya uchrashuvi uchun bronirovalamiz",
+    "addon_3_price": "40$",
+    "addon_4_title": "🏛️ Manzilni ro'yxatga olish",
+    "addon_4_desc": "Rasmiy manzilni ro'yxatga olish xizmati",
+    "addon_4_price": "25$",
+    "addon_5_title": "🔄 Rezidentlik yangilash",
+    "addon_5_desc": "Yangilash uchun tezlashtirgan qayta ishlash",
+    "addon_5_price": "80$",
+    "addon_6_title": "📊 Soliq raqami o'rnatilishi",
+    "addon_6_desc": "Bir kunning ichida soliq raqamini oling",
+    "addon_6_price": "20$"
+  },
+  "common": {
+    "language": "Til",
+    "select_language": "Tilni tanlang",
+    "loading": "Yuklanmoqda...",
+    "error": "Xato yuzaga keldi",
+    "close": "Yopish",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "submit": "Topshirish",
+    "read_more": "Davomini o'qish",
+    "view_all": "Hammasini ko'rish",
+    "required": "Talabdir",
+    "selected_label": "Tanlangan:",
+    "total_label": "Jami:",
+    "continue_button": "Borish",
+    "remind_button": "Menga Eslatma",
+    "remind_title": "Turar-joyim tugashidan avval menga eslatma qilingin",
+    "remind_subtitle": "O'zingizning ma'lumotlarini kiriting va biz sizga muddati tugashidan avval eslatma qilamiz",
+    "remind_title_new": "Turar-joy yenilash sanasini kamaytirmang",
+    "remind_subtitle_new": "Ma'lumotlaringizni kiriting va biz sizga muddati tugashidan 2 oy oldin eslatma qilamiz",
+    "residency_type": "Turar-joy turi",
+    "expiration_date": "Tugash sanasi",
+    "phone_number": "Telefon raqami",
+    "save_button": "Eslatmani saqlash",
+    "reminder_saved": "Eslatma muvaffaqiyatli saqlandi",
+    "remind_note": "Muddati tugashidan 2 oy oldin siz bilan bog'lanamiz",
+    "free_service": "Bepul xizmat"
+  }
+}

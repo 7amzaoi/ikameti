@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "language": "tr",
+    "direction": "ltr",
+    "name": "Türkçe"
+  },
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "blog": "Blog",
+    "faq": "Sıkça Sorulan Sorular",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Premium İkametgah ve Konut Çözümleriniz için Kapı",
+    "subtitle": "Göç, ikamet ve konut sözleşmeleri için uzman rehberlik. Binlerce kişi tarafından güvenilir. Hızlı, profesyonel ve güvenli.",
+    "cta_primary": "Hemen Başlayın",
+    "cta_secondary": "Daha Fazla Bilgi"
+  },
+  "services": {
+    "title": "Temel Hizmetlerimiz",
+    "subtitle": "İkametgah ve konut yolculuğunuzu sorunsuz, güvenli ve stressiz yapmak için tasarlanmış kapsamlı çözümler.",
+    "housing": {
+      "title": "Konut Çözümleri",
+      "description": "Mülk doğrulaması, sözleşme incelemesi, müzakere desteği ve rüya eviniz için yasal dokümantasyon.",
+      "features": [
+        "Mülk taraması",
+        "Sözleşme incelemesi",
+        "Yasal destek"
+      ],
+      "cta": "Keşfet"
+    },
+    "residency": {
+      "title": "İkametgah Programları",
+      "description": "Karmaşık ikamet gereksinimlerinde her adımda uzman rehberlik ile gezinin.",
+      "features": [
+        "Başvuru desteği",
+        "Belge hazırlama",
+        "Röportaj antrenmanı"
+      ],
+      "cta": "Gör"
+    },
+    "legal": {
+      "title": "Hukuk ve Uyum",
+      "description": "Tüm hizmetler arasında tam hukuki uyum ve kurumsal güvenlik ile uluslararası düzenlemelere uygunluk.",
+      "features": [
+        "Hukuki inceleme",
+        "Uyum kontrolü",
+        "24/7 destek"
+      ],
+      "cta": "Danışman"
+    }
+  },
+  "footer": {
+    "tagline": "Göç ve konut hizmetlerinde güvenilir ortağınız.",
+    "quick_links": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "housing_solutions": "Konut Çözümleri",
+    "residency_programs": "İkametgah Programları",
+    "legal_consultation": "Hukuki Danışmanlık",
+    "support": "Destek"
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Bize Ulaşın",
+      "subtitle": "Sorularınızda size yardımcı olmak için buradayız"
+    },
+    "phone": {
+      "title": "Telefon",
+      "availability": "24/7 Müsait"
+    },
+    "email": {
+      "title": "E-posta",
+      "response_time": "2 saat içinde cevap"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "support": "Hızlı sohbet desteği"
+    },
+    "form": {
+      "title": "Bize bir Mesaj Gönderin",
+      "full_name_label": "Ad Soyad *",
+      "full_name_placeholder": "Adınız",
+      "email_label": "E-posta *",
+      "email_placeholder": "sizenin@email.com",
+      "phone_label": "Telefon *",
+      "phone_placeholder": "+90 555 123 4567",
+      "subject_label": "Konu *",
+      "subject_placeholder": "Nasıl yardımcı olabiliriz?",
+      "message_label": "Mesaj *",
+      "message_placeholder": "Mesajınız...",
+      "submit_button": "Mesajı Gönder"
+    },
+    "benefits": {
+      "title": "Bize Neden Ulaşmalısınız?",
+      "consultation": {
+        "title": "✓ Uzman Danışmanlık",
+        "description": "Deneyimli ekipten profesyonel tavsiye"
+      },
+      "fast_response": {
+        "title": "✓ Hızlı Yanıt",
+        "description": "İş saatleri içinde 2 saat içinde yanıt"
+      },
+      "free_consultation": {
+        "title": "✓ Ücretsiz İlk Danışmanlık",
+        "description": "Hiçbir yükümlülük olmaksızın kişiselleştirilmiş tavsiye alın"
+      },
+      "multilingual": {
+        "title": "✓ Çok Dilli Destek",
+        "description": "Tercih ettiğiniz dilde iletişim kurun"
+      }
+    },
+    "final_cta": {
+      "title": "Ücretsiz Danışmanlığınızı Alın",
+      "description": "Bugün ekibimizle konuşun ve ikamet seçeneklerinizi keşfedin",
+      "button": "WhatsApp'ta Sohbet Başlat"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Türkiye'de ikamet hakkında bilmeniz gereken her şey. Yaygın sorulara anında cevaplar alın."
+    },
+    "residency": {
+      "section_title": "🏘️ İkamet Soruları",
+      "q1": {
+        "question": "Türkiye'deki temel ikamet izinlerinin türleri nelerdir?",
+        "intro": "Türkiye birkaç ikamet seçeneği sunar:",
+        "answers": [
+          { "label": "Turist İkamet", "text": "Kısa vadeli kalış vizesi (30-90 gün)" },
+          { "label": "Öğrenci İkamet", "text": "Kayıtlı öğrenciler için (yıllık yenilenebilir)" },
+          { "label": "Gayrimenkul İkamet", "text": "Gayrimenkul yatırımcıları için (250.000€+ yatırım)" },
+          { "label": "Aile Desteği", "text": "Türk vatandaşlarının akrabaları için" },
+          { "label": "Çalışma Vizesi", "text": "İstihdam amaçları için" }
+        ]
+      },
+      "q2": {
+        "question": "İkamet başvurusu ne kadar sürer?",
+        "intro": "İşlem süreleri ikamet türüne göre değişir:",
+        "answers": [
+          { "label": "Turist Vizesi", "text": "Varışta (90 gün vize gerektirmeyen giriş)" },
+          { "label": "Uzun Vadeli İkamet", "text": "Belge işleme için 15-30 gün" },
+          { "label": "Gayrimenkul İkamet", "text": "5-7 iş günü" }
+        ],
+        "note": "Hizmetimiz tipik olarak bunu 10-15 iş günü içinde hızlandırır."
+      },
+      "q3": {
+        "question": "İkamet başvurusu için hangi belgelere ihtiyacım var?",
+        "intro": "Temel gereksinimler tipik olarak şunları içerir:",
+        "answers": [
+          "Geçerli pasaport (minimum 6 ay geçerlilik)",
+          "Konut kanıtı (kira sözleşmesi veya mülkiyet tapusu)",
+          "Gelir veya finansal kaynaklar kanıtı",
+          "Sağlık sigortası kapsamı",
+          "Ceza sicili temizlik sertifikası",
+          "Doldurulmuş başvuru formu"
+        ],
+        "note": "Belirli durumunuza göre özelleştirilmiş tam bir kontrol listesi sağlarız."
+      },
+      "q4": {
+        "question": "İkamet izni üzerindeyken çalışabilir miyim?",
+        "intro": "Çalışma izinleri ikamet türünüze bağlıdır:",
+        "answers": [
+          { "label": "Turist İkamet", "text": "Ayrı çalışma izni gerekli" },
+          { "label": "Öğrenci İkamet", "text": "Sınırlı çalışma saatlerine izin verilir (20 saat/hafta)" },
+          { "label": "Gayrimenkul İkamet", "text": "İşletme kurabilir veya serbest çalışabilirsiniz" },
+          { "label": "Çalışma Vizesi", "text": "İşveren sponsorluğu ile tam istihdam hakları" }
+        ],
+        "note": "İkamet ile birlikte çalışma yetkilendirmesi almakta size rehberlik edebiliriz."
+      },
+      "q5": {
+        "question": "Türk ikamet almak ne kadara mal olur?",
+        "intro": "Maliyetler ikamet türüne göre değişir:",
+        "answers": [
+          { "label": "Turist İkamet", "text": "Ücretsiz (90 gün otomatik)" },
+          { "label": "Kısa Vadeli İkamet", "text": "Yılda 1.200-2.000 TL" },
+          { "label": "Gayrimenkul Yatırımı", "text": "250.000€+ gayrimenkul satın alımı" },
+          { "label": "Hizmet Ücretleri", "text": "Profesyonel yardımımız tipik olarak karmaşıklığa bağlı olarak 500-1.500€ arası" }
+        ],
+        "note": "Durumunuza göre kesin fiyatlandırma için ücretsiz danışmanlık alın."
+      }
+    },
+    "work": {
+      "section_title": "💼 İş ve Şirketler",
+      "q1": {
+        "question": "İkamet ile Türkiye'de işletme başlatabilir miyim?",
+        "intro": "Evet! Birçok ikamet türü işletme mülkiyetine izin verir:",
+        "answers": [
+          "Serbest muhasebeci olarak kayıt yaptırın veya limited şirket kurun",
+          "Çalışma vizesi sahipleri kayıtlı şirket için çalışabilir",
+          "Gayrimenkul vize sahipleri işletmelere sahip olabilir ve yönetebilir",
+          "Serbest çalışanlar bağımsız profesyonel olarak faaliyet gösterebilir"
+        ],
+        "note": "Şirket kaydı ve çalışma izinlerinde yardımcı oluruz."
+      },
+      "q2": {
+        "question": "Türkiye'de çalışan sponsor olmak için neler gerekli?",
+        "intro": "İşveren olarak şunlara ihtiyacınız olacak:",
+        "answers": [
+          "Kayıtlı bir Türk şirketi",
+          "Mali istikrar kanıtı",
+          "İşletme sözleşmesi",
+          "Zorunlu sosyal sigorta primleri",
+          "Çalışma ve Sosyal Güvenlik Bakanlığı üzerinden başvuru"
+        ],
+        "note": "İşlem tipik olarak 2-4 hafta sürer."
+      },
+      "q3": {
+        "question": "Sakinler için vergi gereksinimleri nelerdir?",
+        "intro": "Vergiler ikamet durumunuza bağlıdır:",
+        "answers": [
+          { "label": "Sınırlı Sakinler", "text": "Sadece Türk geliri üzerinden vergi" },
+          { "label": "Sınırsız Sakinler", "text": "Küresel gelir vergilendirilir" },
+          "Sakinler varsa vergi anlaşmalarından yararlanabilir",
+          "Türk makamlarına yıllık vergi beyannamesi gerekli"
+        ],
+        "note": "Kişiselleştirilmiş tavsiye için vergi uzmanı ile konsultasyon önerilir."
+      }
+    },
+    "insurance": {
+      "section_title": "🛡️ Sigorta ve Diğer Konular",
+      "q1": {
+        "question": "İkamet için sağlık sigortası zorunlu mu?",
+        "intro": "Evet, sağlık sigortası zorunludur:",
+        "answers": [
+          "Türk Sosyal Güvenlik Sigorta (SGK) çalışan sakinler için zorunludur",
+          "Özel sigorta çalışmayan sakinler için kabul edilebilir",
+          "Asgari kapsamında acil bakım bulunmalıdır",
+          "Yıllık maliyet yaklaşık 1.200-3.000 TL"
+        ],
+        "note": "Uygun sigorta kapsamı düzenlemesine yardımcı oluruz."
+      },
+      "q2": {
+        "question": "Yabancı sakın olarak gayrimenkul satın alabilir miyim?",
+        "intro": "Evet, bazı kısıtlamalarla:",
+        "answers": [
+          "Yabancılar fon kanıtı ile gayrimenkul satın alabilir",
+          "Gayrimenkul satın alımı ikamet niteliklendirilmesine yol açabilir",
+          "Bazı bölgelerde arazi kısıtlamaları vardır (tarım alanları)",
+          "Kaynak ülkeden vergi temizlik sertifikası gerekli",
+          "Toplam mülk değeri güvenlik için Ankara değerinin %30'ünü aşmaz"
+        ],
+        "note": "Sizi güvenilir gayrimenkul ortaklarına bağlarız."
+      },
+      "q3": {
+        "question": "İkametim sona ererse ne olur?",
+        "intro": "İkamet yenilemesi basittir:",
+        "answers": [
+          "Çoğu ikamet yıllık olarak yenilenebilir",
+          "Sona erişinden 30-60 gün önce başvuru yapın",
+          "İlk başvuruya benzer gereksinimler",
+          "Yenilemeler için işlem tipik olarak daha hızlıdır",
+          "Sınırlı turistler başka 90 gün için çıkıp geri girebilir"
+        ],
+        "note": "Yenileme hatırlatmaları göndeririz ve tüm evrakları halledilir."
+      },
+      "q4": {
+        "question": "Aile üyeleri iznim temelinde ikamet alabilir mi?",
+        "intro": "Bağımlı aile üyeleri sizi takip edebilir:",
+        "answers": [
+          "Eş ve çocuklar bakmakla yükümlü olarak başvuru yapabilir",
+          "İlişkiyi kanıtlayan ek belge gerekli",
+          "Bakmakla yükümlü olanlar için finansal destek kanıtı gerekli",
+          "Çocuklar otomatik olarak bağımlılık haklarını kazanır"
+        ],
+        "note": "Aile birleşimi vizeleri özel hızlandırılmış işleme sahiptir."
+      },
+      "q5": {
+        "question": "İkametten Türk vatandaşlığı mümkün mü?",
+        "intro": "Evet, ikametgahtan vatandaşlık mümkündür:",
+        "answers": [
+          "Sürekli ikamet 5+ yıl gerekli",
+          "Dil gereksinimi (temel Türkçe)",
+          "Karakter geçmişi kontrolü geçti",
+          "250 bin€+ gayrimenkul yatırımı 3 yıllık yol için uygun",
+          "Mevcut vatandaşlıktan vazgeçme gerekmez"
+        ],
+        "note": "Çift vatandaşlık Türk kanununda izin verilir."
+      }
+    },
+    "cta": {
+      "title": "Cevabınızı bulamadınız mı?",
+      "description": "İkamet sorularınız hakkında kişiselleştirilmiş yardım için uzman ekibimizle iletişime geçin.",
+      "button": "Bize Ulaşın"
+    }
+  },
+  "pricing": {
+    "title": "Mükemmel İkamet Planınızı Seçin",
+    "subtitle": "Şeffaf fiyatlandırma, gizli ücret yok. Türkiye ikamet yolculuğunuza bugün başlayın",
+    "cta": "Şimdi Başlayın",
+    "basic": {
+      "title": "Temel Başlangıç",
+      "price": "99$",
+      "description": "Turiztyenler ve kısa vadeli ziyaretçiler için ideal. Türkiye'ye ilk ziyaretiniz için rehberlik alın",
+      "features": [
+        "Uzman danışmanlık telefon görüşmesi",
+        "İkamet uygunluğu değerlendirmesi",
+        "Gerekli belgeler kontrol listesi",
+        "E-posta desteği (çalışma saatleri)"
+      ]
+    },
+    "standard": {
+      "title": "Tam İkamet",
+      "price": "299$",
+      "description": "En popüler seçeneğimiz. Uzun vadeli ikamet için tam destek ve profesyonel rehberlik",
+      "badge": "En Popüler",
+      "features": [
+        "2 danışmanlık telefon görüşmesi",
+        "Tam başvuru işlemi",
+        "Sağlık sigortası rehberi",
+        "Resmi belge çeviri desteği",
+        "Haftalık ilerleme güncellemeleri",
+        "Telefon ve e-posta öncelikli destek"
+      ]
+    },
+    "premium": {
+      "title": "VIP Premium Paketi",
+      "price": "599$",
+      "description": "Son derece güvenilirlik. İkamet + konut + yasal konular için özel destek",
+      "features": [
+        "Tam paketteki her şey",
+        "Mülk arama ve doğrulama yardımı",
+        "Avukat tarafından konut sözleşmesi incelemesi",
+        "Devlet tarafından hızlandırılmış işlem",
+        "Özel kişisel hesap yöneticisi",
+        "24/7 WhatsApp doğrudan destek"
+      ]
+    }
+  },
+  "common": {
+    "selected_label": "Seçilen:",
+    "total_label": "Toplam:",
+    "continue_button": "Git",
+    "remind_button": "Bana Hatırlat",
+    "remind_title": "İkamet Sürem Bitmeden Hatırlat",
+    "remind_subtitle": "Bilgilerini gir ve süresi bitmeden seni haberdar edelim",
+    "remind_title_new": "İkamet Yenileme Tarihinizi Kaçırmayın",
+    "remind_subtitle_new": "Bilgilerinizi girin ve ikamet süreniz bitmeden 2 ay öncesinde sizi hatırlatacağız",
+    "residency_type": "İkamet Türü",
+    "expiration_date": "Bitme Tarihi",
+    "phone_number": "Telefon Numarası",
+    "save_button": "Hatırlatmayı Kaydet",
+    "reminder_saved": "Hatırlatmanız başarıyla kaydedildi",
+    "remind_note": "İkamet süreniz bitmeden 2 ay öncesinde sizinle iletişime geçeceğiz",
+    "free_service": "Ücretsiz hizmet"
+  }
+}

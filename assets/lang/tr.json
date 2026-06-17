@@ -1,0 +1,830 @@
+{
+  "lang": "tr",
+  "direction": "ltr",
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "blog": "Blog",
+    "faq": "SSS",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Premium İkamet ve Konut Çözümlerinize Giriş Kapınız",
+    "subtitle": "İzinsiz yatış, ikamet ve konut sözleşmeleri konusunda uzman rehberlik. Binlerce kişi tarafından güvenilir. Hızlı, profesyonel, güvenli.",
+    "cta_primary": "Hemen Başla",
+    "cta_secondary": "Daha Fazla Öğren"
+  },
+  "services": {
+    "title": "Ana Hizmetlerimiz",
+    "subtitle": "İkamet ve konut yolculuğunuzu sorunsuz, güvenli ve stressiz hale getirmek için tasarlanmış kapsamlı çözümler.",
+    "housing": {
+      "title": "Konut Çözümleri",
+      "description": "Mülk doğrulaması, sözleşme incelemesi, pazarlık desteği ve mükemmel eviniz için yasal belgeler.",
+      "features": [
+        "Mülk taraması",
+        "Sözleşme incelemesi",
+        "Yasal destek"
+      ],
+      "cta": "Keşfet"
+    },
+    "residency": {
+      "title": "İkamet Programları",
+      "description": "Karmaşık ikamet gerekliliklerini yolun her aşamasında uzman rehberlikle gezin.",
+      "features": [
+        "Başvuru desteği",
+        "Belge hazırlığı",
+        "Mülakat koçluğu"
+      ],
+      "cta": "Görüntüle"
+    },
+    "legal": {
+      "title": "Yasal ve Uyum",
+      "description": "Tüm hizmetlerde tam yasal uyum, kurumsal güvenlik ve uluslararası düzenlemeler.",
+      "features": [
+        "Yasal inceleme",
+        "Uyum kontrolü",
+        "24/7 destek"
+      ],
+      "cta": "Danış"
+    }
+  },
+  "why_choose": {
+    "title": "Neden IKAMETI?"
+  },
+  "trust_indicators": {
+    "clients": {
+      "value": "5000+",
+      "label": "Mutlu Müşteri"
+    },
+    "success_rate": {
+      "value": "98%",
+      "label": "Başarı Oranı"
+    },
+    "years_experience": {
+      "value": "15+",
+      "label": "Yıl Deneyim"
+    },
+    "support": {
+      "value": "24/7",
+      "label": "Destek Mevcut"
+    }
+  },
+  "testimonials": {
+    "title": "Müşteriler Ne Diyor",
+    "quote_1": "IKAMETI tüm ikamet sürecini sorunsuz ve stressiz hale getirdi. Gönülden tavsiye ederim!",
+    "author_1": "Ahmed M.",
+    "quote_2": "Profesyonel, güvenilir ve gerçekten önemseyen bir ekip. Bizim için sınırları aştılar.",
+    "author_2": "Sarah K.",
+    "quote_3": "En iyi karar. Her şeyi başından sonuna kadar kusursuz bir şekilde yönetmiştir.",
+    "author_3": "James T."
+  },
+  "wizard": {
+    "title": "Dakikalar İçinde Türkiye'de İkametinizi Alın",
+    "subtitle": "Birkaç hızlı soruyu cevaplayın ve anında size yardımcı olacağız",
+    "steps": {
+      "step_1": {
+        "label": "İkamet Türü",
+        "question": "Hangi tür ikamet ile ilgileniyorsunuz?"
+      },
+      "step_2": {
+        "label": "Mevcut Durum",
+        "question": "Zaten Türkiye'de ikamet etmekte misiniz?"
+      },
+      "step_3": {
+        "label": "Süre",
+        "question": "Ne kadar kalış istiyorsunuz?"
+      },
+      "step_4": {
+        "label": "Ek Bilgi",
+        "question": "Durumunuz hakkında bize daha fazla bilgi verin"
+      },
+      "step_5": {
+        "label": "İletişim",
+        "question": "İletişim Bilgileri"
+      }
+    },
+    "residency_options": {
+      "tourist": {
+        "title": "Turist İkameti",
+        "description": "Kısa vadeli kalış vizesi (30-90 gün)"
+      },
+      "student": {
+        "title": "Öğrenci İkameti",
+        "description": "Oturma hakkı ile okuyan vizesi"
+      },
+      "realestate": {
+        "title": "Gayrimenkul İkameti",
+        "description": "Mülk yatırım vizesi (€250 bin+)"
+      },
+      "family": {
+        "title": "Aile Sponsorluğu",
+        "description": "Aile birleşimi vize programı"
+      }
+    },
+    "form": {
+      "has_residency_yes": "Evet, ikametim var",
+      "has_residency_yes_desc": "Yenilemek veya yükseltmek istiyorum",
+      "has_residency_no": "Hayır, ilk defa",
+      "has_residency_no_desc": "İlk kez başvuruyorum",
+      "duration_1year": "1 Yıl İkameti",
+      "duration_1year_desc": "Bir yıllık ikamet izni",
+      "duration_2year": "2 Yıl İkameti",
+      "duration_2year_desc": "İki yıllık ikamet izni",
+      "rental_contract": "Kiralama sözleşmeniz var mı?",
+      "rental_contract_desc": "Çoğu ikamet başvurusu için gereklidir",
+      "family_members": "Dahil etmek istediğiniz aile üyesi sayısı:",
+      "family_members_opt_1": "Sadece ben (1 kişi)",
+      "family_members_opt_2": "2 kişi",
+      "family_members_opt_3": "3 kişi",
+      "family_members_opt_4": "4 kişi",
+      "family_members_opt_5": "5 veya daha fazla kişi",
+      "full_name": "Tam Ad *",
+      "full_name_placeholder": "Tam adınızı girin",
+      "phone": "Telefon Numarası *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "privacy_notice": "Bilgileriniz güvenlidir ve size kişiselleştirilmiş danışmanlık sağlamak için kullanılacaktır",
+      "prev_button": "← Geri",
+      "next_button": "İleri →",
+      "submit_button": "Ücretsiz Danışmanlık Alın"
+    },
+    "success": {
+      "title": "Bilgileriniz için teşekkürler!",
+      "message": "Ekibimiz bilgilerinizi inceleyecek ve 24 saat içinde kişiselleştirilmiş bir danışmanlık planı ile sizinle iletişime geçecektir.",
+      "whatsapp": "💬 WhatsApp: +90 530 905 21 04",
+      "email": "📧 E-posta: info@ikameti.com"
+    }
+  },
+  "articles_section": {
+    "title": "Makaleler ve Haberler",
+    "subtitle": "İkamet, konut ve göç çözümleri hakkında en son makaleleri ve haberleri takip edin.",
+    "article_1": {
+      "title": "Kapsamlı İkamet Rehberi",
+      "icon": "📰",
+      "description": "İkamet sürecinin tüm adımlarını başından sonuna kadar önemli ipuçları ve rehberlikle öğrenin."
+    },
+    "article_2": {
+      "title": "Mülk Satın Alma İpuçları",
+      "icon": "🏡",
+      "description": "Rüya evinizi seçerken ve satın alırken göz önüne alınması gereken temel noktaları keşfedin."
+    },
+    "article_3": {
+      "title": "Yasal Korumasyon",
+      "icon": "⚖️",
+      "description": "Konut sözleşmeleri ve ikamet anlaşmalarında mevcut haklarınızı ve yasal korumalarınızı anlayın."
+    },
+    "read_more": "Daha Fazla Oku"
+  },
+  "final_cta": {
+    "title": "Başlamaya Hazır mısınız?",
+    "description": "İkamet ve konut hedeflerinize doğru ilk adımı atın. Uzman ekibimiz sizi rehberlik etmeye hazır.",
+    "button": "Bugün İletişime Geçin"
+  },
+  "newsletter": {
+    "title": "Güncel Kalın",
+    "subtitle": "En son makaleleri ve güncellemeleri doğrudan gelen kutunuza alın. Bültenimize abone olun.",
+    "placeholder": "E-postanızı girin",
+    "cta": "Abone Ol"
+  },
+  "footer": {
+    "company": "IKAMETI",
+    "tagline": "Göç ve konut hizmetlerinde sizin güvenilir ortağınız.",
+    "quick_links": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "housing_solutions": "Konut Çözümleri",
+    "residency_programs": "İkamet Programları",
+    "legal_consultation": "Yasal Danışmanlık",
+    "support": "Destek",
+    "copyright": "© 2024 IKAMETI. Tüm hakları saklıdır.",
+    "privacy_policy": "Gizlilik Politikası",
+    "terms_of_service": "Kullanım Şartları"
+  },
+  "about_page": {
+    "hero": {
+      "title": "IKAMETI Hakkında",
+      "subtitle": "15 yıldan fazla süredir ikamet ve konut çözümlerinde güvenilir bir ortak olup, dünya çapında binlerce tatmin müşteriye hizmet vermektedir."
+    },
+    "story": {
+      "title": "Hikayemiz",
+      "paragraph_1": "2009 yılında kurulan IKAMETI, göç ve konut süreçlerini uluslararası müşteriler için basitleştirmek amacıyla ortaya çıkmıştır. Küçük bir yasal danışmanlık firmasi olarak başlayan IKAMETI, şimdi binlerce kişi tarafından güvenilen kapsamlı bir hizmet sağlayıcıya dönüşmüştür.",
+      "paragraph_2": "Deneyimli profesyonellerden oluşan ekibimiz, yeni bir ülkeye taşınmanın zorluk ve sorunlarını iyi anlamaktadır. Süreci sorunsuz, şeffaf ve stressiz hale getirmeyi kendimize adama etmiş bulunuyoruz."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Kişi ve ailelerin güven ve emniyet içinde geleceğini inşa etmeleri için olağanüstü göç ve konut hizmetleri sağlamak."
+    },
+    "values": {
+      "title": "Temel Değerlerimiz",
+      "integrity": {
+        "title": "Bütünlük",
+        "description": "Tüm işlemlerimizde tam şeffaflık ve dürüstlük ile hareket ederiz."
+      },
+      "excellence": {
+        "title": "Mükemmellik",
+        "description": "Sağladığımız her hizmette mükemmelliği hedefleriz."
+      },
+      "client_first": {
+        "title": "Müşteri Odaklı",
+        "description": "Sizin ihtiyaçlarınız birincil önceliğimizdir. Hizmetlerimizi gereksinimlerinize uyarlarız."
+      },
+      "innovation": {
+        "title": "İnovation",
+        "description": "Süreçlerimizi sürekli geliştiriyor ve teknolojiyi kucaklıyoruz."
+      },
+      "reliability": {
+        "title": "Güvenilirlik",
+        "description": "Bize güvenebilirsiniz. Sonuçları düzenli olarak teslim ederiz."
+      },
+      "community": {
+        "title": "Topluluk",
+        "description": "Çeşitli toplulukları destekliyor ve olumlu etki yaratıyoruz."
+      }
+    },
+    "trusted": {
+      "title": "Binlerce Kişinin Güveni",
+      "clients": {
+        "value": "5000+",
+        "label": "Mutlu Müşteri"
+      },
+      "success_rate": {
+        "value": "98%",
+        "label": "Başarı Oranı"
+      },
+      "experience": {
+        "value": "15+",
+        "label": "Yıl Deneyim"
+      },
+      "countries": {
+        "value": "20+",
+        "label": "Ülke"
+      }
+    },
+    "cta": {
+      "title": "IKAMETI ile Ortaklık Yapın",
+      "description": "Göç ve konut ihtiyaçları için bize güvenen binlerce tatmin müşteriye katılın.",
+      "button": "Bugün Başlayın"
+    }
+  },
+  "blog_page": {
+    "hero": {
+      "title": "Blog ve Kaynaklar",
+      "subtitle": "Göç, konut ve yasal konular hakkında uzman görüşleri, pratik rehberlik ve son güncellemeleri."
+    },
+    "filter": {
+      "all": "Tüm Makaleler",
+      "immigration": "Göç",
+      "housing": "Konut",
+      "legal": "Yasal"
+    },
+    "newsletter": {
+      "title": "Güncel Kalın",
+      "description": "En son makaleleri ve güncellemeleri doğrudan gelen kutunuza alın. Bültenimize abone olun.",
+      "button": "Abone Ol",
+      "placeholder": "E-postanızı girin"
+    },
+    "read_article": "Makaleyi Oku →"
+  },
+  "blog_details_page": {
+    "article": {
+      "helpful_label": "Bu makale sizin için yararlı oldu mu?",
+      "helpful_button": "👍 Yararlı",
+      "not_helpful_button": "👎 Yararlı Değildi",
+      "get_help_button": "Uzman Yardımı Alın"
+    },
+    "questions": {
+      "title": "Hala Sorunuz mu var?",
+      "description": "Uzman ekibimiz sizin özel durumunuza uyarlanmış kişiselleştirilmiş rehberlik sağlamaya hazırdır. Bugün ücretsiz danışmanlık için bizimle iletişime geçin.",
+      "schedule_button": "Danışmanlık Planla",
+      "whatsapp_button": "WhatsApp'ta Sohbet Et"
+    },
+    "related_articles": {
+      "title": "İlgili Makaleler",
+      "no_related": "İlgili makale bulunamadı."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Bizimle İletişime Geçin",
+      "subtitle": "Sorularınızda size yardımcı olmak için buradayız"
+    },
+    "phone": {
+      "title": "Telefon",
+      "availability": "24/7 Mevcut"
+    },
+    "email": {
+      "title": "E-posta",
+      "response_time": "2 saat içinde yanıt"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "support": "Hızlı sohbet desteği"
+    },
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "full_name_label": "Tam Ad *",
+      "full_name_placeholder": "Adınız",
+      "email_label": "E-posta *",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Telefon *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "subject_label": "Konu *",
+      "subject_placeholder": "Bize nasıl yardımcı olabiliriz?",
+      "message_label": "Mesaj *",
+      "message_placeholder": "Mesajınız...",
+      "submit_button": "Mesaj Gönder"
+    },
+    "benefits": {
+      "title": "Neden Bizimle İletişime Geçmelisiniz?",
+      "consultation": {
+        "title": "✓ Uzman Danışmanlık",
+        "description": "Deneyimli ekipten profesyonel tavsiyeleri"
+      },
+      "fast_response": {
+        "title": "✓ Hızlı Yanıt",
+        "description": "İş saatleri içinde 2 saat içinde yanıt"
+      },
+      "free_consultation": {
+        "title": "✓ Ücretsiz İlk Danışmanlık",
+        "description": "Yükümlülük olmaksızın kişiselleştirilmiş tavsiyeleri alın"
+      },
+      "multilingual": {
+        "title": "✓ Çok Dilli Destek",
+        "description": "Tercih ettiğiniz dilde iletişim kurun"
+      }
+    },
+    "final_cta": {
+      "title": "Ücretsiz Danışmanlığınızı Alın",
+      "description": "Bugün ekibimizle sohbet edin ve ikamet seçeneklerinizi keşfedin",
+      "button": "WhatsApp'ta Sohbete Başla"
+    }
+  },
+  "faq_page": {
+    "hero": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Türkiye'de ikamet hakkında bilmeniz gereken her şey. Yaygın soruların anında cevaplarını alın."
+    },
+    "residency_section": {
+      "title": "🏘️ İkamet Soruları"
+    },
+    "work_section": {
+      "title": "💼 İş ve Şirketler"
+    },
+    "insurance_section": {
+      "title": "🛡️ Sigort ve Diğer Konular"
+    },
+    "residency_q1": {
+      "question": "Türkiye'deki ana ikamet izni türleri nelerdir?",
+      "intro": "Türkiye çeşitli ikamet seçenekleri sunmaktadır:",
+      "option_1": "Turist İkameti (30-90 gün)",
+      "option_2": "Öğrenci İkameti (yıllık yenilenebilir)",
+      "option_3": "Gayrimenkul İkameti (€250 bin+ yatırım)",
+      "option_4": "Aile Sponsorluğu",
+      "option_5": "Çalışma Vizesi"
+    },
+    "residency_q2": {
+      "question": "İkamet başvurusu süreci ne kadar sürer?",
+      "intro": "İşlem süreleri ikamet türüne göre değişiklik göstermektedir:",
+      "option_1": "Turist Vizesi: Varışta (Schengen-muaf 90 gün giriş)",
+      "option_2": "Uzun vadeli İkamet: Belge işlemesi için 15-30 gün",
+      "option_3": "Gayrimenkul İkameti: 5-7 iş günü",
+      "closing": "Hizmetimiz tipik olarak bunu 10-15 iş günü içinde hızlandırır."
+    },
+    "residency_q3": {
+      "question": "İkamet başvurusu için hangi belgelere ihtiyacım var?",
+      "intro": "Temel gereksinimler genellikle şunları içermektedir:",
+      "item_1": "Geçerli pasaport (minimum 6 ay geçerlilik)",
+      "item_2": "Konaklama belgesi (kiralama sözleşmesi veya mülk tapusu)",
+      "item_3": "Gelir veya finansal kaynakları kanıtı",
+      "item_4": "Sağlık sigortası kapsamı",
+      "item_5": "Ceza kaydı sertifikası",
+      "item_6": "Tamamlanmış başvuru formu",
+      "closing": "Özel durumunuza uyarlanmış kapsamlı bir kontrol listesi sağlarız."
+    },
+    "residency_q4": {
+      "question": "İkamet izni ile çalışabilir miyim?",
+      "intro": "Çalışma izinleri ikamet türüne bağlıdır:",
+      "option_1": "Turist İkameti: Ayrı çalışma izni gereklidir",
+      "option_2": "Öğrenci İkameti: Sınırlı çalışma saatleri izni (hafta 20 saat)",
+      "option_3": "Gayrimenkul İkameti: İşletme kurabilir veya serbest meslek sahibi olabilirsiniz",
+      "option_4": "Çalışma Vizesi: İşveren sponsorluğu ile tam istihdam hakkı",
+      "closing": "İkamet ile birlikte çalışma yetkisi almada sizi rehberlik edebiliriz."
+    },
+    "residency_q5": {
+      "question": "Türk ikametini almak ne kadar maliyetlidir?",
+      "intro": "Maliyetler ikamet türüne göre değişiklik göstermektedir:",
+      "option_1": "Turist İkameti: Ücretsiz (90 gün için otomatik)",
+      "option_2": "Kısa vadeli İkamet: Yıllık ₺1.200-2.000",
+      "option_3": "Gayrimenkul Yatırımı: €250 bin+ mülk satın alma",
+      "option_4": "Hizmet Ücretleri: Profesyonel yardımımız tipik olarak €500-1.500 arasında değişiklik gösterir (karmaşıklığa bağlı olarak)",
+      "closing": "Durumunuza göre kesin fiyatlandırma için ücretsiz danışmanlık alın."
+    },
+    "work_q1": {
+      "question": "İkamet ile Türkiye'de işletme açabilir miyim?",
+      "intro": "Evet! Pek çok ikamet türü işletme sahipliğine izin vermektedir:",
+      "item_1": "Serbest meslek sahibi olarak kayıt yaptırın veya sınırlı şirket kurun",
+      "item_2": "Çalışma vizesi sahipleri kayıtlı şirket için çalışabilirler",
+      "item_3": "Gayrimenkul vize sahipleri işletmelere sahip olabilirler ve yönetebilirler",
+      "item_4": "Serbest meslek sahibi bağımsız profesyoneller olarak faaliyet gösterebilirler",
+      "closing": "Şirket kaydı ve çalışma izni konusunda yardımcı oluyoruz."
+    },
+    "work_q2": {
+      "question": "Türkiye'de çalışan sponsorluğu için ne gereklidir?",
+      "intro": "İşveren olarak şunları yapmanız gerekecektir:",
+      "item_1": "Kayıtlı bir Türk şirketi",
+      "item_2": "Mali istikrarı gösterin",
+      "item_3": "İş sözleşmesi temin edin",
+      "item_4": "Zorunlu sosyal güvenlik katkılarını ödeyiniz",
+      "item_5": "Çalışma ve Sosyal Güvenlik Bakanlığı aracılığıyla başvuru yapınız",
+      "closing": "İşlem tipik olarak 2-4 hafta sürer."
+    },
+    "work_q3": {
+      "question": "İkamet edenlerin vergi yükümlülükleri nelerdir?",
+      "intro": "Vergilendirme ikamet statünüze bağlıdır:",
+      "option_1": "Sınırlı Mukim: Sadece Türkiye gelirine vergi",
+      "option_2": "Sınırsız Mukim: Küresel gelir vergilendirmesine tabi",
+      "item_3": "İkametçiler geçerli olması durumunda vergi antlaşmalarından yararlanabilirler",
+      "item_4": "Türk makamlarına yıllık vergi beyannamesi gereklidir",
+      "closing": "Kişiselleştirilmiş tavsiyeleri almak için vergi danışmanı ile danışmanızı tavsiye ederim."
+    },
+    "insurance_q1": {
+      "question": "İkamet için sağlık sigortası zorunlu mu?",
+      "intro": "Evet, sağlık sigortası gereklidir:",
+      "item_1": "Çalışan ikametçiler için Türk Sosyal Güvenlik Sigorta (SGK) zorunludur",
+      "item_2": "Çalışmayan ikametçiler için özel sigorta kabul edilebilir",
+      "item_3": "Minimum kapsama acil tıpı içermelidir",
+      "item_4": "Yıllık maliyet yaklaşık ₺1.200-3.000",
+      "closing": "Uygun sigorta kapsamını düzenlemede yardımcı oluyoruz."
+    },
+    "insurance_q2": {
+      "question": "Yabancı mukim olarak mülk satın alabilir miyim?",
+      "intro": "Evet, bazı kısıtlamalar ile:",
+      "item_1": "Yabancı uyruklular fon kanıtı ile mülk satın alabilirler",
+      "item_2": "Mülk satın alma ikamet niteliğine yol açabilir",
+      "item_3": "Bazı bölgelerin arazi üzerinde kısıtlamaları vardır (tarım alanları)",
+      "item_4": "Köken ülkesinden vergi tasdiki gereklidir",
+      "item_5": "Toplam mülk değeri Ankara değerinin 30'undan fazla değil güvenlik için",
+      "closing": "Sizi güvenilir gayrimenkul ortaklarıyla bağlantılandırıyoruz."
+    },
+    "insurance_q3": {
+      "question": "İkametim sona ererse ne olur?",
+      "intro": "İkamet yenileme basittir:",
+      "item_1": "Çoğu ikamet yıllık olarak yenilenebilir",
+      "item_2": "Sona ermesinden 30-60 gün önce başvuru yapınız",
+      "item_3": "Gereksinimler ilk başvuruya benzerdir",
+      "item_4": "Yenilemeler için işlem genellikle daha hızlıdır",
+      "item_5": "Sınırlı turistler başka 90 gün için ayrılıp geri girebilirler",
+      "closing": "Yenileme hatırlatmaları gönderir ve tüm evrakları idare ederiz."
+    },
+    "insurance_q4": {
+      "question": "Aile üyeleri izinime dayalı ikamet alabilirler mi?",
+      "intro": "Bağımlı aile sizinle katılabilirsiniz:",
+      "item_1": "Eş ve çocuklar bağımlı olarak başvurabilirler",
+      "item_2": "İlişkiyi kanıtlayan ek belge gereklidir",
+      "item_3": "Bağımlılar için mali destek kanıtı gereklidir",
+      "item_4": "Çocuklar otomatik bağımlılık haklarını kazanırlar",
+      "closing": "Aile birleşimi viselerinin özel hızlandırılmış işlemi vardır."
+    },
+    "insurance_q5": {
+      "question": "İkametten Türk vatandaşlığı mümkün müdür?",
+      "intro": "Evet, ikametten vatandaşlık mümkündür:",
+      "item_1": "Sürekli 5+ yıl ikamet gereklidir",
+      "item_2": "Dil gereksinimi (temel Türkçe)",
+      "item_3": "Karakter arka plan kontrolü geçmiş",
+      "item_4": "€250 bin+ mülk yatırımı 3 yıllık yolu nitelendirir",
+      "item_5": "Mevcut vatandaşlığın feshine gerek yoktur",
+      "closing": "Çift vatandaşlık Türk kanununa göre izin verilmektedir."
+    },
+    "cta": {
+      "title": "Cevapınızı bulamadınız mı?",
+      "description": "İkamet soruları ile size kişiselleştirilmiş yardım için uzman ekibimize başvurun.",
+      "button": "İletişime Geçin"
+    },
+    "tax_section": {
+      "title": "💰 Uyruğa Göre İkamet Vergisi"
+    },
+    "tax_common": {
+      "exempt_title": "Vergi Muafiyeti:",
+      "exempt_1": "Öğrenci ve insani ikametler tüm uyruklar için vergiden muaftır.",
+      "exempt_2": "Bazı uyruklar her tür ikamet vergisinden muaftır: (Filistin - Suriye - ve diğer bazı Arap olmayan uyruklar).",
+      "exempt_3": "İkamet vergisinden muafiyet durumunda yalnızca 964 Türk Lirası tutarındaki ikamet kartı ücreti ödenir."
+    },
+    "tax_q1": {
+      "question": "Türkiye'de ikamet vergisi ne kadar?",
+      "intro": "Kısa süreli ikametler (turist - gayrimenkul - tedavi - vb.) için vergi uyruğa göre değişir ve şöyledir:",
+      "rate_1": "Fas: 2.000 Türk Lirası"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "Rüya İkamet ve Evini Güvenle",
+      "subtitle": "Her adımda uzman rehberlik. IKAMETI ile ikametini başaran 5000+ memnun aileden birkaçı olun.",
+      "badge_1": "✓ 98% Başarı Oranı",
+      "badge_2": "✓ 24/7 Destek",
+      "badge_3": "✓ Hızlı İşlem",
+      "highlights": "✓ 98% Başarı Oranı • ✓ 24/7 Destek • ✓ Hızlı İşlem",
+      "apply_button": "Şimdi Başvuru Yapın",
+      "whatsapp_button": "WhatsApp'ta Sohbet Et"
+    },
+    "problem": {
+      "title": "Karşı Karşıya Olduğunuz Zorluk",
+      "item_1": {
+        "title": "Karmaşık Süreç",
+        "description": "Kafa karıştırıcı gereksinimler, sürekli değişen belgeler ve belirsiz zaman çizelgeleri sizi stresli bırakır."
+      },
+      "item_2": {
+        "title": "Pahalı Hatalar",
+        "description": "Yanlış belge veya kaçırılan son tarih, zaman, para ve rüya ikametinizi maliyetlendirir."
+      },
+      "item_3": {
+        "title": "Destek Yok",
+        "description": "Yalnız başetmek sizi kafa karıştırıcı, endişeli ve rehberlik için güvenilecek kimse olmaması ile bırakır."
+      }
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "main_heading": "Her Şeyi Biz İdare Ederiz",
+      "item_1": {
+        "title": "Uzman Rehberlik",
+        "description": "15+ yıl deneyim olan uzmanlarımız gereksilikleri yaşadığı, fırsatları buldu ve maliyetli hataları önledik."
+      },
+      "item_2": {
+        "title": "Eksiksiz Belgeler",
+        "description": "Tüm belgeleri hazırlarız ve sunarız. Sorun yok, karışıklık yok, gecikme yok."
+      },
+      "item_3": {
+        "title": "24/7 Destek",
+        "description": "Kişisel danışmanınız soruları hızlıca yanıtlar ve her adımda sizi bilgilendirir."
+      },
+      "item_4": {
+        "title": "Yasal Koruma",
+        "description": "Sertifikalı avukatlar uyumu sağlar ve haklarınızın tam korumasını sağlarlar."
+      }
+    },
+    "stats_box": {
+      "title": "✨ Rakamlarla",
+      "approval_time": {
+        "label": "Onay Süresi",
+        "value": "45",
+        "unit": "ortalama gün"
+      },
+      "success_rate": {
+        "label": "Başarı Oranı",
+        "value": "98%",
+        "unit": "onaylı"
+      },
+      "clients": {
+        "label": "Mutlu Müşteri",
+        "value": "5000+",
+        "unit": "memnun"
+      }
+    },
+    "benefits": {
+      "title": "Ne İçin İlk Başvuru Yaparsınız",
+      "item_1": {
+        "title": "Hızlı İşlem",
+        "description": "Danışmanlıktan onaya kadar ortalama 45 gün"
+      },
+      "item_2": {
+        "title": "Şeffaf Fiyatlandırma",
+        "description": "Gizli ücret yok. Tam olarak ne ödediğinizi bilin"
+      },
+      "item_3": {
+        "title": "100% Güvenli",
+        "description": "Kurumsal seviye güvenlik ve yasal koruma"
+      },
+      "item_4": {
+        "title": "Garantili Sonuçlar",
+        "description": "98% başarı oranı kanıtlanmış yöntemle"
+      }
+    },
+    "process": {
+      "title": "4 Adımlı Süreç",
+      "step_1": {
+        "title": "Adım 1",
+        "description": "Hedefini ve uygunluk durumunu anlamak için ücretsiz danışmanlık"
+      },
+      "step_2": {
+        "title": "Adım 2",
+        "description": "Uzman inceleme ve en iyi çözüm tavsiyesi"
+      },
+      "step_3": {
+        "title": "Adım 3",
+        "description": "Tüm belgeleri hazırlarız ve sunuculusunuz"
+      },
+      "step_4": {
+        "title": "Adım 4",
+        "description": "Onay ve devam eden yer değiştirme desteği"
+      }
+    },
+    "testimonials": {
+      "title": "Gerçek Başarı Hikayeleri",
+      "quote_1": "Tüm süreci stressiz hale getirdiler. 6 hafta içinde onaylandı! En iyi karar. Şimdi rüya evimde yaşıyorum.",
+      "client_1_name": "Ahmed M.",
+      "client_1_location": "Dubai, BAE • İkamet Onaylandı",
+      "quote_2": "Profesyonel ekip, net iletişim ve şeffaf fiyatlandırma. Her şeyi kusursuz bir şekilde yönetmiştir. Önemle tavsiye edilir!",
+      "client_2_name": "Sarah J.",
+      "client_2_location": "İstanbul, Türkiye • Konut + İkamet",
+      "quote_3": "Her adımda benim desteklediler. Uzmanlığı zamandan ve paradan tasarruf sağladı. Çok minnettar. Bu gerçek mutabakat.",
+      "client_3_name": "James T.",
+      "client_3_location": "Londra, İngiltere • İkamet Onaylandı"
+    },
+    "form": {
+      "title": "Ücretsiz Danışmanlığınıza Başlayın",
+      "subtitle": "Taahhüt yok. Baskı yok. Sadece dürüst rehberlik.",
+      "full_name_label": "Tam Ad *",
+      "full_name_placeholder": "Tam adınız",
+      "phone_label": "Telefon Numarası *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "nationality_label": "Uyruk *",
+      "select_option": "-- Seçin --",
+      "nationality_egyptian": "Mısırlı",
+      "nationality_saudi": "Suudi",
+      "nationality_uae": "BAE'li",
+      "nationality_other": "Diğer",
+      "interest_label": "İlgi *",
+      "select_service": "-- Hizmeti Seçin --",
+      "interest_housing": "Konut Çözümleri",
+      "interest_residency": "İkamet Programı",
+      "interest_both": "Hem Konut hem İkamet",
+      "interest_legal": "Yasal Danışmanlık",
+      "submit_button": "Ücretsiz Danışmanlığı Başlatın",
+      "privacy_text": "Göndererek, kami'ye rıza göstermek",
+      "privacy_link": "Gizlilik Politikası"
+    },
+    "final_cta": {
+      "title": "Hareket Etmeye Hazır?",
+      "description": "Mükemmel ikametiniz ve eviniz bekleniyor. Bugün başlayalım.",
+      "apply_button": "Şimdi Başvuru Yapın",
+      "whatsapp_button": "Bize WhatsApp Verin",
+      "note": "1 saat içinde yanıt • Spam yok"
+    },
+    "articles": {
+      "title": "Makaleler ve Haberler",
+      "subtitle": "İkamet, konut ve göç çözümleri hakkında en son makaleleri ve haberleri takip edin.",
+      "article_1": {
+        "title": "Kapsamlı İkamet Rehberi",
+        "description": "İkamet sürecinin tüm adımlarını başından sonuna kadar önemli ipuçları ve rehberlikle öğrenin."
+      },
+      "article_2": {
+        "title": "Mülk Satın Alma İpuçları",
+        "description": "Rüya evinizi seçerken ve satın alırken göz önüne alınması gereken temel noktaları keşfedin."
+      },
+      "article_3": {
+        "title": "Yasal Korumasyon",
+        "description": "Konut sözleşmeleri ve ikamet anlaşmalarında mevcut haklarınızı ve yasal korumalarınızı anlayın."
+      },
+      "read_more_button": "Daha Fazla Oku"
+    }
+  },
+  "blog_articles": {
+    "article_1": {
+      "id": 1,
+      "title": "Türk İkamet Tezkeresi Rehberi",
+      "slug": "turkish-residency-permit",
+      "description": "Türk ikamet tezkeresi almak için adım adım talimatlarla tam rehber.",
+      "image": "https://images.unsplash.com/photo-1554224311-beee415c15c7?w=800&h=400&fit=crop",
+      "date": "2026-04-01",
+      "category": "immigration",
+      "author": "Ahmed Al-Mansouri",
+      "content": "<h2>Giriş</h2><p>Türk ikamet tezkereleri uluslararası profesyoneller ve yatırımcılar tarafından çok aranan belgelerdir. Bu kapsamlı rehber, tüm süreci, gereksinimlerini ve zaman çizelgesini adım adım anlatacaktır.</p><h2>Türk İkamet Tezkeresi Türleri</h2><p>Türkiye, farklı amaçlar için tasarlanmış birkaç tür ikamet tezkeresi sunar.</p><h3>Kısa Dönem İkamet Tezkeresi (IKY)</h3><p>1 yıl geçerli ve yenilenebilir. Bu, Türk ikamet yolculuğuna başlayan göçmenler için en yaygın türdür. Gereklilikler:</p><ul><li>Geçerli pasaport</li><li>Sağlık sigortası</li><li>İkamet belgesi</li><li>Temiz ceza kaydı</li></ul><h3>Uzun Dönem İkamet Tezkeresi (LKY)</h3><p>2 yıl geçerli ve Kısa Dönem tezkeresi ile en az 1 yıl sürekli ikamet gerektir. Gereklilikler yukarıdakiyle aynıdır.</p><h2>Başvuru Süreci</h2><p>Başvuru süreci basit ve yerel Göç Müdürlüğü'nde tamamlanabilir. Belgelerinizi hazırlayın, randevu alın ve başvurunuzu gönder.</p><h2>Zaman Çizelgesi</h2><p>Tipik işlem süresi 1-3 aydır. Konumunuza ve başvuru hacmine bağlıdır. Tezkeren sona ermeden önce yenileyebilirsiniz.</p><h2>Maliyet</h2><p>Maliyet para birimi ve döviz kuruna göre değişir, genellikle Türk Lirası olarak 50-150 USD'ye eşdeğerdir.</p>"
+    },
+    "article_2": {
+      "id": 2,
+      "title": "İstanbul'da Mükemmel Daireyi Bulma",
+      "slug": "perfect-apartment-istanbul",
+      "description": "İstanbul'un rekabetçi konut piyasasında ideal daire bulmak için uzman ipuçları ve stratejiler.",
+      "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=400&fit=crop",
+      "date": "2026-03-28",
+      "category": "housing",
+      "author": "Fatima Hassan",
+      "content": "<h2>Giriş</h2><p>İstanbul'da daire bulmak zorlayıcı ama ödüllendirici olabilir. Milyonlarca sakin ve sürekli büyüme ile pazar dinamik ve rekabetçidir. Bu rehber, süreci verimli bir şekilde yönetmenize yardımcı olacaktır.</p><h2>Göçmenler İçin En İyi Mahalleler</h2><p>İstanbul, her biri benzersiz özellikleri olan çeşitli mahalleler sunar. Göçmenler tarafından tercih edilen en iyi mahalleler:</p><h3>Beyoğlu</h3><p>Modern İstanbul'un kalbi, canlı gece hayatı, restoranlar ve kültür mekanları ile bilinir. Genç profesyoneller için mükemmel.</p><h3>Beşiktaş</h3><p>Mükemmel ulaşım, şık olanaklar ve güçlü göçmen topluluğu olan daha sakin bir bölge. Aileler ve yerleşik profesyoneller için ideal.</p><h3>Kadıköy</h3><p>Asya tarafında yer alan trendy ve uygun fiyatlı bölge. Genç ve sanatsal bir ortam arayan göçmenler için harika.</p><h2>Nerede Arayacağınız</h2><p>Kapsamlı arama sonuçları için birden fazla platform kullanın. Her birinin avantajları vardır.</p><h2>Neler Bekleneceği</h2><p>Çoğu ev sahibi ilk ay, son ay ve depozito ister. Daireler genellikle mobilyasız olur. Fiyatlar konuma ve büyüklüğüne bağlı olarak 1.500 TL'den 10.000+ TL'ye kadar değişir.</p><h2>Müzakere İpuçları</h2><p>İlk teklifi kabul etmeyin. Ev sahipleri genellikle müzakereyi beklerler. İstenen fiyattan %10-20 indirim, özellikle uzun vadeli kiralamalar için yaygındır.</p>"
+    },
+    "article_3": {
+      "id": 3,
+      "title": "Türk Çalışma Hukuku Anlamak",
+      "slug": "turkish-labor-law",
+      "description": "Türkiye'deki istihdam sözleşmeleri ve işçi hakları hakkında önemli bilgiler.",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+      "date": "2026-03-20",
+      "category": "legal",
+      "author": "Mehmet Kaya",
+      "content": "<h2>Giriş</h2><p>Türk çalışma hukuku hem işverenleri hem de çalışanları için çok önemlidir. Türkiye, işçi haklarını koruyan ancak işletme esnekliğine izin veren kapsamlı iş yönetmelikleri vardır.</p><h2>İstihdam Sözleşmesi Gereklilikleri</h2><p>Türkiye'deki her istihdam ilişkisi yazılı bir sözleşme ile belgelenmelidir. Sözleşme şunları içermelidir:</p><ul><li>İş unvanı ve sorumlulukları</li><li>Maaş ve ödeme koşulları</li><li>Çalışma saatleri (haftada 45 saat maksimum)</li><li>Yıllık izin hakkı (ayda en az 2-2,5 gün)</li><li>Deneme süresi (maksimum 2 ay)</li><li>Sonlandırma koşulları</li></ul><h2>İşçi Hakları</h2><p>Türk hukuku tüm çalışanlara sözleşme türü veya durumdan bağımsız olarak temel haklar garantisi verir.</p><h3>Asgari Ücret</h3><p>Aylık asgari ücret yılda hükümet tarafından belirlenir. Hiçbir işveren bu tutarın altında ödeyemez.</p><h3>Çalışma Saatleri</h3><p>Standart çalışma haftası 5 gün içinde dağıtılan 45 saattir. Fazla mesai normal ücretin 1,5 katı ile telafi edilir.</p><h3>İzinler ve Tatiller</h3><p>Çalışanlar ücretli yıllık izne hak sahibidir. Resmî tatiller de ücretli tatil günleridir.</p><h2>Yaygın Sorunlar</h2><p>Ücret ödenmemesi, haksız işten çıkarılma veya güvenli olmayan çalışma koşulları gibi sorunlarla karşılaşırsanız yerel İş Müdürlüğü'nü arayın.</p>"
+    },
+    "article_4": {
+      "id": 4,
+      "title": "Türkiye'de Yatırım Fırsatları",
+      "slug": "investment-opportunities",
+      "description": "Türkiye'de yabancı yatırımcılar için mevcut işletme ve yatırım fırsatlarını keşfedin.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
+      "date": "2026-03-15",
+      "category": "business",
+      "author": "Sarah Thompson",
+      "content": "<h2>Giriş</h2><p>Türkiye, büyüyen ekonomisi, stratejik konumu ve işletme dostane politikaları nedeniyle zorlayıcı yatırım fırsatları sunar. Hükümet yabancı yatırımı aktif olarak teşvik eder.</p><h2>Temel Yatırım Sektörleri</h2><p>Türkiye ekonomisi birden fazla sektöre yayılan çeşitli yatırım fırsatları sunmaktadır.</p><h3>Gayrimenkul</h3><p>Türk gayrimenkul piyasası istikrarlı büyümeyle güçlü kalır. Ticari ve konut mülkiyetleri özellikle İstanbul ve Ankara'da iyi getiri sağlar.</p><h3>Turizm</h3><p>Türkiye en iyi turist destinasyonlarından biri. Oteller, tur operatörleri ve konaklama işletmeleri güçlü potansiyel getiriler göstermektedir.</p><h3>Teknoloji</h3><p>İstanbul'un teknoloji sahnesi hızlı büyüyor. Teknoloji yatırımları küresel olarak melek sermayesi çekiyor.</p><h3>İmalat</h3><p>Avrupa ve Asya arasındaki stratejik konum Türkiye'yi üretim ve ihracat operasyonları için cazip kılar.</p><h2>Yatırımcı Vize Gereklilikleri</h2><p>Yabancı yatırımcılar minimum tutarı (genellikle 250.000 ABD Doları) yatırarak ikamet izni alabilir. Yatırım seçenekleri gayrimenkul satın alımını veya işletme kurmayı içerir.</p><h2>Vergi Avantajları</h2><p>Türkiye belirlenmiş sektörlerde yabancı yatırımcılar için vergi teşvikleri sunar. Spesifik faydalar için yerel vergi danışmanlarına danışın.</p><h2>Kayıt Süreci</h2><p>İşletmenizi Ticaret Odası aracılığıyla kurun, vergi kimliği alın ve sosyal sigorta ile kayıt yapın. Çoğu işlem 1-2 haftada tamamlanabilir.</p>"
+    },
+    "article_5": {
+      "id": 5,
+      "title": "Vize Türleri: Hangisine İhtiyacınız Var?",
+      "slug": "turkish-visa-types",
+      "description": "Farklı Türk vize türlerinin kapsamlı özeti ve doğrusunu seçme kılavuzu.",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=400&fit=crop",
+      "date": "2026-03-10",
+      "category": "immigration",
+      "author": "Elena Rodriguez",
+      "content": "<h2>Giriş</h2><p>Türkiye, ziyaret amacınıza bağlı olarak çeşitli vize seçenekleri sunmaktadır. Farkları anlamak ülkeye sorunsuz giriş için çok önemlidir.</p><h2>Turist Vizesi (E-Viza)</h2><p>Kısa süreli turizm için en yaygın vize türü. Türk e-vizeler 90 gün geçerlidir ve dakikalar içinde çevrimiçi olarak alınabilir.</p><h3>Gereklilikler</h3><ul><li>Geçerli pasaport (6+ ay geçerlilik)</li><li>Ödeme için kredi/debit kartı</li><li>E-posta adresi</li></ul><h3>Maliyet ve Geçerlilik</h3><p>Maliyet yaklaşık 20 ABD Doları. Viza tek girişli geçerlidir ve 180 günlük dönem içinde 90 güne kadar kalış sağlar.</p><h2>İş Vizesi</h2><p>Türkiye'de iş kurmak isteyen girişimciler ve işletme profesyonelleri için.</p><h3>Gereklilikler</h3><ul><li>Türk şirket veya kuruluşundan davet mektubu</li><li>Ana ülkede işletme kaydının kanıtı</li><li>Mali stabilite gösteren banka hesap özeti</li><li>Geçerli pasaport</li></ul><h2>Öğrenci Vizesi</h2><p>Türk eğitim kurumlarında kayıtlı öğrenciler için. Süre eğitim programı süresine göre değişir.</p><h3>Gereklilikler</h3><ul><li>Türk üniversitesinden kabul mektubu</li><li>Mali destekleme kanıtı</li><li>Sağlık sigortası</li><li>Geçerli pasaport</li></ul><h2>Çalışma Vizesi</h2><p>Bir Türk şirketi tarafından istihdam edilen kişiler için gereklidir. İşveren sponsorluk belgesi sağlamalıdır.</p><h3>Gereklilikler</h3><ul><li>Çalışma izni (işveren tarafından alınan)</li><li>İstihdam sözleşmesi</li><li>Nitelikler kanıtı</li><li>Geçerli pasaport</li></ul><h2>Uzun Dönem İkamet Vizesi</h2><p>Uzun süre kalmayı planlayanlar için. İkamet izni almaya hak kazandırır.</p>"
+    }
+  },
+  "pricing": {
+    "title": "Mükemmel İkamet Planınızı Seçin",
+    "subtitle": "Şeffaf fiyatlandırma, gizli ücret yok. Türkiye ikamet yolculuğunuza bu gün başlayın",
+    "cta": "Şimdi Başlayın",
+    "basic": {
+      "title": "Başlangıç İkameti",
+      "price": "99$",
+      "price_note": "Tek seferde ödeme",
+      "description": "İlk kez başvuru yapanlar için ideal, tamamen başlangıç desteği.",
+      "features": [
+        "1 ilk danışma",
+        "İkamet türü değerlendirmesi",
+        "Belge kontrol listesi",
+        "Başvuru formu yardımı"
+      ]
+    },
+    "standard": {
+      "title": "Tam İkamet",
+      "price": "199$",
+      "price_note": "Gizli ücret yok",
+      "description": "Devam eden yardım ile tam destek. En popüler seçeneğimiz.",
+      "badge": "En Popüler",
+      "features": [
+        "Başlangıçtaki her şey",
+        "3 danışma oturumu",
+        "Başvuru takibi",
+        "Sağlık sigortası desteği",
+        "Temel belge tercümesi",
+        "WhatsApp desteği"
+      ]
+    },
+    "premium": {
+      "title": "Yerleşim Paketi",
+      "price": "299$",
+      "price_note": "En iyi değer",
+      "description": "Yasal rehberlik ve yerleşim yardımı dahil tam destek.",
+      "features": [
+        "Tam İkametteki her şey",
+        "Kiralama sözleşmesi incelemesi",
+        "Adres kaydı",
+        "İkamet yenileme desteği",
+        "Yasal danışma",
+        "Öncelikli telefon desteği"
+      ]
+    },
+    "addons_title": "Opsiyonel Ek Hizmetler",
+    "addons_subtitle": "Paketinizi ek profesyonel hizmetlerle geliştirin",
+    "addon_1_title": "🏥 Sağlık Sigortası",
+    "addon_1_desc": "İkametgahınız için onaylı sağlık sigortası alın",
+    "addon_1_price": "50$",
+    "addon_2_title": "📋 Belge Tercümesi",
+    "addon_2_desc": "Resmi belgeler için sertifikalı tercüme",
+    "addon_2_price": "30$",
+    "addon_3_title": "📅 Randevu Alma",
+    "addon_3_desc": "Göçmenlik randevunuzu biz ayarlıyoruz",
+    "addon_3_price": "40$",
+    "addon_4_title": "🏛️ Adres Kaydı",
+    "addon_4_desc": "Resmi adres kaydı hizmeti",
+    "addon_4_price": "25$",
+    "addon_5_title": "🔄 İkamet Yenileme",
+    "addon_5_desc": "Hızlı yenileme işlemi",
+    "addon_5_price": "80$",
+    "addon_6_title": "📊 Vergi Numarası Kurulumu",
+    "addon_6_desc": "Bir günde vergi numarası alın",
+    "addon_6_price": "20$"
+  },
+  "common": {
+    "language": "Dil",
+    "select_language": "Dil Seçin",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata meydana geldi",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri",
+    "submit": "Gönder",
+    "read_more": "Daha Fazla Oku",
+    "view_all": "Tümünü Görüntüle",
+    "required": "Gerekli",
+    "selected_label": "Seçilen:",
+    "total_label": "Toplam:",
+    "continue_button": "Git",
+    "remind_button": "Bana Hatırlat",
+    "remind_title": "İkamet Sürem Bitmeden Hatırlat",
+    "remind_subtitle": "Bilgilerini gir ve süresi bitmeden seni haberdar edelim",
+    "remind_title_new": "İkamet Yenileme Tarihinizi Kaçırmayın",
+    "remind_subtitle_new": "Bilgilerinizi girin ve ikamet süreniz bitmeden 2 ay öncesinde sizi hatırlatacağız",
+    "residency_type": "İkamet Türü",
+    "expiration_date": "Bitme Tarihi",
+    "phone_number": "Telefon Numarası",
+    "save_button": "Hatırlatmayı Kaydet",
+    "reminder_saved": "Hatırlatmanız başarıyla kaydedildi",
+    "remind_note": "İkamet süreniz bitmeden 2 ay öncesinde sizinle iletişime geçeceğiz",
+    "free_service": "Ücretsiz hizmet"
+  }
+}

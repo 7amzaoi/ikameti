@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="IKAMETI - منصة متخصصة في تقديم خدمات الإقامة في تركيا، نحول الإجراءات المعقدة إلى خطوات واضحة ومنظمة.">
+    <title>من نحن - IKAMETI</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ikameti.com/about.fa.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IKAMETI">
+    <meta property="og:title" content="About IKAMETI - Your Residency Partner in Turkey">
+    <meta property="og:description" content="IKAMETI turns complex Turkish residency procedures into clear, organized steps.">
+    <meta property="og:url" content="https://ikameti.com/about.fa.html">
+    <meta property="og:image" content="https://ikameti.com/assets/images/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About IKAMETI - Your Residency Partner in Turkey">
+    <meta name="twitter:description" content="IKAMETI turns complex Turkish residency procedures into clear, organized steps.">
+    <meta name="twitter:image" content="https://ikameti.com/assets/images/favicon.png">
+    <meta name="theme-color" content="#d00000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C8102E;
+            --primary-dark: #9B0B21;
+            --primary-light: #FDEAED;
+            --bg-page: #F5F5F5;
+            --bg-white: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #555555;
+            --text-light: #888888;
+            --border: #E0E0E0;
+            --shadow-soft: 0 12px 32px rgba(200, 16, 46, 0.12);
+            --shadow-hover: 0 8px 32px rgba(200, 16, 46, 0.18);
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --max-width: 1120px;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-page);
+            color: var(--text-muted);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .logo-badge, .nav-menu, .language-dropdown, .stat-number {
+            font-family: 'Plus Jakarta Sans', 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+        a { color: inherit; text-decoration: none; }
+        .page-shell { min-height: 100vh; }
+        .container {
+            width: min(var(--max-width), calc(100% - 48px));
+            margin: 0 auto;
+        }
+        .section { padding: 78px 0; }
+        .section.alt { background: var(--bg-white); }
+        .section-title {
+            margin: 0 0 18px;
+            color: var(--text-main);
+            font-size: clamp(28px, 3vw, 36px);
+            line-height: 1.15;
+        }
+        .section-subtitle {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        #navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(224, 224, 224, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+        #navbar .container {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .logo-static {
+            color: var(--text-main);
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border: 1.5px solid var(--primary);
+            border-radius: 6px;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        .nav-menu a {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            inset-inline-start: 0;
+            bottom: -8px;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.2s ease;
+        }
+        .nav-menu a:hover,
+        .nav-menu a.active { color: var(--primary); }
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after { transform: scaleX(1); }
+
+        .language-dropdown { position: relative; display: inline-block; }
+        .language-dropdown-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            padding: 0.6rem 0.9rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg-white);
+            color: var(--text-main);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            min-width: 80px;
+            user-select: none;
+        }
+        .language-dropdown-btn:hover:not(.active) {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: rgba(200, 16, 46, 0.05);
+        }
+        .language-dropdown-btn.active {
+            border-color: var(--primary);
+            background-color: rgba(200, 16, 46, 0.1);
+            color: var(--primary);
+        }
+        .language-dropdown-btn .globe-icon { font-size: 16px; flex-shrink: 0; }
+        .language-code { font-size: 13px; letter-spacing: 0.5px; font-weight: 700; text-transform: uppercase; }
+        .dropdown-arrow { font-size: 12px; color: var(--text-light); flex-shrink: 0; transition: transform 0.2s ease; }
+        .language-dropdown-btn.active .dropdown-arrow { transform: rotate(180deg); }
+        .language-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            inset-inline-end: 0;
+            min-width: 200px;
+            padding: 8px 0;
+            margin: 0;
+            list-style: none;
+            background: var(--bg-white);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .language-dropdown-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            max-height: 400px;
+        }
+        .language-dropdown-menu button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border: 0;
+            background: transparent;
+            border-radius: 0;
+            cursor: pointer;
+            color: var(--text-main);
+            font: inherit;
+            text-align: start;
+        }
+        .language-dropdown-menu button:hover { background: var(--primary-light); }
+        .flag-icon { width: 20px; text-align: center; }
+        #mobile-menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-white);
+            padding: 0;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            flex-direction: column;
+        }
+        #mobile-menu-btn span {
+            width: 18px;
+            height: 2px;
+            background: var(--text-main);
+            border-radius: 999px;
+        }
+        #mobile-menu {
+            display: none;
+            padding: 16px 24px 24px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-white);
+        }
+        #mobile-menu a {
+            display: block;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        #mobile-menu.active { display: block; }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #C8102E 0%, #8B0000 60%, #3D0000 100%);
+            color: #fff;
+            padding: 96px 0 92px;
+            isolation: isolate;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 18% 20%, rgba(255,255,255,0.12) 0 1px, transparent 1px),
+                radial-gradient(circle at 72% 30%, rgba(255,255,255,0.10) 0 1px, transparent 1px),
+                radial-gradient(circle at 40% 78%, rgba(255,255,255,0.08) 0 1px, transparent 1px),
+                linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(-45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 140px 140px, 180px 180px, 220px 220px, 42px 42px, 42px 42px;
+            opacity: 0.24;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 200px;
+            background: url("assets/images/hero-skyline.svg") bottom center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(900px, calc(100% - 48px));
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        .hero h1 {
+            margin: 0;
+            max-width: 720px;
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+        .hero-subtitle {
+            margin: 0;
+            max-width: 780px;
+            font-size: 18px;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.95);
+        }
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.24);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .trust-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 0 8px rgba(255,255,255,0.12);
+        }
+
+        .two-col,
+        .cards-grid,
+        .stats-grid {
+            display: grid;
+            gap: 24px;
+        }
+        .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+        .card,
+        .stat-card,
+        .commitment-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .card,
+        .commitment-box { padding: 28px; }
+        .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 4px;
+            background: var(--primary);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        .icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 24px;
+        }
+        .card h3 {
+            margin: 0 0 12px;
+            color: var(--text-main);
+            font-size: 20px;
+            line-height: 1.35;
+        }
+        .card p { margin: 0; color: var(--text-muted); }
+
+        .stat-card {
+            padding: 30px 24px;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+        }
+        .stat-number {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 48px;
+            line-height: 1;
+            font-weight: 900;
+            direction: ltr;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .commitment-box p {
+            margin: 0;
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        .cta-section {
+            position: relative;
+            overflow: hidden;
+            background: var(--primary);
+            color: #fff;
+            padding: 88px 0 96px;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0 1px, transparent 1px), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.12) 0 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+        .wave-divider {
+            position: absolute;
+            inset-inline: 0;
+            top: -1px;
+            width: 100%;
+            height: 40px;
+        }
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: min(780px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+        .cta-inner h2 {
+            margin: 0 0 14px;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+        }
+        .cta-inner p {
+            margin: 0 auto 28px;
+            max-width: 620px;
+            color: rgba(255,255,255,0.94);
+            font-size: 16px;
+        }
+        .btn-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-1px); }
+
+        footer {
+            background: #1A1A1A;
+            color: #fff;
+            border-top: 3px solid var(--primary);
+            padding: 56px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+        .footer-grid h4 { margin: 0 0 14px; font-size: 16px; color: #fff; }
+        .footer-grid p,
+        .footer-grid a { color: rgba(255,255,255,0.78); font-size: 14px; line-height: 1.8; }
+        .footer-grid a:hover { color: #fff; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+        .footer-logo { color: #fff; font-weight: 900; font-size: 24px; letter-spacing: -0.5px; }
+        .footer-badge { color: #fff; border-color: #fff; }
+        .footer-bottom {
+            margin-top: 34px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.72);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+
+        @media (max-width: 1024px) {
+            .cards-grid,
+            .stats-grid,
+            .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .two-col { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 860px) {
+            #navbar .container { flex-wrap: wrap; }
+            .nav-menu,
+            .language-dropdown { display: none; }
+            #mobile-menu-btn { display: inline-flex; }
+            .section { padding: 64px 0; }
+            .hero { padding: 82px 0 78px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .container { width: min(100% - 32px, var(--max-width)); }
+            .cards-grid,
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+            .hero-subtitle { font-size: 16px; }
+            .stat-number { font-size: 40px; }
+            .card,
+            .commitment-box { padding: 22px; }
+            .cta-section { padding: 76px 0 84px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IKAMETI",
+        "url": "https://ikameti.com/",
+        "logo": "https://ikameti.com/assets/images/favicon.png",
+        "email": "info@ikameti.com",
+        "telephone": "+905309052104",
+        "sameAs": [
+          "https://instagram.com/ikameti_tr",
+          "https://wa.me/905309052104"
+        ],
+        "areaServed": "TR",
+        "description": "Residency, housing and legal services in Turkey."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About IKAMETI",
+        "url": "https://ikameti.com/about.html",
+        "about": {
+          "@type": "Organization",
+          "name": "IKAMETI"
+        }
+      }
+    ]
+    </script>
+
+  <link rel="alternate" hreflang="en" href="https://ikameti.com/about.html">
+  <link rel="alternate" hreflang="ar" href="https://ikameti.com/about.ar.html">
+  <link rel="alternate" hreflang="tr" href="https://ikameti.com/about.tr.html">
+  <link rel="alternate" hreflang="ru" href="https://ikameti.com/about.ru.html">
+  <link rel="alternate" hreflang="fa" href="https://ikameti.com/about.fa.html">
+  <link rel="alternate" hreflang="uz" href="https://ikameti.com/about.uz.html">
+  <link rel="alternate" hreflang="af" href="https://ikameti.com/about.af.html">
+  <link rel="alternate" hreflang="x-default" href="https://ikameti.com/about.ar.html">
+  <meta property="og:locale" content="fa_IR">
+</head>
+<body>
+    <div class="page-shell">
+        <nav id="navbar" aria-label="Primary Navigation">
+            <div class="container">
+                <div class="logo-section">
+                    <a href="index.html" aria-label="IKAMETI Unlimited"><img class="logo-img" src="assets/images/logo.png" alt="IKAMETI Unlimited" style="height: 64px; width: auto; display: block;"></a>
+                </div>
+                <div class="nav-menu" aria-label="Main Links">
+                    <a href="index.html" data-i18n="nav.home">خانه</a>
+                    <a href="about.html" class="active" data-i18n="nav.about">درباره ما</a>
+                    <a href="blog/index.html" data-i18n="nav.blog">وبلاگ</a>
+                    <a href="faq.html" data-i18n="nav.faq">سوالات متداول</a>
+                    <a href="contact.html" data-i18n="nav.contact">تماس</a>
+                </div>
+                <div class="language-dropdown" data-dropdown>
+                    <button class="language-dropdown-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Change Language">
+                        <span class="globe-icon">🌐</span>
+                        <span class="language-code">EN</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <menu class="language-dropdown-menu" role="menu">
+                        <button type="button" role="menuitem" data-language-switch="ar"><span class="flag-icon">🇸🇦</span><span>العربية</span></button>
+                        <button type="button" role="menuitem" data-language-switch="en"><span class="flag-icon">🇺🇸</span><span>English</span></button>
+                        <button type="button" role="menuitem" data-language-switch="tr"><span class="flag-icon">🇹🇷</span><span>Türkçe</span></button>
+                        <button type="button" role="menuitem" data-language-switch="ru"><span class="flag-icon">🇷🇺</span><span>Русский</span></button>
+                        <button type="button" role="menuitem" data-language-switch="fa"><span class="flag-icon">🇮🇷</span><span>فارسی</span></button>
+                        <button type="button" role="menuitem" data-language-switch="uz"><span class="flag-icon">🇺🇿</span><span>Ўзбек</span></button>
+                        <button type="button" role="menuitem" data-language-switch="af"><span class="flag-icon">🇦🇫</span><span>دری</span></button>
+                    </menu>
+                </div>
+                <button id="mobile-menu-btn" type="button" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div id="mobile-menu">
+                <a href="index.html" data-i18n="nav.home">خانه</a>
+                <a href="about.html" data-i18n="nav.about">درباره ما</a>
+                <a href="blog/index.html" data-i18n="nav.blog">وبلاگ</a>
+                <a href="faq.html" data-i18n="nav.faq">سوالات متداول</a>
+                <a href="contact.html" data-i18n="nav.contact">تماس</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-inner reveal is-visible">
+                <h1 data-i18n="about_page.hero.title">درباره ایکامتی</h1>
+                <p class="hero-subtitle" data-i18n="about_page.hero.subtitle">شریک مورد اعتماد در راه‌حل‌های اقامت و مسکن برای بیش از ۱۵ سال، خدمات‌دهنده به هزاران مشتری راضی در سراسر جهان.</p>
+                <div class="trust-badge" aria-label="Trusted clients">
+                    <span class="dot"></span>
+                    <span data-i18n="about_page.trusted.title">مورد اعتماد هزاران</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="two-col">
+                    <article class="card reveal">
+                        <h2 class="section-title" data-i18n="about_page.story.title">داستان ما</h2>
+                        <p class="section-subtitle" data-i18n="about_page.story.paragraph_1">ایکامتی در سال ۲۰۰۹ با هدف ساده‌سازی فرآیندهای مهاجرت و مسکن برای مشتریان بین‌المللی تأسیس شد. آنچه به عنوان یک دفتر حقوقی کوچک شروع شد، اکنون به یک فراهم‌کننده خدمات جامع تبدیل شده است که مورد اعتماد هزاران است.</p>
+                        <p class="section-subtitle" data-i18n="about_page.story.paragraph_2">تیم متخصص ما چالش‌های نقل‌مکان به یک کشور جدید را درک می‌کند. خود را وقف کرده‌ایم تا فرآیند را آسان، شفاف و بدون استرس کنیم.</p>
+                    </article>
+                    <article class="card reveal stagger-1">
+                        <div class="icon-wrap">🎯</div>
+                        <h3 data-i18n="about_page.mission.title">مأموریت ما</h3>
+                        <p data-i18n="about_page.mission.description">ارائه خدمات استثنایی مهاجرت و مسکن که افراد و خانواده‌ها را توانمند می‌سازد تا آینده خود را با اعتماد بسازند.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_page.values.title">ارزش‌های اساسی ما</h2>
+                <div class="cards-grid">
+                    <article class="card reveal"><div class="icon-wrap">🛡️</div><h3 data-i18n="about_page.values.integrity.title">صداقت</h3><p data-i18n="about_page.values.integrity.description">ما با شفافیت و راستی کامل در تمام معاملات عمل می‌کنیم.</p></article>
+                    <article class="card reveal stagger-1"><div class="icon-wrap">⭐</div><h3 data-i18n="about_page.values.excellence.title">تعالی</h3><p data-i18n="about_page.values.excellence.description">ما برای تعالی در هر خدمات‌ی که ارائه می‌دهیم تلاش می‌کنیم.</p></article>
+                    <article class="card reveal stagger-2"><div class="icon-wrap">🤝</div><h3 data-i18n="about_page.values.client_first.title">ترجیح مشتری</h3><p data-i18n="about_page.values.client_first.description">نیازهای شما اول است. خدمات خود را برای الزامات شما سفارشی می‌کنیم.</p></article>
+                    <article class="card reveal"><div class="icon-wrap">💡</div><h3 data-i18n="about_page.values.innovation.title">نوآوری</h3><p data-i18n="about_page.values.innovation.description">ما به طور مداوم فرآیندهای خود را تکامل می‌دهیم و فناوری را پذیرایش می‌کنیم.</p></article>
+                    <article class="card reveal stagger-1"><div class="icon-wrap">✅</div><h3 data-i18n="about_page.values.reliability.title">قابل‌اعتماد</h3><p data-i18n="about_page.values.reliability.description">می‌توانید بر ما حساب کنید. نتایج را طور مداوم تحویل می‌دهیم.</p></article>
+                    <article class="card reveal stagger-2"><div class="icon-wrap">🌍</div><h3 data-i18n="about_page.values.community.title">جامعه</h3><p data-i18n="about_page.values.community.description">ما از جوامع متنوع پشتیبانی می‌کنیم و تأثیر مثبت ایجاد می‌کنیم.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_page.trusted.title">مورد اعتماد هزاران</h2>
+                <div class="stats-grid">
+                    <div class="stat-card reveal"><span class="stat-number" data-i18n="about_page.trusted.clients.value">۵۰۰۰+</span><div class="stat-label" data-i18n="about_page.trusted.clients.label">مشتریان راضی</div></div>
+                    <div class="stat-card reveal stagger-1"><span class="stat-number" data-i18n="about_page.trusted.success_rate.value">۹۸٪</span><div class="stat-label" data-i18n="about_page.trusted.success_rate.label">نرخ موفقیت</div></div>
+                    <div class="stat-card reveal stagger-2"><span class="stat-number" data-i18n="about_page.trusted.experience.value">۱۵+</span><div class="stat-label" data-i18n="about_page.trusted.experience.label">سال تجربه</div></div>
+                    <div class="stat-card reveal stagger-3"><span class="stat-number" data-i18n="about_page.trusted.countries.value">۲۰+</span><div class="stat-label" data-i18n="about_page.trusted.countries.label">کشورها</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="commitment-box reveal is-visible">
+                    <div class="section-title" style="font-size: 22px; margin-bottom: 14px;" data-i18n="about_page.cta.title">شریک ایکامتی شوید</div>
+                    <p data-i18n="about_page.cta.description">به هزاران مشتری راضی بپیوندید که ما را برای نیازهای مهاجرت و مسکن خود اعتماد می‌کنند.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <svg class="wave-divider" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,24 C240,56 480,0 720,18 C960,36 1200,8 1440,24 L1440,0 L0,0 Z" fill="#F5F5F5"></path>
+            </svg>
+            <div class="cta-inner reveal is-visible">
+                <h2 data-i18n="about_page.cta.title">شریک ایکامتی شوید</h2>
+                <p data-i18n="about_page.cta.description">به هزاران مشتری راضی بپیوندید که ما را برای نیازهای مهاجرت و مسکن خود اعتماد می‌کنند.</p>
+                <div class="btn-row">
+                    <a href="contact.html" class="btn btn-ghost" data-i18n="about_page.cta.button">امروز شروع کنید</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <img src="assets/images/logo-white.png" alt="IKAMETI Unlimited" style="height: 60px; width: auto; margin-bottom: 12px;">
+                        </div>
+                        <p data-i18n="footer.tagline">شریک مورد اعتماد شما برای خدمات مهاجرت و مسکن.</p>
+                    </div>
+                    <div>
+                        <h4 data-i18n="footer.quick_links">پیوندهای سریع</h4>
+                        <a href="index.html" data-i18n="nav.home">خانه</a><br>
+                        <a href="about.html" data-i18n="nav.about">درباره ما</a><br>
+                        <a href="blog/index.html" data-i18n="nav.blog">وبلاگ</a><br>
+                        <a href="faq.html" data-i18n="nav.faq">سوالات متداول</a><br>
+                        <a href="contact.html" data-i18n="nav.contact">تماس</a>
+                    </div>
+                    <div>
+                        <h4 data-i18n="footer.services">خدمات</h4>
+                        <a href="#" data-i18n="footer.housing_solutions">راه‌حل‌های مسکن</a><br>
+                        <a href="#" data-i18n="footer.residency_programs">برنامه‌های اقامت</a><br>
+                        <a href="#" data-i18n="footer.support">پشتیبانی</a><br>
+                        <a href="#" data-i18n="footer.legal_consultation">مشاوره حقوقی</a>
+                    </div>
+                    <div>
+                        <h4 data-i18n="footer.contact">تماس</h4>
+                        <a href="mailto:info@ikameti.com">info@ikameti.com</a><br>
+                        <a href="tel:+905309052104">+90 530 905 21 04</a><br>
+                        <a href="https://wa.me/905309052104" target="_blank">WhatsApp</a><br>
+                        <a href="https://instagram.com/ikameti_tr" target="_blank">Instagram</a><br>
+                        <span>İstanbul, Türkiye</span>
+                    </div>
+                </div>
+                <div class="footer-bottom" data-i18n="footer.copyright">© ۲۰۲۴ ایکامتی. تمام حقوق محفوظ است.</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/assets/js/i18n.js"></script>
+    <script>
+        (function () {
+            const mobileButton = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileButton?.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+        })();
+    </script>
+    <script>
+        (function () {
+            const copy = {
+                ar: {
+                    heroTitle: 'من نحن',
+                    heroSubtitle: 'منصة متخصصة في تقديم خدمات الإقامة في تركيا، نحول الإجراءات المعقدة إلى خطوات واضحة ومنظمة',
+                    trustBadge: 'ثقة مبنية على نتائج حقيقية',
+                    overviewTitle: 'نظرة عامة',
+                    overviewBody: 'نركز في Ikameti على التعقيد الإداري وغياب الوضوح في إجراءات الإقامة.',
+                    overviewBody2: 'نحوّل هذه العملية إلى خطوات قابلة للتطبيق، بحيث يعرف كل عميل ما الذي يحتاجه، متى يقدمه، وكيف يتجنب الأخطاء الشائعة. نحن لا نقدم فقط خدمة — نبني نظاماً متكاملاً لإدارة طلبات الإقامة، يبدأ من فهم حالة العميل وينتهي بصدور القرار والمتابعة بعد ذلك.',
+                    visionTitle: 'رؤيتنا ومهمتنا',
+                    visionBody: 'بناء منصة تكون المرجع الأول لكل من يريد الاستقرار في تركيا، من خلال تجربة رقمية واضحة، سريعة، وقابلة للتوسع. تقديم خدمات إقامة موثوقة تعتمد على الوضوح في الخطوات، السرعة في التنفيذ، وتقليل نسبة الخطأ والرفض إلى أدنى مستوى ممكن.',
+                    servicesTitle: 'خدماتنا',
+                    services: [
+                        ['استخراج الإقامة السياحية', 'نتولى كامل إجراءات استخراج إقامتك السياحية خطوة بخطوة'],
+                        ['تجديد الإقامة', 'متابعة وتجديد إقامتك قبل انتهاء صلاحيتها بدون تأخير'],
+                        ['التأمين الصحي', 'إصدار وثيقة التأمين الصحي المطلوبة لملف الإقامة'],
+                        ['حجز مواعيد e-Ikamet', 'حجز موعد الإقامة الإلكتروني بسرعة وبدون متاعب'],
+                        ['استشارات قانونية', 'إجابات دقيقة على أسئلتك القانونية المتعلقة بالإقامة'],
+                        ['متابعة الطلب', 'نتابع ملفك حتى صدور القرار ولا ننتهي عند التقديم']
+                    ],
+                    statsTitle: 'أرقامنا تتكلم',
+                    stats: [
+                        ['+500', 'عميل راضٍ وموثوق'],
+                        ['95%', 'نسبة نجاح الطلبات'],
+                        ['3', 'لغات دعم: عربي، إنجليزي، تركي'],
+                        ['4', 'فئات نخدمها: الطلاب، المستثمرون، المقيمون الجدد، العائلات']
+                    ],
+                    commitmentTitle: 'التزامنا',
+                    commitmentBody: 'نلتزم بتقديم معلومات دقيقة ومحدثة، مع الحفاظ على خصوصية بيانات العملاء، وتقديم تجربة منظمة خالية من التعقيد.',
+                    ctaTitle: 'مستعد تبدأ مسارك نحو الإقامة؟',
+                    ctaBody: 'نحن هنا لنبني لك المسار الصحيح خطوة بخطوة.',
+                    ctaButton: 'تواصل معنا الآن'
+                },
+                en: {
+                    heroTitle: 'About Us',
+                    heroSubtitle: 'A specialized platform for residency services in Turkey that turns complex procedures into clear, organized steps',
+                    trustBadge: 'Trust built on real results',
+                    overviewTitle: 'Overview',
+                    overviewBody: 'At Ikameti, we focus on the administrative complexity and lack of clarity in residency procedures.',
+                    overviewBody2: 'We turn that process into practical steps so every client knows what they need, when to submit it, and how to avoid common mistakes. We do not just provide a service - we build an integrated residency request management system that starts with understanding the client\'s situation and ends with the decision and follow-up afterward.',
+                    visionTitle: 'Our Vision and Mission',
+                    visionBody: 'To build a platform that becomes the first reference for anyone who wants to settle in Turkey, through a clear, fast, and scalable digital experience. To deliver reliable residency services that rely on clear steps, fast execution, and minimizing errors and rejections as much as possible.',
+                    servicesTitle: 'Our Services',
+                    services: [
+                        ['Tourist Residency Processing', 'We handle the full process of obtaining your tourist residency step by step'],
+                        ['Residency Renewal', 'We follow up and renew your residency before it expires without delays'],
+                        ['Health Insurance', 'Issuing the health insurance document required for the residency file'],
+                        ['e-Ikamet Appointments', 'Fast online residency appointment booking without hassle'],
+                        ['Legal Consultations', 'Precise answers to your legal questions related to residency'],
+                        ['Application Follow-up', 'We track your file until the decision is issued and do not stop at submission']
+                    ],
+                    statsTitle: 'Our Numbers Speak',
+                    stats: [
+                        ['+500', 'Satisfied and trusted clients'],
+                        ['95%', 'Application success rate'],
+                        ['3', 'Support languages: Arabic, English, Turkish'],
+                        ['4', 'Groups we serve: students, investors, new residents, families']
+                    ],
+                    commitmentTitle: 'Our Commitment',
+                    commitmentBody: 'We are committed to providing accurate and up-to-date information, protecting client data privacy, and delivering an organized experience free of complexity.',
+                    ctaTitle: 'Ready to start your residency journey?',
+                    ctaBody: 'We are here to build the right path for you step by step.',
+                    ctaButton: 'Contact Us Now'
+                }
+            };
+
+            function applyAboutCopy() {
+                const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+                const content = copy[lang];
+
+                const heroTitle = document.querySelector('.hero h1');
+                const heroSubtitle = document.querySelector('.hero-subtitle');
+                const trustBadge = document.querySelector('.trust-badge span:last-child');
+                const overviewTitle = document.querySelector('.two-col .card:first-child .section-title');
+                const overviewBodies = document.querySelectorAll('.two-col .card:first-child .section-subtitle');
+                const visionTitle = document.querySelector('.two-col .card:nth-child(2) h3');
+                const visionBody = document.querySelector('.two-col .card:nth-child(2) p');
+                const serviceCards = document.querySelectorAll('.cards-grid .card');
+                const statsTitle = document.querySelector('.stats-grid').previousElementSibling;
+                const statCards = document.querySelectorAll('.stats-grid .stat-card');
+                const commitmentTitle = document.querySelector('.commitment-box .section-title');
+                const commitmentBody = document.querySelector('.commitment-box p');
+                const ctaTitle = document.querySelector('.cta-inner h2');
+                const ctaBody = document.querySelector('.cta-inner p');
+                const ctaButton = document.querySelector('.cta-inner .btn');
+
+                if (heroTitle) heroTitle.textContent = content.heroTitle;
+                if (heroSubtitle) heroSubtitle.textContent = content.heroSubtitle;
+                if (trustBadge) trustBadge.textContent = content.trustBadge;
+
+                if (overviewTitle) overviewTitle.textContent = content.overviewTitle;
+                if (overviewBodies[0]) overviewBodies[0].textContent = content.overviewBody;
+                if (overviewBodies[1]) overviewBodies[1].textContent = content.overviewBody2;
+
+                if (visionTitle) visionTitle.textContent = content.visionTitle;
+                if (visionBody) visionBody.textContent = content.visionBody;
+
+                if (serviceCards.length === content.services.length) {
+                    serviceCards.forEach((card, index) => {
+                        const title = card.querySelector('h3');
+                        const body = card.querySelector('p');
+                        if (title) title.textContent = content.services[index][0];
+                        if (body) body.textContent = content.services[index][1];
+                    });
+                }
+
+                if (statsTitle) statsTitle.textContent = content.statsTitle;
+                if (statCards.length === content.stats.length) {
+                    statCards.forEach((card, index) => {
+                        const number = card.querySelector('.stat-number');
+                        const label = card.querySelector('.stat-label');
+                        if (number) number.textContent = content.stats[index][0];
+                        if (label) label.textContent = content.stats[index][1];
+                    });
+                }
+
+                if (commitmentTitle) commitmentTitle.textContent = content.commitmentTitle;
+                if (commitmentBody) commitmentBody.textContent = content.commitmentBody;
+
+                if (ctaTitle) ctaTitle.textContent = content.ctaTitle;
+                if (ctaBody) ctaBody.textContent = content.ctaBody;
+                if (ctaButton) ctaButton.textContent = content.ctaButton;
+            }
+
+            window.addEventListener('languageChanged', applyAboutCopy);
+            window.addEventListener('load', () => setTimeout(applyAboutCopy, 50));
+            setTimeout(applyAboutCopy, 250);
+        })();
+    </script>
+</body>
+</html>

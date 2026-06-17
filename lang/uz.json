@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "language": "uz",
+    "direction": "ltr",
+    "name": "Ўзбек"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqida",
+    "blog": "Blog",
+    "faq": "Tez-tez so'raladigan savollar",
+    "contact": "Bog'lanish"
+  },
+  "hero": {
+    "title": "Sizning Premium Yashoviy va Uy Echimlarning Eshiği",
+    "subtitle": "Immigratsiya, yashoviy va uy shartnomalariga bo'lgan mutaxassis yo'l-yo'riq. Minglab kishining ishonchi. Tez, professional va xavfsiz.",
+    "cta_primary": "Hozir Boshlang",
+    "cta_secondary": "Ko'proq Bilib Oling"
+  },
+  "services": {
+    "title": "Bizning Asosiy Xizmatlar",
+    "subtitle": "Sizning yashoviy va uy sayohatingizni soddal tashlash, xavfsiz va muammosiz qilish uchun mo'ljallangan keng yuzli echimlar.",
+    "housing": {
+      "title": "Uy Echimlar",
+      "description": "Mulk tasdiqilanishi, shartnoma ko'rib chiqish, sohib-sogdagi qo'llab-quvvatlash va sizning ideal uyingiz uchun huquqiy hujjatlar.",
+      "features": [
+        "Mulk tekshirish",
+        "Shartnoma ko'rib chiqish",
+        "Huquqiy qo'llab-quuvvatlash"
+      ],
+      "cta": "O'rganish"
+    },
+    "residency": {
+      "title": "Yashoviy Dasturlar",
+      "description": "Murakkab yashoviy talablarni har bir bosqichda mutaxassis yo'l-yo'riq bilan chuqur o'tib o'tish.",
+      "features": [
+        "Ariza qo'llab-quuvvatlash",
+        "Hujjat tayyorlash",
+        "Suhbat treniki"
+      ],
+      "cta": "Ko'rish"
+    },
+    "legal": {
+      "title": "Huquqiy Hamkorlik",
+      "description": "Barcha xizmatlar bo'ylab to'liq huquqiy muvofiqlik korporativ xavfsiyzlik va xalqaro standartlar bilan.",
+      "features": [
+        "Huquqiy ko'rib chiqish",
+        "Hamkorlik tekshirish",
+        "24/7 qo'llab-quuvvatlash"
+      ],
+      "cta": "Maslahat"
+    }
+  },
+  "footer": {
+    "tagline": "Immigratsiya va yashoviy xizmatlarida sizning ishonchli shrikingiz.",
+    "quick_links": "Tez Havolalar",
+    "services": "Xizmatlar",
+    "contact": "Bog'lanish",
+    "housing_solutions": "Uy Echimlar",
+    "residency_programs": "Yashoviy Dasturlar",
+    "legal_consultation": "Huquqiy Maslahat",
+    "support": "Qo'llab-quuvvatlash"
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Biz Bilan Bog'lanish",
+      "subtitle": "Biz sizning savollarga yordam berishga tayyoriz"
+    },
+    "phone": {
+      "title": "Telefon",
+      "availability": "24/7 Mavjud"
+    },
+    "email": {
+      "title": "Elektron pochta",
+      "response_time": "2 soat ichida javob"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "support": "Tez chat qo'llab-quuvvatlash"
+    },
+    "form": {
+      "title": "Bizga Xabar Yuboring",
+      "full_name_label": "To'liq Ism *",
+      "full_name_placeholder": "Sizning ismingiz",
+      "email_label": "Elektron pochta *",
+      "email_placeholder": "siziing@email.com",
+      "phone_label": "Telefon *",
+      "phone_placeholder": "+998 90 123 4567",
+      "subject_label": "Mavzu *",
+      "subject_placeholder": "Qanday yordam bera olamiz?",
+      "message_label": "Xabar *",
+      "message_placeholder": "Sizning xabaringiz...",
+      "submit_button": "Xabarni Yuboring"
+    },
+    "benefits": {
+      "title": "Nega Biz Bilan Bog'lanasiz?",
+      "consultation": {
+        "title": "✓ Mutaxassis Maslahat",
+        "description": "Tajribali jamadan professional maslahat"
+      },
+      "fast_response": {
+        "title": "✓ Tez Javob",
+        "description": "Ish vaqti ichida 2 soat ichida javob"
+      },
+      "free_consultation": {
+        "title": "✓ Bepul Birinchi Maslahat",
+        "description": "Hech qanday majburiyatsiz shaxsiy maslahat oling"
+      },
+      "multilingual": {
+        "title": "✓ Ko'p Tilida Qo'llab-quuvvatlash",
+        "description": "Sizning afzal tilingizda muloqot qiling"
+      }
+    },
+    "final_cta": {
+      "title": "Sizning Bepul Maslahatini Oling",
+      "description": "Bugun bizning jamoamiz bilan gaplashing va yasoviy variantlaringizni kashf eting",
+      "button": "WhatsApp'da Chatni Boshlang"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Tez-tez So'raladigan Savollar",
+      "subtitle": "Turkiyada yashoviy bo'lish haqida bilishingiz kerak bo'lgan hamma narsasi. Keng tarashtirilgan savollarga bir zumada javoblar oling."
+    },
+    "residency": {
+      "section_title": "🏘️ Yashoviy Savollar",
+      "q1": {
+        "question": "Turkiyada yasoviy ruxsatnomalarning asosiy turlari qanday?",
+        "intro": "Turkiya bir nechta yasoviy variantlarni taqdim etadi:",
+        "answers": [
+          { "label": "Turist Yasoviy", "text": "Qisqa muddatli turist viza (30-90 kun)" },
+          { "label": "Talaba Yasoviy", "text": "Ro'yxatdan o'tgan talabalar uchun (yilga yana yangi)" },
+          { "label": "Mol-mülk Yasoviy", "text": "Mol-mulk investorlari uchun (250,000€+ investitsiya)" },
+          { "label": "Oila Sponsorshipi", "text": "Turk fuqarolari qarindoshlari uchun" },
+          { "label": "Ish Vizasi", "text": "Ishlash maqsadlarida" }
+        ]
+      },
+      "q2": {
+        "question": "Yasoviy ariza jarayoni qancha vaqt oladi?",
+        "intro": "Qayta ishlash vaqti yasoviy turga qarab farq qiladi:",
+        "answers": [
+          { "label": "Turist Vizasi", "text": "Kelish paytida (90 kun viza-bepul kirish)" },
+          { "label": "Uzoq muddatli Yasoviy", "text": "Hujjat qayta ishlash uchun 15-30 kun" },
+          { "label": "Mol-mülk Yasoviy", "text": "5-7 ish kuni" }
+        ],
+        "note": "Bizning xizmatlar odatda bu 10-15 ish kuni ichida tezlashtiradi."
+      },
+      "q3": {
+        "question": "Yasoviy ariza uchun qanday hujjatlarga ehtiyoj bor?",
+        "intro": "Asosiy talablar odatda quyidagilarni o'z ichiga oladi:",
+        "answers": [
+          "To'g'ri pasport (minimal 6 oy amal qilish)",
+          "Turar-joy isboti (ijara shartnamasi yoki mulk tavalludi)",
+          "Daromad yoki moliya manbalarining isboti",
+          "Sog'liq sug'urtasi",
+          "Jinoiy tarixning bo'sh sertifikati",
+          "Tugallangan ariza shakli"
+        ],
+        "note": "Biz sizning aniq vaziyatingizga mos keladigan to'liq tekshirish ro'yxatini taqdim etamiz."
+      },
+      "q4": {
+        "question": "Yasoviy ruxsatnoma bo'lsa ishlay olamanmi?",
+        "intro": "Ish ruxsatnomalaringiz yasoviy turga bog'liq:",
+        "answers": [
+          { "label": "Turist Yasoviy", "text": "Alohida ish ruxsatномasi kerak" },
+          { "label": "Talaba Yasoviy", "text": "Cheklangan ish soatlari ruxsat etilgan (20 soat/haftada)" },
+          { "label": "Mol-mülk Yasoviy", "text": "Biznes yaratishi yoki mustaqil bo'la olasiz" },
+          { "label": "Ish Vizasi", "text": "Ish beruvchi sponsorligiybilan to'liq ish huquqlari" }
+        ],
+        "note": "Biz sizga yasoviy sohib-sogda ish ruxsatnomasi qo'llab-quvvatlash bo'yicha yo'l-yo'riq berishmiz."
+      },
+      "q5": {
+        "question": "Turk yasoviyligini olish qancha turadi?",
+        "intro": "Narxlar yasoviy turga qarab farq qiladi:",
+        "answers": [
+          { "label": "Turist Yasoviy", "text": "Bepul (90 kun avtomatik)" },
+          { "label": "Qisqa muddatli Yasoviy", "text": "Yilda 1,200-2,000 ₺" },
+          { "label": "Mol-mulk Investitsiyasi", "text": "250,000€+ mol-mulk sotib olish" },
+          { "label": "Xizmat To'lovlari", "text": "Bizning professional yordam odatda murakkablikka qarab 500-1,500€" }
+        ],
+        "note": "Sizning vaziyatingizga qarab aniq narxni bilish uchun bepul maslahat oling."
+      }
+    },
+    "work": {
+      "section_title": "💼 Ish va Kompaniyalar",
+      "q1": {
+        "question": "Yasoviy bilan Turkiyada biznes boshlaya olamanmi?",
+        "intro": "Ha! Ko'p yasoviy turlar biznes mulkidan ruxsat beradi:",
+        "answers": [
+          "Erkli shogirt yoki cheklangan kompaniya sifatida ro'yxatdan o'ting",
+          "Ish viza shugulkurlari ro'yxatdan o'tgan kompaniyada ishlashlari mumkin",
+          "Mol-mulk viza shugulkurlari bizneslarni mulking egasi va boshqara oladi",
+          "Mustaqil shugulkurlar erkin mutaxassislar sifatida faoliyat ko'rsata oladi"
+        ],
+        "note": "Biz kompaniya ro'yxatlanishi va ish ruxsatnomalariga yordam beramiz."
+      },
+      "q2": {
+        "question": "Turkiyada xodim sponsorshipi uchun nima talab qilinadi?",
+        "intro": "Ish beruvchi sifatida sizga kerak bo'ladi:",
+        "answers": [
+          "Ro'yxatdan o'tgan Turk kompaniyasi",
+          "Moliya barqarorligini isboti",
+          "Ish shartnamasi",
+          "Majburiy ijtimoiy sug'urtasi hissalarini to'lash",
+          "Mehnat va Ijtimoiy Xavfsizlik Vazirligi orqali ariza berish"
+        ],
+        "note": "Qayta ishlash odatda 2-4 hafta oladi."
+      },
+      "q3": {
+        "question": "Yashovchilar uchun soliq talablari qanday?",
+        "intro": "Soliq yasoviy holatga bog'liq:",
+        "answers": [
+          { "label": "Cheklangan Yashovchilar", "text": "Faqat Turk daromadiga soliq" },
+          { "label": "Cheklanmagan Yashovchilar", "text": "Global daromad soliqlanadi" },
+          "Yashovchilar soliq shartnomalari foydalanishlari mumkin",
+          "Tur hukumatiga yillik soliq e'lon kerak"
+        ],
+        "note": "Biz shaxsiy maslahat uchun soliq mutaxassisi bilan maslahat berishni tavsiya qilamiz."
+      }
+    },
+    "insurance": {
+      "section_title": "🛡️ Sug'urta va Boshqa Mavzular",
+      "q1": {
+        "question": "Yasoviy uchun sog'liq sug'urtasi majburiymi?",
+        "intro": "Ha, sog'liq sug'urtasi talab qilinadi:",
+        "answers": [
+          "Turk Ijtimoiy Xavfsizlik Sug'urtasi (SGK) ishlayotgan yashovchilar uchun majburiy",
+          "Xususiy sug'urta ishlayotgan yashovchilar uchun qabul qilinadi",
+          "Minimal qoplama favqulodda parvarishni o'z ichiga olishi kerak",
+          "Yillik xaraji taxminan 1,200-3,000 ₺"
+        ],
+        "note": "Biz mos keladigan sug'urta qoplanishini o'rnatishda yordam beramiz."
+      },
+      "q2": {
+        "question": "Xorijiy yasovchi sifatida mol-mulk sotib olay olamanmi?",
+        "intro": "Ha, ba'zi cheklamalar bilan:",
+        "answers": [
+          "Xorijilar pul isboti bilan mol-mulk sotib ola oladi",
+          "Mol-mulk sotib olish yasoviy malakani olib kelib qolishi mumkin",
+          "Ba'zi hududlarning yer cheklovlari bor (qishloq xujaligi hududlari)",
+          "Foydalanish mamlakati hali soliq tasdiqiga ehtiyoj",
+          "Jami mulk narxi xavfsizlik uchun Anqara qiymatining 30% bo'lmaydi"
+        ],
+        "note": "Biz siz ishonchli mol-mulk sheriklari bilan bog'laymiz."
+      },
+      "q3": {
+        "question": "Mening yasoviyligim tugasa nima bo'ladi?",
+        "intro": "Yasoviylik yangilanishi sodda:",
+        "answers": [
+          "Ko'p yasoviyliklar yilga yana yangilansa bo'ladi",
+          "Tugashidan 30-60 kun oldin ariza bering",
+          "Dastlabki arizaga o'xshash talablar",
+          "Yangilash uchun qayta ishlash odatda tezroq",
+          "Cheklangan turistlar ko'proq 90 kun uchun chiqib kelishlari mumkin"
+        ],
+        "note": "Biz yangilash eslatmalarini yuboramiz va barcha hujjatlarni boshqaramiz."
+      },
+      "q4": {
+        "question": "Oila azomlari mening ruxsatnomamga asosan yasoviy ola olashlari?",
+        "intro": "Qo'l-quvvatlanmish oila azolari sizni qo'shni oladi:",
+        "answers": [
+          "Tur va bolalar qo'l-quvvatlanmish sifatida ariza bersa oladi",
+          "Munosabatni isbotiyadigan qo'shimcha hujjat talab qilinadi",
+          "Qo'l-quvvatlanmashlarning moliya qo'llab-quvvatlash isboti talab qilinadi",
+          "Bolalar avtomatik qo'l-quvvatlash huquqlari oladi"
+        ],
+        "note": "Oila qayta birlashmasi vizalari maxsus tezlashgan qayta ishlashga ega."
+      },
+      "q5": {
+        "question": "Yasoviylik orqali Turk fuqaroligi mumkinmi?",
+        "intro": "Ha, yasoviylik orqali fuqarolik mumkin:",
+        "answers": [
+          "Uzluksiz yasoviylik 5+ yil talab qilinadi",
+          "Til talabi (asosiy Turkcha)",
+          "Xarakter foni tekshiruvi o'tdi",
+          "250,000€+ mol-mulk investitsiyasi 3 yillik yo'l uchun mos",
+          "Joriy fuqarolikdan voz kechish talab qilinmaydi"
+        ],
+        "note": "Ikki fuqarolik Turk qonuni bo'yicha ruxsat etiladi."
+      }
+    },
+    "cta": {
+      "title": "Javobingizni topa olmadingizmi?",
+      "description": "Yasoviy savollari bo'yicha shaxsiy yordam uchun bizning mutaxassis jamaamiz bilan bog'lanish.",
+      "button": "Biz Bilan Bog'lanish"
+    }
+  },
+  "pricing": {
+    "title": "Mukammal Turizm Rejangizni Tanlang",
+    "subtitle": "Shaffof narxlar, yashirin to'lovlar yo'q. Bugun Turkiya turizmi yo'ligini boshlang",
+    "cta": "Hozir Boshlang",
+    "basic": {
+      "title": "Asosiy Boshlash",
+      "price": "99$",
+      "description": "Sayyohlar va qisqa muddatli tashrif buyuruvchilar uchun ideal. Turkiyada birinchi safar uchun yo'l-yo'riq olun",
+      "features": [
+        "Mutaxassis maslahat qo'ng'iroqi",
+        "Turizm moliyaviy to'lovini baholash",
+        "Kerakli hujjatlar ro'yxatini tayyorlash",
+        "Email yordam (ish vaqti)"
+      ]
+    },
+    "standard": {
+      "title": "To'liq Turizm",
+      "price": "299$",
+      "description": "Bizning eng mashhur tanlovi. Uzoq muddatli turizm uchun to'liq yordam va professional yo'l-yo'riq",
+      "badge": "Eng mashhur",
+      "features": [
+        "2 ta maslahat qo'ng'iroqi",
+        "To'liq ariza qayta ishlash",
+        "Sog'liq sug'urtasi qo'llanmasi",
+        "Rasmiy hujjat tarjimasi yordam",
+        "Haftalik taraqqiyot yangilanishlari",
+        "Telefon va email ustunlik yordam"
+      ]
+    },
+    "premium": {
+      "title": "VIP Premium Paketi",
+      "price": "599$",
+      "description": "Keyingi xotirjamlik. Turizm + maskan + huquqiy masalalar uchun ajratilgan yordam",
+      "features": [
+        "To'liq paketdagi hamma narsa",
+        "Mulk qidirish va tekshirish yordam",
+        "Advokat tomonidan maskan shartnomasi tekshiruvi",
+        "Davlat tomonidan tezlashtirilgan qayta ishlash",
+        "Ajratilgan shaxsiy hisob menejeri",
+        "24/7 WhatsApp to'g'ri yordam"
+      ]
+    }
+  },
+  "common": {
+    "selected_label": "Tanlangan:",
+    "total_label": "Jami:",
+    "continue_button": "Borish",
+    "remind_button": "Menga Eslatma",
+    "remind_title": "Turar-joyim tugashidan avval menga eslatma qilingin",
+    "remind_subtitle": "O'zingizning ma'lumotlarini kiriting va biz sizga muddati tugashidan avval eslatma qilamiz",
+    "remind_title_new": "Turar-joy yenilash sanasini kamaytirmang",
+    "remind_subtitle_new": "Ma'lumotlaringizni kiriting va biz sizga muddati tugashidan 2 oy oldin eslatma qilamiz",
+    "residency_type": "Turar-joy turi",
+    "expiration_date": "Tugash sanasi",
+    "phone_number": "Telefon raqami",
+    "save_button": "Eslatmani saqlash",
+    "reminder_saved": "Eslatma muvaffaqiyatli saqlandi",
+    "remind_note": "Muddati tugashidan 2 oy oldin siz bilan bog'lanamiz",
+    "free_service": "Bepul xizmat"
+  }
+}

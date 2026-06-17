@@ -1,0 +1,214 @@
+<!-- IKAMETI i18n HTML UPDATE TEMPLATE -->
+<!-- Use this as reference for updating all remaining HTML pages -->
+
+<!-- ============================================ -->
+<!-- 1. NAVIGATION (Same on ALL pages) -->
+<!-- ============================================ -->
+<nav id="navbar">
+    <div class="container">
+        <div class="logo-section">
+            <span class="logo-static">IKAMETI</span>
+            <div class="rotating-text-container">
+                <span class="rotating-text" id="rotating-text">Residency</span>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+        <!-- Language Dropdown - Include this on ALL pages -->
+        <div class="language-dropdown">
+            <button class="language-dropdown-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Change Language">
+                <span class="globe-icon">🌐</span>
+                <span class="language-code">EN</span>
+                <span class="dropdown-arrow">▼</span>
+            </button>
+            <menu class="language-dropdown-menu" role="menu">
+                <button role="menuitem" data-language-switch="en" aria-label="Select English">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span class="language-name">English</span>
+                </button>
+                <button role="menuitem" data-language-switch="ar" aria-label="اختر العربية">
+                    <span class="flag-icon">🇸🇦</span>
+                    <span class="language-name">العربية</span>
+                </button>
+                <button role="menuitem" data-language-switch="tr" aria-label="Türkçe'yi seçin">
+                    <span class="flag-icon">🇹🇷</span>
+                    <span class="language-name">Türkçe</span>
+                </button>
+                <button role="menuitem" data-language-switch="ru" aria-label="Выберите русский язык">
+                    <span class="flag-icon">🇷🇺</span>
+                    <span class="language-name">Русский</span>
+                </button>
+                <button role="menuitem" data-language-switch="fa" aria-label="فارسی را انتخاب کنید">
+                    <span class="flag-icon">🇮🇷</span>
+                    <span class="language-name">فارسی</span>
+                </button>
+                <button role="menuitem" data-language-switch="uz" aria-label="Ўзбекчани танланг">
+                    <span class="flag-icon">🇺🇿</span>
+                    <span class="language-name">Ўзбек</span>
+                </button>
+                <button role="menuitem" data-language-switch="af" aria-label="دری انتخاب کنید">
+                    <span class="flag-icon">🇦🇫</span>
+                    <span class="language-name">دری</span>
+                </button>
+            </menu>
+        </div>
+    </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- 2. HERO SECTION (Different per page) -->
+<!-- ============================================ -->
+<section class="bg-dark">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto; padding: var(--space-20) 0;">
+            <h1 class="text-white animate-slide-up" data-i18n="hero.title">
+                Your Gateway to Premium Residency & Housing
+            </h1>
+            <p class="text-white animate-slide-up" style="opacity: 0.95; font-size: 18px; line-height: var(--lh-relaxed); animation-delay: 0.1s;" data-i18n="hero.subtitle">
+                Expert guidance for immigration, residency, and housing contracts. Trusted by thousands. Fast, professional, secure.
+            </p>
+            <div class="hero-buttons flex gap-4 justify-center" style="animation: slideInUp 0.8s ease-out 0.2s backwards; margin-top: var(--space-8);">
+                <a href="contact.html" class="btn btn-cta btn-lg" data-i18n="hero.cta_primary">Get Started Now</a>
+                <a href="about.html" class="btn btn-white btn-lg" data-i18n="hero.cta_secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 3. SERVICES SECTION (3 service cards) -->
+<!-- ============================================ -->
+<section class="bg-base">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-i18n="services.title">Our Core Services</h2>
+            <div class="accent-line"></div>
+        </div>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto var(--space-12); color: var(--text-secondary); font-size: 16px;" data-i18n="services.subtitle">
+            Comprehensive solutions designed to make your residency and housing journey smooth, secure, and hassle-free.
+        </p>
+        <div class="grid grid-cols-3">
+            <!-- SERVICE 1 -->
+            <div class="card stagger-item">
+                <div class="card-icon">🏠</div>
+                <h3 data-i18n="services.housing.title">Housing Solutions</h3>
+                <div style="flex: 1; margin-bottom: var(--space-4);">
+                    <p style="font-size: 15px; margin-bottom: var(--space-3); color: var(--text-secondary);" data-i18n="services.housing.description">Property verification, contract review, negotiation support, and legal documentation for your perfect home.</p>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary);">
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.housing.features.0">Property screening</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.housing.features.1">Contract review</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.housing.features.2">Legal support</span></li>
+                    </ul>
+                </div>
+                <a href="landing.html" class="btn btn-primary btn-sm" style="align-self: flex-start;" data-i18n="services.housing.cta">Explore</a>
+            </div>
+
+            <!-- SERVICE 2 -->
+            <div class="card stagger-item">
+                <div class="card-icon">📋</div>
+                <h3 data-i18n="services.residency.title">Residency Programs</h3>
+                <div style="flex: 1; margin-bottom: var(--space-4);">
+                    <p style="font-size: 15px; margin-bottom: var(--space-3); color: var(--text-secondary);" data-i18n="services.residency.description">Navigate complex residency requirements with expert guidance through every step of the process.</p>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary);">
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.residency.features.0">Application support</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.residency.features.1">Document prep</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.residency.features.2">Interview coaching</span></li>
+                    </ul>
+                </div>
+                <a href="about.html" class="btn btn-primary btn-sm" style="align-self: flex-start;" data-i18n="services.residency.cta">View</a>
+            </div>
+
+            <!-- SERVICE 3 -->
+            <div class="card stagger-item">
+                <div class="card-icon">⚖️</div>
+                <h3 data-i18n="services.legal.title">Legal & Compliance</h3>
+                <div style="flex: 1; margin-bottom: var(--space-4);">
+                    <p style="font-size: 15px; margin-bottom: var(--space-3); color: var(--text-secondary);" data-i18n="services.legal.description">Full legal compliance across all services with enterprise security and international regulations.</p>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-secondary);">
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.legal.features.0">Legal review</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.legal.features.1">Compliance check</span></li>
+                        <li style="margin-bottom: var(--space-2);"><strong style="color: var(--primary);">✓</strong> <span data-i18n="services.legal.features.2">24/7 support</span></li>
+                    </ul>
+                </div>
+                <a href="contact.html" class="btn btn-primary btn-sm" style="align-self: flex-start;" data-i18n="services.legal.cta">Consult</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 4. FORM SECTION PATTERN -->
+<!-- ============================================ -->
+<div class="form-group">
+    <label class="form-label" data-i18n="contact_page.form.full_name_label">Full Name *</label>
+    <input type="text" class="form-input" data-i18n-placeholder="contact_page.form.full_name_placeholder" placeholder="Your name" required>
+</div>
+
+<div class="form-group">
+    <label class="form-label" data-i18n="contact_page.form.email_label">Email *</label>
+    <input type="email" class="form-input" data-i18n-placeholder="contact_page.form.email_placeholder" placeholder="your@email.com" required>
+</div>
+
+<!-- ============================================ -->
+<!-- 5. FOOTER (Same on ALL pages) -->
+<!-- ============================================ -->
+<footer>
+    <div class="container">
+        <div class="grid grid-cols-4">
+            <div>
+                <h4>IKAMETI</h4>
+                <p data-i18n="footer.tagline">Your trusted partner for immigration and housing services.</p>
+            </div>
+            <div>
+                <h4 data-i18n="footer.quick_links">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 data-i18n="footer.services">Services</h4>
+                <ul>
+                    <li><a href="landing.html" data-i18n="footer.housing_solutions">Housing Solutions</a></li>
+                    <li><a href="about.html" data-i18n="footer.residency_programs">Residency Programs</a></li>
+                    <li><a href="#" data-i18n="footer.legal_consultation">Legal Consultation</a></li>
+                    <li><a href="#" data-i18n="footer.support">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 data-i18n="footer.contact">Contact</h4>
+                <ul>
+                    <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                    <li><a href="mailto:info@ikameti.com">info@ikameti.com</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- 6. SCRIPT INCLUSION (Add to every HTML file) -->
+<!-- ============================================ -->
+<!-- Add this script tag before closing </body> tag -->
+<script src="js/i18n.js"></script>
+
+<!-- ============================================ -->
+<!-- KEY PRINCIPLES -->
+<!-- ============================================ -->
+<!--
+1. Every visible text should have a data-i18n attribute
+2. Form placeholders use data-i18n-placeholder
+3. Navigation and footer are identical on all pages
+4. Hero section changes per page
+5. Use dot notation for keys: page.section.item
+6. Reference the JSON files in /lang/ for all available keys
+7. Always include i18n.js script in <body>
+-->

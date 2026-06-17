@@ -1,0 +1,21 @@
+# Claude Code working directory (memory, local settings)
+.claude/
+memory/
+
+# Backup / temp files
+*.bak
+*.tmp
+_*.js
+
+# Dependencies (not used in production, only for build tooling)
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
