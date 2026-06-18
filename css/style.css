@@ -508,6 +508,41 @@ section.bg-dark[style*="min-height"]::after {
         linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.30) 100%);
 }
 
+/* ================================================
+   PER-PAGE HERO BACKGROUND PHOTOS
+   ================================================ */
+/* Photo heroes drop the skyline silhouette and keep only a readable vignette */
+section.bg-dark.hero-img::after {
+    height: 170px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+section.bg-dark.hero-img-home {
+    background:
+        linear-gradient(135deg, rgba(176, 0, 0, 0.55) 0%, rgba(25, 0, 0, 0.80) 100%),
+        url("../assets/images/hero-home.jpg") center center / cover no-repeat;
+}
+section.bg-dark.hero-img-faq {
+    background:
+        linear-gradient(135deg, rgba(176, 0, 0, 0.55) 0%, rgba(25, 0, 0, 0.80) 100%),
+        url("../assets/images/hero-faq.jpg") center center / cover no-repeat;
+}
+section.bg-dark.hero-img-contact {
+    background:
+        linear-gradient(135deg, rgba(176, 0, 0, 0.55) 0%, rgba(25, 0, 0, 0.80) 100%),
+        url("../assets/images/hero-contact.jpg") center center / cover no-repeat;
+}
+section.bg-dark.hero-img-blog {
+    background:
+        linear-gradient(135deg, rgba(176, 0, 0, 0.55) 0%, rgba(25, 0, 0, 0.80) 100%),
+        url("../assets/images/hero-blog.jpg") center center / cover no-repeat;
+}
+section.bg-dark.hero-img-landing {
+    background:
+        linear-gradient(135deg, rgba(176, 0, 0, 0.55) 0%, rgba(25, 0, 0, 0.80) 100%),
+        url("../assets/images/hero-landing.jpg") center center / cover no-repeat;
+}
+
 section.bg-gradient {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: var(--text-white);
