@@ -4,15 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuBtn && mobileMenu) {
+        const resetIcon = () => {
+            const spans = mobileMenuBtn.querySelectorAll('span');
+            spans[0].style.transform = 'rotate(0deg)';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'rotate(0deg)';
+        };
+
         mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            
+            // The shared CSS reveals the menu via the `active` class.
+            const isOpen = mobileMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active', isOpen);
+
             // Animate hamburger icon
             const spans = mobileMenuBtn.querySelectorAll('span');
-            if (mobileMenu.classList.contains('hidden')) {
-                spans[0].style.transform = 'rotate(0deg)';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'rotate(0deg)';
+            if (!isOpen) {
+                resetIcon();
             } else {
                 spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
                 spans[1].style.opacity = '0';
@@ -21,14 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
+        mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-                const spans = mobileMenuBtn.querySelectorAll('span');
-                spans[0].style.transform = 'rotate(0deg)';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'rotate(0deg)';
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+                resetIcon();
             });
         });
     }

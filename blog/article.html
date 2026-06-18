@@ -143,5 +143,23 @@
   <script src="../js/page-handler.js"></script>
   <!-- Blog System -->
   <script src="./assets/js/blog.js"></script>
+  <!-- Mobile menu toggle -->
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('active');
+        btn.classList.toggle('active', open);
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('active');
+          btn.classList.remove('active');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
