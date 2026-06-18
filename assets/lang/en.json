@@ -826,5 +826,11 @@
     "reminder_saved": "Your reminder has been saved",
     "remind_note": "We will contact you 2 months before expiration",
     "free_service": "Free service"
-  }
+  },
+  "rotating_words": [
+    "Residency",
+    "Housing",
+    "Legal Services",
+    "Solutions"
+  ]
 }

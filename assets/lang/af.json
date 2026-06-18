@@ -825,5 +825,11 @@
     "reminder_saved": "Jou herinnering is suksesvol gestoor",
     "remind_note": "Ons sal 2 maande voor jou residensie verstryk met jou in aanraking tree",
     "free_service": "Gratis diens"
-  }
+  },
+  "rotating_words": [
+    "اقامت",
+    "مسکن",
+    "خدمات حقوقی",
+    "راه‌حل‌ها"
+  ]
 }

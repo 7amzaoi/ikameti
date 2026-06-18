@@ -1559,22 +1559,27 @@ section.bg-dark .btn-white:hover {
     letter-spacing: 0.5px;
 }
 
+/* Elegant tagline lockup next to the logo (not a button) */
 .rotating-text-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    border: 2px solid var(--primary);
-    border-radius: 8px;
-    padding: var(--space-2) var(--space-3);
-    background: rgba(208, 0, 0, 0.05);
+    min-width: 92px;
+    padding: 0;
+    padding-inline-start: 12px;
+    margin-inline-start: 4px;
+    border: none;
+    border-inline-start: 2px solid rgba(208, 0, 0, 0.28);
+    border-radius: 0;
+    background: none;
 }
 
 .rotating-text {
     color: var(--primary);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
-    animation: fadeIn 0.3s ease-in-out;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    opacity: 1;
 }
 
 .nav-menu {

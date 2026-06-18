@@ -826,5 +826,11 @@
     "reminder_saved": "Eslatma muvaffaqiyatli saqlandi",
     "remind_note": "Muddati tugashidan 2 oy oldin siz bilan bog'lanamiz",
     "free_service": "Bepul xizmat"
-  }
+  },
+  "rotating_words": [
+    "Yashash",
+    "Uy-joy",
+    "Huquqiy xizmatlar",
+    "Yechimlar"
+  ]
 }

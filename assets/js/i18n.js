@@ -66,6 +66,32 @@ class I18n {
   }
 
   /**
+   * Rotate the navbar tagline (#rotating-text) through the translated
+   * `rotating_words` for the current language, with a soft fade.
+   */
+  startNavRotation() {
+    const el = document.getElementById('rotating-text');
+    if (this._navRotateTimer) { clearInterval(this._navRotateTimer); this._navRotateTimer = null; }
+    if (!el) return;
+    const words = this.translations.rotating_words;
+    if (!Array.isArray(words) || words.length === 0) return;
+
+    let i = 0;
+    el.style.transition = 'opacity 0.35s ease';
+    el.textContent = words[0];
+    if (words.length === 1) return;
+
+    this._navRotateTimer = setInterval(() => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.style.opacity = '1';
+      }, 350);
+    }, 2800);
+  }
+
+  /**
    * Get browser's preferred language
    */
   getBrowserLanguage() {
@@ -97,13 +123,16 @@ class I18n {
       
       // Translate all elements
       this.translatePage();
-      
+
       // Update RTL
       this.updateRTL();
-      
+
+      // Rotate the navbar tagline words in the current language
+      this.startNavRotation();
+
       // Trigger custom event
-      window.dispatchEvent(new CustomEvent('languageChanged', { 
-        detail: { language: lang, direction: this.translations.direction } 
+      window.dispatchEvent(new CustomEvent('languageChanged', {
+        detail: { language: lang, direction: this.translations.direction }
       }));
       
     } catch (error) {
