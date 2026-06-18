@@ -202,68 +202,74 @@
   "about_page": {
     "hero": {
       "title": "IKAMETI Hakkında",
-      "subtitle": "15 yıldan fazla süredir ikamet ve konut çözümlerinde güvenilir bir ortak olup, dünya çapında binlerce tatmin müşteriye hizmet vermektedir."
+      "subtitle": "Türkiye'de ikamet için güvenilir ortağınız — karmaşık ve kafa karıştırıcı işlemleri net, rehberli adımlara dönüştürürüz.",
+      "badge": "Gerçek sonuçlara dayalı güven"
     },
     "story": {
-      "title": "Hikayemiz",
-      "paragraph_1": "2009 yılında kurulan IKAMETI, göç ve konut süreçlerini uluslararası müşteriler için basitleştirmek amacıyla ortaya çıkmıştır. Küçük bir yasal danışmanlık firmasi olarak başlayan IKAMETI, şimdi binlerce kişi tarafından güvenilen kapsamlı bir hizmet sağlayıcıya dönüşmüştür.",
-      "paragraph_2": "Deneyimli profesyonellerden oluşan ekibimiz, yeni bir ülkeye taşınmanın zorluk ve sorunlarını iyi anlamaktadır. Süreci sorunsuz, şeffaf ve stressiz hale getirmeyi kendimize adama etmiş bulunuyoruz."
+      "title": "Biz Kimiz",
+      "p1": "IKAMETI, Türkiye'de ikamet hizmetlerinde uzmanlaşmış bir ekiptir. Var oluş nedenimiz: ikamet işlemleri idari olarak karmaşık, dağınık ve hataya çok açıktır — küçük bir hata size haftalar ya da bir ret kaybettirebilir.",
+      "p2": "Bu süreci net ve uygulanabilir adımlara dönüştürürüz: neye ihtiyacınız olduğunu, ne zaman vereceğinizi ve yaygın hatalardan nasıl kaçınacağınızı her zaman bilirsiniz. Sadece evrak doldurmayız — ilk görüşmeden nihai karara ve sonrasına kadar ikamet dosyanızı yönetiriz."
     },
     "mission": {
-      "title": "Misyonumuz",
-      "description": "Kişi ve ailelerin güven ve emniyet içinde geleceğini inşa etmeleri için olağanüstü göç ve konut hizmetleri sağlamak."
+      "title": "Vizyon ve Misyonumuz",
+      "desc": "Türkiye'ye yerleşmek isteyen herkes için ilk başvuru kaynağı olmak; net, hızlı ve güvenilir bir deneyimle — net adımlara, hızlı uygulamaya ve mümkün olan en düşük hata ve ret oranına dayalı ikamet hizmetleri sunmak."
     },
-    "values": {
-      "title": "Temel Değerlerimiz",
-      "integrity": {
-        "title": "Bütünlük",
-        "description": "Tüm işlemlerimizde tam şeffaflık ve dürüstlük ile hareket ederiz."
-      },
-      "excellence": {
-        "title": "Mükemmellik",
-        "description": "Sağladığımız her hizmette mükemmelliği hedefleriz."
-      },
-      "client_first": {
-        "title": "Müşteri Odaklı",
-        "description": "Sizin ihtiyaçlarınız birincil önceliğimizdir. Hizmetlerimizi gereksinimlerinize uyarlarız."
-      },
-      "innovation": {
-        "title": "İnovation",
-        "description": "Süreçlerimizi sürekli geliştiriyor ve teknolojiyi kucaklıyoruz."
-      },
-      "reliability": {
-        "title": "Güvenilirlik",
-        "description": "Bize güvenebilirsiniz. Sonuçları düzenli olarak teslim ederiz."
-      },
-      "community": {
-        "title": "Topluluk",
-        "description": "Çeşitli toplulukları destekliyor ve olumlu etki yaratıyoruz."
-      }
+    "services": {
+      "title": "Ne Yapıyoruz",
+      "subtitle": "Uçtan uca ikamet desteği — her adımı bu işi her gün yapan kişiler yürütür."
     },
-    "trusted": {
-      "title": "Binlerce Kişinin Güveni",
-      "clients": {
-        "value": "5000+",
-        "label": "Mutlu Müşteri"
-      },
-      "success_rate": {
-        "value": "98%",
-        "label": "Başarı Oranı"
-      },
-      "experience": {
-        "value": "15+",
-        "label": "Yıl Deneyim"
-      },
-      "countries": {
-        "value": "20+",
-        "label": "Ülke"
-      }
+    "work": {
+      "title": "Nasıl Çalışıyoruz",
+      "subtitle": "Basit ve şeffaf bir süreç — ilk mesajdan ikamet kartınıza kadar."
+    },
+    "why": {
+      "title": "Müşteriler Neden Bizi Seçiyor"
+    },
+    "stats": {
+      "title": "Rakamlarımız Konuşuyor"
+    },
+    "commit": {
+      "title": "Taahhüdümüz",
+      "desc": "Doğru ve güncel bilgi, verilerinizin tam gizliliği ve karmaşıklıktan uzak, düzenli bir deneyim sunmayı taahhüt ederiz."
     },
     "cta": {
-      "title": "IKAMETI ile Ortaklık Yapın",
-      "description": "Göç ve konut ihtiyaçları için bize güvenen binlerce tatmin müşteriye katılın.",
-      "button": "Bugün Başlayın"
-    }
+      "title": "İkamet Yolculuğunuza Başlamaya Hazır mısınız?",
+      "desc": "Bugün bize yazın — doğru yolu adım adım birlikte kuralım. İlk danışmanlık ücretsizdir.",
+      "wa": "WhatsApp'tan Yazın",
+      "ig": "Instagram'dan Yazın"
+    },
+    "s1_t": "Turistik İkamet İşlemleri",
+    "s1_d": "Turistik oturum izni sürecinin tamamını adım adım yürütürüz.",
+    "s2_t": "İkamet Uzatma",
+    "s2_d": "İzninizi bitmeden takip eder ve uzatırız — gecikme ya da boşluk yok.",
+    "s3_t": "Sağlık Sigortası",
+    "s3_d": "İkamet dosyanız için gereken sağlık sigortasını düzenleriz.",
+    "s4_t": "e-İkamet Randevuları",
+    "s4_d": "Hızlı ve doğru şekilde online göç randevusu alımı.",
+    "s5_t": "Hukuki Danışmanlık",
+    "s5_d": "İkametle ilgili hukuki sorularınıza net ve doğru yanıtlar.",
+    "s6_t": "Başvuru Takibi",
+    "s6_d": "Dosyanızı karara kadar takip ederiz — başvuruda durmayız.",
+    "k1_t": "Ücretsiz Danışmanlık",
+    "k1_d": "Durumunuzu anlatın; durumunuzu ve doğru ikamet yolunu değerlendirelim.",
+    "k2_t": "Dosya Hazırlığı",
+    "k2_d": "Belgelerinizi doğru hazırlar ve başvurudan önce her şeyi kontrol ederiz.",
+    "k3_t": "Başvuru ve Randevu",
+    "k3_d": "Randevunuzu alır ve başvurunuzu doğru şekilde yaparız.",
+    "k4_t": "Takip ve Sonuç",
+    "k4_d": "Dosyanızı karara kadar takip eder ve sonraki adımlarda yol gösteririz.",
+    "w1_t": "Karışıklık Değil, Netlik",
+    "w1_d": "Her adım sade bir dille açıklanır — sırada ne olduğunu hep bilirsiniz.",
+    "w2_t": "Daha Az Hata ve Ret",
+    "w2_d": "Gecikme veya redde yol açan hataları en aza indiren deneyimli yürütme.",
+    "w3_t": "Çok Dilli Destek",
+    "w3_d": "Baştan sona kendi dilinizde size rehberlik ederiz.",
+    "w4_t": "Gerçek Takip",
+    "w4_d": "Sadece başvuruya kadar değil, karara kadar yanınızdayız.",
+    "st1_l": "Memnun ve güvenen müşteriler",
+    "st2_l": "Başvuru başarı oranı",
+    "st3_l": "Destek dilleri: Arapça, İngilizce, Türkçe",
+    "st4_l": "Hizmet verdiğimiz gruplar: öğrenciler, yatırımcılar, yeni sakinler, aileler"
   },
   "blog_page": {
     "hero": {

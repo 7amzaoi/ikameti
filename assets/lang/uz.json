@@ -202,68 +202,74 @@
   "about_page": {
     "hero": {
       "title": "IKAMETI haqida",
-      "subtitle": "15 yildan ortiqni fuqarolik va uy-joy yechimlarida ishonchli hamkasblingiz, dunyoning minglab xursand mijozlari xizmat ko'rgan."
+      "subtitle": "Turkiyada yashash uchun ishonchli hamkoringiz — murakkab va chalkash jarayonlarni aniq, yo'naltirilgan qadamlarga aylantiramiz.",
+      "badge": "Haqiqiy natijalarga asoslangan ishonch"
     },
     "story": {
-      "title": "Bizning hikoya",
-      "paragraph_1": "2009 yilda tuzilgan IKAMETI immigratsiya va uy-joy jarayonlarini xalqaro mijozlar uchun osonlashtirish maqsadi bilan paydo bo'ldi. Kichik huquqiy konsultatsiyasi sifatida boshlangan bu tashkilot minglab odamlarning ishonchi qozonga oladigan to'la xizmat beruvchiga aylanib o'tti.",
-      "paragraph_2": "Bizning tejaribali jamoa yangi davlatga ko'chib borishning og'irliklarini tushunadi. Biz jarayonni soddalashtirish, ochiq va xotirjam qilishga o'zimizni bag'isladik."
+      "title": "Biz kimmiz",
+      "p1": "IKAMETI — Turkiyada yashash xizmatlariga ixtisoslashgan jamoa. Bizning mavjudligimiz sababi: yashash jarayonlari ma'muriy jihatdan murakkab, tarqoq va xato qilish oson — kichik xato sizga haftalar yoki rad javobiga tushishi mumkin.",
+      "p2": "Biz bu jarayonni aniq va amaliy qadamlarga aylantiramiz: nima kerakligini, qachon topshirishni va keng tarqalgan xatolardan qanday qochishni doimo bilasiz. Biz shunchaki hujjat to'ldirmaymiz — birinchi suhbatdan yakuniy qarorgacha va undan keyin ham ishingizni boshqaramiz."
     },
     "mission": {
-      "title": "Bizning maqsad",
-      "description": "Shaxslarni va oilalarni o'z kelajagini ishoqlik bilan qurish uchun kasb-hunarmand immigratsiya va uy-joy xizmatlarni taqdim etish."
+      "title": "Vazifamiz va maqsadimiz",
+      "desc": "Turkiyada joylashmoqchi bo'lgan har bir kishi uchun birinchi manba bo'lish; aniq, tez va ishonchli tajriba orqali — aniq qadamlar, tez ijro va imkon qadar kam xato va rad asosida yashash xizmatlarini taqdim etish."
     },
-    "values": {
-      "title": "Bizning asosiy qiymatlar",
-      "integrity": {
-        "title": "Halollik",
-        "description": "Biz barcha muomalalarimizda to'liq ochiqlik va halollik bilan faoliyat olib boramiz."
-      },
-      "excellence": {
-        "title": "Muhtamliklik",
-        "description": "Taqdim etadigan har bir xizmatda muhtamliklashga intilishlik uchun kurashishlik."
-      },
-      "client_first": {
-        "title": "Mijozni birinchi",
-        "description": "Sizning ehtiyojlaringiz birinchi. Biz xizmatlarni sizning talabingizga mos qilishlik."
-      },
-      "innovation": {
-        "title": "Yangilanish",
-        "description": "Biz jarayonlarni doimiy rivojlantiramiz va texnologiyani qabul qilamiz."
-      },
-      "reliability": {
-        "title": "Ishonchlilik",
-        "description": "Siz bizga tayanalikingiz mumkin. Biz doimiy natija beramiz."
-      },
-      "community": {
-        "title": "Jamoa",
-        "description": "Biz turli xil xalqalarni qo'llash va ijobiy ta'sir yaratamiz."
-      }
+    "services": {
+      "title": "Biz nima qilamiz",
+      "subtitle": "To'liq yashash yordami — har bir qadamni buni har kuni bajaradigan odamlar amalga oshiradi."
     },
-    "trusted": {
-      "title": "Minglab odamlarning ishonchi",
-      "clients": {
-        "value": "5000+",
-        "label": "Xursand mijozlar"
-      },
-      "success_rate": {
-        "value": "98%",
-        "label": "Muvaffaqiyat stavkasi"
-      },
-      "experience": {
-        "value": "15+",
-        "label": "Yillik tajriba"
-      },
-      "countries": {
-        "value": "20+",
-        "label": "Davlatlar"
-      }
+    "work": {
+      "title": "Qanday ishlaymiz",
+      "subtitle": "Oddiy va shaffof jarayon — birinchi xabardan yashash kartasigacha."
+    },
+    "why": {
+      "title": "Nega mijozlar bizni tanlaydi"
+    },
+    "stats": {
+      "title": "Raqamlarimiz o'zi gapiradi"
+    },
+    "commit": {
+      "title": "Majburiyatimiz",
+      "desc": "Biz aniq va dolzarb ma'lumot, ma'lumotlaringizning to'liq maxfiyligi va murakkablikdan xoli tartibli tajribani taqdim etishga sodiqmiz."
     },
     "cta": {
-      "title": "IKAMETI bilan hamkorlik qiling",
-      "description": "Bizga ishongan minglab xursand mijozlarning qatoriga qo'shiling ularning immigratsiya va uy-joy ehtiyojlarining uchun.",
-      "button": "Bugun boshlang"
-    }
+      "title": "Yashash safaringizni boshlashga tayyormisiz?",
+      "desc": "Bugun bizga yozing — to'g'ri yo'lni siz bilan birga qadam-baqadam quramiz. Birinchi maslahat bepul.",
+      "wa": "WhatsApp'da yozing",
+      "ig": "Instagram'da yozing"
+    },
+    "s1_t": "Turistik yashashni rasmiylashtirish",
+    "s1_d": "Turistik yashash ruxsatnomasining to'liq jarayonini qadam-baqadam bajaramiz.",
+    "s2_t": "Yashashni uzaytirish",
+    "s2_d": "Ruxsatnomangizni tugashidan oldin kuzatamiz va uzaytiramiz — kechikishsiz va uzilishsiz.",
+    "s3_t": "Tibbiy sug'urta",
+    "s3_d": "Yashash ishingiz uchun zarur tibbiy sug'urtani rasmiylashtiramiz.",
+    "s4_t": "e-İkamet navbatlari",
+    "s4_d": "Migratsiya navbatini tez va to'g'ri onlayn olish.",
+    "s5_t": "Huquqiy maslahatlar",
+    "s5_d": "Yashash bo'yicha huquqiy savollaringizga aniq javoblar.",
+    "s6_t": "Arizani kuzatish",
+    "s6_d": "Ishingizni qarorgacha kuzatamiz — topshirishda to'xtamaymiz.",
+    "k1_t": "Bepul maslahat",
+    "k1_d": "Holatingizni ayting; ishingizni va to'g'ri yashash yo'lini baholaymiz.",
+    "k2_t": "Hujjat tayyorlash",
+    "k2_d": "Hujjatlaringizni to'g'ri tayyorlaymiz va topshirishdan oldin hammasini tekshiramiz.",
+    "k3_t": "Topshirish va navbat",
+    "k3_d": "Navbatingizni olamiz va arizangizni to'g'ri topshiramiz.",
+    "k4_t": "Kuzatish va natija",
+    "k4_d": "Ishni qarorgacha kuzatamiz va keyingi qadamlarda yo'l ko'rsatamiz.",
+    "w1_t": "Chalkashlik emas, aniqlik",
+    "w1_d": "Har bir qadam sodda tilda tushuntiriladi — keyin nima bo'lishini doimo bilasiz.",
+    "w2_t": "Kamroq xato va rad",
+    "w2_d": "Kechikish yoki radga olib keladigan xatolarni kamaytiruvchi tajribali ijro.",
+    "w3_t": "Ko'p tilli yordam",
+    "w3_d": "Boshidan oxirigacha o'z tilingizda yo'l ko'rsatamiz.",
+    "w4_t": "Haqiqiy kuzatuv",
+    "w4_d": "Faqat topshirishgacha emas, qarorgacha siz bilan birgamiz.",
+    "st1_l": "Mamnun va ishongan mijozlar",
+    "st2_l": "Arizalar muvaffaqiyat darajasi",
+    "st3_l": "Yordam tillari: arab, ingliz, turk",
+    "st4_l": "Xizmat ko'rsatadiganlar: talabalar, investorlar, yangi rezidentlar, oilalar"
   },
   "blog_page": {
     "hero": {

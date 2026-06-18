@@ -201,69 +201,75 @@
   },
   "about_page": {
     "hero": {
-      "title": "About Us",
-      "subtitle": "A specialized platform for residency services in Turkey that turns complex procedures into clear, organized steps"
+      "title": "About IKAMETI",
+      "subtitle": "Your trusted partner for residency in Turkey — we turn complex, confusing procedures into clear, guided steps.",
+      "badge": "Trust built on real results"
     },
     "story": {
-      "title": "Overview",
-      "paragraph_1": "At Ikameti, we focus on the administrative complexity and lack of clarity in residency procedures.",
-      "paragraph_2": "We turn that process into practical steps so every client knows what they need, when to submit it, and how to avoid common mistakes. We do not just provide a service - we build an integrated residency request management system that starts with understanding the client's situation and ends with the decision and follow-up afterward."
+      "title": "Who We Are",
+      "p1": "IKAMETI is a specialized residency-services team in Turkey. We exist because residency procedures are administratively complex, scattered and easy to get wrong — and one small mistake can cost you weeks or a rejection.",
+      "p2": "We turn that process into clear, practical steps: you always know what you need, when to submit it, and how to avoid common mistakes. We don't just file paperwork — we manage your residency case from the first conversation to the final decision and beyond."
     },
     "mission": {
-      "title": "Our Vision and Mission",
-      "description": "To build a platform that becomes the first reference for anyone who wants to settle in Turkey, through a clear, fast, and scalable digital experience. To deliver reliable residency services that rely on clear steps, fast execution, and minimizing errors and rejections as much as possible."
+      "title": "Our Mission & Vision",
+      "desc": "To become the first reference for anyone settling in Turkey, through a clear, fast and reliable experience — delivering residency services built on clear steps, quick execution and the lowest possible rate of errors and rejections."
     },
-    "values": {
-      "title": "Our Services",
-      "integrity": {
-        "title": "Tourist Residency Processing",
-        "description": "We handle the full process of obtaining your tourist residency step by step"
-      },
-      "excellence": {
-        "title": "Residency Renewal",
-        "description": "We follow up and renew your residency before it expires without delays"
-      },
-      "client_first": {
-        "title": "Health Insurance",
-        "description": "Issuing the health insurance document required for the residency file"
-      },
-      "innovation": {
-        "title": "e-Ikamet Appointments",
-        "description": "Fast online residency appointment booking without hassle"
-      },
-      "reliability": {
-        "title": "Legal Consultations",
-        "description": "Precise answers to your legal questions related to residency"
-      },
-      "community": {
-        "title": "Application Follow-up",
-        "description": "We track your file until the decision is issued and do not stop at submission"
-      }
+    "services": {
+      "title": "What We Do",
+      "subtitle": "End-to-end residency support — every step handled by people who do this every day."
     },
-    "trusted": {
-      "title": "Our Numbers Speak",
-      "clients": {
-        "value": "+500",
-        "label": "Satisfied and trusted clients"
-      },
-      "success_rate": {
-        "value": "95%",
-        "label": "Application success rate"
-      },
-      "experience": {
-        "value": "3",
-        "label": "Support languages: Arabic, English, Turkish"
-      },
-      "countries": {
-        "value": "4",
-        "label": "Groups we serve: students, investors, new residents, families"
-      }
+    "work": {
+      "title": "How We Work",
+      "subtitle": "A simple, transparent process — from your first message to your residence card."
+    },
+    "why": {
+      "title": "Why Clients Choose Us"
+    },
+    "stats": {
+      "title": "Our Numbers Speak"
+    },
+    "commit": {
+      "title": "Our Commitment",
+      "desc": "We are committed to accurate, up-to-date information, full privacy for your data, and an organized experience free of complexity."
     },
     "cta": {
-      "title": "Our Commitment",
-      "description": "We are committed to providing accurate and up-to-date information, protecting client data privacy, and delivering an organized experience free of complexity.",
-      "button": "Contact Us Now"
-    }
+      "title": "Ready to Start Your Residency Journey?",
+      "desc": "Message us today — we'll build the right path for you, step by step. The first consultation is free.",
+      "wa": "Chat on WhatsApp",
+      "ig": "Message on Instagram"
+    },
+    "s1_t": "Tourist Residency Processing",
+    "s1_d": "We handle the full tourist residence permit process step by step.",
+    "s2_t": "Residency Renewal",
+    "s2_d": "We track and renew your permit before it expires — no delays, no lapse.",
+    "s3_t": "Health Insurance",
+    "s3_d": "We issue the health insurance required for your residency file.",
+    "s4_t": "e-İkamet Appointments",
+    "s4_d": "Fast, correct online immigration appointment booking.",
+    "s5_t": "Legal Consultations",
+    "s5_d": "Clear, accurate answers to your residency legal questions.",
+    "s6_t": "Application Follow-up",
+    "s6_d": "We follow your file until the decision — we don't stop at submission.",
+    "k1_t": "Free Consultation",
+    "k1_d": "Tell us your situation; we assess your case and the right residency path.",
+    "k2_t": "File Preparation",
+    "k2_d": "We prepare your documents correctly and check everything before submission.",
+    "k3_t": "Submission & Appointment",
+    "k3_d": "We book your appointment and submit your application the right way.",
+    "k4_t": "Follow-up & Result",
+    "k4_d": "We track your file to the decision and guide you on the next steps.",
+    "w1_t": "Clarity, Not Confusion",
+    "w1_d": "Every step explained in plain language — you always know what's next.",
+    "w2_t": "Fewer Errors & Rejections",
+    "w2_d": "Experienced handling that minimizes the mistakes causing delays or refusals.",
+    "w3_t": "Multilingual Support",
+    "w3_d": "We guide you in your own language from start to finish.",
+    "w4_t": "Real Follow-up",
+    "w4_d": "We stay with you until the decision — not just until you submit.",
+    "st1_l": "Satisfied, trusting clients",
+    "st2_l": "Application success rate",
+    "st3_l": "Support languages: Arabic, English, Turkish",
+    "st4_l": "Groups we serve: students, investors, new residents, families"
   },
   "blog_page": {
     "hero": {
