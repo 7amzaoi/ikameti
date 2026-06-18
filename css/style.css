@@ -2855,7 +2855,9 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 1000px;
+    /* Generous cap so long answers (e.g. the residency-fee tiers) are
+       never clipped, especially on narrow phones where text wraps. */
+    max-height: 3000px;
     padding: var(--space-6);
     padding-top: 0;
 }
