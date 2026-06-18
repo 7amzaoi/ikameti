@@ -825,7 +825,15 @@
     "save_button": "ذخیره یادآوری",
     "reminder_saved": "یادآوری با موفقیت ذخیره شد",
     "remind_note": "ما 2 ماه قبل از تمام اقامت با شما تماس خواهیم گرفت",
-    "free_service": "سرویس رایگان"
+    "free_service": "سرویس رایگان",
+    "select_placeholder": "-- انتخاب کنید --",
+    "type_tourist": "توریستی",
+    "type_student": "دانشجویی",
+    "type_family": "خانوادگی",
+    "type_realestate": "املاک",
+    "error_required": "همه فیلدها الزامی هستند",
+    "error_phone": "لطفاً یک شماره تلفن معتبر وارد کنید",
+    "submitting": "در حال ارسال..."
   },
   "rotating_words": [
     "اقامت",

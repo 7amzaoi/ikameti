@@ -825,7 +825,15 @@
     "save_button": "Hatırlatmayı Kaydet",
     "reminder_saved": "Hatırlatmanız başarıyla kaydedildi",
     "remind_note": "İkamet süreniz bitmeden 2 ay öncesinde sizinle iletişime geçeceğiz",
-    "free_service": "Ücretsiz hizmet"
+    "free_service": "Ücretsiz hizmet",
+    "select_placeholder": "-- Seçiniz --",
+    "type_tourist": "Turistik",
+    "type_student": "Öğrenci",
+    "type_family": "Aile",
+    "type_realestate": "Gayrimenkul",
+    "error_required": "Tüm alanlar zorunludur",
+    "error_phone": "Lütfen geçerli bir telefon numarası girin",
+    "submitting": "Gönderiliyor..."
   },
   "rotating_words": [
     "İkamet",

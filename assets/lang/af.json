@@ -824,7 +824,15 @@
     "save_button": "Herinnering stoor",
     "reminder_saved": "Jou herinnering is suksesvol gestoor",
     "remind_note": "Ons sal 2 maande voor jou residensie verstryk met jou in aanraking tree",
-    "free_service": "Gratis diens"
+    "free_service": "Gratis diens",
+    "select_placeholder": "-- انتخاب کنید --",
+    "type_tourist": "توریستی",
+    "type_student": "محصلی",
+    "type_family": "خانوادگی",
+    "type_realestate": "املاک",
+    "error_required": "همه فیلدها الزامی هستند",
+    "error_phone": "لطفاً یک شماره تلفن معتبر وارد کنید",
+    "submitting": "در حال ارسال..."
   },
   "rotating_words": [
     "اقامت",

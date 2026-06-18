@@ -825,7 +825,15 @@
     "save_button": "Сохранить напоминание",
     "reminder_saved": "Напоминание сохранено",
     "remind_note": "Мы свяжемся с вами за 2 месяца до истечения визы",
-    "free_service": "Бесплатно"
+    "free_service": "Бесплатно",
+    "select_placeholder": "-- Выберите --",
+    "type_tourist": "Туристический",
+    "type_student": "Студенческий",
+    "type_family": "Семейный",
+    "type_realestate": "Недвижимость",
+    "error_required": "Все поля обязательны",
+    "error_phone": "Введите корректный номер телефона",
+    "submitting": "Отправка..."
   },
   "rotating_words": [
     "ВНЖ",

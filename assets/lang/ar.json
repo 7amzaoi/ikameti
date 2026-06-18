@@ -848,7 +848,15 @@
     "save_button": "احفظ التذكير",
     "reminder_saved": "تم حفظ التذكير بنجاح",
     "remind_note": "سيتم التواصل معك قبل شهرين من انتهاء الإقامة",
-    "free_service": "خدمة مجانية"
+    "free_service": "خدمة مجانية",
+    "select_placeholder": "-- اختر --",
+    "type_tourist": "سياحية",
+    "type_student": "طلابية",
+    "type_family": "عائلية",
+    "type_realestate": "عقارية",
+    "error_required": "جميع الحقول مطلوبة",
+    "error_phone": "يرجى إدخال رقم هاتف صحيح",
+    "submitting": "جارٍ الإرسال..."
   },
   "rotating_words": [
     "الإقامة",

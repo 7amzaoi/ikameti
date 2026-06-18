@@ -1030,12 +1030,12 @@
     
 
     <!-- FLOATING REMIND ME BUTTON -->
-    <button id="remind-me-btn" style="position: fixed; bottom: 30px; right: 20px; background: #d00000; color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(208, 0, 0, 0.3); transition: all 0.3s ease; z-index: 999; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 9999px; font-weight: 600; font-size: 14px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+    <button id="remind-me-btn" aria-label="Remind Me" style="position: fixed; bottom: 30px; right: 20px; background: linear-gradient(135deg, #e60000 0%, #b00000 100%); color: white; border: none; cursor: pointer; box-shadow: 0 10px 28px rgba(176, 0, 0, 0.42); transition: transform 0.25s ease, box-shadow 0.25s ease; z-index: 999; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 22px; border-radius: 9999px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.2px;">
+        <svg class="remind-bell" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
         </svg>
-        <span id="remind-btn-text">Remind Me</span>
+        <span class="remind-btn-label" id="remind-btn-text" data-i18n="common.remind_button">Remind Me</span>
     </button>
 
     <!-- REMIND ME MODAL -->
@@ -1045,32 +1045,32 @@
             <button id="modal-close" style="position: absolute; top: 12px; right: 12px; background: none; border: none; cursor: pointer; font-size: 24px; color: #6b7280; transition: all 0.2s; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">×</button>
 
             <!-- Header -->
-            <h2 id="remind-modal-title" style="margin: 0 0 8px; color: #111827; font-size: 20px; font-weight: 800;">Never Miss Your Residency Renewal</h2>
-            <p id="remind-modal-subtitle" style="margin: 0 0 24px; color: #6b7280; font-size: 14px; line-height: 1.5;">Enter your details and we will remind you 2 months before your residency expires</p>
+            <h2 id="remind-modal-title" data-i18n="common.remind_title_new" style="margin: 0 0 8px; color: #111827; font-size: 20px; font-weight: 800;">Never Miss Your Residency Renewal</h2>
+            <p id="remind-modal-subtitle" data-i18n="common.remind_subtitle_new" style="margin: 0 0 24px; color: #6b7280; font-size: 14px; line-height: 1.5;">Enter your details and we will remind you 2 months before your residency expires</p>
 
             <!-- Form -->
             <form id="remindForm" style="display: flex; flex-direction: column; gap: 16px;">
                 <!-- Residency Type -->
                 <div style="display: flex; flex-direction: column; gap: 6px;">
-                    <label id="label-residency" style="color: #111827; font-weight: 600; font-size: 13px;">Residency Type</label>
+                    <label id="label-residency" data-i18n="common.residency_type" style="color: #111827; font-weight: 600; font-size: 13px;">Residency Type</label>
                     <select id="residencyType" required style="padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; font-family: inherit; cursor: pointer; background: white; color: #111827; transition: all 0.2s;">
-                        <option value="">-- Select --</option>
-                        <option value="Tourist">Tourist</option>
-                        <option value="Student">Student</option>
-                        <option value="Family">Family</option>
-                        <option value="Real Estate">Real Estate</option>
+                        <option value="" data-i18n="common.select_placeholder">-- Select --</option>
+                        <option value="Tourist" data-i18n="common.type_tourist">Tourist</option>
+                        <option value="Student" data-i18n="common.type_student">Student</option>
+                        <option value="Family" data-i18n="common.type_family">Family</option>
+                        <option value="Real Estate" data-i18n="common.type_realestate">Real Estate</option>
                     </select>
                 </div>
 
                 <!-- Expiration Date -->
                 <div style="display: flex; flex-direction: column; gap: 6px;">
-                    <label id="label-expiration" style="color: #111827; font-weight: 600; font-size: 13px;">Expiration Date</label>
+                    <label id="label-expiration" data-i18n="common.expiration_date" style="color: #111827; font-weight: 600; font-size: 13px;">Expiration Date</label>
                     <input id="expiryDate" type="date" required style="padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; font-family: inherit; color: #111827;" >
                 </div>
 
                 <!-- Phone Number -->
                 <div style="display: flex; flex-direction: column; gap: 6px;">
-                    <label id="label-phone" style="color: #111827; font-weight: 600; font-size: 13px;">Phone Number</label>
+                    <label id="label-phone" data-i18n="common.phone_number" style="color: #111827; font-weight: 600; font-size: 13px;">Phone Number</label>
                     <input id="phone" type="tel" placeholder="+90 XXX XXX XXXX" required style="padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; font-family: inherit; color: #111827;" >
                 </div>
 
@@ -1079,33 +1079,83 @@
 
                 <!-- Note -->
                 <div style="background: #f0f9ff; border-left: 3px solid #0084ff; padding: 12px; border-radius: 4px; margin-bottom: 8px; font-size: 13px; color: #0c51be; line-height: 1.4;">
-                    📬 <span id="remind-note-text">We will contact you 2 months before expiration</span>
+                    📬 <span id="remind-note-text" data-i18n="common.remind_note">We will contact you 2 months before expiration</span>
                 </div>
 
                 <!-- Trust Element -->
                 <div style="text-align: center; font-size: 12px; color: #6b7280; margin-bottom: 12px;">
-                    <span id="free-service-text">Free service</span>
+                    <span id="free-service-text" data-i18n="common.free_service">Free service</span>
                 </div>
 
                 <!-- Submit Button -->
-                <button id="submit-btn" type="submit" style="background: #d00000; color: white; border: none; padding: 12px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 14px; transition: all 0.3s; margin-top: 8px;">Save Reminder</button>
+                <button id="submit-btn" type="submit" data-i18n="common.save_button" style="background: #d00000; color: white; border: none; padding: 12px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 14px; transition: all 0.3s; margin-top: 8px;">Save Reminder</button>
             </form>
 
             <!-- Success Message -->
-            <div id="success-message" style="display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 8px; padding: 12px; color: #16a34a; font-size: 13px; text-align: center; font-weight: 600; margin-top: 12px;">Your reminder has been saved</div>
+            <div id="success-message" data-i18n="common.reminder_saved" style="display: none; background: #dcfce7; border: 1px solid #86efac; border-radius: 8px; padding: 12px; color: #16a34a; font-size: 13px; text-align: center; font-weight: 600; margin-top: 12px;">Your reminder has been saved</div>
         </div>
     </div>
 
     <style>
+        #remind-me-btn {
+            position: relative;
+            animation: remindIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.5s backwards;
+        }
+
+        /* Soft attention ring that pulses outward */
+        #remind-me-btn::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            border: 2px solid rgba(208, 0, 0, 0.55);
+            animation: remindPulse 2.4s ease-out infinite;
+            pointer-events: none;
+        }
+
         #remind-me-btn:hover {
-            transform: scale(1.05);
-            background: #b30000;
-            box-shadow: 0 6px 20px rgba(208, 0, 0, 0.4);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 14px 34px rgba(176, 0, 0, 0.5);
         }
 
         #remind-me-btn:active {
-            transform: scale(0.95);
+            transform: scale(0.96);
         }
+
+        /* Bell gives a gentle periodic ring */
+        #remind-me-btn .remind-bell {
+            transform-origin: 50% 4px;
+            animation: remindBell 4.5s ease-in-out 1.5s infinite;
+        }
+
+        #remind-me-btn:hover::after { animation-play-state: paused; opacity: 0; }
+
+        @keyframes remindIn {
+            from { opacity: 0; transform: translateY(24px) scale(0.85); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes remindPulse {
+            0%   { transform: scale(1);    opacity: 0.6; }
+            70%  { opacity: 0; }
+            100% { transform: scale(1.45); opacity: 0; }
+        }
+
+        @keyframes remindBell {
+            0%, 70%, 100% { transform: rotate(0deg); }
+            74% { transform: rotate(14deg); }
+            78% { transform: rotate(-12deg); }
+            82% { transform: rotate(9deg); }
+            86% { transform: rotate(-6deg); }
+            90% { transform: rotate(3deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #remind-me-btn, #remind-me-btn::after, #remind-me-btn .remind-bell { animation: none; }
+        }
+
+        /* Mirror the floating button to the start side for RTL languages */
+        html.rtl-mode #remind-me-btn { right: auto; left: 20px; }
 
         #modal-close:hover {
             background: #f3f4f6;
@@ -1160,9 +1210,13 @@
             #remind-me-btn {
                 bottom: 20px;
                 right: 15px;
-                width: 56px;
-                height: 56px;
+                padding: 15px;
+                gap: 0;
             }
+
+            html.rtl-mode #remind-me-btn { right: auto; left: 15px; }
+
+            #remind-me-btn .remind-btn-label { display: none; }
 
             #remind-modal {
                 padding: 16px;
@@ -1195,10 +1249,6 @@
         // Open modal
         remindBtn.addEventListener('click', () => {
             remindModal.style.display = 'flex';
-            // Translate when modal opens
-            setTimeout(() => {
-                translateRemindMe();
-            }, 50);
         });
 
         // Close modal
@@ -1208,7 +1258,7 @@
             successMessage.style.display = 'none';
             formError.style.display = 'none';
             submitBtn.disabled = false;
-            submitBtn.textContent = window.i18n?.getTranslation('save_button') || 'Save Reminder';
+            submitBtn.textContent = window.i18n?.getTranslation('common.save_button') || 'Save Reminder';
             remindForm.reset();
         }
 
@@ -1237,13 +1287,13 @@
 
             // Validation
             if (!type || !expiry || !phoneNum) {
-                formError.textContent = 'All fields are required';
+                formError.textContent = window.i18n?.getTranslation('common.error_required') || 'All fields are required';
                 formError.style.display = 'block';
                 return;
             }
 
             if (!validatePhone(phoneNum)) {
-                formError.textContent = 'Please enter a valid phone number';
+                formError.textContent = window.i18n?.getTranslation('common.error_phone') || 'Please enter a valid phone number';
                 formError.style.display = 'block';
                 return;
             }
@@ -1254,7 +1304,7 @@
             // Set loading state
             submitBtn.disabled = true;
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Submitting...';
+            submitBtn.textContent = window.i18n?.getTranslation('common.submitting') || 'Submitting...';
 
             try {
                 // GET with URL params avoids POST redirect body loss
@@ -1296,125 +1346,8 @@
             }
         });
 
-        // Function to translate remind me feature
-        function translateRemindMe() {
-            if (!window.i18n || !window.i18n.getTranslation) {
-                return; // i18n not ready yet
-            }
-
-            try {
-                // Translate button text
-                const btnText = document.getElementById('remind-btn-text');
-                if (btnText) {
-                    const translated = window.i18n.getTranslation('remind_button');
-                    if (translated && translated !== 'remind_button') {
-                        btnText.textContent = translated;
-                    }
-                }
-
-                // Translate modal title
-                const title = document.getElementById('remind-modal-title');
-                if (title) {
-                    const translated = window.i18n.getTranslation('remind_title_new');
-                    if (translated && translated !== 'remind_title_new') {
-                        title.textContent = translated;
-                    }
-                }
-
-                // Translate modal subtitle
-                const subtitle = document.getElementById('remind-modal-subtitle');
-                if (subtitle) {
-                    const translated = window.i18n.getTranslation('remind_subtitle_new');
-                    if (translated && translated !== 'remind_subtitle_new') {
-                        subtitle.textContent = translated;
-                    }
-                }
-
-                // Translate labels
-                const labelResidency = document.getElementById('label-residency');
-                if (labelResidency) {
-                    const translated = window.i18n.getTranslation('residency_type');
-                    if (translated && translated !== 'residency_type') {
-                        labelResidency.textContent = translated;
-                    }
-                }
-
-                const labelExpiration = document.getElementById('label-expiration');
-                if (labelExpiration) {
-                    const translated = window.i18n.getTranslation('expiration_date');
-                    if (translated && translated !== 'expiration_date') {
-                        labelExpiration.textContent = translated;
-                    }
-                }
-
-                const labelPhone = document.getElementById('label-phone');
-                if (labelPhone) {
-                    const translated = window.i18n.getTranslation('phone_number');
-                    if (translated && translated !== 'phone_number') {
-                        labelPhone.textContent = translated;
-                    }
-                }
-
-                // Translate submit button
-                const submitBtn = document.getElementById('submit-btn');
-                if (submitBtn) {
-                    const translated = window.i18n.getTranslation('save_button');
-                    if (translated && translated !== 'save_button') {
-                        submitBtn.textContent = translated;
-                    }
-                }
-
-                // Translate note
-                const noteText = document.getElementById('remind-note-text');
-                if (noteText) {
-                    const translated = window.i18n.getTranslation('remind_note');
-                    if (translated && translated !== 'remind_note') {
-                        noteText.textContent = translated;
-                    }
-                }
-
-                // Translate free service
-                const freeService = document.getElementById('free-service-text');
-                if (freeService) {
-                    const translated = window.i18n.getTranslation('free_service');
-                    if (translated && translated !== 'free_service') {
-                        freeService.textContent = translated;
-                    }
-                }
-
-                // Translate success message
-                const successMsg = document.getElementById('success-message');
-                if (successMsg) {
-                    const translated = window.i18n.getTranslation('reminder_saved');
-                    if (translated && translated !== 'reminder_saved') {
-                        successMsg.textContent = translated;
-                    }
-                }
-            } catch (e) {
-                console.log('Translation error:', e);
-            }
-        }
-
-        // Translate when i18n is ready
-        if (window.i18n && typeof window.i18n.onReady === 'function') {
-            window.i18n.onReady(translateRemindMe);
-        }
-
-        // Try multiple times to ensure translation
-        setTimeout(() => translateRemindMe(), 50);
-        setTimeout(() => translateRemindMe(), 150);
-        setTimeout(() => translateRemindMe(), 500);
-
-        // Hook into language changes
-        if (window.i18n) {
-            const originalTranslatePage = window.i18n.translatePage;
-            if (originalTranslatePage && typeof originalTranslatePage === 'function') {
-                window.i18n.translatePage = function() {
-                    originalTranslatePage.call(this);
-                    setTimeout(() => translateRemindMe(), 100);
-                };
-            }
-        }
+        // Translation is handled centrally by i18n.js via data-i18n attributes,
+        // which re-run on every language change. No manual sync needed here.
     </script>
     <section class="bg-alt">
         <div class="container">

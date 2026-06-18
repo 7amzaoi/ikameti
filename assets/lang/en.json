@@ -825,7 +825,15 @@
     "save_button": "Save Reminder",
     "reminder_saved": "Your reminder has been saved",
     "remind_note": "We will contact you 2 months before expiration",
-    "free_service": "Free service"
+    "free_service": "Free service",
+    "select_placeholder": "-- Select --",
+    "type_tourist": "Tourist",
+    "type_student": "Student",
+    "type_family": "Family",
+    "type_realestate": "Real Estate",
+    "error_required": "All fields are required",
+    "error_phone": "Please enter a valid phone number",
+    "submitting": "Submitting..."
   },
   "rotating_words": [
     "Residency",

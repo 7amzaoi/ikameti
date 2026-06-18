@@ -825,7 +825,15 @@
     "save_button": "Eslatmani saqlash",
     "reminder_saved": "Eslatma muvaffaqiyatli saqlandi",
     "remind_note": "Muddati tugashidan 2 oy oldin siz bilan bog'lanamiz",
-    "free_service": "Bepul xizmat"
+    "free_service": "Bepul xizmat",
+    "select_placeholder": "-- Tanlang --",
+    "type_tourist": "Turistik",
+    "type_student": "Talaba",
+    "type_family": "Oilaviy",
+    "type_realestate": "Ko'chmas mulk",
+    "error_required": "Barcha maydonlar talab qilinadi",
+    "error_phone": "Iltimos, to'g'ri telefon raqamini kiriting",
+    "submitting": "Yuborilmoqda..."
   },
   "rotating_words": [
     "Yashash",
