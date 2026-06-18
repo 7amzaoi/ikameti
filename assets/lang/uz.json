@@ -510,19 +510,20 @@
     },
     "tax_q1": {
       "question": "Turkiyada yashash solig'i qancha?",
-      "intro": "Turkiyada yashash ruxsatnomasi yig'imlari o'zaro tenglik (reciprocity) tamoyiliga asoslanadi, shuning uchun summa fuqarolikka qarab farq qiladi. Quyidagi tariflar 2025-yil 31-dekabrdagi 33124-sonli Rasmiy gazetada e'lon qilingan Yig'imlar to'g'risidagi qonun Umumiy bayonnomasiga muvofiq 01.01.2026 dan kuchga kiradi.",
+      "intro": "Turkiyada yashash ruxsatnomasi qancha turadi? Yashash ruxsatnomasi yig'imlari (ikamet harcı) o'zaro tenglik tamoyiliga asoslanadi, shuning uchun yashash yig'imi miqdori fuqarolikka va qisqa muddatli yashash ruxsatnomasi turiga (turistik, ko'chmas mulk, oilaviy yoki tibbiy) bog'liq. Quyidagi yig'imlar Migratsiya boshqarmasi (Göç İdaresi) tomonidan 2025-yil 31-dekabrdagi 33124-sonli Rasmiy gazetada e'lon qilingan Yig'imlar to'g'risidagi qonun Umumiy bayonnomasiga muvofiq 01.01.2026 dan kuchga kiradi.",
       "rate_1": "Marokash: 2 000 turk lirasi",
-      "card_note_title": "Barcha fuqaroliklar uchun:",
-      "card_note": "Ariza yig'imiga 964 TL yashash kartasi haqi qo'shiladi. Yashash yig'imidan ozod qilingan fuqaroliklar faqat shu 964 TL karta haqini to'laydi.",
-      "standard_title": "Standart tarif — birinchi oy 25 dollar · boshqa oylar 5 dollar",
-      "standard_desc": "Quyidagi maxsus guruhlarda ko'rsatilmagan davlat fuqarolari dahil, ko'pchilik fuqaroliklar uchun amal qiladi.",
-      "tiers_title": "Ayrim fuqaroliklar uchun pasaytirilgan tariflar:",
+      "card_note_title": "Yashash kartasi haqi — barcha fuqaroliklar uchun:",
+      "card_note": "Har bir fuqarolik uchun yashash ruxsatnomasi ariza yig'imiga 964 TL yashash kartasi haqi qo'shiladi. Yashash yig'imidan ozod qilingan fuqaroliklar faqat shu 964 TL yashash kartasi haqini to'laydi.",
+      "standard_title": "Standart yashash ruxsatnomasi yig'imi — birinchi oy 25 dollar · boshqa oylar 5 dollar",
+      "standard_desc": "Ushbu standart yashash yig'imi quyidagi maxsus o'zaro tenglik guruhlarida ko'rsatilmagan davlat fuqarolari dahil, ko'pchilik fuqaroliklar uchun amal qiladi.",
+      "tiers_title": "Ayrim fuqaroliklar uchun pasaytirilgan yashash ruxsatnomasi yig'imlari:",
       "tier_14": "Birinchi oy 14 dollar · boshqa oylar 3.5 dollar",
       "tier_9": "Birinchi oy 9 dollar · boshqa oylar 2.5 dollar",
       "tier_7": "Birinchi oy 7 dollar · boshqa oylar 1.5 dollar",
       "tier_5": "Birinchi oy 5 dollar · boshqa oylar 0.5 dollar",
-      "exempt_note": "Talaba va insonparvarlik yashash ruxsatlari — hamda ayrim fuqaroliklar — yashash yig'imidan ozod; bu holda faqat 964 TL yashash kartasi haqi to'lanadi.",
-      "source": "Rasmiy manba:"
+      "exempt_note": "Yashash yig'imidan ozod qilish: talaba yashash ruxsatnomasi va insonparvarlik yashash ruxsatnomasi — shuningdek ayrim fuqaroliklar — Turkiyada yashash ruxsatnomasi yig'imidan ozod; bu holda faqat 964 TL yashash kartasi haqi to'lanadi.",
+      "source": "Rasmiy manba — Migratsiya boshqarmasi (goc.gov.tr):",
+      "closing": "Yashash ruxsatnomasi yig'imingizni aniq hisoblash yoki Turkiyada ikamet arizangizni rasmiylashtirishda yordam kerakmi? IKAMETI yashash ruxsatnomalari, ularni uzaytirish va har bir fuqarolik uchun zarur hujjatlar bo'yicha yordam beradi."
     }
   },
   "landing_page": {
