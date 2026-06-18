@@ -1796,7 +1796,7 @@ footer {
     color: var(--text-white);
     padding: var(--space-16) 0 var(--space-6);
     border-top: 2px solid rgba(208, 0, 0, 0.2);
-    margin-top: var(--space-16);
+    margin-top: 0;
 }
 
 footer h4 {
