@@ -845,7 +845,9 @@
     "type_realestate": "Ko'chmas mulk",
     "error_required": "Barcha maydonlar talab qilinadi",
     "error_phone": "Iltimos, to'g'ri telefon raqamini kiriting",
-    "submitting": "Yuborilmoqda..."
+    "submitting": "Yuborilmoqda...",
+    "wa_intro": "Salom IKAMETI, quyidagi qo'shimcha xizmatlar bilan qiziqyapman:",
+    "wa_outro": "Iltimos, batafsil ma'lumot va narxlarni yuboring. Rahmat."
   },
   "rotating_words": [
     "Yashash",

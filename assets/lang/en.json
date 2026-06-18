@@ -845,7 +845,9 @@
     "type_realestate": "Real Estate",
     "error_required": "All fields are required",
     "error_phone": "Please enter a valid phone number",
-    "submitting": "Submitting..."
+    "submitting": "Submitting...",
+    "wa_intro": "Hello IKAMETI, I'm interested in the following optional services:",
+    "wa_outro": "Could you please send me more details and pricing? Thank you."
   },
   "rotating_words": [
     "Residency",

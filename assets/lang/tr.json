@@ -845,7 +845,9 @@
     "type_realestate": "Gayrimenkul",
     "error_required": "Tüm alanlar zorunludur",
     "error_phone": "Lütfen geçerli bir telefon numarası girin",
-    "submitting": "Gönderiliyor..."
+    "submitting": "Gönderiliyor...",
+    "wa_intro": "Merhaba IKAMETI, aşağıdaki opsiyonel hizmetlerle ilgileniyorum:",
+    "wa_outro": "Bana daha fazla bilgi ve fiyat gönderebilir misiniz? Teşekkürler."
   },
   "rotating_words": [
     "İkamet",

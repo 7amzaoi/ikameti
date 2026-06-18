@@ -990,21 +990,40 @@
                 });
             });
 
-            // Continue button functionality
-            continueBtn.addEventListener('click', function() {
-                if (selectedServices.size > 0) {
-                    // Prepare data for the next step
-                    const selectedData = {
-                        services: Array.from(selectedServices).map((id) => ({
-                            id: id,
-                            title: document.querySelector(`[data-service-id="${id}"] h4`)?.textContent?.trim() || `Service ${id}`
-                        })),
-                        count: selectedServices.size
-                    };
-                    
-                    console.log('Selected services ready for checkout:', selectedData);
-                    // Future: Send to checkout or next step
+            // Helper: read the service title for an add-on button
+            function findAddonTitle(btn) {
+                let el = btn;
+                for (let i = 0; i < 4 && el; i++) {
+                    el = el.parentElement;
+                    const h = el && el.querySelector ? el.querySelector('h4') : null;
+                    if (h) return h.textContent.trim();
                 }
+                return null;
+            }
+
+            // Helper: translate a key with a safe fallback
+            function waTr(key, fb) {
+                if (!window.i18n) return fb;
+                const v = window.i18n.getTranslation(key);
+                return (v && v !== key) ? v : fb;
+            }
+
+            // Continue button -> open WhatsApp with the selected services prefilled
+            const WHATSAPP_NUMBER = '905309052104';
+            continueBtn.addEventListener('click', function() {
+                const titles = [];
+                document.querySelectorAll('.addon-btn.added').forEach(function(b) {
+                    const t = findAddonTitle(b);
+                    if (t) titles.push(t);
+                });
+                if (titles.length === 0) return;
+
+                const intro = waTr('common.wa_intro', "Hello IKAMETI, I'm interested in the following optional services:");
+                const outro = waTr('common.wa_outro', 'Could you please send me more details and pricing? Thank you.');
+                const list = titles.map(function(x, i) { return (i + 1) + '. ' + x; }).join('\n');
+                const message = intro + '\n\n' + list + '\n\n' + outro;
+                const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+                window.open(url, '_blank');
             });
 
             // Hook into i18n translation system
