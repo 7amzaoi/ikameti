@@ -920,10 +920,6 @@ body.layout-debug * {
     font-size: 14px;
   }
 
-  nav {
-    display: none;
-  }
-
   .blog-content {
     padding: 12px;
   }
