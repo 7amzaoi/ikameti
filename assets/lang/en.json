@@ -230,7 +230,13 @@
     },
     "commit": {
       "title": "Our Commitment",
-      "desc": "We are committed to accurate, up-to-date information, full privacy for your data, and an organized experience free of complexity."
+      "desc": "We are committed to accurate, up-to-date information, full privacy for your data, and an organized experience free of complexity.",
+      "c1_t": "Accurate & Up-to-date Information",
+      "c1_d": "We rely on official sources and keep up with the latest rule changes — so you never act on outdated information or rumors.",
+      "c2_t": "Full Privacy for Your Data",
+      "c2_d": "Your documents and personal details stay strictly confidential and are used only to complete your residency file.",
+      "c3_t": "A Clear, Simple Experience",
+      "c3_d": "We remove the complexity: clear steps, no confusing jargon, and a real person with you at every stage."
     },
     "cta": {
       "title": "Ready to Start Your Residency Journey?",

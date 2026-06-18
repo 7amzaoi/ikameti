@@ -230,7 +230,13 @@
     },
     "commit": {
       "title": "Majburiyatimiz",
-      "desc": "Biz aniq va dolzarb ma'lumot, ma'lumotlaringizning to'liq maxfiyligi va murakkablikdan xoli tartibli tajribani taqdim etishga sodiqmiz."
+      "desc": "Biz aniq va dolzarb ma'lumot, ma'lumotlaringizning to'liq maxfiyligi va murakkablikdan xoli tartibli tajribani taqdim etishga sodiqmiz.",
+      "c1_t": "Aniq va dolzarb ma'lumot",
+      "c1_d": "Rasmiy manbalarga tayanamiz va qoidalardagi so'nggi o'zgarishlarni kuzatamiz — shunda hech qachon eskirgan ma'lumot yoki mish-mishlarga ko'ra ish tutmaysiz.",
+      "c2_t": "Ma'lumotlaringiz uchun to'liq maxfiylik",
+      "c2_d": "Hujjatlaringiz va shaxsiy ma'lumotlaringiz qat'iy maxfiy qoladi va faqat yashash ishingizni yakunlash uchun ishlatiladi.",
+      "c3_t": "Aniq va sodda tajriba",
+      "c3_d": "Murakkablikni olib tashlaymiz: aniq qadamlar, chalkash atamalarsiz va har bosqichda yoningizda jonli odam."
     },
     "cta": {
       "title": "Yashash safaringizni boshlashga tayyormisiz?",

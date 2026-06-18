@@ -230,7 +230,13 @@
     },
     "commit": {
       "title": "Taahhüdümüz",
-      "desc": "Doğru ve güncel bilgi, verilerinizin tam gizliliği ve karmaşıklıktan uzak, düzenli bir deneyim sunmayı taahhüt ederiz."
+      "desc": "Doğru ve güncel bilgi, verilerinizin tam gizliliği ve karmaşıklıktan uzak, düzenli bir deneyim sunmayı taahhüt ederiz.",
+      "c1_t": "Doğru ve Güncel Bilgi",
+      "c1_d": "Resmî kaynaklara dayanır ve en son kural değişikliklerini takip ederiz — böylece asla eski bilgi ya da söylentilere göre hareket etmezsiniz.",
+      "c2_t": "Verileriniz İçin Tam Gizlilik",
+      "c2_d": "Belgeleriniz ve kişisel bilgileriniz tamamen gizli kalır ve yalnızca ikamet dosyanızı tamamlamak için kullanılır.",
+      "c3_t": "Net ve Basit Bir Deneyim",
+      "c3_d": "Karmaşıklığı kaldırırız: net adımlar, kafa karıştıran terimler yok ve her aşamada yanınızda gerçek bir kişi."
     },
     "cta": {
       "title": "İkamet Yolculuğunuza Başlamaya Hazır mısınız?",
