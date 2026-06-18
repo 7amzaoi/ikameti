@@ -304,59 +304,53 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Bizimle İletişime Geçin",
-      "subtitle": "Sorularınızda size yardımcı olmak için buradayız"
+      "title": "Türkiye'deki İkametinizi Konuşalım",
+      "subtitle": "Tek bir mesaj yeterli. WhatsApp ve Instagram'dan hızlıca yanıt veriyoruz."
     },
-    "phone": {
-      "title": "Telefon",
-      "availability": "24/7 Mevcut"
+    "channels": {
+      "title": "Bize Doğrudan Ulaşın",
+      "subtitle": "WhatsApp ve Instagram'a odaklanıyoruz; böylece günlerce değil, dakikalar içinde gerçek bir yanıt alırsınız.",
+      "wa_desc": "Sorularınızı ve belgelerinizi gönderin. Net yanıtlar almanın ve dosyanızı başlatmanın en hızlı yolu.",
+      "wa_meta": "Genellikle dakikalar içinde yanıt",
+      "wa_button": "WhatsApp'tan Yazın",
+      "ig_desc": "Güncellemelerimizi takip edin ve istediğiniz zaman mesaj gönderin — her gün aktifiz.",
+      "ig_meta": "Bize DM atın @ikameti_tr",
+      "ig_button": "Instagram'dan Yazın"
     },
-    "email": {
-      "title": "E-posta",
-      "response_time": "2 saat içinde yanıt"
+    "solve": {
+      "title": "Bunlardan Biriyle Karşılaşıyorsanız Bize Ulaşın",
+      "subtitle": "Bunlar her gün çözdüğümüz sorunlar — zamanınıza, paranıza ya da yasal statünüze mal olmasına izin vermeyin.",
+      "s1_t": "İkamet bitmek üzere veya reddedildi",
+      "s1_d": "Yasal statünüzü kaybetmeden uzatma işlemlerini yapar, reddedilen başvuruları düzeltiriz.",
+      "s2_t": "Hangi ikametin uygun olduğundan emin değilsiniz",
+      "s2_d": "Turistik, aile, öğrenci ya da gayrimenkul — durumunuza tam olarak neyin uyduğunu söyleriz.",
+      "s3_t": "Evrak ve randevularda kayboldunuz",
+      "s3_d": "Dosyanızı hazırlar ve Göç İdaresi randevunuzu ilk seferde doğru şekilde alırız.",
+      "s4_t": "Güvenli konut arıyorsunuz",
+      "s4_d": "Sizi ikamete de uygun, güvenilir ve doğrulanmış konutlarla buluştururuz.",
+      "s5_t": "Vergi numarası, adres veya sigorta gerekiyor",
+      "s5_d": "Tüm resmi ek işlemleri hızlıca — çoğu zaman tek günde — tamamlarız.",
+      "s6_t": "Dil engeli",
+      "s6_d": "Ekibimiz ilk mesajdan kartınızı alana kadar kendi dilinizde rehberlik eder."
     },
-    "whatsapp": {
-      "title": "WhatsApp",
-      "support": "Hızlı sohbet desteği"
+    "why": {
+      "title": "Müşteriler Neden IKAMETI'yi Seçiyor",
+      "w1_t": "Hızlı Yanıt",
+      "w1_d": "Otomatik botlara değil, dakikalar içinde gerçek bir kişiye ulaşın.",
+      "w2_t": "Ücretsiz İlk Danışmanlık",
+      "w2_d": "Hiçbir yükümlülük olmadan dürüst ve kişiye özel tavsiye alın.",
+      "w3_t": "Deneyimli ve Güvenilir",
+      "w3_d": "Yüzlerce ikamet ve konut dosyası başarıyla tamamlandı.",
+      "w4_t": "Çok Dilli Ekip",
+      "w4_d": "Arapça, İngilizce, Türkçe, Rusça, Farsça ve daha fazlası."
     },
-    "form": {
-      "title": "Bize Mesaj Gönderin",
-      "full_name_label": "Tam Ad *",
-      "full_name_placeholder": "Adınız",
-      "email_label": "E-posta *",
-      "email_placeholder": "your@email.com",
-      "phone_label": "Telefon *",
-      "phone_placeholder": "+90 530 905 21 04",
-      "subject_label": "Konu *",
-      "subject_placeholder": "Bize nasıl yardımcı olabiliriz?",
-      "message_label": "Mesaj *",
-      "message_placeholder": "Mesajınız...",
-      "submit_button": "Mesaj Gönder"
+    "final": {
+      "title": "Bugün Çözmeye Hazır mısınız?",
+      "desc": "Durumunuzu anlatın, adım adım yol gösterelim. İlk mesaj ücretsizdir.",
+      "wa": "WhatsApp'tan Başla",
+      "ig": "Instagram'dan Yaz"
     },
-    "benefits": {
-      "title": "Neden Bizimle İletişime Geçmelisiniz?",
-      "consultation": {
-        "title": "✓ Uzman Danışmanlık",
-        "description": "Deneyimli ekipten profesyonel tavsiyeleri"
-      },
-      "fast_response": {
-        "title": "✓ Hızlı Yanıt",
-        "description": "İş saatleri içinde 2 saat içinde yanıt"
-      },
-      "free_consultation": {
-        "title": "✓ Ücretsiz İlk Danışmanlık",
-        "description": "Yükümlülük olmaksızın kişiselleştirilmiş tavsiyeleri alın"
-      },
-      "multilingual": {
-        "title": "✓ Çok Dilli Destek",
-        "description": "Tercih ettiğiniz dilde iletişim kurun"
-      }
-    },
-    "final_cta": {
-      "title": "Ücretsiz Danışmanlığınızı Alın",
-      "description": "Bugün ekibimizle sohbet edin ve ikamet seçeneklerinizi keşfedin",
-      "button": "WhatsApp'ta Sohbete Başla"
-    }
+    "wa_prefill": "Merhaba IKAMETI, Türkiye'de ikamet hakkında bilgi almak istiyorum."
   },
   "faq_page": {
     "hero": {

@@ -304,59 +304,53 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Biz bilan bog'laning",
-      "subtitle": "Sizning savollarga yordam berishga biz shunga tayyorman"
+      "title": "Turkiyadagi yashashingiz haqida gaplashaylik",
+      "subtitle": "Bitta xabar kifoya. WhatsApp va Instagram orqali tez javob beramiz."
     },
-    "phone": {
-      "title": "Telefon",
-      "availability": "24/7 Doimiy"
+    "channels": {
+      "title": "Biz bilan to'g'ridan-to'g'ri bog'laning",
+      "subtitle": "Biz WhatsApp va Instagramga e'tibor qaratamiz — shunda kunlab emas, daqiqalarda haqiqiy javob olasiz.",
+      "wa_desc": "Savollaringiz va hujjatlaringizni yuboring. Aniq javob olish va ishingizni boshlashning eng tez yo'li.",
+      "wa_meta": "Odatda daqiqalarda javob beramiz",
+      "wa_button": "WhatsApp'da yozing",
+      "ig_desc": "Yangiliklarimizni kuzating va istalgan vaqtda xabar yozing — biz har kuni faolmiz.",
+      "ig_meta": "Bizga yozing @ikameti_tr",
+      "ig_button": "Instagram'da yozing"
     },
-    "email": {
-      "title": "Elektron pochta",
-      "response_time": "2 soat ichida javob"
+    "solve": {
+      "title": "Quyidagilardan biriga duch kelsangiz, biz bilan bog'laning",
+      "subtitle": "Bular biz har kuni hal qiladigan muammolar — ular vaqtingiz, pulingiz yoki qonuniy maqomingizga zarar yetkazmasin.",
+      "s1_t": "Ruxsatnoma tugayapti yoki rad etilgan",
+      "s1_d": "Qonuniy maqomingizni yo'qotishdan oldin uzaytirishni amalga oshiramiz va rad etilgan arizalarni tuzatamiz.",
+      "s2_t": "Qaysi yashash turi mosligini bilmaysiz",
+      "s2_d": "Turistik, oilaviy, talaba yoki ko'chmas mulk — holatingizga aynan nima mosligini aytamiz.",
+      "s3_t": "Hujjat va navbatlarda adashdingiz",
+      "s3_d": "Ishingizni tayyorlaymiz va Migratsiya boshqarmasidagi navbatni birinchi martadayoq to'g'ri olamiz.",
+      "s4_t": "Xavfsiz uy-joy qidiryapsiz",
+      "s4_d": "Sizni yashashga ham mos keladigan ishonchli, tekshirilgan uy-joy bilan bog'laymiz.",
+      "s5_t": "Soliq raqami, manzil yoki sug'urta kerak",
+      "s5_d": "Barcha rasmiy qo'shimcha ishlarni tez — ko'pincha bir kunda — bajaramiz.",
+      "s6_t": "Til to'sig'i",
+      "s6_d": "Jamoamiz birinchi xabardan kartani olgungizgacha o'z tilingizda yo'l-yo'riq beradi."
     },
-    "whatsapp": {
-      "title": "WhatsApp",
-      "support": "Tez chat yordamchi"
+    "why": {
+      "title": "Nega mijozlar IKAMETI'ni tanlaydi",
+      "w1_t": "Tez javoblar",
+      "w1_d": "Botlar emas, daqiqalarda jonli odam bilan bog'lanasiz.",
+      "w2_t": "Bepul birinchi maslahat",
+      "w2_d": "Hech qanday majburiyatsiz halol va shaxsiy maslahat.",
+      "w3_t": "Tajribali va ishonchli",
+      "w3_d": "Yuzlab yashash va uy-joy ishlari muvaffaqiyatli bajarilgan.",
+      "w4_t": "Ko'p tilli jamoa",
+      "w4_d": "Arab, ingliz, turk, rus, fors va boshqalar."
     },
-    "form": {
-      "title": "Bizga xabar yuboring",
-      "full_name_label": "To'liq ism *",
-      "full_name_placeholder": "Sizning ismingiz",
-      "email_label": "Elektron pochta *",
-      "email_placeholder": "your@email.com",
-      "phone_label": "Telefon raqami *",
-      "phone_placeholder": "+90 530 905 21 04",
-      "subject_label": "Mavzu *",
-      "subject_placeholder": "Biz sizga qanday yordam bera olamiz?",
-      "message_label": "Xabar *",
-      "message_placeholder": "Sizning xabaringiz...",
-      "submit_button": "Xabar yuboring"
+    "final": {
+      "title": "Bugun hal qilishga tayyormisiz?",
+      "desc": "Holatingizni ayting, sizni bosqichma-bosqich yo'naltiramiz. Birinchi xabar bepul.",
+      "wa": "WhatsApp'da boshlash",
+      "ig": "Instagram'da yozish"
     },
-    "benefits": {
-      "title": "Nima uchun biz bilan bog'lanish?",
-      "consultation": {
-        "title": "✓ Sifatli maslahat",
-        "description": "Tejaribali jamoanining kasb-hunarmand maslahat"
-      },
-      "fast_response": {
-        "title": "✓ Tez javob",
-        "description": "Ish vaqtida 2 soat ichida javob"
-      },
-      "free_consultation": {
-        "title": "✓ Bepul dastlabki maslahat",
-        "description": "Majburiyatsiz shaxsiy maslahat oling"
-      },
-      "multilingual": {
-        "title": "✓ Ko'p tilni yordamchi",
-        "description": "Sizning tanlovingiz tilida muloqot qiling"
-      }
-    },
-    "final_cta": {
-      "title": "Bepul maslahat oling",
-      "description": "Bugun bizning jamoa bilan suhbat qiling va fuqarolik variantlarini aniqlang",
-      "button": "WhatsApp orqali chat boshlang"
-    }
+    "wa_prefill": "Salom IKAMETI, Turkiyada yashash haqida so'ramoqchiman."
   },
   "faq_page": {
     "hero": {
