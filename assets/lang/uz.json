@@ -510,8 +510,19 @@
     },
     "tax_q1": {
       "question": "Turkiyada yashash solig'i qancha?",
-      "intro": "Qisqa muddatli yashash ruxsatnomalari (turistik - ko'chmas mulk - davolanish - va h.k.) uchun soliq fuqarolikka qarab farq qiladi va quyidagicha:",
-      "rate_1": "Marokash: 2 000 turk lirasi"
+      "intro": "Turkiyada yashash ruxsatnomasi yig'imlari o'zaro tenglik (reciprocity) tamoyiliga asoslanadi, shuning uchun summa fuqarolikka qarab farq qiladi. Quyidagi tariflar 2025-yil 31-dekabrdagi 33124-sonli Rasmiy gazetada e'lon qilingan Yig'imlar to'g'risidagi qonun Umumiy bayonnomasiga muvofiq 01.01.2026 dan kuchga kiradi.",
+      "rate_1": "Marokash: 2 000 turk lirasi",
+      "card_note_title": "Barcha fuqaroliklar uchun:",
+      "card_note": "Ariza yig'imiga 964 TL yashash kartasi haqi qo'shiladi. Yashash yig'imidan ozod qilingan fuqaroliklar faqat shu 964 TL karta haqini to'laydi.",
+      "standard_title": "Standart tarif — birinchi oy 25 dollar · boshqa oylar 5 dollar",
+      "standard_desc": "Quyidagi maxsus guruhlarda ko'rsatilmagan davlat fuqarolari dahil, ko'pchilik fuqaroliklar uchun amal qiladi.",
+      "tiers_title": "Ayrim fuqaroliklar uchun pasaytirilgan tariflar:",
+      "tier_14": "Birinchi oy 14 dollar · boshqa oylar 3.5 dollar",
+      "tier_9": "Birinchi oy 9 dollar · boshqa oylar 2.5 dollar",
+      "tier_7": "Birinchi oy 7 dollar · boshqa oylar 1.5 dollar",
+      "tier_5": "Birinchi oy 5 dollar · boshqa oylar 0.5 dollar",
+      "exempt_note": "Talaba va insonparvarlik yashash ruxsatlari — hamda ayrim fuqaroliklar — yashash yig'imidan ozod; bu holda faqat 964 TL yashash kartasi haqi to'lanadi.",
+      "source": "Rasmiy manba:"
     }
   },
   "landing_page": {

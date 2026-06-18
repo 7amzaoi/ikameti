@@ -510,8 +510,19 @@
     },
     "tax_q1": {
       "question": "Türkiye'de ikamet vergisi ne kadar?",
-      "intro": "Kısa süreli ikametler (turist - gayrimenkul - tedavi - vb.) için vergi uyruğa göre değişir ve şöyledir:",
-      "rate_1": "Fas: 2.000 Türk Lirası"
+      "intro": "Türkiye'de ikamet izni harçları mütekabiliyet esasına dayanır; bu nedenle tutar uyruğunuza göre değişir. Aşağıdaki tutarlar, 31 Aralık 2025 tarihli ve 33124 sayılı Resmî Gazete'de yayımlanan Harçlar Kanunu Genel Tebliği ile belirlenmiş olup 01.01.2026 tarihinden itibaren geçerlidir.",
+      "rate_1": "Fas: 2.000 Türk Lirası",
+      "card_note_title": "Tüm uyruklar için geçerlidir:",
+      "card_note": "Başvuru harcına 964 TL ikamet kartı bedeli eklenir. İkamet harcından muaf olan uyruklar yalnızca bu 964 TL kart bedelini öder.",
+      "standard_title": "Standart tarife — ilk ay 25 ABD doları · diğer aylar 5 ABD doları",
+      "standard_desc": "Aşağıdaki özel gruplarda yer almayan ülkelerin vatandaşları dâhil çoğu uyruk için geçerlidir.",
+      "tiers_title": "Belirli uyruklar için daha düşük tarifeler:",
+      "tier_14": "İlk ay 14 ABD doları · diğer aylar 3,5 ABD doları",
+      "tier_9": "İlk ay 9 ABD doları · diğer aylar 2,5 ABD doları",
+      "tier_7": "İlk ay 7 ABD doları · diğer aylar 1,5 ABD doları",
+      "tier_5": "İlk ay 5 ABD doları · diğer aylar 0,5 ABD doları",
+      "exempt_note": "Öğrenci ve insani ikametler — ve bazı uyruklar — ikamet harcından muaftır; bu durumda yalnızca 964 TL ikamet kartı bedeli ödenir.",
+      "source": "Resmî kaynak:"
     }
   },
   "landing_page": {

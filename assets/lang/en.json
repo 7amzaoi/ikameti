@@ -510,8 +510,19 @@
     },
     "tax_q1": {
       "question": "How much is the residency tax in Turkey?",
-      "intro": "The tax for short-term residencies (tourist - real estate - medical - etc.) varies by nationality, as follows:",
-      "rate_1": "Moroccan: 2,000 Turkish Lira"
+      "intro": "Residence permit fees in Turkey are based on reciprocity, so the amount depends on your nationality. The rates below take effect on 01/01/2026, as set by the General Communiqué on the Fees Law published in the Official Gazette No. 33124 dated 31 December 2025.",
+      "rate_1": "Moroccan: 2,000 Turkish Lira",
+      "card_note_title": "Applies to all nationalities:",
+      "card_note": "A residence card fee of 964 TL is added to the application fee. Nationalities that are exempt from the residence fee pay only this 964 TL card fee.",
+      "standard_title": "Standard rate — first month 25 USD · each additional month 5 USD",
+      "standard_desc": "Applies to most nationalities, including the citizens of any country not listed in the special groups below.",
+      "tiers_title": "Lower rates for specific nationalities:",
+      "tier_14": "First month 14 USD · each additional month 3.5 USD",
+      "tier_9": "First month 9 USD · each additional month 2.5 USD",
+      "tier_7": "First month 7 USD · each additional month 1.5 USD",
+      "tier_5": "First month 5 USD · each additional month 0.5 USD",
+      "exempt_note": "Student and humanitarian residencies — and certain nationalities — are exempt from the residence fee; in that case only the 964 TL residence card fee is paid.",
+      "source": "Official source:"
     }
   },
   "landing_page": {
