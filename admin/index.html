@@ -197,8 +197,17 @@
           </div>
         </div>
         <div class="field">
-          <label for="blog-image">Cover image URL</label>
-          <input type="url" id="blog-image" placeholder="https://…/image.jpg">
+          <label>Cover image</label>
+          <div class="image-upload">
+            <div class="image-preview" id="blog-image-preview" aria-hidden="true"></div>
+            <div class="image-upload-controls">
+              <input type="file" id="blog-image-file" accept="image/*" hidden>
+              <button type="button" class="btn btn-ghost btn-sm" id="blog-image-upload-btn">⬆ Upload from device</button>
+              <button type="button" class="btn btn-ghost btn-sm" id="blog-image-clear-btn" style="display:none;">Remove</button>
+              <div class="image-upload-status" id="blog-image-status"></div>
+            </div>
+          </div>
+          <input type="url" id="blog-image" placeholder="…or paste an image URL" style="margin-top:10px;">
         </div>
         <div class="field">
           <label for="blog-description">Short description <span class="hint">(shown on the blog card)</span></label>

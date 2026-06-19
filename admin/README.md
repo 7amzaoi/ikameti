@@ -38,7 +38,13 @@ database level — no other Supabase user can read submissions or edit blogs, ev
 if one is created later. To hand access to a different email, change it inside
 `is_admin()` in that file (and in `admin/js/config.js → ADMIN_EMAIL`) and re-run.
 
-### 4. Log in
+### 4. Enable image uploads (optional but recommended)
+Run [`../supabase/storage.sql`](../supabase/storage.sql) once in the SQL Editor.
+It creates a public **`blog-images`** storage bucket so you can upload a cover
+image straight from your device in the article editor (only the admin can
+upload; you can still paste a URL instead).
+
+### 5. Log in
 Open **`/admin/login.html`** in the browser and sign in with
 `hmzaaslan77@gmail.com`. You'll land on the dashboard. Your session is
 remembered until you click **Sign out**. Any other account is rejected.

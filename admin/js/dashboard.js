@@ -251,8 +251,75 @@
     $('#blog-description').value = b ? (b.description || '') : '';
     $('#blog-content').value = b ? (b.content || '') : '';
     $('#blog-slug').dataset.touched = b ? '1' : '';
+    $('#blog-image-file').value = '';
+    setImageStatus('');
+    setImagePreview(b ? (b.image || '') : '');
     openModal('blog-modal');
   }
+
+  /* ---- cover image: upload from device (Supabase Storage) ---- */
+  const BLOG_BUCKET = 'blog-images';
+
+  function setImagePreview(url) {
+    const prev = $('#blog-image-preview');
+    if (url) {
+      prev.style.backgroundImage = `url("${url.replace(/"/g, '%22')}")`;
+      prev.classList.remove('empty');
+      $('#blog-image-clear-btn').style.display = '';
+    } else {
+      prev.style.backgroundImage = '';
+      prev.classList.add('empty');
+      $('#blog-image-clear-btn').style.display = 'none';
+    }
+  }
+  function setImageStatus(msg, kind) {
+    const el = $('#blog-image-status');
+    el.textContent = msg || '';
+    el.className = 'image-upload-status' + (kind ? ' ' + kind : '');
+  }
+
+  async function uploadCover(file) {
+    const ext = (file.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
+    const path = `covers/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
+    const { error } = await sb.storage.from(BLOG_BUCKET).upload(path, file, {
+      cacheControl: '3600', upsert: false, contentType: file.type || undefined
+    });
+    if (error) throw error;
+    return sb.storage.from(BLOG_BUCKET).getPublicUrl(path).data.publicUrl;
+  }
+
+  $('#blog-image-upload-btn').addEventListener('click', () => $('#blog-image-file').click());
+  $('#blog-image-clear-btn').addEventListener('click', () => {
+    $('#blog-image').value = '';
+    $('#blog-image-file').value = '';
+    setImagePreview('');
+    setImageStatus('');
+  });
+  $('#blog-image').addEventListener('input', e => setImagePreview(e.target.value.trim()));
+  $('#blog-image-file').addEventListener('change', async e => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) { setImageStatus('Please choose an image file.', 'error'); return; }
+    if (file.size > 5 * 1024 * 1024) { setImageStatus('Image is too large (max 5 MB).', 'error'); return; }
+
+    const saveBtn = $('#blog-save-btn');
+    saveBtn.disabled = true;
+    setImageStatus('Uploading…', 'uploading');
+    try {
+      const url = await uploadCover(file);
+      $('#blog-image').value = url;
+      setImagePreview(url);
+      setImageStatus('Uploaded ✓', 'ok');
+    } catch (err) {
+      const m = /bucket.*not found|does not exist/i.test(err.message || '')
+        ? 'Image bucket missing — run supabase/storage.sql once in Supabase.'
+        : (err.message || 'Upload failed');
+      setImageStatus(m, 'error');
+      toast(m, 'err');
+    } finally {
+      saveBtn.disabled = false;
+    }
+  });
 
   // auto-slug from title until the user edits the slug field directly
   $('#blog-title').addEventListener('input', e => {

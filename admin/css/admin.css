@@ -330,6 +330,20 @@ td .blog-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .modal-foot { padding: 16px 24px; border-top: 1px solid var(--line-2); display: flex; gap: 10px; justify-content: flex-end; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
 
+/* ---------- IMAGE UPLOAD ---------- */
+.image-upload { display: flex; gap: 14px; align-items: center; }
+.image-preview {
+  width: 104px; height: 78px; border-radius: var(--radius-sm); flex-shrink: 0;
+  border: 1px solid var(--line); background: var(--line-2) center/cover no-repeat;
+  display: grid; place-items: center; color: var(--muted-2); font-size: 12px; overflow: hidden;
+}
+.image-preview.empty::after { content: "No image"; }
+.image-upload-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.image-upload-status { font-size: 12.5px; color: var(--muted); width: 100%; }
+.image-upload-status.uploading { color: var(--brand); }
+.image-upload-status.error { color: var(--danger); }
+.image-upload-status.ok { color: var(--ok); }
+
 /* ---------- TOAST ---------- */
 .toast {
   position: fixed; bottom: 24px; right: 24px; z-index: 200;
