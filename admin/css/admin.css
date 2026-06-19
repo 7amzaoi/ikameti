@@ -64,16 +64,7 @@ button { font-family: inherit; }
   box-shadow: var(--shadow-lg);
   padding: 36px 32px;
 }
-.login-logo {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 800; font-size: 20px; color: var(--ink);
-  margin-bottom: 6px;
-}
-.login-logo .dot {
-  width: 30px; height: 30px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
-  display: grid; place-items: center; color: #fff; font-size: 16px;
-}
+.login-logo-img { height: 46px; width: auto; max-width: 78%; display: block; margin-bottom: 16px; }
 .login-sub { color: var(--muted); font-size: 14px; margin: 0 0 26px; }
 
 /* ---------- FORM CONTROLS ---------- */
@@ -136,15 +127,11 @@ select { cursor: pointer; }
   position: sticky; top: 0; height: 100vh;
 }
 .sidebar-brand {
-  display: flex; align-items: center; gap: 10px;
-  padding: 20px 22px; font-weight: 800; font-size: 17px;
+  display: flex; align-items: center;
+  padding: 18px 20px;
   border-bottom: 1px solid var(--line-2);
 }
-.sidebar-brand .dot {
-  width: 30px; height: 30px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
-  display: grid; place-items: center; color: #fff; font-size: 15px;
-}
+.brand-logo { height: 34px; width: auto; max-width: 100%; display: block; }
 .nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .nav-link {
   display: flex; align-items: center; gap: 12px;
