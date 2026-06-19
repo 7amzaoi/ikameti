@@ -5,6 +5,14 @@
 
 const BLOG_RTL_LANGUAGES = new Set(['ar', 'fa', 'uz', 'af']);
 
+// Resolve the blog/ base from this script's own URL so data loads work on
+// any host or subpath (e.g. GitHub Pages project sites at /<repo>/blog/).
+const BLOG_BASE = (function () {
+  const s = document.currentScript;
+  if (s && s.src) return s.src.replace(/assets\/js\/blog\.js.*$/, '');
+  return './';
+})();
+
 const BLOG = {
   articles: [],
   activeCategory: 'all',
@@ -51,9 +59,7 @@ const BLOG = {
    */
   loadArticlesFromJson: async function() {
     try {
-      const depth = window.location.pathname.split('/').filter(Boolean).length;
-      const prefix = depth <= 2 ? './data/' : '../data/';
-      const response = await fetch(`${prefix}articles.json`, { cache: 'no-store' });
+      const response = await fetch(`${BLOG_BASE}data/articles.json`, { cache: 'no-store' });
       if (!response.ok) {
         return false;
       }
