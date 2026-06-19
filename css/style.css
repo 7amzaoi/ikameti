@@ -2091,12 +2091,19 @@ footer a:hover {
         width: 100%;
     }
 
+    footer {
+        padding: 40px 0 24px;
+    }
+
     footer .grid-cols-4 {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6) var(--space-8);
     }
 
     .footer-bottom {
         font-size: 12px;
+        margin-top: var(--space-6);
+        padding-top: var(--space-4);
     }
 }
 
