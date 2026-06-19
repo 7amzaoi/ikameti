@@ -249,12 +249,60 @@
     $('#blog-status').value = b ? b.status : 'published';
     $('#blog-image').value = b ? (b.image || '') : '';
     $('#blog-description').value = b ? (b.description || '') : '';
-    $('#blog-content').value = b ? (b.content || '') : '';
+    setEditorHtml(b ? (b.content || '') : '');
     $('#blog-slug').dataset.touched = b ? '1' : '';
     $('#blog-image-file').value = '';
     setImageStatus('');
     setImagePreview(b ? (b.image || '') : '');
     openModal('blog-modal');
+  }
+
+  /* ---- rich-text content editor (Quill, with plain-textarea fallback) ---- */
+  let quill = null, editorTried = false;
+  function ensureEditor() {
+    if (editorTried) return quill;
+    editorTried = true;
+    const host = document.getElementById('blog-content-editor');
+    if (!host) return null;
+    if (window.Quill) {
+      quill = new window.Quill(host, {
+        theme: 'snow',
+        placeholder: 'Start writing your article…',
+        modules: {
+          toolbar: [
+            [{ header: [2, 3, false] }],
+            ['bold', 'italic', 'underline'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['blockquote', 'link'],
+            ['clean']
+          ]
+        }
+      });
+    } else {
+      // Fallback if the editor library can't load: a plain text box.
+      const ta = document.createElement('textarea');
+      ta.id = 'blog-content-fallback';
+      ta.style.cssText = 'min-height:240px;width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;';
+      host.replaceWith(ta);
+    }
+    return quill;
+  }
+  function setEditorHtml(html) {
+    const q = ensureEditor();
+    if (q) {
+      // dangerouslyPasteHTML keeps the editor's internal model in sync so
+      // lists, links and formatting survive (plain innerHTML assignment loses them).
+      if (html && html.trim()) q.clipboard.dangerouslyPasteHTML(html);
+      else q.setText('');
+    } else {
+      const ta = document.getElementById('blog-content-fallback'); if (ta) ta.value = html || '';
+    }
+  }
+  function getEditorHtml() {
+    const q = ensureEditor();
+    if (q) { const h = q.root.innerHTML.trim(); return (h === '<p><br></p>' || h === '<p></p>') ? '' : h; }
+    const ta = document.getElementById('blog-content-fallback');
+    return ta ? ta.value : '';
   }
 
   /* ---- cover image: upload from device (Supabase Storage) ---- */
@@ -341,7 +389,7 @@
       status: $('#blog-status').value,
       image: $('#blog-image').value.trim() || null,
       description: $('#blog-description').value.trim() || null,
-      content: $('#blog-content').value
+      content: getEditorHtml()
     };
     if (!payload.title || !payload.slug) { toast('Title and slug are required', 'err'); return; }
 

@@ -330,6 +330,23 @@ td .blog-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .modal-foot { padding: 16px 24px; border-top: 1px solid var(--line-2); display: flex; gap: 10px; justify-content: flex-end; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
 
+/* ---------- RICH TEXT EDITOR (Quill) ---------- */
+.ql-toolbar.ql-snow {
+  border: 1px solid var(--line); border-bottom: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0; background: #fbfbfc;
+}
+.ql-container.ql-snow {
+  border: 1px solid var(--line);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family: var(--font); font-size: 14.5px;
+}
+#blog-content-editor .ql-editor { min-height: 240px; line-height: 1.6; }
+.ql-editor.ql-blank::before { color: var(--muted-2); font-style: normal; }
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke { stroke: var(--brand); }
+.ql-snow.ql-toolbar button.ql-active .ql-stroke { stroke: var(--brand); }
+.ql-snow .ql-picker.ql-expanded .ql-picker-label { border-color: var(--line); }
+
 /* ---------- IMAGE UPLOAD ---------- */
 .image-upload { display: flex; gap: 14px; align-items: center; }
 .image-preview {
