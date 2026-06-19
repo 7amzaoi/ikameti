@@ -41,6 +41,17 @@ const BLOG = {
    * Load articles from the canonical JSON data source.
    */
   loadArticles: async function(options = {}) {
+    // Primary source: Supabase (managed from the admin dashboard).
+    try {
+      const fromDb = await this.loadArticlesFromSupabase();
+      if (fromDb) {
+        return true;
+      }
+    } catch (error) {
+      console.warn('Supabase article source unavailable, falling back to JSON:', error);
+    }
+
+    // Fallback source: bundled articles.json.
     try {
       const loaded = await this.loadArticlesFromJson();
       if (loaded) {
@@ -52,6 +63,48 @@ const BLOG = {
       console.error('Failed to load blog articles from JSON:', error);
       throw error;
     }
+  },
+
+  /**
+   * Load published articles from Supabase via the shared public client.
+   * Returns false (so the JSON fallback runs) if the client or data
+   * is unavailable.
+   */
+  loadArticlesFromSupabase: async function() {
+    if (!window.IKAMETI_DB || typeof window.IKAMETI_DB.getPublishedBlogs !== 'function') {
+      return false;
+    }
+
+    const articles = await window.IKAMETI_DB.getPublishedBlogs();
+    if (!Array.isArray(articles) || articles.length === 0) {
+      return false;
+    }
+
+    const dedupedArticles = new Map();
+    articles
+      .map((article) => this.normalizeArticle(article))
+      .forEach((article) => {
+        if (!article.slug) {
+          return;
+        }
+        const existing = dedupedArticles.get(article.slug);
+        if (!existing || article.id >= existing.id) {
+          dedupedArticles.set(article.slug, article);
+        }
+      });
+
+    this.articles = Array.from(dedupedArticles.values())
+      .sort((a, b) => {
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+        if (!Number.isNaN(dateA) && !Number.isNaN(dateB) && dateA !== dateB) {
+          return dateB - dateA;
+        }
+        return b.id - a.id;
+      });
+
+    console.log(`Loaded ${this.articles.length} articles from Supabase`);
+    return true;
   },
 
   /**

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Login · IKAMETI</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="login-card" id="login-form" autocomplete="on">
+      <div class="login-logo"><span class="dot">★</span> IKAMETI Admin</div>
+      <p class="login-sub">Sign in to manage blogs and view form submissions.</p>
+
+      <div class="alert alert-error" id="login-error"></div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@ikameti.com" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="login-btn">Sign in</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script>
+    const form = document.getElementById('login-form');
+    const errorBox = document.getElementById('login-error');
+    const btn = document.getElementById('login-btn');
+
+    function showError(msg) {
+      errorBox.textContent = msg;
+      errorBox.classList.add('show');
+    }
+
+    const ALLOWED = (window.IKAMETI_ADMIN_CONFIG.ADMIN_EMAIL || '').toLowerCase();
+
+    function isAllowed(email) {
+      return !ALLOWED || (email || '').toLowerCase() === ALLOWED;
+    }
+
+    // Show a message if the dashboard bounced a non-admin back here.
+    if (new URLSearchParams(location.search).get('denied')) {
+      showError('That account is not authorised to access the dashboard.');
+    }
+
+    // If already signed in as the allowed admin, skip straight to the dashboard.
+    window.sb.auth.getSession().then(({ data }) => {
+      if (data.session && isAllowed(data.session.user.email)) {
+        window.location.replace('index.html');
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorBox.classList.remove('show');
+      btn.disabled = true;
+      btn.textContent = 'Signing in…';
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      const { error } = await window.sb.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        showError(error.message || 'Invalid email or password.');
+        btn.disabled = false;
+        btn.textContent = 'Sign in';
+        return;
+      }
+
+      // Only the allowed admin may proceed — sign others straight back out.
+      if (!isAllowed(email)) {
+        await window.sb.auth.signOut();
+        showError('That account is not authorised to access the dashboard.');
+        btn.disabled = false;
+        btn.textContent = 'Sign in';
+        return;
+      }
+      window.location.replace('index.html');
+    });
+  </script>
+</body>
+</html>
