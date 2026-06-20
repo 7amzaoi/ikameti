@@ -307,8 +307,10 @@
   }
 
   /* ---- per-language translations (title / description / content) ---- */
+  // English is NOT listed here: the main fields above ARE the English /
+  // default version. This section is only for the other languages.
   const TR_LANGS = [
-    ['en', 'English'], ['ar', 'العربية'], ['tr', 'Türkçe'], ['ru', 'Русский'],
+    ['ar', 'العربية'], ['tr', 'Türkçe'], ['ru', 'Русский'],
     ['fa', 'فارسی'], ['uz', 'Ўзбек'], ['af', 'دری']
   ];
   const TR_RTL = new Set(['ar', 'fa', 'af']);
