@@ -331,7 +331,8 @@
             '<label>Short description</label>' +
             '<textarea id="tr-' + code + '-desc" style="min-height:48px;"' + dir + ' placeholder="Card summary in ' + name + '"></textarea>' +
             '<label>Content</label>' +
-            '<textarea id="tr-' + code + '-content" class="tr-content" style="min-height:150px;"' + dir + ' placeholder="Full article in ' + name + ' — write normally; blank lines become paragraphs."></textarea>' +
+            '<textarea id="tr-' + code + '-content" class="tr-content" style="min-height:150px;"' + dir + ' placeholder="Full article in ' + name + '. Use  # Heading  for sections, **bold** for bold, and  - item  for bullet lists. Blank lines start new paragraphs."></textarea>' +
+            '<div class="tr-hint">Formatting: <code># Title</code> → heading · <code>## Title</code> → smaller heading · <code>**word**</code> → <b>bold</b> · <code>- item</code> → bullet list. Paste from ChatGPT works as-is.</div>' +
           '</div>' +
         '</details>'
       );
@@ -355,11 +356,54 @@
     });
   }
 
-  function htmlOrWrap(s) {
-    s = (s || '').trim();
+  // Convert the pasted text into clean article HTML so a translation looks
+  // exactly like the English version (headings, bold, lists — not raw "#"/"*").
+  // Already-HTML input is left untouched. Plain text without any markdown is
+  // simply split into paragraphs.
+  function mdToHtml(s) {
+    s = (s || '').replace(/\r\n?/g, '\n').trim();
     if (!s) return '';
     if (/<[a-z][\s\S]*>/i.test(s)) return s; // already HTML — keep as-is
-    return s.split(/\n{2,}/).map(function (p) { return '<p>' + p.trim().replace(/\n/g, '<br>') + '</p>'; }).join('');
+
+    function inline(t) {
+      t = t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');   // **bold**
+      t = t.replace(/__([^_]+)__/g, '<strong>$1</strong>');       // __bold__
+      t = t.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>'); // *italic*
+      t = t.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      return t;
+    }
+
+    const lines = s.split('\n');
+    const out = [];
+    let listType = null; // 'ul' | 'ol'
+    let para = [];
+    const flushPara = () => { if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; } };
+    const closeList = () => { if (listType) { out.push('</' + listType + '>'); listType = null; } };
+
+    lines.forEach((raw) => {
+      const line = raw.trim();
+      if (!line) { flushPara(); closeList(); return; }
+      let m;
+      if ((m = line.match(/^(#{1,6})\s+(.*)$/))) {
+        flushPara(); closeList();
+        const level = Math.min(m[1].length + 1, 6); // "#" -> h2 (matches article headings)
+        out.push('<h' + level + '>' + inline(m[2].trim()) + '</h' + level + '>');
+      } else if ((m = line.match(/^[-*+]\s+(.*)$/))) {
+        flushPara();
+        if (listType !== 'ul') { closeList(); out.push('<ul>'); listType = 'ul'; }
+        out.push('<li>' + inline(m[1].trim()) + '</li>');
+      } else if ((m = line.match(/^\d+[.)]\s+(.*)$/))) {
+        flushPara();
+        if (listType !== 'ol') { closeList(); out.push('<ol>'); listType = 'ol'; }
+        out.push('<li>' + inline(m[1].trim()) + '</li>');
+      } else {
+        closeList();
+        para.push(line);
+      }
+    });
+    flushPara(); closeList();
+    return out.join('\n');
   }
 
   function collectTranslations() {
@@ -371,7 +415,7 @@
       const entry = {};
       if (title) entry.title = title;
       if (desc) entry.description = desc;
-      if (content) entry.content = htmlOrWrap(content);
+      if (content) entry.content = mdToHtml(content);
       if (Object.keys(entry).length) out[code] = entry;
     });
     return out;
