@@ -172,8 +172,19 @@ const BLOG = {
       date: article.date || '',
       category: article.category || 'general',
       author: article.author || 'IKAMETI Team',
-      readTime: article.readTime || ''
+      readTime: article.readTime || '',
+      translations: (article.translations && typeof article.translations === 'object') ? article.translations : {}
     };
+  },
+
+  /** Active site language code (falls back to the document language). */
+  currentLang: function() {
+    try {
+      if (window.i18n && typeof window.i18n.getCurrentLanguage === 'function') {
+        return window.i18n.getCurrentLanguage();
+      }
+    } catch (_) { /* ignore */ }
+    return document.documentElement.lang || 'en';
   },
 
   /**
@@ -210,25 +221,38 @@ const BLOG = {
     const localizedArticles = this.getLocalizedArticlesMap();
     const localizedArticle = localizedArticles.get(normalizedArticle.slug);
 
-    if (!localizedArticle) {
-      return normalizedArticle;
+    // Start from the canonical article, layered with the legacy static
+    // i18n override (blog_articles in the language JSON) when it exists.
+    let result = normalizedArticle;
+    if (localizedArticle) {
+      result = {
+        ...normalizedArticle,
+        ...localizedArticle,
+        id: Number(localizedArticle.id) || normalizedArticle.id,
+        slug: localizedArticle.slug || normalizedArticle.slug,
+        category: localizedArticle.category || normalizedArticle.category,
+        date: localizedArticle.date || normalizedArticle.date,
+        author: localizedArticle.author || normalizedArticle.author,
+        image: localizedArticle.image || normalizedArticle.image,
+        title: localizedArticle.title || normalizedArticle.title,
+        description: localizedArticle.description || localizedArticle.excerpt || normalizedArticle.description,
+        excerpt: localizedArticle.excerpt || localizedArticle.description || normalizedArticle.excerpt,
+        content: localizedArticle.content || normalizedArticle.content,
+        readTime: localizedArticle.readTime || normalizedArticle.readTime
+      };
     }
 
-    return {
-      ...normalizedArticle,
-      ...localizedArticle,
-      id: Number(localizedArticle.id) || normalizedArticle.id,
-      slug: localizedArticle.slug || normalizedArticle.slug,
-      category: localizedArticle.category || normalizedArticle.category,
-      date: localizedArticle.date || normalizedArticle.date,
-      author: localizedArticle.author || normalizedArticle.author,
-      image: localizedArticle.image || normalizedArticle.image,
-      title: localizedArticle.title || normalizedArticle.title,
-      description: localizedArticle.description || localizedArticle.excerpt || normalizedArticle.description,
-      excerpt: localizedArticle.excerpt || localizedArticle.description || normalizedArticle.excerpt,
-      content: localizedArticle.content || normalizedArticle.content,
-      readTime: localizedArticle.readTime || normalizedArticle.readTime
-    };
+    // Per-article translations authored in the admin dashboard take
+    // precedence for the active language when they are filled in.
+    const t = normalizedArticle.translations && normalizedArticle.translations[this.currentLang()];
+    if (t && typeof t === 'object') {
+      if (t.title && t.title.trim()) result = { ...result, title: t.title };
+      const desc = (t.description && t.description.trim()) ? t.description : (t.excerpt || '');
+      if (desc && desc.trim()) result = { ...result, description: desc, excerpt: desc };
+      if (t.content && t.content.trim()) result = { ...result, content: t.content };
+    }
+
+    return result;
   },
 
   /**

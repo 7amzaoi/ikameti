@@ -373,3 +373,22 @@ td .blog-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
   .app.nav-open .scrim { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 50; }
   .hamburger { display: inline-flex; }
 }
+
+/* ---------- BLOG TRANSLATIONS ---------- */
+.translations { display: flex; flex-direction: column; gap: 8px; }
+.tr-lang { border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; overflow: hidden; }
+.tr-lang > summary {
+  list-style: none; cursor: pointer; padding: 11px 14px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  font-size: 14px; font-weight: 600; color: var(--ink-2); background: var(--line-2);
+}
+.tr-lang > summary::-webkit-details-marker { display: none; }
+.tr-lang > summary::after { content: '⌄'; color: var(--muted); font-size: 15px; line-height: 1; transition: transform .2s; }
+.tr-lang[open] > summary { background: var(--brand-soft); color: var(--brand-dark); }
+.tr-lang[open] > summary::after { transform: rotate(180deg); color: var(--brand); }
+.tr-lang-code { font-size: 11px; font-weight: 700; color: var(--muted-2); letter-spacing: .5px; margin-inline-start: auto; }
+.tr-lang[open] .tr-lang-code { color: var(--brand); }
+.tr-fields { padding: 14px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); }
+.tr-fields label { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-top: 4px; }
+.tr-fields label:first-child { margin-top: 0; }
+.tr-content { font-size: 13px; line-height: 1.6; }

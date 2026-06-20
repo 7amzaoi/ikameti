@@ -55,7 +55,7 @@ const IKAMETI_DB = {
     const client = await getClient();
     const { data, error } = await client
       .from('blogs')
-      .select('id, slug, title, description, content, image, category, author, read_time, published_date')
+      .select('id, slug, title, description, content, translations, image, category, author, read_time, published_date')
       .eq('status', 'published')
       .order('published_date', { ascending: false });
 
@@ -68,6 +68,7 @@ const IKAMETI_DB = {
       description: row.description || '',
       excerpt: row.description || '',
       content: row.content || '',
+      translations: row.translations && typeof row.translations === 'object' ? row.translations : {},
       image: row.image || '',
       date: row.published_date || '',
       category: row.category || 'general',

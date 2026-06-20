@@ -250,6 +250,7 @@
     $('#blog-image').value = b ? (b.image || '') : '';
     $('#blog-description').value = b ? (b.description || '') : '';
     setEditorHtml(b ? (b.content || '') : '');
+    fillTranslations(b ? b.translations : {});
     $('#blog-slug').dataset.touched = b ? '1' : '';
     $('#blog-image-file').value = '';
     setImageStatus('');
@@ -303,6 +304,75 @@
     if (q) { const h = q.root.innerHTML.trim(); return (h === '<p><br></p>' || h === '<p></p>') ? '' : h; }
     const ta = document.getElementById('blog-content-fallback');
     return ta ? ta.value : '';
+  }
+
+  /* ---- per-language translations (title / description / content) ---- */
+  const TR_LANGS = [
+    ['en', 'English'], ['ar', 'العربية'], ['tr', 'Türkçe'], ['ru', 'Русский'],
+    ['fa', 'فارسی'], ['uz', 'Ўзбек'], ['af', 'دری']
+  ];
+  const TR_RTL = new Set(['ar', 'fa', 'af']);
+  let translationsBuilt = false;
+
+  function buildTranslations() {
+    if (translationsBuilt) return;
+    const host = document.getElementById('blog-translations');
+    if (!host) return;
+    host.innerHTML = TR_LANGS.map(([code, name]) => {
+      const dir = TR_RTL.has(code) ? ' dir="rtl"' : '';
+      return (
+        '<details class="tr-lang" data-lang="' + code + '">' +
+          '<summary><span class="tr-lang-name">' + name + '</span><span class="tr-lang-code">' + code.toUpperCase() + '</span></summary>' +
+          '<div class="tr-fields">' +
+            '<label>Title</label>' +
+            '<input type="text" id="tr-' + code + '-title"' + dir + ' placeholder="Article title in ' + name + '">' +
+            '<label>Short description</label>' +
+            '<textarea id="tr-' + code + '-desc" style="min-height:48px;"' + dir + ' placeholder="Card summary in ' + name + '"></textarea>' +
+            '<label>Content</label>' +
+            '<textarea id="tr-' + code + '-content" class="tr-content" style="min-height:150px;"' + dir + ' placeholder="Full article in ' + name + ' — write normally; blank lines become paragraphs."></textarea>' +
+          '</div>' +
+        '</details>'
+      );
+    }).join('');
+    translationsBuilt = true;
+  }
+
+  function fillTranslations(map) {
+    buildTranslations();
+    const t = (map && typeof map === 'object') ? map : {};
+    TR_LANGS.forEach(([code]) => {
+      const v = (t[code] && typeof t[code] === 'object') ? t[code] : {};
+      const ti = document.getElementById('tr-' + code + '-title');
+      const de = document.getElementById('tr-' + code + '-desc');
+      const co = document.getElementById('tr-' + code + '-content');
+      if (ti) ti.value = v.title || '';
+      if (de) de.value = v.description || v.excerpt || '';
+      if (co) co.value = v.content || '';
+      const det = document.querySelector('.tr-lang[data-lang="' + code + '"]');
+      if (det) det.open = Boolean(String(v.title || v.description || v.content || '').trim());
+    });
+  }
+
+  function htmlOrWrap(s) {
+    s = (s || '').trim();
+    if (!s) return '';
+    if (/<[a-z][\s\S]*>/i.test(s)) return s; // already HTML — keep as-is
+    return s.split(/\n{2,}/).map(function (p) { return '<p>' + p.trim().replace(/\n/g, '<br>') + '</p>'; }).join('');
+  }
+
+  function collectTranslations() {
+    const out = {};
+    TR_LANGS.forEach(([code]) => {
+      const title = ((document.getElementById('tr-' + code + '-title') || {}).value || '').trim();
+      const desc = ((document.getElementById('tr-' + code + '-desc') || {}).value || '').trim();
+      const content = ((document.getElementById('tr-' + code + '-content') || {}).value || '').trim();
+      const entry = {};
+      if (title) entry.title = title;
+      if (desc) entry.description = desc;
+      if (content) entry.content = htmlOrWrap(content);
+      if (Object.keys(entry).length) out[code] = entry;
+    });
+    return out;
   }
 
   /* ---- cover image: upload from device (Supabase Storage) ---- */
@@ -389,7 +459,8 @@
       status: $('#blog-status').value,
       image: $('#blog-image').value.trim() || null,
       description: $('#blog-description').value.trim() || null,
-      content: getEditorHtml()
+      content: getEditorHtml(),
+      translations: collectTranslations()
     };
     if (!payload.title || !payload.slug) { toast('Title and slug are required', 'err'); return; }
 

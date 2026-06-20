@@ -62,6 +62,7 @@ create table if not exists public.blogs (
   title          text        not null,
   description    text,                       -- short summary shown on the card
   content        text,                       -- full article body (HTML)
+  translations   jsonb       not null default '{}'::jsonb,  -- per-language overrides: {"ar":{"title","description","content"}, ...}
   image          text,                       -- cover image URL
   category       text        references public.categories(slug)
                               on update cascade on delete set null,
@@ -75,6 +76,9 @@ create table if not exists public.blogs (
 );
 
 comment on table public.blogs is 'Blog articles. status=published are shown publicly; draft are admin-only.';
+
+-- For databases created before the translations column existed:
+alter table public.blogs add column if not exists translations jsonb not null default '{}'::jsonb;
 
 create index if not exists blogs_category_idx        on public.blogs (category);
 create index if not exists blogs_status_idx          on public.blogs (status);
