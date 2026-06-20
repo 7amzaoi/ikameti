@@ -404,5 +404,6 @@ td .blog-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .tr-fields label { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-top: 4px; }
 .tr-fields label:first-child { margin-top: 0; }
 .tr-content { font-size: 13px; line-height: 1.6; }
-.tr-hint { font-size: 11.5px; color: var(--muted); line-height: 1.7; margin-top: 2px; }
-.tr-hint code { background: var(--brand-soft); color: var(--brand-dark); padding: 1px 5px; border-radius: 4px; font-size: 11px; }
+.tr-editor { background: #fff; }
+.tr-editor .ql-editor { min-height: 170px; line-height: 1.7; font-size: 14px; }
+.tr-editor[dir="rtl"] .ql-editor { text-align: right; }

@@ -315,6 +315,7 @@
   ];
   const TR_RTL = new Set(['ar', 'fa', 'af']);
   let translationsBuilt = false;
+  const trEditors = {}; // lang code -> Quill instance (null if using textarea fallback)
 
   function buildTranslations() {
     if (translationsBuilt) return;
@@ -331,13 +332,65 @@
             '<label>Short description</label>' +
             '<textarea id="tr-' + code + '-desc" style="min-height:48px;"' + dir + ' placeholder="Card summary in ' + name + '"></textarea>' +
             '<label>Content</label>' +
-            '<textarea id="tr-' + code + '-content" class="tr-content" style="min-height:150px;"' + dir + ' placeholder="Full article in ' + name + '. Use  # Heading  for sections, **bold** for bold, and  - item  for bullet lists. Blank lines start new paragraphs."></textarea>' +
-            '<div class="tr-hint">Formatting: <code># Title</code> → heading · <code>## Title</code> → smaller heading · <code>**word**</code> → <b>bold</b> · <code>- item</code> → bullet list. Paste from ChatGPT works as-is.</div>' +
+            '<div id="tr-' + code + '-editor" class="tr-editor"' + dir + '></div>' +
           '</div>' +
         '</details>'
       );
     }).join('');
     translationsBuilt = true;
+    // Give every language the same rich editor as English, so pasting a full
+    // article keeps its headings, bold and lists — and nothing gets cut off.
+    TR_LANGS.forEach(([code]) => ensureTrEditor(code));
+  }
+
+  function ensureTrEditor(code) {
+    if (code in trEditors) return trEditors[code];
+    const host = document.getElementById('tr-' + code + '-editor');
+    if (!host) { trEditors[code] = null; return null; }
+    if (window.Quill) {
+      const q = new window.Quill(host, {
+        theme: 'snow',
+        modules: {
+          toolbar: [
+            [{ header: [2, 3, false] }],
+            ['bold', 'italic', 'underline'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['blockquote', 'link'],
+            ['clean']
+          ]
+        }
+      });
+      if (TR_RTL.has(code)) { q.root.setAttribute('dir', 'rtl'); q.root.style.textAlign = 'right'; }
+      trEditors[code] = q;
+      return q;
+    }
+    // Fallback if Quill can't load: a plain textarea (markdown converted on save).
+    const ta = document.createElement('textarea');
+    ta.id = 'tr-' + code + '-content-fallback';
+    ta.className = 'tr-content';
+    ta.style.cssText = 'min-height:150px;width:100%;';
+    if (TR_RTL.has(code)) ta.setAttribute('dir', 'rtl');
+    host.replaceWith(ta);
+    trEditors[code] = null;
+    return null;
+  }
+
+  function setTrEditorHtml(code, html) {
+    const q = ensureTrEditor(code);
+    if (q) {
+      if (html && html.trim()) q.clipboard.dangerouslyPasteHTML(html);
+      else q.setText('');
+    } else {
+      const ta = document.getElementById('tr-' + code + '-content-fallback');
+      if (ta) ta.value = html || '';
+    }
+  }
+
+  function getTrEditorHtml(code) {
+    const q = ensureTrEditor(code);
+    if (q) { const h = q.root.innerHTML.trim(); return (h === '<p><br></p>' || h === '<p></p>') ? '' : h; }
+    const ta = document.getElementById('tr-' + code + '-content-fallback');
+    return ta ? mdToHtml(ta.value) : '';
   }
 
   function fillTranslations(map) {
@@ -347,10 +400,9 @@
       const v = (t[code] && typeof t[code] === 'object') ? t[code] : {};
       const ti = document.getElementById('tr-' + code + '-title');
       const de = document.getElementById('tr-' + code + '-desc');
-      const co = document.getElementById('tr-' + code + '-content');
       if (ti) ti.value = v.title || '';
       if (de) de.value = v.description || v.excerpt || '';
-      if (co) co.value = v.content || '';
+      setTrEditorHtml(code, v.content || '');
       const det = document.querySelector('.tr-lang[data-lang="' + code + '"]');
       if (det) det.open = Boolean(String(v.title || v.description || v.content || '').trim());
     });
@@ -411,11 +463,11 @@
     TR_LANGS.forEach(([code]) => {
       const title = ((document.getElementById('tr-' + code + '-title') || {}).value || '').trim();
       const desc = ((document.getElementById('tr-' + code + '-desc') || {}).value || '').trim();
-      const content = ((document.getElementById('tr-' + code + '-content') || {}).value || '').trim();
+      const content = getTrEditorHtml(code).trim();
       const entry = {};
       if (title) entry.title = title;
       if (desc) entry.description = desc;
-      if (content) entry.content = mdToHtml(content);
+      if (content) entry.content = content;
       if (Object.keys(entry).length) out[code] = entry;
     });
     return out;
