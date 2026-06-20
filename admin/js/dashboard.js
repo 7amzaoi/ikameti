@@ -327,7 +327,6 @@
         '<details class="tr-lang" data-lang="' + code + '">' +
           '<summary><span class="tr-lang-name">' + name + '</span><span class="tr-lang-code">' + code.toUpperCase() + '</span></summary>' +
           '<div class="tr-fields">' +
-            '<button type="button" class="tr-copy-en" data-lang="' + code + '">⤓ Copy the English layout here — then just translate the text over it</button>' +
             '<label>Title</label>' +
             '<input type="text" id="tr-' + code + '-title"' + dir + ' placeholder="Article title in ' + name + '">' +
             '<label>Short description</label>' +
@@ -342,32 +341,6 @@
     // Give every language the same rich editor as English, so pasting a full
     // article keeps its headings, bold and lists — and nothing gets cut off.
     TR_LANGS.forEach(([code]) => ensureTrEditor(code));
-
-    // "Copy the English layout here": clones the English article (headings,
-    // bold, lists + title/description) into a language so the user only has to
-    // translate the words in place and the formatting is guaranteed to match.
-    host.addEventListener('click', (e) => {
-      const btn = e.target.closest('.tr-copy-en');
-      if (!btn) return;
-      e.preventDefault();
-      const code = btn.getAttribute('data-lang');
-      const enHtml = getEditorHtml();
-      if (!enHtml || !enHtml.trim()) {
-        alert('Write the English article above first, then click this to copy its layout.');
-        return;
-      }
-      const existing = getTrEditorHtml(code);
-      if (existing && existing.trim() &&
-          !confirm('Replace the current content of this language with the English layout?\nYou will then translate the text in place.')) {
-        return;
-      }
-      setTrEditorHtml(code, enHtml);
-      const ti = document.getElementById('tr-' + code + '-title');
-      const de = document.getElementById('tr-' + code + '-desc');
-      if (ti && !ti.value.trim()) ti.value = ($('#blog-title') || {}).value || '';
-      if (de && !de.value.trim()) de.value = ($('#blog-description') || {}).value || '';
-      const det = btn.closest('.tr-lang'); if (det) det.open = true;
-    });
   }
 
   function ensureTrEditor(code) {
@@ -388,6 +361,24 @@
         }
       });
       if (TR_RTL.has(code)) { q.root.setAttribute('dir', 'rtl'); q.root.style.textAlign = 'right'; }
+
+      // Smart paste: when the user pastes plain text that looks like markdown
+      // (e.g. a ChatGPT article with "#", "##", "**bold**", "- item"), convert
+      // it to real formatting instead of dropping it in as flat text. Rich HTML
+      // pastes (Word, web pages) are left to Quill's own handling.
+      q.root.addEventListener('paste', (e) => {
+        const cd = e.clipboardData || window.clipboardData;
+        if (!cd) return;
+        const html = (cd.getData('text/html') || '').trim();
+        if (html) return; // already formatted — let Quill keep it
+        const text = cd.getData('text/plain') || '';
+        const looksLikeMarkdown = /(^|\n)\s*(#{1,6}\s|[-*+]\s|\d+[.)]\s)/.test(text) || /\*\*[^*]+\*\*/.test(text);
+        if (!looksLikeMarkdown) return; // plain prose — normal paste is fine
+        e.preventDefault();
+        const range = q.getSelection(true);
+        q.clipboard.dangerouslyPasteHTML(range ? range.index : q.getLength(), mdToHtml(text));
+      });
+
       trEditors[code] = q;
       return q;
     }
