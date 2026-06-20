@@ -125,7 +125,7 @@
                 <h1 class="text-white animate-slide-up" style="font-weight: 800; line-height: var(--lh-tight);" data-i18n="landing_page.hero.title">O'zingizning ideal fuqarolik va uyni xavfsiz qiling</h1>
                 <p class="text-white animate-slide-up" style="opacity: 0.9; font-size: 20px; line-height: var(--lh-normal); animation-delay: 0.1s; margin-top: var(--space-4);" data-i18n="landing_page.hero.subtitle">Har bir bosqichda sifatli maslahat. IKAMETI bilan fuqarolikni amalga oshirgan 5000+ oilani qo'shilishingizga tavsiya.</p>
                 <div class="flex gap-4 flex-wrap" style="margin: var(--space-8) 0; animation: slideInUp 0.8s ease-out 0.2s backwards;">
-                    <a href="#apply" class="btn btn-cta btn-lg" data-i18n="landing_page.hero.apply_button">Hozir arizala</a>
+                    <a href="../contact.html" class="btn btn-cta btn-lg" data-i18n="landing_page.hero.apply_button">Hozir arizala</a>
                     <a href="https://wa.me/905309052104" class="btn btn-white btn-lg" data-i18n="landing_page.hero.whatsapp_button">WhatsApp orqali gaplashish</a>
                 </div>
                 <p class="text-white animate-slide-up" style="opacity: 0.8; font-size: 15px; animation-delay: 0.3s;" data-i18n="landing_page.hero.highlights">✓ 98% Muvaffaqiyat stavkasi • ✓ 24/7 Yordamchi • ✓ Tez jarayon</p>
@@ -346,62 +346,44 @@
     </section>
 
     <!-- APPLICATION FORM SECTION -->
-    <section class="bg-alt cta-merged" id="apply" style="padding: var(--space-16) 0;">
+    <section class="bg-base landing-faq" id="faq" style="padding: var(--space-16) 0;">
         <div class="container">
-            <div class="cta-form-grid">
-                <!-- CTA panel -->
-                <div class="cta-panel stagger-item">
-                    <h2 data-i18n="landing_page.final_cta.title">Harakat qilishga tayoqmi?</h2>
-                    <p class="cta-panel-desc" data-i18n="landing_page.final_cta.description">Sizning ideal fuqarolik va uy kutmoqda. Bugun boshlaylik.</p>
-                    <div class="cta-panel-actions">
-                        <a href="../contact.html" class="btn cta-btn cta-btn-primary" data-i18n="landing_page.final_cta.contact_button">Biz bilan bog'lanish</a>
-                        <a href="https://wa.me/905309052104?text=Hi%20IKAMETI%2C%20I%20want%20to%20learn%20more%20about%20your%20residency%20services" target="_blank" rel="noopener" class="btn cta-btn cta-btn-wa" data-i18n="landing_page.final_cta.whatsapp_button">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.043z"/></svg>
-                            <span>Bizga WhatsApp orqali yuboring</span>
-                        </a>
-                    </div>
-                    <p class="cta-panel-note" data-i18n="landing_page.final_cta.note">1 soat ichida javob • Spam yo'q</p>
-                </div>
-                <!-- Consultation form -->
-                <div class="card cta-form-card stagger-item">
-                    <div class="cta-form-head">
-                        <h2 data-i18n="landing_page.form.title">Bepul maslahat boshlang</h2>
-                        <p data-i18n="landing_page.form.subtitle">Majburiyat yo'q. Bosim yo'q. Faqat halol maslahat.</p>
-                    </div>
-                    <form style="display: flex; flex-direction: column; gap: var(--space-6);">
-                                            <div>
-                                                <label style="display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--text-primary); font-size: 15px;" data-i18n="landing_page.form.full_name_label">To'liq ism *</label>
-                                                <input type="text" data-i18n-placeholder="landing_page.form.full_name_placeholder" placeholder="Sizning to'liq ismingiz" required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; transition: all 0.3s ease; font-family: inherit;">
-                                            </div>
-                                            <div>
-                                                <label style="display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--text-primary); font-size: 15px;" data-i18n="landing_page.form.phone_label">Telefon raqami *</label>
-                                                <input type="tel" data-i18n-placeholder="landing_page.form.phone_placeholder" placeholder="+90 530 905 21 04" required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; transition: all 0.3s ease; font-family: inherit;">
-                                            </div>
-                                            <div>
-                                                <label style="display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--text-primary); font-size: 15px;" data-i18n="landing_page.form.nationality_label">Millati *</label>
-                                                <select required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; transition: all 0.3s ease; font-family: inherit;">
-                                                    <option value="">-- Select --</option>
-                                                    <option value="egyptian">Egyptian</option>
-                                                    <option value="saudi">Saudi Arabian</option>
-                                                    <option value="uae">UAE National</option>
-                                                    <option value="other">Other</option>
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <label style="display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--text-primary); font-size: 15px;" data-i18n="landing_page.form.interest_label">Qiziqish *</label>
-                                                <select required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 15px; transition: all 0.3s ease; font-family: inherit;">
-                                                    <option value="">-- Select Service --</option>
-                                                    <option value="housing">Housing Solutions</option>
-                                                    <option value="residency">Residency Program</option>
-                                                    <option value="both">Both Housing & Residency</option>
-                                                    <option value="legal">Legal Consultation</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; font-weight: 700; padding: 16px;" data-i18n="landing_page.form.submit_button">Bepul maslahat boshlang</button>
-                                            <p style="font-size: 14px; color: var(--text-tertiary); text-align: center;" data-i18n="landing_page.form.privacy_text">Ariza berish orqali siz bizning</p>
-                                        </form>
-                </div>
+            <div class="section-title">
+                <h2 data-i18n="landing_page.faq.title">Koʻp soʻraladigan savollar</h2>
+                <p style="color: var(--text-secondary); font-size: 16px; margin-top: var(--space-4);" data-i18n="landing_page.faq.subtitle">Bogʻlanishdan oldin tezkor javoblar.</p>
+                <div class="accent-line"></div>
             </div>
+            <div class="faq-list" style="max-width: 760px; margin: 0 auto;">
+                <details class="faq-item">
+                    <summary><span data-i18n="landing_page.faq.q1">Yashash jarayoni qancha vaqt oladi?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+                    <div class="faq-answer"><p data-i18n="landing_page.faq.a1">Hujjatlaringiz tayyor boʻlgach, aksariyat arizalar 10–15 ish kunida yakunlanadi.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span data-i18n="landing_page.faq.q2">Narxi qancha?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+                    <div class="faq-answer"><p data-i18n="landing_page.faq.a2">Yashash turiga bogʻliq. Sizga oldindan aniq, hammasi kiritilgan narxni beramiz — yashirin toʻlovlarsiz.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span data-i18n="landing_page.faq.q3">Tasdiqni kafolatlaysizmi?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+                    <div class="faq-answer"><p data-i18n="landing_page.faq.a3">Muvaffaqiyat darajamiz 98%. Mutaxassislar avval ishingizni koʻrib chiqadi va faqat tasdiq ehtimoli yuqori boʻlganda davom etamiz.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span data-i18n="landing_page.faq.q4">Qanday hujjatlar kerak?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+                    <div class="faq-answer"><p data-i18n="landing_page.faq.a4">Odatda amal qiluvchi pasport, turar joy isboti, daromad isboti va tibbiy sugʻurta. Sizga shaxsiy roʻyxat yuboramiz.</p></div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="bg-dark" style="padding: var(--space-16) 0;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: var(--space-4); font-size: 44px; font-weight: 800;" data-i18n="landing_page.final_cta.title">Harakat qilishga tayoqmi?</h2>
+            <p style="color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto; font-size: 18px; line-height: 1.6;" data-i18n="landing_page.final_cta.description">Sizning ideal fuqarolik va uy kutmoqda. Bugun boshlaylik.</p>
+            <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                <a href="../contact.html" class="btn btn-primary" style="font-size: 16px; padding: 14px 28px; font-weight: 700;" data-i18n="landing_page.final_cta.apply_button">Hozir arizala</a>
+                <a href="https://wa.me/905309052104?text=Hi%20IKAMETI%2C%20I%20want%20to%20learn%20more%20about%20your%20residency%20services" target="_blank" rel="noopener" class="btn btn-white" style="font-size: 16px; padding: 14px 28px; font-weight: 700;" data-i18n="landing_page.final_cta.whatsapp_button">Bizga WhatsApp orqali yuboring</a>
+            </div>
+            <p style="color: rgba(255, 255, 255, 0.6); margin-top: var(--space-8); font-size: 14px;" data-i18n="landing_page.final_cta.note">1 soat ichida javob • Spam yo'q</p>
         </div>
     </section>
 

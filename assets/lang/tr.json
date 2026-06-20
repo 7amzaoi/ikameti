@@ -677,6 +677,18 @@
       "contact_button": "Bize Ulaşın",
       "note": "1 saat içinde yanıt • Spam yok"
     },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Bize ulaşmadan önce hızlı yanıtlar.",
+      "q1": "İkamet süreci ne kadar sürer?",
+      "a1": "Belgeleriniz hazır olduğunda başvuruların çoğu 10–15 iş gününde tamamlanır.",
+      "q2": "Maliyeti nedir?",
+      "a2": "İkamet türüne bağlıdır. Size baştan net, her şey dahil bir teklif sunarız — gizli ücret yok.",
+      "q3": "Onayı garanti ediyor musunuz?",
+      "a3": "%98 başarı oranımız var. Uzmanlarımız önce dosyanızı inceler ve yalnızca onay olasılığı yüksekse devam ederiz.",
+      "q4": "Hangi belgeler gerekli?",
+      "a4": "Genellikle geçerli pasaport, konaklama belgesi, gelir belgesi ve sağlık sigortası. Size özel bir kontrol listesi göndeririz."
+    },
     "articles": {
       "title": "Makaleler ve Haberler",
       "subtitle": "İkamet, konut ve göç çözümleri hakkında en son makaleleri ve haberleri takip edin.",

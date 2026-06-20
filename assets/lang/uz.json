@@ -677,6 +677,18 @@
       "contact_button": "Biz bilan bog'lanish",
       "note": "1 soat ichida javob • Spam yo'q"
     },
+    "faq": {
+      "title": "Koʻp soʻraladigan savollar",
+      "subtitle": "Bogʻlanishdan oldin tezkor javoblar.",
+      "q1": "Yashash jarayoni qancha vaqt oladi?",
+      "a1": "Hujjatlaringiz tayyor boʻlgach, aksariyat arizalar 10–15 ish kunida yakunlanadi.",
+      "q2": "Narxi qancha?",
+      "a2": "Yashash turiga bogʻliq. Sizga oldindan aniq, hammasi kiritilgan narxni beramiz — yashirin toʻlovlarsiz.",
+      "q3": "Tasdiqni kafolatlaysizmi?",
+      "a3": "Muvaffaqiyat darajamiz 98%. Mutaxassislar avval ishingizni koʻrib chiqadi va faqat tasdiq ehtimoli yuqori boʻlganda davom etamiz.",
+      "q4": "Qanday hujjatlar kerak?",
+      "a4": "Odatda amal qiluvchi pasport, turar joy isboti, daromad isboti va tibbiy sugʻurta. Sizga shaxsiy roʻyxat yuboramiz."
+    },
     "articles": {
       "title": "Maqolalar & Yangiliklar",
       "subtitle": "Fuqarolik, uy-joy va immigratsiya yechimlarining so'nggi maqolalarini va yangilikların bilan yangilaning.",

@@ -677,6 +677,18 @@
       "contact_button": "Contact Us",
       "note": "Responses within 1 hour • No spam ever"
     },
+    "faq": {
+      "title": "Common Questions",
+      "subtitle": "Quick answers before you reach out.",
+      "q1": "How long does the residency process take?",
+      "a1": "Most applications are completed within 10–15 business days once your documents are ready.",
+      "q2": "How much does it cost?",
+      "a2": "It depends on the residency type. We give you a clear, all-inclusive quote upfront — with no hidden fees.",
+      "q3": "Do you guarantee approval?",
+      "a3": "We hold a 98% success rate. Our experts review your case first and only proceed when approval is highly likely.",
+      "q4": "What documents do I need?",
+      "a4": "Usually a valid passport, proof of accommodation, proof of income and health insurance. We send you a personalised checklist."
+    },
     "articles": {
       "title": "Articles & News",
       "subtitle": "Stay updated with the latest articles and news about residency, housing, and immigration solutions.",
