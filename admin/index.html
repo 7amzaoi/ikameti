@@ -6,7 +6,11 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Dashboard · IKAMETI Admin</title>
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-  <link rel="stylesheet" href="css/admin.css">
+  <script>
+    /* Apply the saved theme before paint so there is no light flash. */
+    (function () { try { if (localStorage.getItem('ikameti-theme') === 'dark') document.documentElement.classList.add('dark'); } catch (e) {} })();
+  </script>
+  <link rel="stylesheet" href="css/admin.css?v=20260620i">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css">
 </head>
 <body>
@@ -17,7 +21,11 @@
     <aside class="sidebar">
       <div class="sidebar-brand"><img src="../assets/images/logo.png" alt="IKAMETI" class="brand-logo"></div>
       <nav class="nav">
-        <div class="nav-link active" data-view="blogs">
+        <div class="nav-link active" data-view="analytics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span>Analytics</span>
+        </div>
+        <div class="nav-link" data-view="blogs">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           <span>Blogs</span>
           <span class="count" id="count-blogs">–</span>
@@ -40,6 +48,10 @@
             <div class="email" id="user-email">…</div>
             <div class="role">Administrator</div>
           </div>
+          <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
         </div>
         <button class="btn btn-ghost btn-block btn-sm" id="logout-btn">Sign out</button>
         <a class="btn btn-ghost btn-block btn-sm" href="../index.html" target="_blank" rel="noopener" style="margin-top:8px;">View website ↗</a>
@@ -61,8 +73,49 @@
       </header>
 
       <main class="content">
+        <!-- ===== ANALYTICS VIEW ===== -->
+        <section class="view active" id="view-analytics">
+          <div class="stats" id="analytics-kpis"></div>
+          <div class="analytics-grid">
+            <div class="panel chart-card span-2">
+              <div class="panel-head">
+                <h3>Submissions over time</h3>
+                <div class="spacer"></div>
+                <span class="chart-sub" id="ana-time-sub"></span>
+              </div>
+              <div class="chart-box chart-box-lg"><canvas id="chart-time"></canvas></div>
+            </div>
+
+            <div class="panel chart-card">
+              <div class="panel-head"><h3>Leads by stage</h3></div>
+              <div class="donut-wrap">
+                <div class="chart-box donut-box"><canvas id="chart-stage"></canvas><div class="donut-center" id="donut-stage-center"></div></div>
+                <div class="chart-legend" id="legend-stage"></div>
+              </div>
+            </div>
+
+            <div class="panel chart-card">
+              <div class="panel-head"><h3>Reminders by urgency</h3></div>
+              <div class="donut-wrap">
+                <div class="chart-box donut-box"><canvas id="chart-urgency"></canvas><div class="donut-center" id="donut-urgency-center"></div></div>
+                <div class="chart-legend" id="legend-urgency"></div>
+              </div>
+            </div>
+
+            <div class="panel chart-card">
+              <div class="panel-head"><h3>Residency types</h3><div class="spacer"></div><span class="chart-sub">leads + reminders</span></div>
+              <div class="hbars" id="bars-types"></div>
+            </div>
+
+            <div class="panel chart-card">
+              <div class="panel-head"><h3>Top languages</h3><div class="spacer"></div><span class="chart-sub">all submissions</span></div>
+              <div class="hbars" id="bars-langs"></div>
+            </div>
+          </div>
+        </section>
+
         <!-- ===== BLOGS VIEW ===== -->
-        <section class="view active" id="view-blogs">
+        <section class="view" id="view-blogs">
           <div class="stats" id="blogs-stats"></div>
 
           <div class="panel">
@@ -112,12 +165,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
               <input type="text" id="residency-search" placeholder="Search by name or phone…">
             </div>
-            <div class="seg" id="residency-status-seg">
-              <button data-status="" class="active">All</button>
-              <button data-status="new">New</button>
-              <button data-status="contacted">Contacted</button>
-              <button data-status="in_progress">In progress</button>
-              <button data-status="closed">Closed</button>
+            <div class="board-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3"/><path d="M9 5l3-3 3 3"/><path d="M15 19l-3 3-3-3"/><path d="M19 9l3 3-3 3"/><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+              Drag a card between columns to change its stage
             </div>
           </div>
           <div class="cards" id="residency-cards"></div>
@@ -268,7 +318,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
-  <script src="js/config.js?v=20260620"></script>
-  <script src="js/dashboard.js?v=20260620"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/config.js?v=20260620i"></script>
+  <script src="js/dashboard.js?v=20260620i"></script>
 </body>
 </html>
