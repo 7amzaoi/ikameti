@@ -3150,20 +3150,23 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
 /* ================================================
    LANDING — compact FAQ accordion (replaces the form)
    ================================================ */
+/* NOTE: selectors are scoped under .landing-faq so they override the
+   FAQ-page component (.faq-answer { max-height:0; overflow:hidden }) which
+   otherwise collapses these answers to zero height. */
 .landing-faq .faq-list { display: flex; flex-direction: column; gap: 14px; }
-.faq-item {
+.landing-faq .faq-item {
     background: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 14px;
     overflow: hidden;
     transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
 }
-.faq-item:hover { border-color: #cfcfcf; }
-.faq-item[open] {
+.landing-faq .faq-item:hover { border-color: #cfcfcf; }
+.landing-faq .faq-item[open] {
     border-color: rgba(208, 0, 0, 0.35);
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
 }
-.faq-item summary {
+.landing-faq .faq-item summary {
     list-style: none;
     cursor: pointer;
     padding: 20px 24px;
@@ -3176,11 +3179,11 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
     color: #161616;
     transition: color .18s ease;
 }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary:hover { color: var(--primary); }
-.faq-item[open] summary { color: var(--primary); }
+.landing-faq .faq-item summary::-webkit-details-marker { display: none; }
+.landing-faq .faq-item summary:hover { color: var(--primary); }
+.landing-faq .faq-item[open] summary { color: var(--primary); }
 /* chevron that rotates open/closed */
-.faq-icon {
+.landing-faq .faq-icon {
     width: 11px;
     height: 11px;
     flex-shrink: 0;
@@ -3189,18 +3192,22 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
     border-bottom: 2.5px solid var(--primary);
     transform: rotate(45deg);
     transition: transform .28s ease, margin-top .28s ease;
+    background: none;
 }
-.faq-item[open] .faq-icon { transform: rotate(-135deg); margin-top: 3px; }
-.faq-answer {
+.landing-faq .faq-item[open] .faq-icon { transform: rotate(-135deg); margin-top: 3px; }
+.landing-faq .faq-answer {
+    max-height: none;       /* override collapsed FAQ-page component */
+    overflow: visible;
+    background: none;
     padding: 0 24px 20px;
     color: #333333;
     font-size: 15.5px;
     line-height: 1.85;
 }
-.faq-answer p {
+.landing-faq .faq-answer p {
     margin: 0;
     padding-top: 16px;
     border-top: 1px solid #eee;
 }
-.faq-item[open] .faq-answer { animation: faqReveal .3s ease; }
+.landing-faq .faq-item[open] .faq-answer { animation: faqReveal .3s ease; }
 @keyframes faqReveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
