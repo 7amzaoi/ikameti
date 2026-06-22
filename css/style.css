@@ -3218,8 +3218,25 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
 #remindForm .iti { width: 100%; display: block; }
 #remindForm .iti > input,
 #remindForm .iti input[type="tel"] { width: 100%; }
-/* keep the phone widget left-to-right even inside RTL pages */
-#remind-modal .iti { direction: ltr; }
-html.rtl-mode #remind-modal label[for], 
-html.rtl-mode #remind-modal #label-phone { text-align: right; }
 #remindForm .iti__country-list { text-align: left; direction: ltr; }
+html.rtl-mode #remind-modal #label-phone { text-align: right; }
+
+/* intl-tel-input ships [dir=rtl] rules that flip the flag to the right and
+   the padding to the wrong side on Arabic/Persian/Dari pages, which left an
+   ugly gap. Force the widget into the same clean LTR layout as English:
+   flag + dial code on the left, right next to the number. */
+#remind-modal .iti { direction: ltr !important; }
+#remind-modal .iti--separate-dial-code input,
+#remind-modal .iti--separate-dial-code input[type="tel"],
+#remind-modal .iti--separate-dial-code input[type="text"] {
+    padding-left: 52px !important;
+    padding-right: 6px !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    direction: ltr !important;
+}
+#remind-modal .iti__flag-container { right: auto !important; left: 0 !important; }
+#remind-modal .iti--separate-dial-code .iti__selected-dial-code { margin-left: 6px !important; margin-right: 0 !important; }
+#remind-modal .iti__arrow { margin-left: 6px !important; margin-right: 0 !important; }
+#remind-modal .iti__flag-box,
+#remind-modal .iti__country-name { margin-right: 6px !important; margin-left: 0 !important; }
