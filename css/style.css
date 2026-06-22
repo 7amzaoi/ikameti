@@ -3246,6 +3246,13 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
 /* ================================================
    Homepage NEWS box (below the hero) — interactive carousel
    ================================================ */
+/* center the subtitle neatly under the heading */
+.news-section .section-title h2 { margin-bottom: var(--space-3); }
+.news-section .section-title p {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto var(--space-5);
+}
 .news-carousel { max-width: 880px; margin: 0 auto; }
 .news-box {
     position: relative;
@@ -3290,6 +3297,9 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
     line-height: 1.25;
     margin: 0 0 14px;
 }
+/* text-only items: keep the text clear of the prev/next arrows */
+.news-slide--noimg .news-slide-body { padding-left: 64px; padding-right: 64px; text-align: center; }
+.news-slide--noimg .news-text { max-width: 620px; margin-left: auto; margin-right: auto; }
 .news-text { color: var(--text-secondary); font-size: 15.5px; line-height: 1.8; }
 .news-text p { margin: 0 0 10px; }
 .news-text p:last-child { margin-bottom: 0; }

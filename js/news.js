@@ -9,6 +9,8 @@
   'use strict';
 
   var state = { items: [], index: 0 };
+  var timer = null;
+  var AUTO_MS = 2000;
 
   function $(sel) { return document.querySelector(sel); }
   function currentLang() {
@@ -85,7 +87,7 @@
       '<div class="news-box">' +
         (multi ? '<button type="button" class="news-nav news-prev" data-news-nav="-1" aria-label="' + esc(prevLabel) + '">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>' : '') +
-        '<article class="news-slide" key="' + state.index + '">' +
+        '<article class="news-slide' + (item.image ? '' : ' news-slide--noimg') + '" key="' + state.index + '">' +
           (item.image ? '<div class="news-slide-img" style="background-image:url(\'' + String(item.image).replace(/'/g, '%27') + '\')"></div>' : '') +
           '<div class="news-slide-body">' +
             (item.date ? '<span class="news-date">' + fmtDate(item.date) + '</span>' : '') +
@@ -107,8 +109,15 @@
     });
   }
 
-  function go(delta) { state.index += delta; render(); }
-  function goTo(i) { state.index = i; render(); }
+  function go(delta) { state.index += delta; render(); restartAuto(); }
+  function goTo(i) { state.index = i; render(); restartAuto(); }
+
+  // Auto-advance every 2s (the interactive touch). Pauses on hover and
+  // restarts after a manual click so it never fights the user.
+  function tick() { state.index += 1; render(); }
+  function startAuto() { stopAuto(); if (state.items.length > 1) timer = setInterval(tick, AUTO_MS); }
+  function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+  function restartAuto() { if (timer) startAuto(); } // only if not paused (hover)
 
   function show() {
     var section = $('#news-section');
@@ -134,6 +143,7 @@
         if (!state.items.length) { hide(); return; }
         show();
         render();
+        startAuto();
       })
       .catch(function (err) { console.warn('[IKAMETI] news load failed:', err); hide(); });
   }
@@ -141,6 +151,16 @@
   function init() {
     if (!$('#news-section')) return; // page has no news box
     waitForDb(40, load);
+    // pause auto-rotate while the visitor is reading (hovering), resume after
+    var carouselEl = $('#news-carousel');
+    if (carouselEl) {
+      carouselEl.addEventListener('mouseenter', stopAuto);
+      carouselEl.addEventListener('mouseleave', function () { if (state.items.length > 1) startAuto(); });
+    }
+    // don't tick while the tab is in the background
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopAuto(); else if (state.items.length > 1) startAuto();
+    });
     // re-localise the visible item when the language changes
     window.addEventListener('languageChanged', function () { if (state.items.length) render(); });
     window.addEventListener('i18nReady', function () { if (state.items.length) render(); });
