@@ -162,3 +162,38 @@ if (document.readyState === 'loading') {
     const handler = new PageHandler();
     handler.init().catch(error => console.error('[PageHandler] Failed to initialize:', error));
 }
+
+/* ============================================================
+ * Remind Me phone widget — keep it cleanly LTR on every page.
+ * intl-tel-input puts its dial-code padding on the right (it sees the RTL
+ * <html>), but our CSS forces the flag to the LEFT. So mirror the padding to
+ * the left, matched to the actual flag width, so the number never overlaps
+ * the "+90" box. The widget is hidden until the modal opens, so we measure
+ * once it is visible (and again on country change).
+ * ============================================================ */
+(function () {
+    function fixRemindPhonePadding() {
+        var phone = document.getElementById('phone');
+        if (!phone) return;
+        var flag = document.querySelector('#remind-modal .iti__selected-flag');
+        if (!flag) return;
+        var w = flag.offsetWidth;
+        if (!w) return; // not visible yet
+        phone.style.setProperty('padding-left', (w + 8) + 'px', 'important');
+        phone.style.setProperty('padding-right', '12px', 'important');
+    }
+    function start() {
+        var phone = document.getElementById('phone');
+        if (!phone) return;
+        phone.addEventListener('countrychange', fixRemindPhonePadding);
+        var btn = document.getElementById('remind-me-btn');
+        if (btn) btn.addEventListener('click', function () {
+            // run after the modal becomes visible so the flag has a real width
+            setTimeout(fixRemindPhonePadding, 50);
+            setTimeout(fixRemindPhonePadding, 300);
+        });
+        window.addEventListener('languageChanged', function () { setTimeout(fixRemindPhonePadding, 150); });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+    else start();
+})();
