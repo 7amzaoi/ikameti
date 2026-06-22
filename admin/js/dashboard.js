@@ -13,10 +13,12 @@
     user: null,
     categories: [],
     blogs: [],
+    news: [],
     residency: [],
     reminders: [],
     filters: {
       blogSearch: '', blogCat: '', blogStatus: '',
+      newsSearch: '', newsStatus: '',
       resSearch: '', resStatus: '',
       remSearch: '', remUrgency: '', remSort: 'urgency'
     }
@@ -25,6 +27,7 @@
   const VIEW_META = {
     analytics: { title: 'Analytics',      sub: 'A live overview of leads, reminders and content.',             action: '' },
     blogs:     { title: 'Blogs',          sub: 'Create, edit and remove blog articles and their categories.', action: '+ New article' },
+    news:      { title: 'News',           sub: 'Items shown in the homepage news box (below the hero).',       action: '+ New news' },
     residency: { title: 'Residency Form', sub: '“Get Your Residency in Turkey in Minutes” — submitted leads.', action: '' },
     reminders: { title: 'Remind Me',      sub: 'Renewal reminder requests, sorted by how soon they expire.',  action: '' }
   };
@@ -126,7 +129,11 @@
     if (view === 'analytics') renderAnalytics();
   }
   $$('.nav-link').forEach(l => l.addEventListener('click', () => switchView(l.dataset.view)));
-  $('#primary-action').addEventListener('click', () => { if ($('#primary-action').dataset.view === 'blogs') openBlogEditor(); });
+  $('#primary-action').addEventListener('click', () => {
+    const v = $('#primary-action').dataset.view;
+    if (v === 'blogs') openBlogEditor();
+    else if (v === 'news') openNewsEditor();
+  });
 
   // mobile sidebar
   $('#hamburger').addEventListener('click', () => $('#app').classList.toggle('nav-open'));
@@ -654,6 +661,226 @@
     if (error) { toast(error.message, 'err'); return; }
     toast('Category deleted', 'ok');
     loadBlogs();
+  }
+
+  /* =====================================================================
+     NEWS (homepage news box)
+     ===================================================================== */
+  async function loadNews() {
+    const { data, error } = await sb.from('news').select('*').order('published_date', { ascending: false });
+    if (error) { toast('Failed to load news: ' + error.message, 'err'); return; }
+    state.news = data || [];
+    $('#count-news').textContent = state.news.length;
+    renderNewsStats();
+    renderNews();
+  }
+  function renderNewsStats() {
+    const total = state.news.length;
+    const pub = state.news.filter(n => n.status === 'published').length;
+    const draft = state.news.filter(n => n.status === 'draft').length;
+    $('#news-stats').innerHTML =
+      stat('Total news', total, 'brand', ICONS.doc) +
+      stat('Published', pub, 'ok', ICONS.globe) +
+      stat('Drafts', draft, 'warn', ICONS.pencil);
+  }
+  function filteredNews() {
+    const q = state.filters.newsSearch.toLowerCase();
+    return state.news.filter(n =>
+      (!q || (n.title || '').toLowerCase().includes(q)) &&
+      (!state.filters.newsStatus || n.status === state.filters.newsStatus));
+  }
+  function renderNews() {
+    const rows = filteredNews();
+    const tbody = $('#news-tbody');
+    const empty = $('#news-empty');
+    if (!rows.length) {
+      tbody.innerHTML = '';
+      empty.innerHTML = emptyState('📰', 'No news yet', 'Create your first item with the “New news” button.');
+      return;
+    }
+    empty.innerHTML = '';
+    tbody.innerHTML = rows.map(n => {
+      const statusPill = n.status === 'published'
+        ? '<span class="pill pill-ok">Published</span>'
+        : '<span class="pill pill-muted">Draft</span>';
+      const thumb = n.image ? `<img class="thumb" src="${esc(n.image)}" alt="" onerror="this.style.visibility='hidden'">` : '';
+      const snippet = (n.body || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+      return `<tr>
+        <td>
+          <div style="display:flex;gap:12px;align-items:center;">
+            ${thumb}
+            <div>
+              <div class="blog-title">${esc(n.title)}</div>
+              <div class="blog-meta">${esc(snippet)}</div>
+            </div>
+          </div>
+        </td>
+        <td>${statusPill}</td>
+        <td style="white-space:nowrap;">${fmtDate(n.published_date)}</td>
+        <td>
+          <div class="row-actions">
+            <button class="icon-btn" title="Edit" data-edit-news="${n.id}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+            <button class="icon-btn del" title="Delete" data-del-news="${n.id}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </button>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+    $$('[data-edit-news]', tbody).forEach(b => b.addEventListener('click', () => openNewsEditor(Number(b.dataset.editNews))));
+    $$('[data-del-news]', tbody).forEach(b => b.addEventListener('click', () => deleteNews(Number(b.dataset.delNews))));
+  }
+
+  $('#news-search').addEventListener('input', e => { state.filters.newsSearch = e.target.value; renderNews(); });
+  $('#news-status-filter').addEventListener('change', e => { state.filters.newsStatus = e.target.value; renderNews(); });
+
+  // ---- news editor ----
+  let newsTrBuilt = false;
+  function openNewsEditor(id) {
+    const n = id ? state.news.find(x => x.id === id) : null;
+    $('#news-modal-title').textContent = n ? 'Edit news' : 'New news item';
+    $('#news-id').value = n ? n.id : '';
+    $('#news-title').value = n ? n.title : '';
+    $('#news-date').value = n && n.published_date ? n.published_date : new Date().toISOString().slice(0, 10);
+    $('#news-status').value = n ? n.status : 'published';
+    $('#news-image').value = n ? (n.image || '') : '';
+    $('#news-body').value = n ? (n.body || '') : '';
+    fillNewsTranslations(n ? n.translations : {});
+    $('#news-image-file').value = '';
+    setNewsImageStatus('');
+    setNewsImagePreview(n ? (n.image || '') : '');
+    openModal('news-modal');
+  }
+
+  function buildNewsTranslations() {
+    if (newsTrBuilt) return;
+    const host = $('#news-translations');
+    if (!host) return;
+    host.innerHTML = TR_LANGS.map(([code, name]) => {
+      const dir = TR_RTL.has(code) ? ' dir="rtl"' : '';
+      return (
+        '<details class="tr-lang" data-lang="' + code + '">' +
+          '<summary><span class="tr-lang-name">' + name + '</span><span class="tr-lang-code">' + code.toUpperCase() + '</span></summary>' +
+          '<div class="tr-fields">' +
+            '<label>Title</label>' +
+            '<input type="text" id="ntr-' + code + '-title"' + dir + ' placeholder="Title in ' + name + '">' +
+            '<label>Text</label>' +
+            '<textarea id="ntr-' + code + '-body" style="min-height:90px;"' + dir + ' placeholder="Text in ' + name + '"></textarea>' +
+          '</div>' +
+        '</details>'
+      );
+    }).join('');
+    newsTrBuilt = true;
+  }
+  function fillNewsTranslations(map) {
+    buildNewsTranslations();
+    const t = (map && typeof map === 'object') ? map : {};
+    TR_LANGS.forEach(([code]) => {
+      const v = (t[code] && typeof t[code] === 'object') ? t[code] : {};
+      const ti = $('#ntr-' + code + '-title');
+      const bo = $('#ntr-' + code + '-body');
+      if (ti) ti.value = v.title || '';
+      if (bo) bo.value = v.body || '';
+      const det = document.querySelector('#news-translations .tr-lang[data-lang="' + code + '"]');
+      if (det) det.open = Boolean(String(v.title || v.body || '').trim());
+    });
+  }
+  function collectNewsTranslations() {
+    const out = {};
+    TR_LANGS.forEach(([code]) => {
+      const title = (($('#ntr-' + code + '-title') || {}).value || '').trim();
+      const body = (($('#ntr-' + code + '-body') || {}).value || '').trim();
+      const entry = {};
+      if (title) entry.title = title;
+      if (body) entry.body = body;
+      if (Object.keys(entry).length) out[code] = entry;
+    });
+    return out;
+  }
+
+  // news image (reuses the blog-images storage bucket + uploadCover)
+  function setNewsImagePreview(url) {
+    const prev = $('#news-image-preview');
+    if (url) {
+      prev.style.backgroundImage = `url("${url.replace(/"/g, '%22')}")`;
+      prev.classList.remove('empty');
+      $('#news-image-clear-btn').style.display = '';
+    } else {
+      prev.style.backgroundImage = '';
+      prev.classList.add('empty');
+      $('#news-image-clear-btn').style.display = 'none';
+    }
+  }
+  function setNewsImageStatus(msg, kind) {
+    const el = $('#news-image-status');
+    el.textContent = msg || '';
+    el.className = 'image-upload-status' + (kind ? ' ' + kind : '');
+  }
+  $('#news-image-upload-btn').addEventListener('click', () => $('#news-image-file').click());
+  $('#news-image-clear-btn').addEventListener('click', () => {
+    $('#news-image').value = '';
+    $('#news-image-file').value = '';
+    setNewsImagePreview('');
+    setNewsImageStatus('');
+  });
+  $('#news-image').addEventListener('input', e => setNewsImagePreview(e.target.value.trim()));
+  $('#news-image-file').addEventListener('change', async e => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) { setNewsImageStatus('Please choose an image file.', 'error'); return; }
+    if (file.size > 5 * 1024 * 1024) { setNewsImageStatus('Image is too large (max 5 MB).', 'error'); return; }
+    const saveBtn = $('#news-save-btn');
+    saveBtn.disabled = true;
+    setNewsImageStatus('Uploading…', 'uploading');
+    try {
+      const url = await uploadCover(file);
+      $('#news-image').value = url;
+      setNewsImagePreview(url);
+      setNewsImageStatus('Uploaded ✓', 'ok');
+    } catch (err) {
+      const m = /bucket.*not found|does not exist/i.test(err.message || '')
+        ? 'Image bucket missing — run supabase/storage.sql once in Supabase.'
+        : (err.message || 'Upload failed');
+      setNewsImageStatus(m, 'error');
+      toast(m, 'err');
+    } finally {
+      saveBtn.disabled = false;
+    }
+  });
+
+  $('#news-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const id = $('#news-id').value;
+    const payload = {
+      title: $('#news-title').value.trim(),
+      body: $('#news-body').value.trim() || null,
+      image: $('#news-image').value.trim() || null,
+      published_date: $('#news-date').value || null,
+      status: $('#news-status').value,
+      translations: collectNewsTranslations()
+    };
+    if (!payload.title) { toast('Title is required', 'err'); return; }
+    const btn = $('#news-save-btn');
+    btn.disabled = true; btn.textContent = 'Saving…';
+    let error;
+    if (id) ({ error } = await sb.from('news').update(payload).eq('id', Number(id)));
+    else ({ error } = await sb.from('news').insert([payload]));
+    btn.disabled = false; btn.textContent = 'Save news';
+    if (error) { toast(error.message, 'err'); return; }
+    closeModal('news-modal');
+    toast(id ? 'News updated' : 'News created', 'ok');
+    loadNews();
+  });
+
+  async function deleteNews(id) {
+    const n = state.news.find(x => x.id === id);
+    if (!confirm(`Delete “${n ? n.title : 'this item'}”? This cannot be undone.`)) return;
+    const { error } = await sb.from('news').delete().eq('id', id);
+    if (error) { toast(error.message, 'err'); return; }
+    toast('News deleted', 'ok');
+    loadNews();
   }
 
   /* =====================================================================
@@ -1250,7 +1477,7 @@
     const ok = await guard();
     if (!ok) return;
     switchView('analytics');
-    await Promise.all([loadBlogs(), loadResidency(), loadReminders()]);
+    await Promise.all([loadBlogs(), loadNews(), loadResidency(), loadReminders()]);
     renderAnalytics();
   })();
 })();

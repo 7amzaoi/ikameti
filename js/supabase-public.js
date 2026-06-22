@@ -77,6 +77,31 @@ const IKAMETI_DB = {
     }));
   },
 
+  /**
+   * Fetch published news items, newest first. Returns a plain array the
+   * homepage news box consumes. Throws on failure so the caller can hide
+   * the section gracefully.
+   */
+  async getPublishedNews() {
+    const client = await getClient();
+    const { data, error } = await client
+      .from('news')
+      .select('id, title, body, image, translations, published_date')
+      .eq('status', 'published')
+      .order('published_date', { ascending: false });
+
+    if (error) throw error;
+
+    return (data || []).map((row) => ({
+      id: row.id,
+      title: row.title || '',
+      body: row.body || '',
+      image: row.image || '',
+      translations: row.translations && typeof row.translations === 'object' ? row.translations : {},
+      date: row.published_date || ''
+    }));
+  },
+
   /** Insert a residency-wizard lead. */
   async insertResidency(payload) {
     const client = await getClient();
