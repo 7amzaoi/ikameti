@@ -2148,17 +2148,34 @@ footer a:hover {
         padding: var(--space-3) var(--space-4);
     }
 
+    /* Tidy 2-column footer on phones: brand on top, link groups paired. */
     footer .grid-cols-4 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6) var(--space-5);
+    }
+
+    footer .grid-cols-4 > div:first-child {
+        grid-column: 1 / -1;
+        margin-bottom: var(--space-2);
+    }
+
+    footer .grid-cols-4 > div:first-child img {
+        height: 48px !important;
     }
 
     footer h4 {
-        margin-top: var(--space-6);
+        margin-top: 0;
         margin-bottom: var(--space-3);
+        font-size: 15px;
     }
 
-    footer h4:first-child {
-        margin-top: 0;
+    footer ul li {
+        margin-bottom: var(--space-2);
+    }
+
+    footer ul li a,
+    footer p {
+        font-size: 13px;
     }
 }
 
