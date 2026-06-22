@@ -744,6 +744,7 @@
     $('#news-id').value = n ? n.id : '';
     $('#news-title').value = n ? n.title : '';
     $('#news-date').value = n && n.published_date ? n.published_date : new Date().toISOString().slice(0, 10);
+    $('#news-show-date').checked = n ? n.show_date !== false : true;
     $('#news-status').value = n ? n.status : 'published';
     $('#news-image').value = n ? (n.image || '') : '';
     $('#news-body').value = n ? (n.body || '') : '';
@@ -858,6 +859,7 @@
       body: $('#news-body').value.trim() || null,
       image: $('#news-image').value.trim() || null,
       published_date: $('#news-date').value || null,
+      show_date: $('#news-show-date').checked,
       status: $('#news-status').value,
       translations: collectNewsTranslations()
     };

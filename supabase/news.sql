@@ -22,11 +22,15 @@ create table if not exists public.news (
   image          text,                          -- optional cover image URL
   translations   jsonb       not null default '{}'::jsonb,  -- {"ar":{"title","body"}, ...}
   published_date date        not null default current_date,
+  show_date      boolean     not null default true,         -- show/hide the date on the public box
   status         text        not null default 'draft'
                              check (status in ('draft', 'published')),
   created_at     timestamptz not null default now(),
   updated_at     timestamptz not null default now()
 );
+
+-- Added after the first release: lets each item hide its date on the public box.
+alter table public.news add column if not exists show_date boolean not null default true;
 
 comment on table public.news is 'Homepage news items. status=published are shown publicly; draft are admin-only.';
 

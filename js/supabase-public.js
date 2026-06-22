@@ -86,7 +86,7 @@ const IKAMETI_DB = {
     const client = await getClient();
     const { data, error } = await client
       .from('news')
-      .select('id, title, body, image, translations, published_date')
+      .select('id, title, body, image, translations, published_date, show_date')
       .eq('status', 'published')
       .order('published_date', { ascending: false });
 
@@ -98,7 +98,8 @@ const IKAMETI_DB = {
       body: row.body || '',
       image: row.image || '',
       translations: row.translations && typeof row.translations === 'object' ? row.translations : {},
-      date: row.published_date || ''
+      date: row.published_date || '',
+      showDate: row.show_date !== false
     }));
   },
 

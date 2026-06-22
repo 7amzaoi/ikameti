@@ -59,7 +59,7 @@
       if (tr.title && tr.title.trim()) title = tr.title;
       if (tr.body && tr.body.trim()) body = tr.body;
     }
-    return { title: title, body: body, image: item.image, date: item.date };
+    return { title: title, body: body, image: item.image, date: item.date, showDate: item.showDate !== false };
   }
 
   function render() {
@@ -90,7 +90,7 @@
         '<article class="news-slide' + (item.image ? '' : ' news-slide--noimg') + '" key="' + state.index + '">' +
           (item.image ? '<div class="news-slide-img" style="background-image:url(\'' + String(item.image).replace(/'/g, '%27') + '\')"></div>' : '') +
           '<div class="news-slide-body">' +
-            (item.date ? '<span class="news-date">' + fmtDate(item.date) + '</span>' : '') +
+            (item.date && item.showDate ? '<span class="news-date">' + fmtDate(item.date) + '</span>' : '') +
             '<h3 class="news-title">' + esc(item.title) + '</h3>' +
             '<div class="news-text">' + bodyHtml(item.body) + '</div>' +
           '</div>' +
