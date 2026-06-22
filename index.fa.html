@@ -1269,6 +1269,14 @@
         let iti = null;
         if (window.intlTelInput) {
             phone.setAttribute('dir', 'ltr');
+            // Initialise inside a forced-LTR wrapper so the flag + dial code stay
+            // on the left, right next to the number — even on RTL (Arabic…) pages.
+            const phoneLtrWrap = document.createElement('span');
+            phoneLtrWrap.setAttribute('dir', 'ltr');
+            phoneLtrWrap.style.display = 'block';
+            phoneLtrWrap.style.width = '100%';
+            phone.parentNode.insertBefore(phoneLtrWrap, phone);
+            phoneLtrWrap.appendChild(phone);
             iti = window.intlTelInput(phone, {
                 initialCountry: 'tr',
                 preferredCountries: ['tr', 'sa', 'ae', 'eg', 'sy', 'iq', 'de'],
