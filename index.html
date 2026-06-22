@@ -59,6 +59,8 @@
   <link rel="alternate" hreflang="af" href="https://ikameti.com/index.af.html">
   <link rel="alternate" hreflang="x-default" href="https://ikameti.com/index.ar.html">
   <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 </head>
 <body>
 
@@ -1262,6 +1264,27 @@
         const expiryDate = document.getElementById('expiryDate');
         const phone = document.getElementById('phone');
 
+        // Ready-made international phone input: country picker + dial code,
+        // and it blocks letters/symbols so only a real number can be entered.
+        let iti = null;
+        if (window.intlTelInput) {
+            phone.setAttribute('dir', 'ltr');
+            iti = window.intlTelInput(phone, {
+                initialCountry: 'tr',
+                preferredCountries: ['tr', 'sa', 'ae', 'eg', 'sy', 'iq', 'de'],
+                separateDialCode: true,
+                autoPlaceholder: 'aggressive',
+                utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
+            });
+            phone.addEventListener('input', () => {
+                const cleaned = phone.value.replace(/[^\d\s]/g, '');
+                if (cleaned !== phone.value) phone.value = cleaned;
+            });
+            phone.addEventListener('keypress', (e) => {
+                if (e.key && e.key.length === 1 && !/[\d\s]/.test(e.key)) e.preventDefault();
+            });
+        }
+
         // Google Sheets API endpoint
         const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz2IfjsRozMo5zJiU4Zqy4clWQZjY5HNllN9g7mdU6XlRjLs3JBd7K77pHcOSNcjOtN/exec';
 
@@ -1302,7 +1325,7 @@
 
             const type = residencyType.value.trim();
             const expiry = expiryDate.value.trim();
-            const phoneNum = phone.value.trim();
+            const phoneNum = (iti && typeof iti.getNumber === 'function' && phone.value.trim()) ? iti.getNumber() : phone.value.trim();
 
             // Validation
             if (!type || !expiry || !phoneNum) {
@@ -1311,7 +1334,8 @@
                 return;
             }
 
-            if (!validatePhone(phoneNum)) {
+            const phoneOk = (iti && window.intlTelInputUtils && typeof iti.isValidNumber === 'function') ? iti.isValidNumber() : validatePhone(phoneNum);
+            if (!phoneOk) {
                 formError.textContent = window.i18n?.getTranslation('common.error_phone') || 'Please enter a valid phone number';
                 formError.style.display = 'block';
                 return;

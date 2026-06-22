@@ -3211,3 +3211,15 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
 }
 .landing-faq .faq-item[open] .faq-answer { animation: faqReveal .3s ease; }
 @keyframes faqReveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ================================================
+   Remind Me — international phone input (intl-tel-input)
+   ================================================ */
+#remindForm .iti { width: 100%; display: block; }
+#remindForm .iti > input,
+#remindForm .iti input[type="tel"] { width: 100%; }
+/* keep the phone widget left-to-right even inside RTL pages */
+#remind-modal .iti { direction: ltr; }
+html.rtl-mode #remind-modal label[for], 
+html.rtl-mode #remind-modal #label-phone { text-align: right; }
+#remindForm .iti__country-list { text-align: left; direction: ltr; }
