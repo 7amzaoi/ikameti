@@ -84,11 +84,19 @@ const IKAMETI_DB = {
    */
   async getPublishedNews() {
     const client = await getClient();
-    const { data, error } = await client
+    const run = (columns) => client
       .from('news')
-      .select('id, title, body, image, translations, published_date, show_date')
+      .select(columns)
       .eq('status', 'published')
       .order('published_date', { ascending: false });
+
+    let { data, error } = await run('id, title, body, image, translations, published_date, show_date');
+    // Older databases may not have the show_date column yet — retry without it
+    // so a missing column never hides the whole news box.
+    if (error && /show_date/i.test(error.message || '')) {
+      console.warn('[IKAMETI] news: show_date column missing — run the ALTER in supabase/news.sql. Falling back.');
+      ({ data, error } = await run('id, title, body, image, translations, published_date'));
+    }
 
     if (error) throw error;
 
