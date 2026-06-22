@@ -51,12 +51,17 @@
     if (isNaN(date)) return esc(d);
     return date.toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
   }
+  // Whole days left until `dateStr`, measured at UTC midnight so the count is
+  // identical for every admin regardless of their local timezone, and it ticks
+  // down by exactly one each UTC day. Negative = already expired.
+  const MS_PER_DAY = 86400000;
   function daysUntil(dateStr) {
     if (!dateStr) return null;
-    const today = new Date(); today.setHours(0, 0, 0, 0);
-    const target = new Date(dateStr); target.setHours(0, 0, 0, 0);
+    const target = new Date(dateStr);
     if (isNaN(target)) return null;
-    return Math.round((target - today) / 86400000);
+    const todayUTC = Math.floor(Date.now() / MS_PER_DAY);
+    const targetUTC = Math.floor(target.getTime() / MS_PER_DAY);
+    return targetUTC - todayUTC;
   }
   function urgencyOf(days) {
     if (days == null) return 'safe';
@@ -1014,7 +1019,7 @@
     const days = daysUntil(r.expiry_date);
     const u = urgencyOf(days);
     const initials = (r.full_name || r.residency_type || '?').trim().charAt(0).toUpperCase();
-    return `<div class="sub-card ${u} ${statusClass(r.status)}" draggable="true" data-card-id="${r.id}" style="--i:${i}">
+    return `<div class="sub-card ${u} ${statusClass(r.status)}" draggable="true" data-card-id="${r.id}" data-expiry="${esc(r.expiry_date || '')}" style="--i:${i}">
       <div class="sub-card-head">
         <div class="avatar">${esc(initials)}</div>
         <div class="who">
@@ -1024,8 +1029,8 @@
         ${statusBadge(r.status)}
       </div>
       <div class="countdown ${u}">
-        <span class="big">${countdownIcon(u)}</span>
-        <span>${countdownText(days)}</span>
+        <span class="big cd-icon">${countdownIcon(u)}</span>
+        <span class="cd-text">${countdownText(days)}</span>
       </div>
       <div class="sub-card-tags">
         ${r.residency_type ? '<span class="tag tag-type">' + esc(r.residency_type) + '</span>' : ''}
@@ -1054,6 +1059,27 @@
     if (days === 0) return 'Expires today';
     return `${days} day${days === 1 ? '' : 's'} left until expiry`;
   }
+
+  // Live countdown: recompute the remaining days for the cards already on screen
+  // and update them in place (text + urgency colour) — no DOM rebuild, so it
+  // never re-triggers entrance animations or steals focus from a notes field.
+  // Day boundaries are in UTC, so the number ticks down at 00:00 UTC.
+  function tickCountdowns() {
+    const wrap = document.getElementById('reminders-cards');
+    if (!wrap) return;
+    $$('.sub-card[data-expiry]', wrap).forEach(card => {
+      const days = daysUntil(card.dataset.expiry || null);
+      const u = urgencyOf(days);
+      ['urgent', 'soon', 'upcoming', 'safe'].forEach(c => card.classList.remove(c));
+      card.classList.add(u);
+      const cd = card.querySelector('.countdown');
+      if (!cd) return;
+      cd.className = 'countdown ' + u;
+      const icon = cd.querySelector('.cd-icon'); if (icon) icon.textContent = countdownIcon(u);
+      const txt = cd.querySelector('.cd-text'); if (txt) txt.textContent = countdownText(days);
+    });
+  }
+  setInterval(tickCountdowns, 30000);
 
   $('#reminders-search').addEventListener('input', e => { state.filters.remSearch = e.target.value; renderReminders(); });
   $('#reminders-sort').addEventListener('change', e => { state.filters.remSort = e.target.value; renderReminders(); });
