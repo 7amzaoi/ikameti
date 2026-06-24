@@ -1060,10 +1060,112 @@
       });
     });
   }
-  function contactButtons(phone) {
+  /* =====================================================================
+     PRE-FILLED WHATSAPP MESSAGES (written in the client's own language)
+     Each card's WhatsApp button opens chat with a ready, professional
+     message that already contains the client's name and request details.
+     ===================================================================== */
+  const WA_LANGS = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af'];
+  function waLang(l) { l = String(l || '').toLowerCase(); return WA_LANGS.indexOf(l) >= 0 ? l : 'en'; }
+
+  const WA = {
+    en: {
+      client: 'there', dash: '—', yes: 'Yes', no: 'No',
+      type: { tourist: 'Tourist residence', student: 'Student residence', 'real-estate': 'Real-estate residence', family: 'Family residence', _: 'residence permit' },
+      dur: { '1-year': '1 year', '2-year': '2 years' },
+      lbl: { type: 'Residency type', dur: 'Duration', fam: 'Family members', rent: 'Rental contract' },
+      days: d => d == null ? '' : (d < 0 ? `it expired ${Math.abs(d)} day(s) ago` : (d === 0 ? 'it expires today' : `about ${d} day(s) left`)),
+      reminder: c => `Hello ${c.name},\n\nThis is IKAMETI Unlimited. We'd like to remind you that your ${c.type} is set to expire on ${c.date} (${c.days}).\n\nWe'd be glad to help you renew it smoothly and on time. Would you like us to begin the renewal process for you?`,
+      intro: n => `Hello ${n},\n\nThank you for your residency request with IKAMETI Unlimited. Here is a summary of what you requested:`,
+      outro: '\n\nOur team is ready to guide you through the next steps. When would be a good time to talk?'
+    },
+    ar: {
+      client: 'عميلنا العزيز', dash: '—', yes: 'نعم', no: 'لا',
+      type: { tourist: 'الإقامة السياحية', student: 'الإقامة الطلابية', 'real-estate': 'الإقامة العقارية', family: 'الإقامة العائلية', _: 'الإقامة' },
+      dur: { '1-year': 'سنة واحدة', '2-year': 'سنتان' },
+      lbl: { type: 'نوع الإقامة', dur: 'المدة', fam: 'عدد أفراد العائلة', rent: 'عقد إيجار' },
+      days: d => d == null ? '' : (d < 0 ? `انتهت منذ ${Math.abs(d)} يوم` : (d === 0 ? 'تنتهي اليوم' : `يتبقّى نحو ${d} يوم`)),
+      reminder: c => `مرحباً ${c.name}،\n\nمعك فريق IKAMETI Unlimited. نودّ تذكيرك بأن ${c.type} الخاصة بك ستنتهي بتاريخ ${c.date} (${c.days}).\n\nيسعدنا مساعدتك في تجديدها بسلاسة وفي الوقت المناسب. هل ترغب أن نبدأ إجراءات التجديد نيابةً عنك؟`,
+      intro: n => `مرحباً ${n}،\n\nشكراً لتقديمك طلب الإقامة عبر IKAMETI Unlimited. إليك ملخّص ما طلبته:`,
+      outro: '\n\nفريقنا جاهز لإرشادك في الخطوات التالية. ما هو الوقت المناسب للتواصل معك؟'
+    },
+    tr: {
+      client: 'Değerli müşterimiz', dash: '—', yes: 'Evet', no: 'Hayır',
+      type: { tourist: 'Turist oturumu', student: 'Öğrenci oturumu', 'real-estate': 'Gayrimenkul oturumu', family: 'Aile oturumu', _: 'oturum izni' },
+      dur: { '1-year': '1 yıl', '2-year': '2 yıl' },
+      lbl: { type: 'Oturum türü', dur: 'Süre', fam: 'Aile üyesi sayısı', rent: 'Kira sözleşmesi' },
+      days: d => d == null ? '' : (d < 0 ? `${Math.abs(d)} gün önce doldu` : (d === 0 ? 'bugün doluyor' : `yaklaşık ${d} gün kaldı`)),
+      reminder: c => `Merhaba ${c.name},\n\nBen IKAMETI Unlimited ekibinden. ${c.type} izninizin ${c.date} tarihinde sona ereceğini hatırlatmak isteriz (${c.days}).\n\nYenileme işlemini zamanında ve sorunsuz tamamlamanıza yardımcı olmaktan memnuniyet duyarız. Sizin için yenileme sürecini başlatmamızı ister misiniz?`,
+      intro: n => `Merhaba ${n},\n\nIKAMETI Unlimited üzerinden yaptığınız oturum başvurusu için teşekkür ederiz. Talep ettiklerinizin özeti:`,
+      outro: '\n\nEkibimiz sonraki adımlarda size rehberlik etmeye hazır. Görüşmek için uygun bir zaman nedir?'
+    },
+    ru: {
+      client: 'уважаемый клиент', dash: '—', yes: 'Да', no: 'Нет',
+      type: { tourist: 'туристический ВНЖ', student: 'студенческий ВНЖ', 'real-estate': 'ВНЖ по недвижимости', family: 'семейный ВНЖ', _: 'вид на жительство' },
+      dur: { '1-year': '1 год', '2-year': '2 года' },
+      lbl: { type: 'Тип ВНЖ', dur: 'Срок', fam: 'Члены семьи', rent: 'Договор аренды' },
+      days: d => d == null ? '' : (d < 0 ? `истёк ${Math.abs(d)} дн. назад` : (d === 0 ? 'истекает сегодня' : `осталось около ${d} дн.`)),
+      reminder: c => `Здравствуйте, ${c.name}!\n\nЭто команда IKAMETI Unlimited. Напоминаем, что срок действия вашего ${c.type} истекает ${c.date} (${c.days}).\n\nМы будем рады помочь вам продлить его вовремя и без хлопот. Начать процесс продления для вас?`,
+      intro: n => `Здравствуйте, ${n}!\n\nБлагодарим за заявку на ВНЖ через IKAMETI Unlimited. Краткое резюме вашего запроса:`,
+      outro: '\n\nНаша команда готова сопровождать вас на следующих этапах. Когда вам удобно связаться?'
+    },
+    fa: {
+      client: 'مشتری گرامی', dash: '—', yes: 'بله', no: 'خیر',
+      type: { tourist: 'اقامت توریستی', student: 'اقامت دانشجویی', 'real-estate': 'اقامت ملکی', family: 'اقامت خانوادگی', _: 'اقامت' },
+      dur: { '1-year': 'یک سال', '2-year': 'دو سال' },
+      lbl: { type: 'نوع اقامت', dur: 'مدت', fam: 'اعضای خانواده', rent: 'قرارداد اجاره' },
+      days: d => d == null ? '' : (d < 0 ? `${Math.abs(d)} روز پیش منقضی شد` : (d === 0 ? 'امروز منقضی می‌شود' : `حدود ${d} روز باقی مانده`)),
+      reminder: c => `سلام ${c.name} عزیز،\n\nاین پیام از طرف تیم IKAMETI Unlimited است. یادآوری می‌کنیم که ${c.type} شما در تاریخ ${c.date} منقضی می‌شود (${c.days}).\n\nخوشحال می‌شویم در تمدید آن به‌موقع و بدون دردسر کمکتان کنیم. مایل هستید روند تمدید را برایتان آغاز کنیم؟`,
+      intro: n => `سلام ${n} عزیز،\n\nاز ثبت درخواست اقامت شما در IKAMETI Unlimited سپاسگزاریم. خلاصه‌ای از درخواست شما:`,
+      outro: '\n\nتیم ما آماده است شما را در مراحل بعدی راهنمایی کند. چه زمانی برای گفتگو مناسب است؟'
+    },
+    uz: {
+      client: 'hurmatli mijoz', dash: '—', yes: 'Ha', no: 'Yoʻq',
+      type: { tourist: 'Turistik yashash ruxsati', student: 'Talaba yashash ruxsati', 'real-estate': 'Koʻchmas mulk yashash ruxsati', family: 'Oilaviy yashash ruxsati', _: 'yashash ruxsati' },
+      dur: { '1-year': '1 yil', '2-year': '2 yil' },
+      lbl: { type: 'Yashash turi', dur: 'Muddat', fam: 'Oila aʼzolari', rent: 'Ijara shartnomasi' },
+      days: d => d == null ? '' : (d < 0 ? `${Math.abs(d)} kun oldin tugagan` : (d === 0 ? 'bugun tugaydi' : `taxminan ${d} kun qoldi`)),
+      reminder: c => `Assalomu alaykum, ${c.name}!\n\nBu IKAMETI Unlimited jamoasi. ${c.type} muddati ${c.date} sanasida tugashini eslatib oʻtamiz (${c.days}).\n\nUni oʻz vaqtida va muammosiz yangilashga yordam berishdan mamnun boʻlamiz. Yangilash jarayonini siz uchun boshlaymizmi?`,
+      intro: n => `Assalomu alaykum, ${n}!\n\nIKAMETI Unlimited orqali yashash uchun ariza qoldirganingiz uchun rahmat. Soʻrovingiz qisqacha mazmuni:`,
+      outro: '\n\nJamoamiz keyingi bosqichlarda sizga yoʻl-yoʻriq koʻrsatishga tayyor. Suhbat uchun qulay vaqt qachon?'
+    },
+    af: {
+      client: 'مشتری محترم', dash: '—', yes: 'بله', no: 'نخیر',
+      type: { tourist: 'اقامت توریستی', student: 'اقامت محصلی', 'real-estate': 'اقامت ملکی', family: 'اقامت خانوادگی', _: 'اقامت' },
+      dur: { '1-year': 'یک سال', '2-year': 'دو سال' },
+      lbl: { type: 'نوع اقامت', dur: 'مدت', fam: 'اعضای فامیل', rent: 'قرارداد کرایه' },
+      days: d => d == null ? '' : (d < 0 ? `${Math.abs(d)} روز پیش ختم شد` : (d === 0 ? 'امروز ختم می‌شود' : `تقریباً ${d} روز باقی مانده`)),
+      reminder: c => `سلام ${c.name} عزیز،\n\nاین پیام از طرف تیم IKAMETI Unlimited است. یادآوری می‌کنیم که ${c.type} شما به تاریخ ${c.date} ختم می‌شود (${c.days}).\n\nخوشحال می‌شویم در تمدید آن به‌وقت و بدون دردسر کمک‌تان کنیم. آیا می‌خواهید روند تمدید را برای‌تان آغاز کنیم؟`,
+      intro: n => `سلام ${n} عزیز،\n\nاز درخواست اقامت شما از طریق IKAMETI Unlimited سپاسگزاریم. خلاصه‌ی درخواست شما:`,
+      outro: '\n\nتیم ما آماده است تا شما را در مراحل بعدی راهنمایی کند. چه وقت برای صحبت مناسب است؟'
+    }
+  };
+
+  function waSummary(D, r) {
+    const lines = [];
+    lines.push(`• ${D.lbl.type}: ${D.type[r.residency_type] || D.type._}`);
+    if (r.duration) lines.push(`• ${D.lbl.dur}: ${D.dur[r.duration] || r.duration.replace('-', ' ')}`);
+    if (r.family_members) lines.push(`• ${D.lbl.fam}: ${r.family_members}`);
+    lines.push(`• ${D.lbl.rent}: ${r.rental_contract === 'yes' ? D.yes : D.no}`);
+    return lines.join('\n');
+  }
+  function reminderMessage(r) {
+    const D = WA[waLang(r.language)];
+    const name = (r.full_name || '').trim() || D.client;
+    const type = D.type[r.residency_type] || D.type._;
+    return D.reminder({ name, type, date: r.expiry_date ? fmtDate(r.expiry_date) : D.dash, days: D.days(daysUntil(r.expiry_date)) });
+  }
+  function residencyMessage(r) {
+    const D = WA[waLang(r.language)];
+    const name = (r.full_name || '').trim() || D.client;
+    return D.intro(name) + '\n' + waSummary(D, r) + D.outro;
+  }
+
+  function contactButtons(phone, message) {
     const digits = phoneDigits(phone);
+    const text = message ? '?text=' + encodeURIComponent(message) : '';
     return `
-      <a class="icon-btn wa" title="WhatsApp" href="https://wa.me/${digits}" target="_blank" rel="noopener">
+      <a class="icon-btn wa" title="WhatsApp" href="https://wa.me/${digits}${text}" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.043z"/></svg>
       </a>
       <a class="icon-btn" title="Call" href="tel:${esc(phone || '')}">
@@ -1152,7 +1254,7 @@
       <div class="sub-card-foot">
         ${statusSelect('residency_submissions', r)}
         <div class="foot-actions">
-          ${contactButtons(r.phone)}
+          ${contactButtons(r.phone, residencyMessage(r))}
           <button class="icon-btn del" title="Delete" data-del-sub="${r.id}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
           </button>
@@ -1273,7 +1375,7 @@
       <div class="sub-card-foot">
         ${statusSelect('reminder_submissions', r)}
         <div class="foot-actions">
-          ${contactButtons(r.phone)}
+          ${contactButtons(r.phone, reminderMessage(r))}
           <button class="icon-btn del" title="Delete" data-del-sub="${r.id}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
           </button>
