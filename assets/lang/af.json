@@ -776,14 +776,15 @@
     "cta": "Begin nou",
     "basic": {
       "title": "Residensie-begin",
-      "price": "99$",
+      "price": "9$",
       "price_note": "Eenmalige betaling",
       "description": "Ideaal vir eerste-keer aansoekera met volledige aanvangondersteuning.",
       "features": [
-        "1 aanvangconsultasie",
-        "Residensie-tipevaluering",
-        "Dokumentasiekontrolelys",
-        "Ansoekvormhulp"
+        "Konsultasie",
+        "Lêervoorbereiding en -indiening",
+        "Dokumentkontrolelys",
+        "Aansoekvormhulp",
+        "Uitreiking van gesondheidsversekering (betaald)"
       ]
     },
     "standard": {

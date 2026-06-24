@@ -776,14 +776,15 @@
     "cta": "Hozir Boshlang",
     "basic": {
       "title": "Rezidentlik boshlanishi",
-      "price": "99$",
+      "price": "9$",
       "price_note": "Bir martalik to'lov",
       "description": "Birinchi marta ariza beruvchilar uchun ideal, to'liq boshlang'ich qo'llab-quvvatlash.",
       "features": [
-        "1 boshlang'ich maslahat",
-        "Rezidentlik turini baholash",
+        "Maslahat",
+        "Hujjatni tayyorlash va topshirish",
         "Hujjatlar ro'yxati",
-        "Ariza shakli bo'yicha yordam"
+        "Ariza formasiga yordam",
+        "Tibbiy sug'urta rasmiylashtirish (pullik)"
       ]
     },
     "standard": {

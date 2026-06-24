@@ -776,14 +776,15 @@
     "cta": "Şimdi Başlayın",
     "basic": {
       "title": "Başlangıç İkameti",
-      "price": "99$",
+      "price": "9$",
       "price_note": "Tek seferde ödeme",
       "description": "İlk kez başvuru yapanlar için ideal, tamamen başlangıç desteği.",
       "features": [
-        "1 ilk danışma",
-        "İkamet türü değerlendirmesi",
+        "Danışmanlık",
+        "Dosya hazırlama ve teslim",
         "Belge kontrol listesi",
-        "Başvuru formu yardımı"
+        "Başvuru formu yardımı",
+        "Sağlık sigortası çıkarma (ücretli)"
       ]
     },
     "standard": {

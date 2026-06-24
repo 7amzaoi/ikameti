@@ -776,14 +776,15 @@
     "cta": "Get Started Now",
     "basic": {
       "title": "Starter Residency",
-      "price": "$99",
+      "price": "$9",
       "price_note": "One-time payment",
       "description": "Perfect for first-time applicants with complete initial support.",
       "features": [
-        "1 initial consultation",
-        "Residency type assessment",
+        "Consultation",
+        "File preparation & submission",
         "Document checklist",
-        "Application form assistance"
+        "Application form assistance",
+        "Health insurance issuance (paid)"
       ]
     },
     "standard": {
