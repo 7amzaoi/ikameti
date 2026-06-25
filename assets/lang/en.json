@@ -789,17 +789,20 @@
     },
     "standard": {
       "title": "Full Residency",
-      "price": "$199",
+      "price": "$55",
       "price_note": "No hidden fees",
       "description": "Complete support with ongoing assistance. Our most popular choice.",
       "badge": "Most Popular",
       "features": [
-        "Everything in Starter",
-        "3 consultation sessions",
         "Application follow-up",
-        "Health insurance support",
-        "Basic document translation",
-        "WhatsApp support"
+        "Health insurance",
+        "Document translation",
+        "Tax payment",
+        "Application submission",
+        "Residency appointment booking",
+        "File preparation",
+        "Logistics support",
+        "Full consultation"
       ]
     },
     "premium": {

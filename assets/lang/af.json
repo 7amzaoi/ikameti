@@ -789,17 +789,20 @@
     },
     "standard": {
       "title": "Volledige residensie",
-      "price": "199$",
+      "price": "55$",
       "price_note": "Geen verborge kostes",
       "description": "Volledige ondersteuning met voortgaande hulp. Ons gewildste keuse.",
       "badge": "Gewildste",
       "features": [
-        "Alles in begin",
-        "3 raadplegings sessies",
-        "Ansoekverfolgingskip",
-        "Gesondheidsverskkeringsondersteuning",
-        "Basiese dokumentvertaling",
-        "WhatsApp-ondersteuning"
+        "Aansoek-opvolging",
+        "Gesondheidsversekering",
+        "Dokumentvertaling",
+        "Belastingbetaling",
+        "Aansoekindiening",
+        "Bespreking van residensie-afspraak",
+        "Lêervoorbereiding",
+        "Logistieke ondersteuning",
+        "Volledige konsultasie"
       ]
     },
     "premium": {

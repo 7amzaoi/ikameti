@@ -789,17 +789,20 @@
     },
     "standard": {
       "title": "To'liq rezidentlik",
-      "price": "199$",
+      "price": "55$",
       "price_note": "Yashirin to'lovlar yo'q",
       "description": "To'liq qo'llab-quvvatlash, doimiy yordam bilan. Bizning eng mashhur tanlov.",
       "badge": "Eng mashhur",
       "features": [
-        "Boshlang'ichning hamma narsasi",
-        "3 maslahat sedansesi",
-        "Ariza kuzatuv",
-        "Sog'liq sug'urtasi yordami",
-        "Asosiy hujjat tarjimasi",
-        "WhatsApp qo'llab-quvvatlash"
+        "Ariza kuzatuvi",
+        "Tibbiy sug'urta",
+        "Hujjat tarjimasi",
+        "Soliq to'lovi",
+        "Ariza topshirish",
+        "Rezidentlik uchun navbat olish",
+        "Hujjatni tayyorlash",
+        "Logistika yordami",
+        "To'liq maslahat"
       ]
     },
     "premium": {

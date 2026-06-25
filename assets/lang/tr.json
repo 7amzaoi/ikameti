@@ -789,17 +789,20 @@
     },
     "standard": {
       "title": "Tam İkamet",
-      "price": "199$",
+      "price": "55$",
       "price_note": "Gizli ücret yok",
       "description": "Devam eden yardım ile tam destek. En popüler seçeneğimiz.",
       "badge": "En Popüler",
       "features": [
-        "Başlangıçtaki her şey",
-        "3 danışma oturumu",
         "Başvuru takibi",
-        "Sağlık sigortası desteği",
-        "Temel belge tercümesi",
-        "WhatsApp desteği"
+        "Sağlık sigortası",
+        "Belge çevirisi",
+        "Vergi ödemesi",
+        "Başvuru gönderimi",
+        "İkamet randevusu alma",
+        "Dosya hazırlama",
+        "Lojistik destek",
+        "Tam danışmanlık"
       ]
     },
     "premium": {
