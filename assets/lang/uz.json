@@ -811,12 +811,16 @@
       "price_note": "Eng yaxshi narx",
       "description": "Yuridik yo'l-yo'riq va turar-joy yordami bilan to'liq qo'llab-quvvatlash.",
       "features": [
-        "To'liq rezidentlikdan hamma narsa",
-        "Ijarа shartnomasi ko'rikni o'tkazish",
-        "Manzil ro'yxatga olish",
-        "Rezidentlik yangilash yordami",
-        "Yuridik maslahat",
-        "Ustuvor telefon qo'llab-quvvatlash"
+        "Rasmiy yashash manzilini rasmiylashtirish",
+        "Ariza faylini oxirgi bosqichgacha kuzatish",
+        "Tibbiy sug'urta",
+        "Hujjat tarjimasi",
+        "Soliq to'lovi",
+        "Ariza topshirish",
+        "Rezidentlik uchun navbat olish",
+        "Hujjatni tayyorlash",
+        "Logistika yordami",
+        "To'liq maslahat"
       ]
     },
     "addons_title": "Ixtiyoriy Qo'shimcha Xizmatlar",

@@ -811,12 +811,16 @@
       "price_note": "Beste waarde",
       "description": "Volledige ondersteuning met regsgeleiding en settlementbystand.",
       "features": [
-        "Alles in volledige residensie",
-        "Huurkontrakbeoordelingsbesluit",
-        "Adresregistrasie",
-        "Residensievernuwingsondersteuning",
-        "Regsraadgewing",
-        "Prioriteitetelefoonondersteuning"
+        "Uitreiking van amptelike woonadres",
+        "Opvolging van aansoeklêer tot die laaste stap",
+        "Gesondheidsversekering",
+        "Dokumentvertaling",
+        "Belastingbetaling",
+        "Aansoekindiening",
+        "Bespreking van residensie-afspraak",
+        "Lêervoorbereiding",
+        "Logistieke ondersteuning",
+        "Volledige konsultasie"
       ]
     },
     "addons_title": "Opsionele Addisionele Dienste",

@@ -811,12 +811,16 @@
       "price_note": "En iyi değer",
       "description": "Yasal rehberlik ve yerleşim yardımı dahil tam destek.",
       "features": [
-        "Tam İkametteki her şey",
-        "Kiralama sözleşmesi incelemesi",
-        "Adres kaydı",
-        "İkamet yenileme desteği",
-        "Yasal danışma",
-        "Öncelikli telefon desteği"
+        "Resmi ikamet adresi çıkarma",
+        "Başvuru dosyasının son adıma kadar takibi",
+        "Sağlık sigortası",
+        "Belge çevirisi",
+        "Vergi ödemesi",
+        "Başvuru gönderimi",
+        "İkamet randevusu alma",
+        "Dosya hazırlama",
+        "Lojistik destek",
+        "Tam danışmanlık"
       ]
     },
     "addons_title": "Opsiyonel Ek Hizmetler",
