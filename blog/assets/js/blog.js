@@ -250,6 +250,9 @@ const BLOG = {
       const desc = (t.description && t.description.trim()) ? t.description : (t.excerpt || '');
       if (desc && desc.trim()) result = { ...result, description: desc, excerpt: desc };
       if (t.content && t.content.trim()) result = { ...result, content: t.content };
+      // Per-language cover image: show the language-specific cover when one
+      // was uploaded for the active language, otherwise keep the default.
+      if (t.image && t.image.trim()) result = { ...result, image: t.image };
     }
 
     return result;

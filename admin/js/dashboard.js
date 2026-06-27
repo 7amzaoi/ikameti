@@ -351,6 +351,17 @@
         '<details class="tr-lang" data-lang="' + code + '">' +
           '<summary><span class="tr-lang-name">' + name + '</span><span class="tr-lang-code">' + code.toUpperCase() + '</span></summary>' +
           '<div class="tr-fields">' +
+            '<label>Cover image <span class="hint">(shown only when the site is in ' + name + ')</span></label>' +
+            '<div class="image-upload">' +
+              '<div class="image-preview empty" id="tr-' + code + '-image-preview" aria-hidden="true"></div>' +
+              '<div class="image-upload-controls">' +
+                '<input type="file" id="tr-' + code + '-image-file" accept="image/*" hidden>' +
+                '<button type="button" class="btn btn-ghost btn-sm" data-tr-upload="' + code + '">⬆ Upload from device</button>' +
+                '<button type="button" class="btn btn-ghost btn-sm" data-tr-clear="' + code + '" style="display:none;">Remove</button>' +
+                '<div class="image-upload-status" id="tr-' + code + '-image-status"></div>' +
+              '</div>' +
+            '</div>' +
+            '<input type="url" id="tr-' + code + '-image" placeholder="…or paste an image URL" style="margin-top:8px;">' +
             '<label>Title</label>' +
             '<input type="text" id="tr-' + code + '-title"' + dir + ' placeholder="Article title in ' + name + '">' +
             '<label>Short description</label>' +
@@ -364,7 +375,59 @@
     translationsBuilt = true;
     // Give every language the same rich editor as English, so pasting a full
     // article keeps its headings, bold and lists — and nothing gets cut off.
-    TR_LANGS.forEach(([code]) => ensureTrEditor(code));
+    TR_LANGS.forEach(([code]) => { ensureTrEditor(code); wireTrImage(code); });
+  }
+
+  /* ---- per-language cover image (reuses the blog-images bucket) ---- */
+  function setTrImagePreview(code, url) {
+    const prev = document.getElementById('tr-' + code + '-image-preview');
+    const clearBtn = document.querySelector('[data-tr-clear="' + code + '"]');
+    if (!prev) return;
+    if (url) {
+      prev.style.backgroundImage = 'url("' + url.replace(/"/g, '%22') + '")';
+      prev.classList.remove('empty');
+      if (clearBtn) clearBtn.style.display = '';
+    } else {
+      prev.style.backgroundImage = '';
+      prev.classList.add('empty');
+      if (clearBtn) clearBtn.style.display = 'none';
+    }
+  }
+  function setTrImageStatus(code, msg, kind) {
+    const el = document.getElementById('tr-' + code + '-image-status');
+    if (!el) return;
+    el.textContent = msg || '';
+    el.className = 'image-upload-status' + (kind ? ' ' + kind : '');
+  }
+  function wireTrImage(code) {
+    const fileInput = document.getElementById('tr-' + code + '-image-file');
+    const urlInput = document.getElementById('tr-' + code + '-image');
+    const uploadBtn = document.querySelector('[data-tr-upload="' + code + '"]');
+    const clearBtn = document.querySelector('[data-tr-clear="' + code + '"]');
+    if (!fileInput || !urlInput) return;
+    if (uploadBtn) uploadBtn.addEventListener('click', () => fileInput.click());
+    if (clearBtn) clearBtn.addEventListener('click', () => {
+      urlInput.value = ''; fileInput.value = '';
+      setTrImagePreview(code, ''); setTrImageStatus(code, '');
+    });
+    urlInput.addEventListener('input', () => setTrImagePreview(code, urlInput.value.trim()));
+    fileInput.addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (!file.type.startsWith('image/')) { setTrImageStatus(code, 'Please choose an image file.', 'error'); return; }
+      if (file.size > 5 * 1024 * 1024) { setTrImageStatus(code, 'Image is too large (max 5 MB).', 'error'); return; }
+      const saveBtn = $('#blog-save-btn'); if (saveBtn) saveBtn.disabled = true;
+      setTrImageStatus(code, 'Uploading…', 'uploading');
+      try {
+        const url = await uploadCover(file);
+        urlInput.value = url; setTrImagePreview(code, url); setTrImageStatus(code, 'Uploaded ✓', 'ok');
+      } catch (err) {
+        const m = /bucket.*not found|does not exist/i.test(err.message || '')
+          ? 'Image bucket missing — run supabase/storage.sql once in Supabase.'
+          : (err.message || 'Upload failed');
+        setTrImageStatus(code, m, 'error'); toast(m, 'err');
+      } finally { if (saveBtn) saveBtn.disabled = false; }
+    });
   }
 
   function ensureTrEditor(code) {
@@ -442,11 +505,17 @@
       const v = (t[code] && typeof t[code] === 'object') ? t[code] : {};
       const ti = document.getElementById('tr-' + code + '-title');
       const de = document.getElementById('tr-' + code + '-desc');
+      const im = document.getElementById('tr-' + code + '-image');
+      const fi = document.getElementById('tr-' + code + '-image-file');
       if (ti) ti.value = v.title || '';
       if (de) de.value = v.description || v.excerpt || '';
+      if (im) im.value = v.image || '';
+      if (fi) fi.value = '';
+      setTrImageStatus(code, '');
+      setTrImagePreview(code, v.image || '');
       setTrEditorHtml(code, v.content || '');
       const det = document.querySelector('.tr-lang[data-lang="' + code + '"]');
-      if (det) det.open = Boolean(String(v.title || v.description || v.content || '').trim());
+      if (det) det.open = Boolean(String(v.title || v.description || v.content || v.image || '').trim());
     });
   }
 
@@ -505,10 +574,12 @@
     TR_LANGS.forEach(([code]) => {
       const title = ((document.getElementById('tr-' + code + '-title') || {}).value || '').trim();
       const desc = ((document.getElementById('tr-' + code + '-desc') || {}).value || '').trim();
+      const image = ((document.getElementById('tr-' + code + '-image') || {}).value || '').trim();
       const content = getTrEditorHtml(code).trim();
       const entry = {};
       if (title) entry.title = title;
       if (desc) entry.description = desc;
+      if (image) entry.image = image;
       if (content) entry.content = content;
       if (Object.keys(entry).length) out[code] = entry;
     });
