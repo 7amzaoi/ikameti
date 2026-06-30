@@ -1,0 +1,75 @@
+# =====================================================================
+# IKAMETI — Apache configuration (Hostinger)
+# Place this file in the site root (public_html). Lines wrapped in
+# <IfModule> are safe: if a module is missing, Apache just skips them.
+# =====================================================================
+
+# Default page + UTF-8 everywhere (Arabic/Persian render correctly)
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+# Don't expose directory file listings
+Options -Indexes
+
+# ---------------------------------------------------------------------
+# Force HTTPS and a single canonical host (non-www, matching sitemap)
+# ---------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www.ikameti.com  ->  ikameti.com  (and force https in the same hop)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # http  ->  https
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Custom error page
+# ---------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------
+# GZIP compression (smaller, faster downloads)
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Browser caching
+#  - HTML: never cached, so content/price/translation edits show at once
+#  - CSS/JS: 1 day (short, because they are edited often)
+#  - Language JSON: 1 hour
+#  - Images/fonts: 1 year (rarely change; Supabase covers are unique URLs)
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html              "access plus 0 seconds"
+  ExpiresByType text/css               "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType application/json       "access plus 1 hour"
+  ExpiresByType image/jpeg             "access plus 1 year"
+  ExpiresByType image/png              "access plus 1 year"
+  ExpiresByType image/webp             "access plus 1 year"
+  ExpiresByType image/svg+xml          "access plus 1 year"
+  ExpiresByType image/x-icon           "access plus 1 year"
+  ExpiresByType font/woff2             "access plus 1 year"
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Basic security headers
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Don't cache HTML even via proxies (belt-and-braces with mod_expires)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
