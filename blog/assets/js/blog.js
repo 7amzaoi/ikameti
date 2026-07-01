@@ -420,6 +420,7 @@ const BLOG = {
 
     document.title = `${localizedArticle.title} - IKAMETI Blog`;
     this.updateMetaTags(localizedArticle);
+    this.injectArticleSchema(localizedArticle);
     this.renderArticleHeader(localizedArticle);
     this.renderArticleContent(localizedArticle);
     this.renderCtaSection();
@@ -748,6 +749,56 @@ const BLOG = {
     }
 
     this.setMetaName('description', description);
+  },
+
+  /**
+   * Inject BlogPosting + BreadcrumbList structured data for the article page.
+   * Replaces any previously injected article schema on language change.
+   */
+  injectArticleSchema: function(article) {
+    try {
+      const url = window.location.href;
+      const origin = window.location.origin;
+      const img = article.image || (origin + '/assets/images/logo.png');
+      const desc = article.description || article.excerpt || '';
+      let iso = '';
+      const d = new Date(article.date);
+      if (!Number.isNaN(d.getTime())) { iso = d.toISOString().slice(0, 10); }
+      const schema = [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: article.title,
+          description: desc,
+          image: img,
+          datePublished: iso,
+          dateModified: iso,
+          author: { '@type': 'Organization', name: article.author || 'IKAMETI' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'IKAMETI',
+            logo: { '@type': 'ImageObject', url: 'https://ikameti.com.tr/assets/images/logo.png' }
+          },
+          mainEntityOfPage: { '@type': 'WebPage', '@id': url }
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: origin + '/blog/' },
+            { '@type': 'ListItem', position: 3, name: article.title, item: url }
+          ]
+        }
+      ];
+      const old = document.getElementById('article-schema');
+      if (old) { old.remove(); }
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.id = 'article-schema';
+      s.textContent = JSON.stringify(schema);
+      document.head.appendChild(s);
+    } catch (e) { /* non-fatal */ }
   },
 
   /**
