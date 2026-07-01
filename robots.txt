@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ikameti.com/sitemap.xml
+Sitemap: https://ikameti.com.tr/sitemap.xml
