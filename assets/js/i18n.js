@@ -13,7 +13,7 @@ const I18N_BASE = (function () {
 
 class I18n {
   constructor() {
-    this.languages = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af'];
+    this.languages = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af', 'tk'];
     this.rtlLanguages = ['ar', 'fa', 'af'];
     this.languageNames = {
       'en': 'English',
@@ -22,7 +22,8 @@ class I18n {
       'ru': 'Русский',
       'fa': 'فارسی',
       'uz': 'Ўзбек',
-      'af': 'دری'
+      'af': 'دری',
+      'tk': 'Türkmençe'
     };
     this.currentLanguage = null;
     this.translations = {};

@@ -1,0 +1,898 @@
+{
+  "news_section": {
+    "title": "Soňky habarlar",
+    "subtitle": "IKAMETI toparyndan täzelikler, bildirişler we maslahatlar.",
+    "prev": "Öňki",
+    "next": "Indiki",
+    "more": "Dowamyny oka",
+    "less": "Azrak görkez"
+  },
+  "lang": "tk",
+  "direction": "ltr",
+  "nav": {
+    "home": "Baş sahypa",
+    "about": "Biz barada",
+    "blog": "Blog",
+    "faq": "Sorag-jogap",
+    "contact": "Habarlaşmak"
+  },
+  "hero": {
+    "title": "Premium ýaşaýyş we öý-jaý çözgütlerine gapyňyz",
+    "subtitle": "Immigrasiýa, ýaşaýyş rugsady we öý-jaý şertnamalary boýunça hünärmen ýolbaşçylyk. Müňlerçe adam ynanýar. Çalt, hünärli, ygtybarly.",
+    "cta_primary": "Häzir başlaň",
+    "cta_secondary": "Köpräk öwreniň"
+  },
+  "services": {
+    "title": "Esasy hyzmatlarymyz",
+    "subtitle": "Ýaşaýyş we öý-jaý ýoluňyzy rahat, ygtybarly we kynçylyksyz etmek üçin düzülen giňişleýin çözgütler.",
+    "housing": {
+      "title": "Öý-jaý çözgütleri",
+      "description": "Emlägi barlamak, şertnama gözden geçirmek, gepleşik goldawy we ideal öýüňiz üçin ýuridik resminamalar.",
+      "features": [
+        "Emlägi barlamak",
+        "Şertnamany gözden geçirmek",
+        "Ýuridik goldaw"
+      ],
+      "cta": "Öwreniň"
+    },
+    "residency": {
+      "title": "Ýaşaýyş maksatnamalary",
+      "description": "Çylşyrymly ýaşaýyş talaplaryny her ädimde hünärmen ýolbaşçylygy bilen geçiň.",
+      "features": [
+        "Arza goldawy",
+        "Resminama taýýarlygy",
+        "Söhbetdeşlik taýýarlygy"
+      ],
+      "cta": "Görüň"
+    },
+    "legal": {
+      "title": "Ýuridik we laýyklyk",
+      "description": "Ähli hyzmatlarda doly ýuridik laýyklyk, korporatiw howpsuzlyk we halkara kadalar.",
+      "features": [
+        "Ýuridik gözden geçiriş",
+        "Laýyklyk barlagy",
+        "24/7 goldaw"
+      ],
+      "cta": "Maslahat"
+    }
+  },
+  "why_choose": {
+    "title": "Näme üçin IKAMETI?"
+  },
+  "trust_indicators": {
+    "clients": {
+      "value": "5000+",
+      "label": "Razy müşderiler"
+    },
+    "success_rate": {
+      "value": "98%",
+      "label": "Üstünlik derejesi"
+    },
+    "years_experience": {
+      "value": "15+",
+      "label": "Ýyllyk tejribe"
+    },
+    "support": {
+      "value": "24/7",
+      "label": "Goldaw elýeter"
+    }
+  },
+  "testimonials": {
+    "title": "Müşderiler näme diýýär",
+    "quote_1": "IKAMETI ähli ýaşaýyş işini rahat we alada-gamsyz etdi. Ýürekden maslahat berýärin!",
+    "author_1": "Ahmed M.",
+    "quote_2": "Hünärli, ygtybarly we hakykatdan alada edýän topar. Biziň üçin çäkden çykdylar.",
+    "author_2": "Sara K.",
+    "quote_3": "Iň gowy karar. Ähli zady başdan-aýak kemçiliksiz dolandyrdylar.",
+    "author_3": "James T."
+  },
+  "wizard": {
+    "title": "Türkiýede ýaşaýyş rugsadyňyzy minutlaryň içinde alyň",
+    "subtitle": "Birnäçe çalt soraga jogap beriň, biz size derrew kömek ederis",
+    "steps": {
+      "step_1": {
+        "label": "Ýaşaýyş görnüşi",
+        "question": "Haýsy ýaşaýyş görnüşi bilen gyzyklanýaňyz?"
+      },
+      "step_2": {
+        "label": "Häzirki ýagdaý",
+        "question": "Türkiýede eýýäm ýaşaýyş rugsadyňyz barmy?"
+      },
+      "step_3": {
+        "label": "Möhlet",
+        "question": "Näçe wagt galmak isleýäňiz?"
+      },
+      "step_4": {
+        "label": "Goşmaça maglumat",
+        "question": "Ýagdaýyňyz barada bize köpräk gürrüň beriň"
+      },
+      "step_5": {
+        "label": "Habarlaşmak",
+        "question": "Habarlaşmak maglumatlary"
+      }
+    },
+    "residency_options": {
+      "tourist": {
+        "title": "Syýahatçy ýaşaýşy",
+        "description": "Gysga möhletli wiza (30-90 gün)"
+      },
+      "student": {
+        "title": "Talyp ýaşaýşy",
+        "description": "Ýaşaýyş hukukly okuw rugsady"
+      },
+      "realestate": {
+        "title": "Gozgalmaýan emläk ýaşaýşy",
+        "description": "Emläge maýa goýum wizasy"
+      },
+      "family": {
+        "title": "Maşgala hemaýaty",
+        "description": "Maşgala birleşmesi wiza maksatnamasy"
+      }
+    },
+    "form": {
+      "has_residency_yes": "Hawa, ýaşaýyş rugsadym bar",
+      "has_residency_yes_desc": "Täzelemek ýa-da ýokarlandyrmak isleýärin",
+      "has_residency_no": "Ýok, ilkinji gezek",
+      "has_residency_no_desc": "Ilkinji gezek arza berýärin",
+      "duration_1year": "1 ýyllyk ýaşaýyş",
+      "duration_1year_desc": "Bir ýyllyk ýaşaýyş rugsady",
+      "duration_2year": "2 ýyllyk ýaşaýyş",
+      "duration_2year_desc": "Iki ýyllyk ýaşaýyş rugsady",
+      "rental_contract": "Kärende şertnamaňyz barmy?",
+      "rental_contract_desc": "Köp ýaşaýyş arzalary üçin zerur",
+      "family_members": "Goşuljak maşgala agzalarynyň sany:",
+      "family_members_opt_1": "Diňe men (1 adam)",
+      "family_members_opt_2": "2 adam",
+      "family_members_opt_3": "3 adam",
+      "family_members_opt_4": "4 adam",
+      "family_members_opt_5": "5 ýa-da köp adam",
+      "full_name": "Doly at *",
+      "full_name_placeholder": "Doly adyňyzy giriziň",
+      "phone": "Telefon belgisi *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "privacy_notice": "Maglumatyňyz ygtybarly we size şahsy maslahat bermek üçin ulanylar",
+      "prev_button": "← Yza",
+      "next_button": "Öňe →",
+      "submit_button": "Mugt maslahat alyň",
+      "family_members_ph": "Maşgala agzalarynyň sanyny saýlaň",
+      "err_name": "Doly adyňyzy giriziň",
+      "err_phone": "Telefon belgiňizi giriziň",
+      "err_type": "Ýaşaýyş görnüşini saýlaň",
+      "err_select": "Dowam etmek üçin bir warianty saýlaň"
+    },
+    "success": {
+      "title": "Maglumatyňyz üçin sag boluň!",
+      "message": "Toparymyz maglumatyňyzy gözden geçirer we 24 sagadyň içinde şahsy maslahat meýilnamasy bilen siziň bilen habarlaşar.",
+      "whatsapp": "💬 WhatsApp: +90 530 905 21 04",
+      "email": "📧 Email: info@ikameti.com"
+    }
+  },
+  "articles_section": {
+    "title": "Makalalar we habarlar",
+    "subtitle": "Ýaşaýyş, öý-jaý we immigrasiýa çözgütleri barada iň soňky makalalar we habarlar bilen tanşyň.",
+    "article_1": {
+      "title": "Doly ýaşaýyş gollanmasy",
+      "icon": "📰",
+      "description": "Ýaşaýyş işiniň ähli ädimlerini başdan-aýak möhüm maslahatlar bilen öwreniň."
+    },
+    "article_2": {
+      "title": "Emläk satyn alyş maslahatlary",
+      "icon": "🏡",
+      "description": "Arzuwyňyzdaky emlägi saýlanyňyzda we satyn alanyňyzda göz öňünde tutmaly esasy nokatlary öwreniň."
+    },
+    "article_3": {
+      "title": "Ýuridik goraglar",
+      "icon": "⚖️",
+      "description": "Öý-jaý şertnamalarynda we ýaşaýyş ylalaşyklarynda elýeterli hukuklaryňyzy we ýuridik goraglaryňyzy düşüniň."
+    },
+    "read_more": "Köpräk oka"
+  },
+  "final_cta": {
+    "title": "Başlamaga taýýarmy?",
+    "description": "Ýaşaýyş we öý-jaý maksatlaryňyza tarap ilkinji ädimi ädiň. Hünärmen toparymyz size ýol görkezmäge taýýar.",
+    "button": "Şu gün habarlaşyň"
+  },
+  "newsletter": {
+    "title": "Täzeliklerden habarly boluň",
+    "subtitle": "Iň soňky makalalary we täzelikleri poçtaňyza alyň. Habar býulletenimize agza boluň.",
+    "placeholder": "Email giriziň",
+    "cta": "Agza bol"
+  },
+  "footer": {
+    "company": "IKAMETI",
+    "tagline": "Immigrasiýa we öý-jaý hyzmatlarynda ynamdar hyzmatdaşyňyz.",
+    "quick_links": "Çalt baglanyşyklar",
+    "services": "Hyzmatlar",
+    "contact": "Habarlaşmak",
+    "housing_solutions": "Öý-jaý çözgütleri",
+    "residency_programs": "Ýaşaýyş maksatnamalary",
+    "legal_consultation": "Ýuridik maslahat",
+    "support": "Goldaw",
+    "copyright": "© 2024 IKAMETI. Ähli hukuklar goralan.",
+    "privacy_policy": "Gizlinlik syýasaty",
+    "terms_of_service": "Hyzmat şertleri"
+  },
+  "about_page": {
+    "hero": {
+      "title": "IKAMETI barada",
+      "subtitle": "Türkiýede ýaşaýyş üçin ynamdar hyzmatdaşyňyz — çylşyrymly, bulaşyk amallary aýdyň, ýolbaşçylykly ädimlere öwürýäris.",
+      "badge": "Hakyky netijelere esaslanan ynam"
+    },
+    "story": {
+      "title": "Biz kim",
+      "p1": "IKAMETI — Türkiýede ýöriteleşen ýaşaýyş hyzmatlary topary. Biz bar, sebäbi ýaşaýyş amallary dolandyryş taýdan çylşyrymly, dagynyk we ýalňyşmak aňsat — bir kiçijik ýalňyş size hepdelere ýa-da ret edilmäge sebäp bolup biler.",
+      "p2": "Biz ol işi aýdyň, amaly ädimlere öwürýäris: näme gerekdigiňizi, haçan tabşyrmalydygyňyzy we adaty ýalňyşlyklardan nädip gaça durmalydygyňyzy hemişe bilýärsiňiz. Biz diňe resminama tabşyrmaýarys — ýaşaýyş işiňizi ilkinji söhbetdeşlikden soňky karara çenli we ondan soň hem dolandyrýarys."
+    },
+    "mission": {
+      "title": "Maksadymyz we garaýşymyz",
+      "desc": "Türkiýä ýerleşýän her bir adam üçin aýdyň, çalt we ygtybarly tejribe arkaly ilkinji salgy bolmak — aýdyň ädimlere, çalt ýerine ýetirişe we mümkin boldugyça az ýalňyşa we ret edilmä esaslanan ýaşaýyş hyzmatlaryny hödürlemek."
+    },
+    "services": {
+      "title": "Näme edýäris",
+      "subtitle": "Başdan-aýak ýaşaýyş goldawy — her ädim muny her gün edýän adamlar tarapyndan."
+    },
+    "work": {
+      "title": "Nädip işleýäris",
+      "subtitle": "Ýönekeý, aç-açan amal — ilkinji habaryňyzdan ýaşaýyş kartyňyza çenli."
+    },
+    "why": {
+      "title": "Näme üçin müşderiler bizi saýlaýar"
+    },
+    "stats": {
+      "title": "Sanlarymyz gürleýär"
+    },
+    "commit": {
+      "title": "Borjumyz",
+      "desc": "Biz takyk, täzelenen maglumata, maglumatlaryňyzyň doly gizlinligine we çylşyrymlylyksyz tertipli tejribä borçlanýarys.",
+      "c1_t": "Takyk we täzelenen maglumat",
+      "c1_d": "Biz resmi çeşmelere daýanýarys we iň soňky kada üýtgemeleri yzarlaýarys — şonuň üçin siz hiç haçan köne maglumat ýa-da myş-myşlar esasynda hereket etmeýärsiňiz.",
+      "c2_t": "Maglumatlaryňyzyň doly gizlinligi",
+      "c2_d": "Resminamalaryňyz we şahsy maglumatlaryňyz doly gizlin galýar we diňe ýaşaýyş işiňizi tamamlamak üçin ulanylýar.",
+      "c3_t": "Aýdyň, ýönekeý tejribe",
+      "c3_d": "Biz çylşyrymlylygy aýyrýarys: aýdyň ädimler, bulaşdyryjy adalgalar ýok we her tapgyrda siziň bilen hakyky adam."
+    },
+    "cta": {
+      "title": "Ýaşaýyş ýoluňyzy başlamaga taýýarmy?",
+      "desc": "Şu gün bize ýazyň — size dogry ýoly ädimme-ädim gurarys. Ilkinji maslahat mugt.",
+      "wa": "WhatsApp-da söhbetdeş boluň",
+      "ig": "Instagram-da habar iberiň"
+    },
+    "s1_t": "Syýahatçy ýaşaýşyny resmileşdirmek",
+    "s1_d": "Syýahatçy ýaşaýyş rugsadynyň doly işini ädimme-ädim ýerine ýetirýäris.",
+    "s2_t": "Ýaşaýşy täzelemek",
+    "s2_d": "Rugsadyňyzy möhleti gutarmazdan öň yzarlaýarys we täzeleýäris — gijä galman, arakesmesiz.",
+    "s3_t": "Saglyk ätiýaçlandyryşy",
+    "s3_d": "Ýaşaýyş işiňiz üçin zerur saglyk ätiýaçlandyryşyny resmileşdirýäris.",
+    "s4_t": "e-İkamet duşuşyklary",
+    "s4_d": "Çalt, dogry onlaýn migrasiýa duşuşygyny bellemek.",
+    "s5_t": "Ýuridik maslahatlar",
+    "s5_d": "Ýaşaýyş ýuridik soraglaryňyza aýdyň, takyk jogaplar.",
+    "s6_t": "Arzany yzarlamak",
+    "s6_d": "Işiňizi karara çenli yzarlaýarys — tabşyrmakda durmaýarys.",
+    "k1_t": "Mugt maslahat",
+    "k1_d": "Ýagdaýyňyzy aýdyň; işiňizi we dogry ýaşaýyş ýoluny bahalandyrýarys.",
+    "k2_t": "Iş taýýarlamak",
+    "k2_d": "Resminamalaryňyzy dogry taýýarlaýarys we tabşyrmazdan öň ähli zady barlaýarys.",
+    "k3_t": "Tabşyrmak we duşuşyk",
+    "k3_d": "Duşuşygyňyzy belleýäris we arzaňyzy dogry ýol bilen tabşyrýarys.",
+    "k4_t": "Yzarlamak we netije",
+    "k4_d": "Işiňizi karara çenli yzarlaýarys we indiki ädimlerde ýol görkezýäris.",
+    "w1_t": "Bulaşyklyk däl, aýdyňlyk",
+    "w1_d": "Her ädim sada dilde düşündirilýär — indiki näme boljakdygyny hemişe bilýärsiňiz.",
+    "w2_t": "Az ýalňyş we ret ediliş",
+    "w2_d": "Gijä galmaga ýa-da ret edilmäge sebäp bolýan ýalňyşlyklary azaldýan tejribeli işleýiş.",
+    "w3_t": "Köp dilli goldaw",
+    "w3_d": "Size başdan-aýak öz diliňizde ýol görkezýäris.",
+    "w4_t": "Hakyky yzarlaýyş",
+    "w4_d": "Karara çenli siziň bilen galýarys — diňe tabşyrýançaňyz däl.",
+    "st1_l": "Razy, ynanýan müşderiler",
+    "st2_l": "Arza üstünlik derejesi",
+    "st3_l": "Goldaw dilleri: Arapça, Iňlisçe, Türkçe",
+    "st4_l": "Hyzmat edýän toparlarymyz: talyplar, maýadarlar, täze ýaşaýjylar, maşgalalar"
+  },
+  "blog_page": {
+    "hero": {
+      "title": "Blogumyz we çeşmeler",
+      "subtitle": "Immigrasiýa, öý-jaý we ýuridik meseleler boýunça hünärmen düşünjeler, amaly ýolbaşçylyk we iň soňky täzelikler."
+    },
+    "filter": {
+      "all": "Ähli makalalar",
+      "immigration": "Immigrasiýa",
+      "housing": "Öý-jaý",
+      "legal": "Ýuridik"
+    },
+    "newsletter": {
+      "title": "Täzeliklerden habarly boluň",
+      "description": "Iň soňky makalalary we täzelikleri poçtaňyza alyň. Habar býulletenimize agza boluň.",
+      "button": "Agza bol",
+      "placeholder": "Email giriziň"
+    },
+    "read_article": "Makalany oka →"
+  },
+  "blog_details_page": {
+    "article": {
+      "helpful_label": "Bu makala size kömek etdimi?",
+      "helpful_button": "👍 Peýdaly",
+      "not_helpful_button": "👎 Peýdaly däl",
+      "get_help_button": "Hünärmen kömegini al"
+    },
+    "questions": {
+      "title": "Ýene soraglaryňyz barmy?",
+      "description": "Hünärmen toparymyz ýagdaýyňyza görä şahsy ýolbaşçylyk bermäge taýýar. Mugt maslahat üçin şu gün habarlaşyň.",
+      "schedule_button": "Maslahat bellemek",
+      "whatsapp_button": "WhatsApp-da söhbetdeş boluň"
+    },
+    "related_articles": {
+      "title": "Meňzeş makalalar",
+      "no_related": "Meňzeş makala tapylmady."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Ýaşaýşyňyz barada gürleşeliň",
+      "subtitle": "Diňe bir habar ýeterlik. WhatsApp we Instagram-da çalt jogap berýäris."
+    },
+    "channels": {
+      "title": "Bize göni ýüz tutuň",
+      "subtitle": "Biz WhatsApp we Instagram-a ünsi jemleýäris, şonuň üçin siz günlerçe däl, minutlaryň içinde hakyky jogap alýarsyňyz.",
+      "wa_desc": "Soraglaryňyzy we resminamalaryňyzy iberiň. Aýdyň jogaplary almagyň we işiňizi başlamagyň iň çalt ýoly.",
+      "wa_meta": "Adatça minutlaryň içinde jogap berýär",
+      "wa_button": "WhatsApp-da söhbetdeş boluň",
+      "ig_desc": "Täzeliklerimizi yzarlaň we islän wagtyňyz göni habar iberiň — biz her gün işjeň.",
+      "ig_meta": "@ikameti_tr bize DM ýazyň",
+      "ig_button": "Instagram-da habar iberiň"
+    },
+    "solve": {
+      "title": "Şulardan biri bilen ýüzbe-ýüz bolsaňyz habarlaşyň",
+      "subtitle": "Bular her gün çözýän meselelerimiz — olaryň size wagt, pul ýa-da ýuridik statusyňyzy ýitirmegine ýol bermäň.",
+      "s1_t": "Rugsat möhleti gutarýar ýa-da ret edildi",
+      "s1_d": "Ýuridik statusyňyzy ýitirmezden öň täzelemeleri edýäris we ret edilen arzalary düzedýäris.",
+      "s2_t": "Haýsy ýaşaýşyň size laýykdygyny bilmeýäňiz",
+      "s2_d": "Syýahatçy, maşgala, talyp ýa-da emläk — işiňize takyk näme laýyk gelýändigini aýdýarys.",
+      "s3_t": "Resminamalarda we duşuşyklarda ýitip galdyňyz",
+      "s3_d": "Işiňizi taýýarlaýarys we migrasiýa (Göç İdaresi) duşuşygyňyzy ilkinji gezekde dogry belleýäris.",
+      "s4_t": "Howpsuz ýaşaýyş jaýyny gözleýäňiz",
+      "s4_d": "Sizi ýaşaýyş üçin hem laýyk bolan ynamdar, barlanan ýaşaýyş jaýy bilen baglanyşdyrýarys.",
+      "s5_t": "Salgyt belgisi, salgy ýa-da ätiýaçlandyryş gerek",
+      "s5_d": "Ähli resmi goşmaçalary çalt tamamlaýarys — köplenç bir günüň içinde.",
+      "s6_t": "Dil päsgelçiligi",
+      "s6_d": "Toparymyz ilkinji habardan soňky karta çenli size öz diliňizde ýol görkezýär."
+    },
+    "why": {
+      "title": "Näme üçin müşderiler IKAMETI-ni saýlaýar",
+      "w1_t": "Çalt jogaplar",
+      "w1_d": "Awtomatik botlar däl, minutlaryň içinde hakyky adama ýetiň.",
+      "w2_t": "Mugt ilkinji maslahat",
+      "w2_d": "Hiç hili borç bolmazdan dogruçyl, şahsy maslahat alyň.",
+      "w3_t": "Tejribeli we ynamdar",
+      "w3_d": "Ýüzlerçe ýaşaýyş we öý-jaý işi üstünlikli ýerine ýetirildi.",
+      "w4_t": "Köp dilli topar",
+      "w4_d": "Arapça, Iňlisçe, Türkçe, Rusça, Parsça we başgalar."
+    },
+    "final": {
+      "title": "Şu gün çözmäge taýýarmy?",
+      "desc": "Ýagdaýyňyzy aýdyň, size ädimme-ädim ýol görkezeris. Ilkinji habar mugt.",
+      "wa": "WhatsApp-da başlaň",
+      "ig": "Instagram-da habar iberiň"
+    },
+    "wa_prefill": "Salam IKAMETI, Türkiýede ýaşaýyş barada soramak isleýärin."
+  },
+  "faq_page": {
+    "hero": {
+      "title": "Köp berilýän soraglar",
+      "subtitle": "Türkiýede ýaşaýyş barada bilmeli ähli zadyňyz. Adaty soraglara derrew jogap alyň."
+    },
+    "residency_section": {
+      "title": "🏘️ Ýaşaýyş soraglary"
+    },
+    "work_section": {
+      "title": "💼 Iş we kompaniýalar"
+    },
+    "insurance_section": {
+      "title": "🛡️ Ätiýaçlandyryş we beýleki mowzuklar"
+    },
+    "residency_q1": {
+      "question": "Türkiýede ýaşaýyş rugsatlarynyň esasy görnüşleri haýsylar?",
+      "intro": "Türkiýe birnäçe ýaşaýyş warianty hödürleýär:",
+      "option_1": "Syýahatçy ýaşaýşy (30-90 gün)",
+      "option_2": "Talyp ýaşaýşy (her ýyl täzelenýär)",
+      "option_3": "Gozgalmaýan emläk ýaşaýşy (€250,000+ maýa goýum)",
+      "option_4": "Maşgala hemaýaty",
+      "option_5": "Iş wizasy"
+    },
+    "residency_q2": {
+      "question": "Ýaşaýyş arzasy işi näçe wagt alýar?",
+      "intro": "Işleýiş wagtlary ýaşaýyş görnüşine görä üýtgeýär:",
+      "option_1": "Syýahatçy wizasy: Gelende (90 gün Şengensiz giriş)",
+      "option_2": "Uzak möhletli ýaşaýyş: Resminama işlemek üçin 15-30 gün",
+      "option_3": "Gozgalmaýan emläk ýaşaýşy: 5-7 iş güni",
+      "closing": "Hyzmatymyz adatça muny 10-15 iş gününiň içinde çaltlaşdyrýar."
+    },
+    "residency_q3": {
+      "question": "Ýaşaýyş arzasy üçin haýsy resminamalar gerek?",
+      "intro": "Esasy talaplar adatça şulary öz içine alýar:",
+      "item_1": "Hereket edýän pasport (azyndan 6 aý möhlet)",
+      "item_2": "Ýaşaýyş subutnamasy (kärende şertnamasy ýa-da emläk şahadatnamasy)",
+      "item_3": "Girdeji ýa-da maliýe subutnamasy",
+      "item_4": "Saglyk ätiýaçlandyryşy",
+      "item_5": "Jenaýat ýazgysy şahadatnamasy",
+      "item_6": "Doldurylan arza formasy",
+      "closing": "Ýagdaýyňyza görä doly barlag sanawyny hödürleýäris."
+    },
+    "residency_q4": {
+      "question": "Ýaşaýyş rugsady bilen işläp bilýärinmi?",
+      "intro": "Iş rugsatlary ýaşaýyş görnüşiňize baglydyr:",
+      "option_1": "Syýahatçy ýaşaýşy: Iş rugsady aýratyn gerek",
+      "option_2": "Talyp ýaşaýşy: Çäkli iş sagatlary rugsat berilýär (hepdede 20 sagat)",
+      "option_3": "Gozgalmaýan emläk ýaşaýşy: Iş açyp ýa-da erkin hünärmen bolup bilýär",
+      "option_4": "Iş wizasy: Iş berijiniň hemaýaty bilen doly iş hukugy",
+      "closing": "Ýaşaýyş bilen bir hatarda iş rugsadyny almakda size ýol görkezip bileris."
+    },
+    "residency_q5": {
+      "question": "Türk ýaşaýşyny almagyň bahasy näçe?",
+      "intro": "Bahalar ýaşaýyş görnüşine görä üýtgeýär:",
+      "option_1": "Syýahatçy ýaşaýşy: Mugt (90 gün awtomatik)",
+      "option_2": "Gysga möhletli ýaşaýyş: Ýylda ₺1,200-2,000",
+      "option_3": "Gozgalmaýan emläk maýa goýumy: €250,000+ emläk satyn almak",
+      "option_4": "Hyzmat tölegleri: Hünärmen kömegimiz adatça çylşyrymlylyga görä €500-1,500 aralygynda",
+      "closing": "Ýagdaýyňyza görä takyk baha üçin mugt maslahat alyň."
+    },
+    "work_q1": {
+      "question": "Ýaşaýyş bilen Türkiýede iş açyp bilerinmi?",
+      "intro": "Hawa! Köp ýaşaýyş görnüşleri iş eýeçiligine rugsat berýär:",
+      "item_1": "Ýeke eýeçi hökmünde bellige alyň ýa-da jogapkärçiligi çäkli jemgyýet dörediň",
+      "item_2": "Iş wizasy eýeleri bellige alnan kompaniýada işläp bilýär",
+      "item_3": "Emläk wizasy eýeleri iş açyp we dolandyryp bilýär",
+      "item_4": "Erkin hünärmenler garaşsyz hünärmen hökmünde işläp bilýär",
+      "closing": "Kompaniýa bellige almakda we iş rugsatlarynda kömek edýäris."
+    },
+    "work_q2": {
+      "question": "Türkiýede işgäre hemaýat etmek üçin näme gerek?",
+      "intro": "Iş beriji hökmünde siz:",
+      "item_1": "Bellige alnan türk kompaniýasy bolmaly",
+      "item_2": "Maliýe durnuklylygyny görkezmeli",
+      "item_3": "Iş şertnamasyny bermeli",
+      "item_4": "Hökmany sosial ätiýaçlandyryş tölegini tölemeli",
+      "item_5": "Zähmet we Sosial üpjünçilik ministrligi arkaly arza bermeli",
+      "closing": "Işlemek adatça 2-4 hepde alýar."
+    },
+    "work_q3": {
+      "question": "Ýaşaýjylar üçin salgyt talaplary näme?",
+      "intro": "Salgyt ýaşaýyş statusyňyza baglydyr:",
+      "option_1": "Çäkli ýaşaýjylar: Diňe türk girdejisine salgyt",
+      "option_2": "Çäksiz ýaşaýjylar: Global girdeji salgyda degişli",
+      "item_3": "Ýaşaýjylar degişli bolsa salgyt şertnamalaryndan peýdalanyp bilýär",
+      "item_4": "Türk edaralaryna ýyllyk salgyt hasabaty gerek",
+      "closing": "Şahsy maslahat üçin salgyt hünärmeni bilen maslahatlaşmagy maslahat berýäris."
+    },
+    "insurance_q1": {
+      "question": "Ýaşaýyş üçin saglyk ätiýaçlandyryşy hökmanymy?",
+      "intro": "Hawa, saglyk ätiýaçlandyryşy gerek:",
+      "item_1": "Türk sosial ätiýaçlandyryşy (SGK) işleýän ýaşaýjylar üçin hökmany",
+      "item_2": "Işlemeýän ýaşaýjylar üçin hususy ätiýaçlandyryş kabul edilýär",
+      "item_3": "Iň az gorag gyssagly kömegi öz içine almaly",
+      "item_4": "Ýyllyk bahasy takmynan ₺1,200-3,000",
+      "closing": "Laýyk ätiýaçlandyryş guramaga kömek edýäris."
+    },
+    "insurance_q2": {
+      "question": "Daşary ýurtly ýaşaýjy hökmünde emläk satyn alyp bilerinmi?",
+      "intro": "Hawa, käbir çäklendirmeler bilen:",
+      "item_1": "Daşary ýurt raýatlary serişde subutnamasy bilen emläk satyn alyp bilýär",
+      "item_2": "Emläk satyn almak ýaşaýyş hukugyna eltip bilýär",
+      "item_3": "Käbir sebitlerde ýer boýunça çäklendirmeler bar (oba hojalyk ýerleri)",
+      "item_4": "Gelip çykan ýurtdan salgyt arassalygy gerek",
+      "item_5": "Howpsuzlyk üçin umumy emläk bahasy Ankara bahasynyň 30%-den köp bolmaly däl",
+      "closing": "Sizi ynamdar emläk hyzmatdaşlary bilen baglanyşdyrýarys."
+    },
+    "insurance_q3": {
+      "question": "Ýaşaýşymyň möhleti gutarsa näme bolýar?",
+      "intro": "Ýaşaýşy täzelemek ýönekeý:",
+      "item_1": "Köp ýaşaýyşlar her ýyl täzelenip bilýär",
+      "item_2": "Möhleti gutarmazdan 30-60 gün öň arza beriň",
+      "item_3": "Talaplar ilkinji arza meňzeş",
+      "item_4": "Täzelemeler üçin işlemek adatça has çalt",
+      "item_5": "Çäkli syýahatçylar çykyp we ýene 90 gün üçin gaýdyp girip bilýär",
+      "closing": "Täzeleme ýatlatmalaryny iberýäris we ähli resminamalary edýäris."
+    },
+    "insurance_q4": {
+      "question": "Maşgala agzalary meniň rugsadym esasynda ýaşaýyş alyp bilýärmi?",
+      "intro": "Garaşly maşgala size goşulyp bilýär:",
+      "item_1": "Är-aýal we çagalar garaşly hökmünde arza berip bilýär",
+      "item_2": "Garyndaşlygy subut edýän goşmaça resminama gerek",
+      "item_3": "Garaşlylar üçin maliýe goldaw subutnamasy gerek",
+      "item_4": "Çagalar awtomatik garaşlylyk hukugyny alýar",
+      "closing": "Maşgala birleşmesi wizalary aýratyn çaltlaşdyrylan işlemäge eýedir."
+    },
+    "insurance_q5": {
+      "question": "Ýaşaýyşdan türk raýatlygy mümkinmi?",
+      "intro": "Hawa, ýaşaýyş arkaly raýatlyk mümkin:",
+      "item_1": "5+ ýyl üznüksiz ýaşaýyş gerek",
+      "item_2": "Dil talaby (esasy türkçe)",
+      "item_3": "Häsiýet barlagyndan geçmek",
+      "item_4": "€250K+ emläk maýa goýumy 3 ýyllyk ýola laýyk gelýär",
+      "item_5": "Häzirki raýatlykdan ýüz öwürmek talap edilmeýär",
+      "closing": "Türk kanunynda goşa raýatlyk rugsat berilýär."
+    },
+    "cta": {
+      "title": "Jogabyňyzy tapmadyňyzmy?",
+      "description": "Ýaşaýyş soraglaryňyz boýunça şahsy kömek üçin hünärmen toparymyz bilen habarlaşyň.",
+      "button": "Habarlaşyň"
+    },
+    "tax_section": {
+      "title": "💰 Milletine görä ýaşaýyş salgydy"
+    },
+    "tax_common": {
+      "exempt_title": "Salgyt boşadylyşy:",
+      "exempt_1": "Talyp we ynsanperwer ýaşaýyşlary ähli milletler üçin salgytdan boşadylýar.",
+      "exempt_2": "Käbir milletler ähli görnüşli ýaşaýyş salgydyndan boşadylýar, ýagny (Palestina - Siriýa - we käbir beýleki arap däl milletler).",
+      "exempt_3": "Ýaşaýyş salgydyndan boşadylan ýagdaýynda diňe 964 türk lirasy ýaşaýyş kartynyň tölegi tölenýär."
+    },
+    "tax_q1": {
+      "question": "Türkiýede ýaşaýyş salgydy näçe?",
+      "intro": "Türkiýede ýaşaýyş rugsady näçe durýar? Ýaşaýyş rugsady tölegleri (ikamet harcı) özara garşylyklylyk ýörelgesine esaslanýar, şonuň üçin ýaşaýyş tölegi milletiňize we gysga möhletli ýaşaýyş rugsadynyň görnüşine — syýahatçy, emläk, maşgala ýa-da lukmançylyk — baglydyr. Aşakdaky tölegler Migrasiýa dolandyryşy (Göç İdaresi) tarapyndan 31-nji dekabr 2025-nji ýyldaky 33124 belgili Resmi gazetde çap edilen Tölegler kanuny boýunça Umumy beýannama laýyklykda 01/01/2026-njy ýyldan güýje girýär.",
+      "rate_1": "Marokkoly: 2,000 türk lirasy",
+      "card_note_title": "Ýaşaýyş kartynyň tölegi — ähli milletlere degişli:",
+      "card_note": "Her millet üçin ýaşaýyş rugsady arza tölegine 964 TL ýaşaýyş kartynyň tölegi goşulýar. Ýaşaýyş töleginden boşadylan milletler diňe şu 964 TL ýaşaýyş kartynyň tölegini töleýär.",
+      "standard_title": "Standart ýaşaýyş rugsadynyň tölegi — birinji aý 25 USD · her goşmaça aý 5 USD",
+      "standard_desc": "Bu standart ýaşaýyş tölegi köp milletlere, şol sanda aşakdaky ýörite özara garşylyklylyk toparlarynda görkezilmedik islendik ýurduň raýatlaryna degişlidir.",
+      "tiers_title": "Belli milletler üçin azaldylan ýaşaýyş rugsady tölegleri:",
+      "tier_14": "Birinji aý 14 USD · her goşmaça aý 3.5 USD",
+      "tier_9": "Birinji aý 9 USD · her goşmaça aý 2.5 USD",
+      "tier_7": "Birinji aý 7 USD · her goşmaça aý 1.5 USD",
+      "tier_5": "Birinji aý 5 USD · her goşmaça aý 0.5 USD",
+      "exempt_note": "Ýaşaýyş tölegi boşadylyşy: talyp ýaşaýyş rugsatlary we ynsanperwer ýaşaýyş rugsatlary — şeýle hem käbir milletler — Türkiýede ýaşaýyş rugsady töleginden boşadylýar; bu ýagdaýda diňe 964 TL ýaşaýyş kartynyň tölegi tölenýär.",
+      "source": "Resmi çeşme — Migrasiýa dolandyryşy (goc.gov.tr):",
+      "closing": "Takyk ýaşaýyş rugsady tölegiňizi hasaplamakda ýa-da Türkiýede ikamet arzaňyzy tamamlamakda kömek gerekmi? IKAMETI ähli milletler üçin ýaşaýyş rugsatlarynda, täzelemelerde we zerur resminamalarda kömek edýär."
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "Arzuwyňyzdaky ýaşaýşy we öýi üpjün ediň",
+      "subtitle": "Her ädimde hünärmen ýolbaşçylyk. IKAMETI bilen ýaşaýşyna ýeten 5000+ razy maşgala goşulyň.",
+      "badge_1": "✓ 98% üstünlik derejesi",
+      "badge_2": "✓ 24/7 goldaw",
+      "badge_3": "✓ Çalt işlemek",
+      "highlights": "✓ 98% üstünlik derejesi • ✓ 24/7 goldaw • ✓ Çalt işlemek",
+      "apply_button": "Häzir arza ber",
+      "whatsapp_button": "WhatsApp-da söhbetdeş boluň"
+    },
+    "problem": {
+      "title": "Ýüzbe-ýüz bolýan kynçylygyňyz",
+      "item_1": {
+        "title": "Çylşyrymly amal",
+        "description": "Bulaşdyryjy talaplar, hemişe üýtgeýän resminamalar we düşnüksiz möhletler sizi dartgynly ýagdaýda goýýar."
+      },
+      "item_2": {
+        "title": "Gymmat ýalňyşlyklar",
+        "description": "Bir nädogry resminama ýa-da sypdyrylan möhlet size wagt, pul we arzuwyňyzdaky ýaşaýşy gymmada düşýär."
+      },
+      "item_3": {
+        "title": "Goldaw ýok",
+        "description": "Muny ýeke geçmek sizi bulaşyk, aladaly we ýol görkezmek üçin ynanar ýaly hiç kimsiz goýýar."
+      }
+    },
+    "solution": {
+      "title": "Çözgüdimiz",
+      "main_heading": "Biz ähli zady edýäris",
+      "item_1": {
+        "title": "Hünärmen ýolbaşçylyk",
+        "description": "15+ ýyllyk hünärmenlerimiz talaplarda ýol tapýar, mümkinçilikleri tapýar we gymmat ýalňyşlyklardan gaça durýar."
+      },
+      "item_2": {
+        "title": "Doly resminama",
+        "description": "Ähli resminamalary taýýarlaýarys we tabşyrýarys. Kynçylyk ýok, bulaşyklyk ýok, gijä galma ýok."
+      },
+      "item_3": {
+        "title": "24/7 goldaw",
+        "description": "Şahsy geňeşçiňiz soraglara çalt jogap berýär we sizi her ädimde habarly saklaýar."
+      },
+      "item_4": {
+        "title": "Ýuridik gorag",
+        "description": "Şahadatnamaly ýuristler laýyklygy we hukuklaryňyzyň doly goragyny üpjün edýär."
+      }
+    },
+    "stats_box": {
+      "title": "✨ Sanlar bilen",
+      "approval_time": {
+        "label": "Tassyklama wagty",
+        "value": "45",
+        "unit": "gün ortaça"
+      },
+      "success_rate": {
+        "label": "Üstünlik derejesi",
+        "value": "98%",
+        "unit": "tassyklandy"
+      },
+      "clients": {
+        "label": "Razy müşderiler",
+        "value": "5000+",
+        "unit": "razy"
+      }
+    },
+    "benefits": {
+      "title": "Näme alýarsyňyz",
+      "item_1": {
+        "title": "Çalt işlemek",
+        "description": "Maslahatdan tassyklama çenli ortaça 45 gün"
+      },
+      "item_2": {
+        "title": "Aç-açan bahalar",
+        "description": "Gizlin töleg ýok. Näme töleýändigiňizi takyk biliň"
+      },
+      "item_3": {
+        "title": "100% ygtybarly",
+        "description": "Korporatiw derejeli howpsuzlyk we ýuridik gorag"
+      },
+      "item_4": {
+        "title": "Kepillendirilen netijeler",
+        "description": "Subut edilen usul bilen 98% üstünlik derejesi"
+      }
+    },
+    "process": {
+      "title": "4 ädimli amal",
+      "step_1": {
+        "title": "1-nji ädim",
+        "description": "Maksadyňyzy we laýyklygyňyzy düşünmek üçin mugt maslahat"
+      },
+      "step_2": {
+        "title": "2-nji ädim",
+        "description": "Hünärmen gözden geçiriş we iň gowy çözgüt maslahaty"
+      },
+      "step_3": {
+        "title": "3-nji ädim",
+        "description": "Ähli resminamalary size taýýarlaýarys we tabşyrýarys"
+      },
+      "step_4": {
+        "title": "4-nji ädim",
+        "description": "Tassyklama we dowamly göçme goldawy"
+      }
+    },
+    "testimonials": {
+      "title": "Hakyky üstünlik taryhlary",
+      "quote_1": "Ähli işi dartgynsyz etdiler. 6 hepdede tassyklandy! Eden iň gowy kararym. Indi täze öýümde arzuwymy ýaşaýaryn.",
+      "client_1_name": "Ahmed M.",
+      "client_1_location": "Dubaý, BAE • Ýaşaýyş tassyklandy",
+      "quote_2": "Hünärli topar, aýdyň aragatnaşyk we aç-açan bahalar. Ähli zady kemçiliksiz etdiler. Ýürekden maslahat berýärin!",
+      "client_2_name": "Sara J.",
+      "client_2_location": "Stambul, Türkiýe • Öý-jaý + Ýaşaýyş",
+      "quote_3": "Her ädimde meni goldadylar. Olaryň tejribesi maňa wagt we pul tygşytlady. Örän minnetdar. Bu hakyky iş.",
+      "client_3_name": "James T.",
+      "client_3_location": "London, Angliýa • Ýaşaýyş tassyklandy"
+    },
+    "form": {
+      "title": "Mugt maslahatyňyzy başlaň",
+      "subtitle": "Borç ýok. Basyş ýok. Diňe dogruçyl ýolbaşçylyk.",
+      "full_name_label": "Doly at *",
+      "full_name_placeholder": "Doly adyňyz",
+      "phone_label": "Telefon belgisi *",
+      "phone_placeholder": "+90 530 905 21 04",
+      "nationality_label": "Millet *",
+      "select_option": "-- Saýlaň --",
+      "nationality_egyptian": "Müsürli",
+      "nationality_saudi": "Saud Arabystanly",
+      "nationality_uae": "BAE raýaty",
+      "nationality_other": "Başga",
+      "interest_label": "Gyzyklanma *",
+      "select_service": "-- Hyzmaty saýlaň --",
+      "interest_housing": "Öý-jaý çözgütleri",
+      "interest_residency": "Ýaşaýyş maksatnamasy",
+      "interest_both": "Öý-jaý we ýaşaýyş",
+      "interest_legal": "Ýuridik maslahat",
+      "submit_button": "Mugt maslahat başla",
+      "privacy_text": "Tabşyrmak bilen, siz razylaşýarsyňyz",
+      "privacy_link": "Gizlinlik syýasaty"
+    },
+    "final_cta": {
+      "title": "Hereket etmäge taýýarmy?",
+      "description": "Ideal ýaşaýşyňyz we öýüňiz garaşýar. Geliň, şu gün başlalyň.",
+      "apply_button": "Häzir arza ber",
+      "whatsapp_button": "WhatsApp ýaz",
+      "contact_button": "Habarlaşyň",
+      "note": "1 sagadyň içinde jogap • Hiç haçan spam ýok"
+    },
+    "faq": {
+      "title": "Adaty soraglar",
+      "subtitle": "Habarlaşmazdan öň çalt jogaplar.",
+      "q1": "Ýaşaýyş işi näçe wagt alýar?",
+      "a1": "Resminamalaryňyz taýýar bolanda köp arzalar 10–15 iş gününiň içinde tamamlanýar.",
+      "q2": "Bahasy näçe?",
+      "a2": "Ýaşaýyş görnüşine bagly. Size öňünden aýdyň, hemme zady öz içine alýan baha berýäris — gizlin töleg ýok.",
+      "q3": "Tassyklamany kepillendirýärsiňizmi?",
+      "a3": "Bizde 98% üstünlik derejesi bar. Hünärmenlerimiz ilki işiňizi gözden geçirýär we diňe tassyklama ähtimallygy ýokary bolanda dowam edýär.",
+      "q4": "Haýsy resminamalar gerek?",
+      "a4": "Adatça hereket edýän pasport, ýaşaýyş subutnamasy, girdeji subutnamasy we saglyk ätiýaçlandyryşy. Size şahsy barlag sanawyny iberýäris."
+    },
+    "articles": {
+      "title": "Makalalar we habarlar",
+      "subtitle": "Ýaşaýyş, öý-jaý we immigrasiýa çözgütleri barada iň soňky makalalar we habarlar bilen tanşyň.",
+      "article_1": {
+        "title": "Doly ýaşaýyş gollanmasy",
+        "description": "Ýaşaýyş işiniň ähli ädimlerini başdan-aýak möhüm maslahatlar bilen öwreniň."
+      },
+      "article_2": {
+        "title": "Emläk satyn alyş maslahatlary",
+        "description": "Arzuwyňyzdaky emlägi saýlanyňyzda we satyn alanyňyzda göz öňünde tutmaly esasy nokatlary öwreniň."
+      },
+      "article_3": {
+        "title": "Ýuridik goraglar",
+        "description": "Öý-jaý şertnamalarynda we ýaşaýyş ylalaşyklarynda elýeterli hukuklaryňyzy we ýuridik goraglaryňyzy düşüniň."
+      },
+      "read_more_button": "Köpräk oka"
+    }
+  },
+  "blog_articles": {
+    "article_1": {
+      "id": 1,
+      "title": "Türk ýaşaýyş rugsady gollanmasy",
+      "slug": "turkish-residency-permit",
+      "description": "Ädimme-ädim görkezmeler bilen türk ýaşaýyş rugsatlaryny almagyň doly gollanmasy.",
+      "image": "https://images.unsplash.com/photo-1554224311-beee415c15c7?w=800&h=400&fit=crop",
+      "date": "2026-04-01",
+      "category": "immigration",
+      "author": "Ahmed Al-Mansouri",
+      "content": "<h2>Introduction</h2><p>Turkish residency permits are highly sought after by international professionals and investors. This comprehensive guide will walk you through the entire process, requirements, and timeline.</p><h2>Types of Turkish Residency Permits</h2><p>Turkey offers several types of residence permits designed for different purposes.</p><h3>Short-Term Residence Permit (IKY)</h3><p>Valid for 1 year and can be renewed. This is the most common type for expats starting their Turkish residency journey. It requires:</p><ul><li>Valid passport</li><li>Health insurance</li><li>Certificate of residence</li><li>Clear criminal record</li></ul><h3>Long-Term Residence Permit (LKY)</h3><p>Valid for 2 years and requires at least 1 year of continuous residence with a Short-Term permit. Requirements include the same documentation as above.</p><h2>Application Process</h2><p>The application process is straightforward and can be completed at your local Migration Office (Göç İdaresi). Prepare your documents, schedule an appointment, and submit your application.</p><h2>Timeline</h2><p>The typical processing time is 1-3 months, depending on your location and the volume of applications. You can extend your permit before it expires.</p><h2>Cost</h2><p>The cost varies by currency and exchange rate, typically ranging from 50-150 USD equivalent in Turkish Lira.</p>"
+    },
+    "article_2": {
+      "id": 2,
+      "title": "Stambulda ideal jaýyňyzy tapmak",
+      "slug": "perfect-apartment-istanbul",
+      "description": "Stambulyň bäsdeşlikli ýaşaýyş bazarynda ideal kwartirany tapmak üçin hünärmen maslahatlary we strategiýalar.",
+      "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=400&fit=crop",
+      "date": "2026-03-28",
+      "category": "housing",
+      "author": "Fatima Hassan",
+      "content": "<h2>Introduction</h2><p>Finding an apartment in Istanbul can be challenging but rewarding. With millions of residents and constant growth, the market is dynamic and competitive. This guide will help you navigate the process efficiently.</p><h2>Best Neighborhoods for Expats</h2><p>Istanbul offers diverse neighborhoods, each with unique characteristics. Here are top neighborhoods favored by expats:</p><h3>Beyoğlu</h3><p>The heart of modern Istanbul, known for its vibrant nightlife, restaurants, and cultural venues. Perfect for young professionals and those seeking an active lifestyle.</p><h3>Beşiktaş</h3><p>A more residential area with excellent transportation, upscale amenities, and strong expat community. Ideal for families and established professionals.</p><h3>Kadıköy</h3><p>Located on the Asian side, it's trendy, affordable, and very popular among expats. Great for those seeking a younger, artistic vibe.</p><h2>Where to Search</h2><p>Use multiple platforms for comprehensive search results: Sahibinden.com, Airbnb (for temporary rentals), Expatica forums, and local real estate agencies. Each has advantages.</p><h2>What to Expect</h2><p>Most landlords require first month, last month, and deposit. Apartments are typically unfurnished. Prices vary from 1,500 TL to 10,000+ TL depending on location and size.</p><h2>Negotiation Tips</h2><p>Don't accept the first offer. Landlords often expect negotiation. A 10-20% reduction from the asking price is common, especially for longer-term leases.</p>"
+    },
+    "article_3": {
+      "id": 3,
+      "title": "Türk zähmet kanunyny düşünmek",
+      "slug": "turkish-labor-law",
+      "description": "Türkiýede iş şertnamalary we işgär hukuklary barada zerur maglumat.",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+      "date": "2026-03-20",
+      "category": "legal",
+      "author": "Mehmet Kaya",
+      "content": "<h2>Introduction</h2><p>Understanding Turkish labor law is crucial for both employers and employees. Turkey has comprehensive labor regulations that protect workers' rights while allowing business flexibility.</p><h2>Employment Contract Requirements</h2><p>Every employment relationship in Turkey must be documented with a written contract. The contract must include:</p><ul><li>Job title and responsibilities</li><li>Salary and payment terms (monthly minimum)</li><li>Working hours (maximum 45 hours/week)</li><li>Annual leave entitlement (minimum 2-2.5 days/month)</li><li>Probation period (maximum 2 months)</li><li>Termination conditions</li></ul><h2>Worker Rights</h2><p>Turkish law guarantees fundamental rights to all employees regardless of contract type or status.</p><h3>Minimum Wage</h3><p>The monthly minimum wage is set annually by the government and applies to all workers. Employers cannot pay below this amount.</p><h3>Working Hours</h3><p>The standard working week is 45 hours distributed over 5 days. Overtime must be compensated at 1.5x the regular wage.</p><h3>Leave and Holidays</h3><p>Employees are entitled to paid annual leave. Public holidays are also paid days off.</p><h2>Common Issues</h2><p>If you face issues like non-payment of wages, wrongful termination, or unsafe working conditions, contact your local labor office (İş Gücü İdareliği).</p>"
+    },
+    "article_4": {
+      "id": 4,
+      "title": "Türkiýedäki maýa goýum mümkinçilikleri",
+      "slug": "investment-opportunities",
+      "description": "Türkiýede daşary ýurt maýadarlary üçin elýeterli iş we maýa goýum mümkinçiliklerini öwreniň.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
+      "date": "2026-03-15",
+      "category": "business",
+      "author": "Sarah Thompson",
+      "content": "<h2>Introduction</h2><p>Turkey presents compelling investment opportunities due to its growing economy, strategic location, and business-friendly policies. The government actively encourages foreign investment.</p><h2>Key Investment Sectors</h2><p>Turkey's economy offers diverse investment opportunities across multiple sectors.</p><h3>Real Estate</h3><p>The Turkish real estate market remains strong with consistent growth. Commercial and residential properties offer good returns, especially in Istanbul and Ankara.</p><h3>Tourism</h3><p>Turkey is a top tourist destination. Hotels, tour operators, and hospitality businesses show strong potential returns.</p><h3>Technology</h3><p>Istanbul's tech scene is booming with startups and innovation hubs. Tech investments are attracting venture capital globally.</p><h3>Manufacturing</h3><p>Strategic location between Europe and Asia makes Turkey attractive for manufacturing and export operations.</p><h2>Investor Visa Requirements</h2><p>Foreign investors can obtain residency permits by investing a minimum amount (typically $250,000 USD). Investment options include real estate purchase or business establishment.</p><h2>Tax Benefits</h2><p>Turkey offers tax incentives for foreign investors in designated sectors and regions. Consult with local tax advisors for specific benefits.</p><h2>Registration Process</h2><p>Establish your business through the Chamber of Commerce, obtain a tax ID, and register with social insurance. Most processes can be completed in 1-2 weeks.</p>"
+    },
+    "article_5": {
+      "id": 5,
+      "title": "Wiza görnüşleri: Haýsy biri size gerek?",
+      "slug": "turkish-visa-types",
+      "description": "Dürli türk wiza görnüşleriniň giňişleýin syny we dogrusyny nädip saýlamaly.",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=400&fit=crop",
+      "date": "2026-03-10",
+      "category": "immigration",
+      "author": "Elena Rodriguez",
+      "content": "<h2>Introduction</h2><p>Turkey offers various visa options depending on your purpose of visit. Understanding the differences is crucial for a smooth entry into the country.</p><h2>Tourist Visa (e-Visa)</h2><p>The most common visa type for short-term tourism. Turkish e-Visas are valid for 90 days and can be obtained online in minutes.</p><h3>Requirements</h3><ul><li>Valid passport (6+ months validity)</li><li>Credit/debit card for payment</li><li>Email address</li></ul><h3>Cost and Validity</h3><p>The cost is approximately $20 USD. The visa is valid for single entry and covers stays of up to 90 days within a 180-day period.</p><h2>Business Visa</h2><p>For entrepreneurs and business professionals looking to establish business in Turkey.</p><h3>Requirements</h3><ul><li>Invitation letter from Turkish company or organization</li><li>Proof of business registration in home country</li><li>Bank statements showing financial stability</li><li>Valid passport</li></ul><h2>Student Visa</h2><p>For students enrolled in Turkish educational institutions. Duration matches your study program.</p><h3>Requirements</h3><ul><li>Admission letter from Turkish university</li><li>Proof of financial support</li><li>Health insurance</li><li>Valid passport</li></ul><h2>Work Visa</h2><p>Required if you're employed by a Turkish company. Your employer must provide sponsorship documentation.</p><h3>Requirements</h3><ul><li>Work permit (obtained by employer)</li><li>Employment contract</li><li>Proof of qualifications</li><li>Valid passport</li></ul><h2>Long-Term Residency Visa</h2><p>For those planning to stay long-term. Leads to residence permit eligibility.</p>"
+    }
+  },
+  "pricing": {
+    "title": "Ideal ýaşaýyş meýilnamaňyzy saýlaň",
+    "subtitle": "Gizlin tölegsiz aç-açan bahalar. Türk ýaşaýyş ýoluňyzy şu gün başlaň",
+    "cta": "Häzir başlaň",
+    "basic": {
+      "title": "Başlangyç ýaşaýyş",
+      "price": "$9",
+      "price_note": "Bir gezeklik töleg",
+      "description": "Doly başlangyç goldaw bilen ilkinji gezek arza berýänler üçin ideal.",
+      "features": [
+        "Maslahat",
+        "Iş taýýarlamak we tabşyrmak",
+        "Resminama sanawy",
+        "Arza formasy kömegi",
+        "Saglyk ätiýaçlandyryşyny resmileşdirmek (tölegli)"
+      ]
+    },
+    "standard": {
+      "title": "Doly ýaşaýyş",
+      "price": "$55",
+      "price_note": "Gizlin töleg ýok",
+      "description": "Dowamly kömek bilen doly goldaw. Iň meşhur saýlawymyz.",
+      "badge": "Iň meşhur",
+      "features": [
+        "Arzany yzarlamak",
+        "Saglyk ätiýaçlandyryşy",
+        "Resminama terjimesi",
+        "Salgyt tölegi",
+        "Arza tabşyrmak",
+        "Ýaşaýyş duşuşygyny bellemek",
+        "Iş taýýarlamak",
+        "Logistika goldawy",
+        "Doly maslahat"
+      ]
+    },
+    "premium": {
+      "title": "Ýerleşme paketi",
+      "price": "$299",
+      "price_note": "Iň gowy baha",
+      "description": "Ýuridik ýolbaşçylygy we ýerleşme kömegini öz içine alýan doly goldaw.",
+      "features": [
+        "Resmi ýaşaýyş salgysyny resmileşdirmek",
+        "Arza işini soňky ädime çenli yzarlamak",
+        "Saglyk ätiýaçlandyryşy",
+        "Resminama terjimesi",
+        "Salgyt tölegi",
+        "Arza tabşyrmak",
+        "Ýaşaýyş duşuşygyny bellemek",
+        "Iş taýýarlamak",
+        "Logistika goldawy",
+        "Doly maslahat"
+      ]
+    },
+    "addons_title": "Goşmaça hyzmatlar (islege bagly)",
+    "addons_subtitle": "Paketiňizi goşmaça hünärmen hyzmatlary bilen güýçlendiriň",
+    "addon_1_title": "🏥 Saglyk ätiýaçlandyryşy",
+    "addon_1_desc": "Ýaşaýşyňyz üçin tassyklanan saglyk ätiýaçlandyryşyny alyň",
+    "addon_1_price": "$50",
+    "addon_2_title": "📋 Resminama terjimesi",
+    "addon_2_desc": "Resmi resminamalar üçin şahadatnamaly terjime",
+    "addon_2_price": "$30",
+    "addon_3_title": "📅 Duşuşyk bellemek",
+    "addon_3_desc": "Migrasiýa duşuşygyňyzy belleýäris",
+    "addon_3_price": "$40",
+    "addon_4_title": "🏛️ Salgy bellige almak",
+    "addon_4_desc": "Resmi salgy bellige alyş hyzmaty",
+    "addon_4_price": "$25",
+    "addon_5_title": "🔄 Ýaşaýşy täzelemek",
+    "addon_5_desc": "Çalt täzeleme işi",
+    "addon_5_price": "$80",
+    "addon_6_title": "📊 Salgyt belgisini düzmek",
+    "addon_6_desc": "Salgyt belgiňizi bir günde alyň",
+    "addon_6_price": "$20"
+  },
+  "common": {
+    "language": "Dil",
+    "select_language": "Dili saýlaň",
+    "loading": "Ýüklenýär...",
+    "error": "Ýalňyşlyk ýüze çykdy",
+    "close": "Ýap",
+    "back": "Yza",
+    "next": "Indiki",
+    "submit": "Tabşyr",
+    "read_more": "Köpräk oka",
+    "view_all": "Ählisini gör",
+    "required": "Hökmany",
+    "selected_label": "Saýlanan:",
+    "total_label": "Jemi:",
+    "continue_button": "Git",
+    "remind_button": "Maňa ýatlat",
+    "remind_title": "Ýaşaýşym gutarmazdan öň maňa ýatlat",
+    "remind_subtitle": "Maglumatlaryňyzy giriziň, möhleti gutarmazdan öň size ýatladarys",
+    "remind_title_new": "Ýaşaýyş täzelemäňizi hiç haçan sypdyrmaň",
+    "remind_subtitle_new": "Maglumatlaryňyzy giriziň, ýaşaýşyňyz gutarmazdan 2 aý öň size ýatladarys",
+    "residency_type": "Ýaşaýyş görnüşi",
+    "expiration_date": "Möhletiň gutarýan senesi",
+    "phone_number": "Telefon belgisi",
+    "save_button": "Ýatlatmany sakla",
+    "reminder_saved": "Ýatlatmaňyz saklandy",
+    "remind_note": "Möhleti gutarmazdan 2 aý öň siziň bilen habarlaşarys",
+    "free_service": "Mugt hyzmat",
+    "select_placeholder": "-- Saýlaň --",
+    "type_tourist": "Syýahatçy",
+    "type_student": "Talyp",
+    "type_family": "Maşgala",
+    "type_realestate": "Gozgalmaýan emläk",
+    "error_required": "Ähli meýdanlar hökmany",
+    "error_phone": "Dogry telefon belgisini giriziň",
+    "submitting": "Iberilýär...",
+    "wa_intro": "Salam IKAMETI, şu goşmaça hyzmatlar bilen gyzyklanýaryn:",
+    "wa_outro": "Maňa köpräk maglumat we baha iberip bilersiňizmi? Sag boluň."
+  },
+  "rotating_words": [
+    "Ýaşaýyş",
+    "Öý-jaý",
+    "Ýuridik hyzmatlar",
+    "Çözgütler"
+  ]
+}

@@ -335,7 +335,7 @@
   // default version. This section is only for the other languages.
   const TR_LANGS = [
     ['ar', 'العربية'], ['tr', 'Türkçe'], ['ru', 'Русский'],
-    ['fa', 'فارسی'], ['uz', 'Ўзбек'], ['af', 'دری']
+    ['fa', 'فارسی'], ['uz', 'Ўзбек'], ['af', 'دری'], ['tk', 'Türkmençe']
   ];
   const TR_RTL = new Set(['ar', 'fa', 'af']);
   let translationsBuilt = false;
@@ -1136,7 +1136,7 @@
      Each card's WhatsApp button opens chat with a ready, professional
      message that already contains the client's name and request details.
      ===================================================================== */
-  const WA_LANGS = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af'];
+  const WA_LANGS = ['en', 'ar', 'tr', 'ru', 'fa', 'uz', 'af', 'tk'];
   function waLang(l) { l = String(l || '').toLowerCase(); return WA_LANGS.indexOf(l) >= 0 ? l : 'en'; }
 
   const WA = {
@@ -1209,6 +1209,16 @@
       reminder: c => `سلام ${c.name} عزیز،\n\nاین پیام از طرف تیم IKAMETI Unlimited است. یادآوری می‌کنیم که ${c.type} شما به تاریخ ${c.date} ختم می‌شود (${c.days}).\n\nخوشحال می‌شویم در تمدید آن به‌وقت و بدون دردسر کمک‌تان کنیم. آیا می‌خواهید روند تمدید را برای‌تان آغاز کنیم؟`,
       intro: n => `سلام ${n} عزیز،\n\nاز درخواست اقامت شما از طریق IKAMETI Unlimited سپاسگزاریم. خلاصه‌ی درخواست شما:`,
       outro: '\n\nتیم ما آماده است تا شما را در مراحل بعدی راهنمایی کند. چه وقت برای صحبت مناسب است؟'
+    },
+    tk: {
+      client: 'hormatly müşderi', dash: '—', yes: 'Hawa', no: 'Ýok',
+      type: { tourist: 'Syýahatçy ýaşaýşy', student: 'Talyp ýaşaýşy', 'real-estate': 'Gozgalmaýan emläk ýaşaýşy', family: 'Maşgala ýaşaýşy', _: 'ýaşaýyş rugsady' },
+      dur: { '1-year': '1 ýyl', '2-year': '2 ýyl' },
+      lbl: { type: 'Ýaşaýyş görnüşi', dur: 'Möhlet', fam: 'Maşgala agzalary', rent: 'Kärende şertnamasy' },
+      days: d => d == null ? '' : (d < 0 ? `${Math.abs(d)} gün öň gutardy` : (d === 0 ? 'şu gün gutarýar' : `takmynan ${d} gün galdy`)),
+      reminder: c => `Salam ${c.name},\n\nBu IKAMETI Unlimited topary. ${c.type} rugsadyňyzyň ${c.date} senesinde gutarjakdygyny ýatladýarys (${c.days}).\n\nOny öz wagtynda we kynçylyksyz täzelemäge kömek etmekden hoşal bolarys. Täzeleme işini siziň üçin başlamagymyzy isleýärsiňizmi?`,
+      intro: n => `Salam ${n},\n\nIKAMETI Unlimited arkaly beren ýaşaýyş arzaňyz üçin sag boluň. Talap edenleriňiziň gysgaça mazmuny:`,
+      outro: '\n\nToparymyz indiki ädimlerde size ýol görkezmäge taýýar. Habarlaşmak üçin haýsy wagt amatly?'
     }
   };
 
