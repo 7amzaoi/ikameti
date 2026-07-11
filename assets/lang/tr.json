@@ -3,7 +3,9 @@
     "title": "Son Haberler",
     "subtitle": "IKAMETI ekibinden güncellemeler, duyurular ve ipuçları.",
     "prev": "Önceki",
-    "next": "Sonraki"
+    "next": "Sonraki",
+    "more": "Devamını oku",
+    "less": "Daha az göster"
   },
   "lang": "tr",
   "direction": "ltr",

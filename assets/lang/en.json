@@ -3,7 +3,9 @@
     "title": "Latest News",
     "subtitle": "Updates, announcements and tips from the IKAMETI team.",
     "prev": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "more": "Read more",
+    "less": "Show less"
   },
   "lang": "en",
   "direction": "ltr",

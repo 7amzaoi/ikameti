@@ -10,7 +10,7 @@
 
   var state = { items: [], index: 0 };
   var timer = null;
-  var AUTO_MS = 2000;
+  var AUTO_MS = 7000;
 
   function $(sel) { return document.querySelector(sel); }
   function currentLang() {
@@ -74,6 +74,8 @@
     var multi = state.items.length > 1;
     var prevLabel = t('news_section.prev', 'Previous');
     var nextLabel = t('news_section.next', 'Next');
+    var moreLabel = t('news_section.more', 'Read more');
+    var lessLabel = t('news_section.less', 'Show less');
 
     var dots = '';
     if (multi) {
@@ -93,6 +95,7 @@
             (item.date && item.showDate ? '<span class="news-date">' + fmtDate(item.date) + '</span>' : '') +
             '<h3 class="news-title">' + esc(item.title) + '</h3>' +
             '<div class="news-text">' + bodyHtml(item.body) + '</div>' +
+            '<button type="button" class="news-more" data-news-more hidden>' + esc(moreLabel) + '</button>' +
           '</div>' +
         '</article>' +
         (multi ? '<button type="button" class="news-nav news-next" data-news-nav="1" aria-label="' + esc(nextLabel) + '">' +
@@ -107,6 +110,26 @@
     Array.prototype.forEach.call(carousel.querySelectorAll('[data-news-dot]'), function (b) {
       b.addEventListener('click', function () { goTo(Number(b.getAttribute('data-news-dot'))); });
     });
+
+    // Keep the card a fixed height: clamp long news text and reveal the rest
+    // behind a "Read more" toggle. Only show the toggle when it actually overflows.
+    var textEl = carousel.querySelector('.news-text');
+    var moreBtn = carousel.querySelector('[data-news-more]');
+    if (textEl && moreBtn) {
+      textEl.classList.add('is-clamped');
+      if (textEl.scrollHeight - textEl.clientHeight > 8) {
+        moreBtn.hidden = false;
+        moreBtn.addEventListener('click', function () {
+          var expanded = textEl.classList.toggle('is-expanded');
+          textEl.classList.toggle('is-clamped', !expanded);
+          moreBtn.textContent = expanded ? lessLabel : moreLabel;
+          if (expanded) stopAuto(); // let the visitor read without the card flipping
+        });
+      } else {
+        textEl.classList.remove('is-clamped');
+        moreBtn.hidden = true;
+      }
+    }
   }
 
   function go(delta) { state.index += delta; render(); restartAuto(); }

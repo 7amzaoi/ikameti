@@ -3,7 +3,9 @@
     "title": "So‘nggi yangiliklar",
     "subtitle": "IKAMETI jamoasidan yangiliklar, e’lonlar va maslahatlar.",
     "prev": "Oldingi",
-    "next": "Keyingi"
+    "next": "Keyingi",
+    "more": "Batafsil o‘qish",
+    "less": "Kamroq ko‘rsatish"
   },
   "lang": "uz",
   "direction": "ltr",

@@ -3321,6 +3321,37 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
 .news-text p { margin: 0 0 10px; }
 .news-text p:last-child { margin-bottom: 0; }
 
+/* Fixed-height news body: clamp long text to keep every card the same size,
+   with a soft fade at the bottom and a "Read more" toggle to expand it. */
+.news-text.is-clamped {
+    position: relative;
+    max-height: 11.5em;              /* ~6–7 lines, keeps the card tidy */
+    overflow: hidden;
+}
+.news-text.is-clamped::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3.2em;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #fff 92%);
+    pointer-events: none;
+}
+.news-text.is-expanded { max-height: none; overflow: visible; }
+.news-more {
+    align-self: flex-start;
+    margin-top: 14px;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 0;
+}
+.news-more:hover { text-decoration: underline; }
+.news-more[hidden] { display: none; }
+.news-slide--noimg .news-more { align-self: center; }
+
 .news-nav {
     position: absolute;
     top: 50%;
