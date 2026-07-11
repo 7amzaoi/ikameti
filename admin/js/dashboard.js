@@ -515,7 +515,7 @@
       setTrImagePreview(code, v.image || '');
       setTrEditorHtml(code, v.content || '');
       const det = document.querySelector('.tr-lang[data-lang="' + code + '"]');
-      if (det) det.open = Boolean(String(v.title || v.description || v.content || v.image || '').trim());
+      if (det) det.open = false; // always start collapsed; user expands as needed
     });
   }
 
@@ -856,7 +856,7 @@
       if (ti) ti.value = v.title || '';
       if (bo) bo.value = v.body || '';
       const det = document.querySelector('#news-translations .tr-lang[data-lang="' + code + '"]');
-      if (det) det.open = Boolean(String(v.title || v.body || '').trim());
+      if (det) det.open = false; // always start collapsed; user expands as needed
     });
   }
   function collectNewsTranslations() {
