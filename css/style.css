@@ -3282,6 +3282,7 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
 .news-slide {
     display: flex;
     align-items: stretch;
+    min-height: 380px;              /* fixed card height: switching items never shifts the page */
     animation: newsIn .42s cubic-bezier(.2,.7,.3,1);
 }
 @keyframes newsIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
@@ -3325,7 +3326,7 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
    with a soft fade at the bottom and a "Read more" toggle to expand it. */
 .news-text.is-clamped {
     position: relative;
-    max-height: 11.5em;              /* ~6–7 lines, keeps the card tidy */
+    max-height: 8em;                 /* ~5 lines, fits inside the fixed card height */
     overflow: hidden;
 }
 .news-text.is-clamped::after {
@@ -3383,7 +3384,7 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
 .news-dot.active { background: var(--primary); width: 26px; }
 
 @media (max-width: 720px) {
-    .news-slide { flex-direction: column; }
+    .news-slide { flex-direction: column; min-height: 340px; }
     .news-slide-img { flex: none; width: 100%; min-height: 180px; }
     .news-nav { width: 38px; height: 38px; }
     .news-nav svg { width: 19px; height: 19px; }
