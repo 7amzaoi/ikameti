@@ -153,7 +153,12 @@
       "privacy_notice": "Your information is secure and will be used to provide you with personalized consultation",
       "prev_button": "← Back",
       "next_button": "Next →",
-      "submit_button": "Get Free Consultation"
+      "submit_button": "Get Free Consultation",
+      "family_members_ph": "Select number of family members",
+      "err_name": "Please enter your full name",
+      "err_phone": "Please enter your phone number",
+      "err_type": "Please select a residency type",
+      "err_select": "Please select an option to continue"
     },
     "success": {
       "title": "Thank you for your information!",

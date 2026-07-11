@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://ikameti.com.tr/assets/images/favicon.png">
     <meta name="theme-color" content="#d00000">
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20260711b">
+    <link rel="stylesheet" href="css/style.css?v=20260711c">
     <link rel="stylesheet" href="assets/css/i18n.css">
     <script type="application/ld+json">
     [
@@ -448,24 +448,33 @@
                         <h3 style="margin-bottom: var(--space-8); text-align: center;" data-i18n="wizard.steps.step_4.question">أخبرنا المزيد عن وضعك</h3>
                         <div style="max-width: 500px; margin: 0 auto;">
                             <div class="wizard-checkbox-group" style="margin-bottom: var(--space-8);">
-                                <label class="checkbox-option" style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); border: 2px solid var(--border-light); border-radius: var(--radius-lg); cursor: pointer; transition: all var(--transition-normal); margin-bottom: var(--space-3);">
-                                    <input type="checkbox" name="rental_contract" value="yes" style="width: 20px; height: 20px; flex-shrink: 0; cursor: pointer; accent-color: var(--primary);">
-                                    <div>
-                                        <strong style="display: block;" data-i18n="wizard.form.rental_contract">هل لديك عقد إيجار؟</strong>
-                                        <p style="font-size: 13px; color: var(--text-secondary); margin-top: var(--space-1);" data-i18n="wizard.form.rental_contract_desc">مطلوب لمعظم طلبات الإقامة</p>
-                                    </div>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="rental_contract" value="yes">
+                                    <span class="checkbox-option__box" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <span class="checkbox-option__text">
+                                        <strong data-i18n="wizard.form.rental_contract">هل لديك عقد إيجار؟</strong>
+                                        <span data-i18n="wizard.form.rental_contract_desc">مطلوب لمعظم طلبات الإقامة</span>
+                                    </span>
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" data-i18n="wizard.form.family_members">عدد أفراد الأسرة المراد تضمينهم:</label>
-                                <select name="family_members" class="form-input" style="cursor: pointer;">
-                                    <option value="">Select number of family members</option>
-                                    <option value="1" data-i18n="wizard.form.family_members_opt_1">أنا فقط (شخص واحد)</option>
-                                    <option value="2" data-i18n="wizard.form.family_members_opt_2">شخصان</option>
-                                    <option value="3" data-i18n="wizard.form.family_members_opt_3">ثلاثة أشخاص</option>
-                                    <option value="4" data-i18n="wizard.form.family_members_opt_4">أربعة أشخاص</option>
-                                    <option value="5+" data-i18n="wizard.form.family_members_opt_5">خمسة أشخاص أو أكثر</option>
-                                </select>
+                                <div class="c-select" data-cselect>
+                                    <button type="button" class="c-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="c-select__value" data-i18n="wizard.form.family_members_ph">Select number of family members</span>
+                                        <svg class="c-select__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                                    </button>
+                                    <ul class="c-select__menu" role="listbox">
+                                        <li class="c-select__option" role="option" data-value="1" data-i18n="wizard.form.family_members_opt_1">أنا فقط (شخص واحد)</li>
+                                        <li class="c-select__option" role="option" data-value="2" data-i18n="wizard.form.family_members_opt_2">شخصان</li>
+                                        <li class="c-select__option" role="option" data-value="3" data-i18n="wizard.form.family_members_opt_3">ثلاثة أشخاص</li>
+                                        <li class="c-select__option" role="option" data-value="4" data-i18n="wizard.form.family_members_opt_4">أربعة أشخاص</li>
+                                        <li class="c-select__option" role="option" data-value="5+" data-i18n="wizard.form.family_members_opt_5">خمسة أشخاص أو أكثر</li>
+                                    </ul>
+                                    <input type="hidden" name="family_members" value="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -500,11 +509,7 @@
                 <div id="wizard-success" style="display: none; text-align: center; padding: var(--space-12); animation: slideInUp 0.6s ease-out;">
                     <div style="font-size: 64px; margin-bottom: var(--space-6);">🎉</div>
                     <h3 style="margin-bottom: var(--space-4);" data-i18n="wizard.success.title">شكراً لتقديم معلوماتك!</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--space-8); max-width: 500px; margin-left: auto; margin-right: auto;" data-i18n="wizard.success.message">سيقوم فريقنا بمراجعة معلوماتك والتواصل معك برنامج استشارة شخصي خلال 24 ساعة.</p>
-                    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
-                        <a href="https://wa.me/905309052104" target="_blank" class="btn btn-cta" data-i18n="wizard.success.whatsapp">💬 واتساب: +90 530 905 21 04</a>
-                        <a href="mailto:info@ikameti.com" class="btn btn-primary" data-i18n="wizard.success.email">📧 البريد الإلكتروني: info@ikameti.com</a>
-                    </div>
+                    <p style="color: var(--text-primary); font-size: 18px; font-weight: 600; line-height: 1.75; margin: 0 auto; max-width: 560px;" data-i18n="wizard.success.message">سيقوم فريقنا بمراجعة معلوماتك والتواصل معك برنامج استشارة شخصي خلال 24 ساعة.</p>
                 </div>
             </div>
         </div>
@@ -1697,15 +1702,16 @@
                 }
             });
 
-            // Handle checkbox selections
-            document.querySelectorAll('.checkbox-option').forEach(checkbox => {
-                checkbox.addEventListener('click', function(e) {
-                    const input = this.querySelector('input');
-                    if (input) {
-                        input.checked = !input.checked;
-                        this.classList.toggle('selected', input.checked);
-                    }
-                });
+            // Handle checkbox selections — let the label toggle the checkbox
+            // natively (once), then just mirror the visual state. Manually
+            // flipping input.checked here double-toggled when the box itself
+            // was clicked, so the click appeared to do nothing.
+            document.querySelectorAll('.checkbox-option').forEach(box => {
+                const input = box.querySelector('input[type="checkbox"]');
+                if (!input) return;
+                const sync = () => box.classList.toggle('selected', input.checked);
+                input.addEventListener('change', sync);
+                sync();
             });
 
             // Next step function
@@ -1718,7 +1724,7 @@
                     if (requiredInput) {
                         const selectedOption = currentStepElement.querySelector('input[type="radio"]:checked, input[type="checkbox"]:checked');
                         if (!selectedOption) {
-                            alert('Please select an option to continue');
+                            alert((window.i18n && window.i18n.getTranslation && window.i18n.getTranslation('wizard.form.err_select')) || 'Please select an option to continue');
                             return;
                         }
                     }
@@ -1753,8 +1759,11 @@
              */
             const setSubmitLoading = (isLoading) => {
                 if (!submitBtn) return;
+                const tr = (k, d) => (window.i18n && window.i18n.getTranslation && window.i18n.getTranslation(k)) || d;
                 submitBtn.disabled = isLoading;
-                submitBtn.textContent = isLoading ? 'Submitting...' : 'Get Free Consultation';
+                submitBtn.textContent = isLoading
+                    ? tr('common.submitting', 'Submitting...')
+                    : tr('wizard.form.submit_button', 'Get Free Consultation');
             };
 
             /**
@@ -1769,23 +1778,24 @@
              * Submit form to Google Apps Script webhook
              */
             async function submitWizard() {
+                const tr = (k, d) => (window.i18n && window.i18n.getTranslation && window.i18n.getTranslation(k)) || d;
                 // Validate final step
                 const nameInput = form.querySelector('input[name="full_name"]');
                 const phoneInput = form.querySelector('input[name="phone"]');
                 const residencyTypeInput = form.querySelector('input[name="residency_type"]:checked');
 
                 if (!nameInput.value.trim()) {
-                    alert('Please enter your full name');
+                    alert(tr('wizard.form.err_name', 'Please enter your full name'));
                     return;
                 }
 
                 if (!phoneInput.value.trim()) {
-                    alert('Please enter your phone number');
+                    alert(tr('wizard.form.err_phone', 'Please enter your phone number'));
                     return;
                 }
 
                 if (!residencyTypeInput) {
-                    alert('Please select a residency type');
+                    alert(tr('wizard.form.err_type', 'Please select a residency type'));
                     return;
                 }
 
@@ -1797,6 +1807,7 @@
                 formData.append("phone", document.querySelector('input[name="phone"]').value);
                 formData.append("expiryDate", expiryDateValue);
 
+                setSubmitLoading(true);
                 fetch(WEBHOOK_URL, {
                     method: "POST",
                     mode: "no-cors",
@@ -1804,11 +1815,12 @@
                 })
                 .then(() => {
                     console.log("Data sent successfully");
-
-                    document.getElementById("residency-wizard-form").style.display = "none";
-                    document.getElementById("wizard-success").style.display = "block";
+                    showSuccessState();
                 })
-                .catch((err) => console.error("Error:", err));
+                .catch((err) => {
+                    console.error("Error:", err);
+                    setSubmitLoading(false);
+                });
             }
 
             // Show success message
@@ -1829,8 +1841,8 @@
     <script src="assets/js/i18n.js"></script>
     <!-- Supabase (blog data + form submissions) -->
     <script type="module" src="js/supabase-public.js?v=20260622d"></script>
-    <script src="js/news.js?v=20260711b"></script>
-    <script src="js/page-handler.js"></script>
+    <script src="js/news.js?v=20260711c"></script>
+    <script src="js/page-handler.js?v=20260711c"></script>
 
 
 </body>

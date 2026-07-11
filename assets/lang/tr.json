@@ -153,7 +153,12 @@
       "privacy_notice": "Bilgileriniz güvenlidir ve size kişiselleştirilmiş danışmanlık sağlamak için kullanılacaktır",
       "prev_button": "← Geri",
       "next_button": "İleri →",
-      "submit_button": "Ücretsiz Danışmanlık Alın"
+      "submit_button": "Ücretsiz Danışmanlık Alın",
+      "family_members_ph": "Aile üyesi sayısını seçin",
+      "err_name": "Lütfen tam adınızı girin",
+      "err_phone": "Lütfen telefon numaranızı girin",
+      "err_type": "Lütfen bir ikamet türü seçin",
+      "err_select": "Devam etmek için bir seçenek seçin"
     },
     "success": {
       "title": "Bilgileriniz için teşekkürler!",

@@ -153,7 +153,12 @@
       "privacy_notice": "Sizning ma'lumotlari xavfsiz va sizga shaxsiy maslahat berishda ishlatiladi",
       "prev_button": "← Orqaga",
       "next_button": "Keyingi →",
-      "submit_button": "Bepul maslahat oling"
+      "submit_button": "Bepul maslahat oling",
+      "family_members_ph": "Oila a'zolari sonini tanlang",
+      "err_name": "Iltimos, to‘liq ismingizni kiriting",
+      "err_phone": "Iltimos, telefon raqamingizni kiriting",
+      "err_type": "Iltimos, yashash turini tanlang",
+      "err_select": "Davom etish uchun variant tanlang"
     },
     "success": {
       "title": "Ma'lumotingiz uchun rahmat!",

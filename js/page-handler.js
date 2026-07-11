@@ -197,3 +197,54 @@ if (document.readyState === 'loading') {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
     else start();
 })();
+
+/* ============================================================
+ * Custom <select> (.c-select) — used by the residency wizard.
+ * Replaces the raw browser dropdown with a styled, on-brand menu.
+ * Keeps a hidden input in sync so the value still submits, and mirrors
+ * the chosen option's data-i18n key so it re-localises on language change.
+ * ============================================================ */
+(function () {
+    function closeAll() {
+        document.querySelectorAll('.c-select.open').forEach(function (el) {
+            el.classList.remove('open');
+            var t = el.querySelector('.c-select__trigger');
+            if (t) t.setAttribute('aria-expanded', 'false');
+        });
+    }
+    function initCSelect(root) {
+        var trigger = root.querySelector('.c-select__trigger');
+        var valueEl = root.querySelector('.c-select__value');
+        var hidden = root.querySelector('input[type="hidden"]');
+        var options = Array.prototype.slice.call(root.querySelectorAll('.c-select__option'));
+        if (!trigger || !valueEl) return;
+        if (valueEl.getAttribute('data-i18n')) valueEl.classList.add('is-placeholder');
+
+        trigger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = root.classList.contains('open');
+            closeAll();
+            if (!isOpen) { root.classList.add('open'); trigger.setAttribute('aria-expanded', 'true'); }
+        });
+
+        options.forEach(function (opt) {
+            opt.addEventListener('click', function () {
+                options.forEach(function (o) { o.classList.remove('selected'); });
+                opt.classList.add('selected');
+                if (hidden) hidden.value = opt.getAttribute('data-value') || '';
+                var key = opt.getAttribute('data-i18n');
+                if (key) valueEl.setAttribute('data-i18n', key); else valueEl.removeAttribute('data-i18n');
+                valueEl.textContent = opt.textContent;
+                valueEl.classList.remove('is-placeholder');
+                closeAll();
+            });
+        });
+    }
+    function start() {
+        document.querySelectorAll('.c-select').forEach(initCSelect);
+        document.addEventListener('click', closeAll);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+    else start();
+})();
