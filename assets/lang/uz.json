@@ -888,6 +888,22 @@
     "error_phone": "Iltimos, to'g'ri telefon raqamini kiriting",
     "submitting": "Yuborilmoqda...",
     "wa_intro": "Salom IKAMETI, quyidagi qo'shimcha xizmatlar bilan qiziqyapman:",
-    "wa_outro": "Iltimos, batafsil ma'lumot va narxlarni yuboring. Rahmat."
+    "wa_outro": "Iltimos, batafsil ma'lumot va narxlarni yuboring. Rahmat.",
+    "nationality": "Fuqarolik",
+    "nationality_other": "🌍 Boshqa",
+    "remind_learn_more": "Ushbu xizmat haqida batafsil →"
+  },
+  "remind_page": {
+    "hero_title": "Yashash ruxsatini yangilashni o‘tkazib yubormang",
+    "hero_subtitle": "Bepul eslatma o‘rnating va jamoamiz yashash ruxsatingiz tugashidan 2 oy oldin siz bilan bog‘lanadi — o‘z vaqtida va muammosiz yangilang.",
+    "benefits_title": "Nega eslatma xizmatidan foydalanish kerak?",
+    "b1_t": "Muddatni o‘tkazib yubormang",
+    "b1_d": "2 oy oldin eslatamiz, shunda yangilashga doim vaqtingiz bo‘ladi.",
+    "b2_t": "100% bepul",
+    "b2_d": "Eslatma xizmati sizga hech qanday to‘lovga tushmaydi — yashirin to‘lovlar yo‘q.",
+    "b3_t": "Siz bilan shaxsan bog‘lanamiz",
+    "b3_d": "Jamoamiz oson yangilashingiz uchun o‘z tilingizda bog‘lanadi.",
+    "form_title": "Bepul eslatmangizni o‘rnating",
+    "form_subtitle": "Ma'lumotlaringizni kiriting, qolganini o‘zimiz hal qilamiz."
   }
 }

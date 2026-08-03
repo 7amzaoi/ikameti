@@ -888,6 +888,22 @@
     "error_phone": "Please enter a valid phone number",
     "submitting": "Submitting...",
     "wa_intro": "Hello IKAMETI, I'm interested in the following optional services:",
-    "wa_outro": "Could you please send me more details and pricing? Thank you."
+    "wa_outro": "Could you please send me more details and pricing? Thank you.",
+    "nationality": "Nationality",
+    "nationality_other": "🌍 Other",
+    "remind_learn_more": "Learn more about this service →"
+  },
+  "remind_page": {
+    "hero_title": "Never Miss Your Residency Renewal",
+    "hero_subtitle": "Set a free reminder and our team will contact you 2 months before your residency expires — so you renew on time, without stress.",
+    "benefits_title": "Why use the reminder service?",
+    "b1_t": "Never miss a deadline",
+    "b1_d": "We remind you 2 months early, so you always have time to renew.",
+    "b2_t": "100% free",
+    "b2_d": "The reminder service costs you nothing — no hidden fees.",
+    "b3_t": "We contact you personally",
+    "b3_d": "Our team reaches out in your own language to help you renew smoothly.",
+    "form_title": "Set your free reminder",
+    "form_subtitle": "Enter your details and we'll take care of the rest."
   }
 }

@@ -888,6 +888,22 @@
     "error_phone": "Dogry telefon belgisini giriziň",
     "submitting": "Iberilýär...",
     "wa_intro": "Salam IKAMETI, şu goşmaça hyzmatlar bilen gyzyklanýaryn:",
-    "wa_outro": "Maňa köpräk maglumat we baha iberip bilersiňizmi? Sag boluň."
+    "wa_outro": "Maňa köpräk maglumat we baha iberip bilersiňizmi? Sag boluň.",
+    "nationality": "Raýatlyk",
+    "nationality_other": "🌍 Başga",
+    "remind_learn_more": "Bu hyzmat barada giňişleýin →"
+  },
+  "remind_page": {
+    "hero_title": "Ýaşaýyş rugsadyňyzy täzelemegi sypdyrmaň",
+    "hero_subtitle": "Mugt ýatlatma düzüň, toparymyz ýaşaýyş rugsadyňyz gutarmazdan 2 aý öň siziň bilen habarlaşar — öz wagtynda we alada-gamsyz täzeläň.",
+    "benefits_title": "Näme üçin ýatlatma hyzmatyny ulanmaly?",
+    "b1_t": "Möhleti sypdyrmaň",
+    "b1_d": "2 aý öň ýatladýarys, şonuň üçin täzelemäge hemişe wagtyňyz bolýar.",
+    "b2_t": "100% mugt",
+    "b2_d": "Ýatlatma hyzmaty size hiç zat düşmeýär — gizlin töleg ýok.",
+    "b3_t": "Siziň bilen şahsy habarlaşarys",
+    "b3_d": "Toparymyz rahat täzelemegiňiz üçin öz diliňizde habarlaşar.",
+    "form_title": "Mugt ýatlatmaňyzy düzüň",
+    "form_subtitle": "Maglumatlaryňyzy giriziň, galanyny biz ederis."
   }
 }

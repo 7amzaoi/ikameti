@@ -888,6 +888,22 @@
     "error_phone": "Lütfen geçerli bir telefon numarası girin",
     "submitting": "Gönderiliyor...",
     "wa_intro": "Merhaba IKAMETI, aşağıdaki opsiyonel hizmetlerle ilgileniyorum:",
-    "wa_outro": "Bana daha fazla bilgi ve fiyat gönderebilir misiniz? Teşekkürler."
+    "wa_outro": "Bana daha fazla bilgi ve fiyat gönderebilir misiniz? Teşekkürler.",
+    "nationality": "Uyruk",
+    "nationality_other": "🌍 Diğer",
+    "remind_learn_more": "Bu hizmet hakkında daha fazla →"
+  },
+  "remind_page": {
+    "hero_title": "İkamet Yenilemenizi Asla Kaçırmayın",
+    "hero_subtitle": "Ücretsiz bir hatırlatma kurun; ekibimiz ikametiniz sona ermeden 2 ay önce sizinle iletişime geçsin — zamanında ve stressiz yenileyin.",
+    "benefits_title": "Neden hatırlatma hizmetini kullanmalısınız?",
+    "b1_t": "Son tarihi asla kaçırmayın",
+    "b1_d": "Size 2 ay önceden hatırlatırız, yenilemek için her zaman vaktiniz olur.",
+    "b2_t": "%100 ücretsiz",
+    "b2_d": "Hatırlatma hizmeti size hiçbir şeye mal olmaz — gizli ücret yok.",
+    "b3_t": "Sizinle bizzat iletişime geçeriz",
+    "b3_d": "Ekibimiz sorunsuz yenilemeniz için sizinle kendi dilinizde iletişime geçer.",
+    "form_title": "Ücretsiz hatırlatmanızı kurun",
+    "form_subtitle": "Bilgilerinizi girin, gerisini biz hallederiz."
   }
 }

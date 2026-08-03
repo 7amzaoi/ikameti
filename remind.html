@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-root="true" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) — GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL51XPSZ0K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PL51XPSZ0K');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residency Renewal Reminder — IKAMETI</title>
+    <meta name="description" content="Set a free reminder and IKAMETI will contact you 2 months before your Turkish residency expires — so you renew on time, without stress.">
+    <link rel="canonical" href="https://ikameti.com.tr/remind.html">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="css/style.css?v=20260712d">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <style>
+        .remind-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6); max-width: 960px; margin: 0 auto; }
+        .rb-card { background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: var(--space-8); text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .rb-icon { font-size: 40px; margin-bottom: var(--space-3); }
+        .rb-card h3 { font-size: 18px; margin-bottom: var(--space-2); color: var(--text-primary); }
+        .rb-card p { font-size: 14.5px; color: var(--text-secondary); line-height: 1.7; }
+        .remind-form-wrap { max-width: 480px; margin: 0 auto; background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: clamp(24px, 4vw, 40px); box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .remind-form-wrap .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+        .remind-form-wrap label { color: #111827; font-weight: 600; font-size: 13px; }
+        .remind-form-wrap select, .remind-form-wrap input { padding: 12px 14px; border: 1px solid #e5e7eb; border-radius: 10px; font-size: 14px; font-family: inherit; color: #111827; background: #fff; cursor: pointer; transition: border-color .2s; }
+        .remind-form-wrap select:focus, .remind-form-wrap input:focus { outline: none; border-color: var(--primary); }
+        .remind-form-wrap .iti { width: 100%; }
+        .rp-note { background: #f0f9ff; border-left: 3px solid #0084ff; padding: 12px; border-radius: 4px; margin: 6px 0 14px; font-size: 13px; color: #0c51be; line-height: 1.4; }
+        [dir="rtl"] .rp-note { border-left: none; border-right: 3px solid #0084ff; }
+        .rp-submit { width: 100%; background: var(--primary); color: #fff; border: none; padding: 14px 16px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 15px; transition: opacity .2s, transform .15s; }
+        .rp-submit:hover { transform: translateY(-1px); }
+        .rp-submit:disabled { opacity: .7; cursor: default; }
+        .rp-msg { border-radius: 8px; padding: 12px; font-size: 13px; text-align: center; font-weight: 600; margin-top: 12px; }
+        .rp-error { display:none; background:#fee2e2; border:1px solid #fca5a5; color:#dc2626; }
+        .rp-success { display:none; background:#dcfce7; border:1px solid #86efac; color:#16a34a; }
+        .rp-free { text-align:center; font-size:12px; color:#6b7280; margin: 4px 0 12px; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <a href="index.html" aria-label="IKAMETI Unlimited"><img class="logo-img" src="assets/images/logo.png" alt="IKAMETI Unlimited" style="height: 64px; width: auto; display: block;"></a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="blog/index.html" data-i18n="nav.blog">Blog</a>
+                <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="language-dropdown">
+                <button class="language-dropdown-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Change Language">
+                    <span class="globe-icon">🌐</span>
+                    <span class="language-code">EN</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <menu class="language-dropdown-menu" role="menu">
+                    <button role="menuitem" data-language-switch="en" aria-label="Select English"><span class="flag-icon">🇺🇸</span><span class="language-name">English</span></button>
+                    <button role="menuitem" data-language-switch="ar" aria-label="اختر العربية"><span class="flag-icon">🇸🇦</span><span class="language-name">العربية</span></button>
+                    <button role="menuitem" data-language-switch="tr" aria-label="Türkçe'yi seçin"><span class="flag-icon">🇹🇷</span><span class="language-name">Türkçe</span></button>
+                    <button role="menuitem" data-language-switch="ru" aria-label="Выберите русский язык"><span class="flag-icon">🇷🇺</span><span class="language-name">Русский</span></button>
+                    <button role="menuitem" data-language-switch="fa" aria-label="فارسی را انتخاب کنید"><span class="flag-icon">🇮🇷</span><span class="language-name">فارسی</span></button>
+                    <button role="menuitem" data-language-switch="uz" aria-label="Ўзбекчани танланг"><span class="flag-icon">🇺🇿</span><span class="language-name">Ўзбек</span></button>
+                    <button role="menuitem" data-language-switch="af" aria-label="دری انتخاب کنید"><span class="flag-icon">🇦🇫</span><span class="language-name">دری</span></button>
+                    <button role="menuitem" data-language-switch="tk" aria-label="Türkmençäni saýlaň"><span class="flag-icon">🇹🇲</span><span class="language-name">Türkmençe</span></button>
+                </menu>
+            </div>
+            <button id="mobile-menu-btn"><span></span><span></span><span></span></button>
+        </div>
+        <div id="mobile-menu">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="blog/index.html" data-i18n="nav.blog">Blog</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-dark hero-img hero-img-home">
+        <div class="container">
+            <div class="text-center" style="max-width: 760px; margin: 0 auto; padding: var(--space-20) 0;">
+                <div style="font-size: 52px; margin-bottom: var(--space-4);">🔔</div>
+                <h1 class="text-white" data-i18n="remind_page.hero_title">Never Miss Your Residency Renewal</h1>
+                <p class="text-white" style="opacity: 0.95; font-size: 18px; line-height: var(--lh-relaxed); margin-top: var(--space-4);" data-i18n="remind_page.hero_subtitle">Set a free reminder and our team will contact you 2 months before your residency expires — so you renew on time, without stress.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="bg-base">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="remind_page.benefits_title">Why use the reminder service?</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="remind-benefits">
+                <div class="rb-card">
+                    <div class="rb-icon">⏰</div>
+                    <h3 data-i18n="remind_page.b1_t">Never miss a deadline</h3>
+                    <p data-i18n="remind_page.b1_d">We remind you 2 months early, so you always have time to renew.</p>
+                </div>
+                <div class="rb-card">
+                    <div class="rb-icon">💸</div>
+                    <h3 data-i18n="remind_page.b2_t">100% free</h3>
+                    <p data-i18n="remind_page.b2_d">The reminder service costs you nothing — no hidden fees.</p>
+                </div>
+                <div class="rb-card">
+                    <div class="rb-icon">🤝</div>
+                    <h3 data-i18n="remind_page.b3_t">We contact you personally</h3>
+                    <p data-i18n="remind_page.b3_d">Our team reaches out in your own language to help you renew smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="remind_page.form_title">Set your free reminder</h2>
+                <p style="color: var(--text-secondary); margin-top: var(--space-3);" data-i18n="remind_page.form_subtitle">Enter your details and we'll take care of the rest.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="remind-form-wrap">
+                <form id="remindFormPage" novalidate>
+                    <div class="field">
+                        <label data-i18n="common.residency_type">Residency Type</label>
+                        <select id="rp-residencyType" required>
+                            <option value="" data-i18n="common.select_placeholder">-- Select --</option>
+                            <option value="Tourist" data-i18n="common.type_tourist">Tourist</option>
+                            <option value="Student" data-i18n="common.type_student">Student</option>
+                            <option value="Family" data-i18n="common.type_family">Family</option>
+                            <option value="Real Estate" data-i18n="common.type_realestate">Real Estate</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="common.expiration_date">Expiration Date</label>
+                        <input id="rp-expiryDate" type="date" required>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="common.phone_number">Phone Number</label>
+                        <input id="rp-phone" type="tel" placeholder="+90 5XX XXX XX XX" required>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="common.nationality">Nationality</label>
+                        <select id="rp-nationality" required>
+                            <option value="" data-i18n="common.select_placeholder">-- Select --</option>
+                            <option value="Syria">🇸🇾 Syria</option>
+                            <option value="Iraq">🇮🇶 Iraq</option>
+                            <option value="Palestine">🇵🇸 Palestine</option>
+                            <option value="Egypt">🇪🇬 Egypt</option>
+                            <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
+                            <option value="Jordan">🇯🇴 Jordan</option>
+                            <option value="Lebanon">🇱🇧 Lebanon</option>
+                            <option value="Yemen">🇾🇪 Yemen</option>
+                            <option value="Sudan">🇸🇩 Sudan</option>
+                            <option value="Libya">🇱🇾 Libya</option>
+                            <option value="Morocco">🇲🇦 Morocco</option>
+                            <option value="Algeria">🇩🇿 Algeria</option>
+                            <option value="Tunisia">🇹🇳 Tunisia</option>
+                            <option value="Somalia">🇸🇴 Somalia</option>
+                            <option value="Kuwait">🇰🇼 Kuwait</option>
+                            <option value="UAE">🇦🇪 UAE</option>
+                            <option value="Qatar">🇶🇦 Qatar</option>
+                            <option value="Bahrain">🇧🇭 Bahrain</option>
+                            <option value="Oman">🇴🇲 Oman</option>
+                            <option value="Turkey">🇹🇷 Turkey</option>
+                            <option value="Russia">🇷🇺 Russia</option>
+                            <option value="Ukraine">🇺🇦 Ukraine</option>
+                            <option value="Iran">🇮🇷 Iran</option>
+                            <option value="Afghanistan">🇦🇫 Afghanistan</option>
+                            <option value="Uzbekistan">🇺🇿 Uzbekistan</option>
+                            <option value="Turkmenistan">🇹🇲 Turkmenistan</option>
+                            <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
+                            <option value="Kyrgyzstan">🇰🇬 Kyrgyzstan</option>
+                            <option value="Tajikistan">🇹🇯 Tajikistan</option>
+                            <option value="Azerbaijan">🇦🇿 Azerbaijan</option>
+                            <option value="Pakistan">🇵🇰 Pakistan</option>
+                            <option value="India">🇮🇳 India</option>
+                            <option value="Bangladesh">🇧🇩 Bangladesh</option>
+                            <option value="Other" data-i18n="common.nationality_other">🌍 Other</option>
+                        </select>
+                    </div>
+                    <div class="rp-note">📬 <span data-i18n="common.remind_note">We will contact you 2 months before expiration</span></div>
+                    <div class="rp-free" data-i18n="common.free_service">Free service</div>
+                    <button id="rp-submit" type="submit" class="rp-submit" data-i18n="common.save_button">Save Reminder</button>
+                    <div id="rp-error" class="rp-msg rp-error"></div>
+                </form>
+                <div id="rp-success" class="rp-msg rp-success" data-i18n="common.reminder_saved">Your reminder has been saved</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-cols-4">
+                <div>
+                    <img loading="lazy" src="assets/images/logo-white.png" alt="IKAMETI Unlimited" style="height: 60px; width: auto; margin-bottom: 12px;">
+                    <p data-i18n="footer.tagline">Your trusted partner for immigration and housing services.</p>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="blog/index.html" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.services">Services</h4>
+                    <ul>
+                        <li><a href="pages/landing.html" data-i18n="footer.housing_solutions">Housing Solutions</a></li>
+                        <li><a href="about.html" data-i18n="footer.residency_programs">Residency Programs</a></li>
+                        <li><a href="remind.html" data-i18n="remind_page.hero_title">Never Miss Your Residency Renewal</a></li>
+                        <li><a href="contact.html" data-i18n="footer.support">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul>
+                        <li><a href="tel:+905309052104">+90 530 905 21 04</a></li>
+                        <li><a href="mailto:info@ikameti.com">info@ikameti.com</a></li>
+                        <li><a href="https://wa.me/905309052104" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/ikameti_tr" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2024 IKAMETI. All rights reserved.</p> | <a href="#" data-i18n="footer.privacy_policy">Privacy Policy</a> | <a href="#" data-i18n="footer.terms_of_service">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        (function () {
+            var b = document.getElementById('mobile-menu-btn'), m = document.getElementById('mobile-menu');
+            if (b && m) b.addEventListener('click', function () { m.classList.toggle('active'); b.classList.toggle('active'); });
+        })();
+
+        // Reminder form — phone widget + submit to Supabase (via IKAMETI_DB)
+        (function () {
+            var phone = document.getElementById('rp-phone');
+            var iti = null;
+            if (window.intlTelInput && phone) {
+                iti = window.intlTelInput(phone, {
+                    initialCountry: 'tr',
+                    preferredCountries: ['tr', 'sa', 'ae', 'eg', 'sy', 'iq', 'de'],
+                    separateDialCode: true,
+                    autoPlaceholder: 'aggressive',
+                    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
+                });
+                phone.addEventListener('keypress', function (e) { if (e.key && e.key.length === 1 && !/[\d\s]/.test(e.key)) e.preventDefault(); });
+            }
+            function t(k, d) { return (window.i18n && window.i18n.getTranslation && window.i18n.getTranslation(k)) || d; }
+            var form = document.getElementById('remindFormPage');
+            var err = document.getElementById('rp-error');
+            var ok = document.getElementById('rp-success');
+            var btn = document.getElementById('rp-submit');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                err.style.display = 'none';
+                var type = document.getElementById('rp-residencyType').value.trim();
+                var expiry = document.getElementById('rp-expiryDate').value.trim();
+                var nationality = document.getElementById('rp-nationality').value.trim();
+                var phoneNum = (iti && iti.getNumber && phone.value.trim()) ? iti.getNumber() : phone.value.trim();
+                if (!type || !expiry || !nationality || !phoneNum) {
+                    err.textContent = t('common.error_required', 'All fields are required');
+                    err.style.display = 'block';
+                    return;
+                }
+                btn.disabled = true;
+                btn.textContent = t('common.submitting', 'Submitting...');
+                var payload = {
+                    residency_type: type,
+                    expiry_date: expiry,
+                    phone: phoneNum,
+                    nationality: nationality,
+                    language: (window.i18n && window.i18n.getCurrentLanguage) ? window.i18n.getCurrentLanguage() : 'en'
+                };
+                var done = function () { form.style.display = 'none'; ok.style.display = 'block'; };
+                if (window.IKAMETI_DB && window.IKAMETI_DB.insertReminder) {
+                    window.IKAMETI_DB.insertReminder(payload).then(done).catch(function (er) { console.error('[IKAMETI] reminder save failed:', er); done(); });
+                } else { done(); }
+            });
+        })();
+    </script>
+    <script src="assets/js/i18n.js?v=20260712a"></script>
+    <script type="module" src="js/supabase-public.js?v=20260712e"></script>
+    <script src="js/page-handler.js?v=20260711c"></script>
+</body>
+</html>

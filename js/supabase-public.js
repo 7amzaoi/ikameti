@@ -119,10 +119,16 @@ const IKAMETI_DB = {
     return true;
   },
 
-  /** Insert a "Remind Me" request. */
+  /** Insert a "Remind Me" request. Resilient to a DB that doesn't have the
+   *  `nationality` column yet — it retries once without it. */
   async insertReminder(payload) {
     const client = await getClient();
-    const { error } = await client.from('reminder_submissions').insert([payload]);
+    let { error } = await client.from('reminder_submissions').insert([payload]);
+    if (error && payload && ('nationality' in payload) && /nationality|column/i.test(error.message || '')) {
+      const rest = Object.assign({}, payload);
+      delete rest.nationality;
+      ({ error } = await client.from('reminder_submissions').insert([rest]));
+    }
     if (error) throw error;
     return true;
   }
@@ -149,6 +155,7 @@ function wireReminderForm() {
     const type = (document.getElementById('residencyType') || {}).value || '';
     const expiry = (document.getElementById('expiryDate') || {}).value || '';
     const phone = (document.getElementById('phone') || {}).value || '';
+    const nationality = (document.getElementById('nationality') || {}).value || '';
 
     if (!type.trim() || !expiry.trim() || !phone.trim()) return; // let the page's own validation message show
 
@@ -156,6 +163,7 @@ function wireReminderForm() {
       residency_type: type.trim(),
       expiry_date: expiry,
       phone: phone.trim(),
+      nationality: nationality.trim() || null,
       language: currentLanguage()
     }).catch((err) => console.error('[IKAMETI] reminder save failed:', err));
   }, true);

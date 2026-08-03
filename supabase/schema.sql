@@ -127,6 +127,7 @@ create table if not exists public.reminder_submissions (
   phone          text        not null,
   residency_type text,                       -- Tourist | Student | Family | Real Estate
   expiry_date    date        not null,       -- when their permit expires
+  nationality    text,                       -- client's nationality (for easier contact)
   language       text,
   status         text        not null default 'new'
                               check (status in ('new', 'contacted', 'in_progress', 'closed')),
@@ -135,6 +136,9 @@ create table if not exists public.reminder_submissions (
 );
 
 comment on table public.reminder_submissions is 'Renewal reminder requests from the Remind Me modal.';
+
+-- For databases created before the nationality column existed:
+alter table public.reminder_submissions add column if not exists nationality text;
 
 create index if not exists reminder_submissions_created_idx on public.reminder_submissions (created_at desc);
 create index if not exists reminder_submissions_expiry_idx  on public.reminder_submissions (expiry_date);

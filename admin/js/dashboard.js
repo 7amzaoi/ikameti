@@ -1455,6 +1455,7 @@
       </div>
       <div class="sub-card-body">
         ${kv('Phone', r.phone)}
+        ${kv('Nationality', r.nationality)}
         ${kv('Language', (r.language || '—').toUpperCase())}
       </div>
       <textarea class="notes-area" placeholder="Internal notes…" data-notes-for="reminder_submissions:${r.id}">${esc(r.notes || '')}</textarea>
