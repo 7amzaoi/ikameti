@@ -62,8 +62,6 @@
         #navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(224,224,224,0.9); box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         #navbar .container { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
         .logo-section { display: flex; align-items: center; gap: 4px; white-space: nowrap; flex-shrink: 0; }
-        .rotating-text-container { display: flex; align-items: center; min-width: 92px; padding-inline-start: 12px; margin-inline-start: 4px; border-inline-start: 2px solid rgba(208,0,0,0.28); }
-        .rotating-text { color: var(--primary); font-weight: 600; font-size: 14px; letter-spacing: 0.2px; white-space: nowrap; transition: opacity 0.35s ease; }
         .nav-menu { display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 600; color: var(--text-main); }
         .nav-menu a { position: relative; transition: color 0.2s ease; }
         .nav-menu a::after { content: ''; position: absolute; inset-inline-start: 0; bottom: -8px; width: 100%; height: 2px; background: var(--primary); transform: scaleX(0); transform-origin: center; transition: transform 0.2s ease; }
@@ -211,7 +209,6 @@
             <div class="container">
                 <div class="logo-section">
                     <a href="index.html" aria-label="IKAMETI Unlimited"><img class="logo-img" src="assets/images/logo.png" alt="IKAMETI Unlimited" style="height: 64px; width: auto; display: block;"></a>
-                    <div class="rotating-text-container"><span class="rotating-text" id="rotating-text">Residency</span></div>
                 </div>
                 <div class="nav-menu" aria-label="Main Links">
                     <a href="index.html" data-i18n="nav.home">Home</a>
@@ -400,7 +397,7 @@
         </footer>
     </div>
 
-    <script src="assets/js/i18n.js?v=20260711d"></script>
+    <script src="assets/js/i18n.js?v=20260712a"></script>
     <script>
         (function () {
             const btn = document.getElementById('mobile-menu-btn');

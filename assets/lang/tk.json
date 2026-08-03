@@ -20,7 +20,8 @@
     "title": "Premium ýaşaýyş we öý-jaý çözgütlerine gapyňyz",
     "subtitle": "Immigrasiýa, ýaşaýyş rugsady we öý-jaý şertnamalary boýunça hünärmen ýolbaşçylyk. Müňlerçe adam ynanýar. Çalt, hünärli, ygtybarly.",
     "cta_primary": "Häzir başlaň",
-    "cta_secondary": "Köpräk öwreniň"
+    "cta_secondary": "Köpräk öwreniň",
+    "disclaimer": "İkameti döwlet edarasy däl-de, hususy geňeşçilik kompaniýasydyr. Biz resmi işleriňizi aňsat we dogry tamamlamagyňyza kömek etmek üçin goldaw we maslahat hyzmatlaryny hödürleýäris; ähli resmi kararlar bolsa ygtyýarly döwlet edaralary tarapyndan kabul edilýär."
   },
   "services": {
     "title": "Esasy hyzmatlarymyz",
@@ -888,11 +889,5 @@
     "submitting": "Iberilýär...",
     "wa_intro": "Salam IKAMETI, şu goşmaça hyzmatlar bilen gyzyklanýaryn:",
     "wa_outro": "Maňa köpräk maglumat we baha iberip bilersiňizmi? Sag boluň."
-  },
-  "rotating_words": [
-    "Ýaşaýyş",
-    "Öý-jaý",
-    "Ýuridik hyzmatlar",
-    "Çözgütler"
-  ]
+  }
 }

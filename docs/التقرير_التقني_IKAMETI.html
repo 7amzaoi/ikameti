@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التقرير التقني — مشروع IKAMETI</title>
+<style>
+  :root{ --primary:#D00000; --ink:#1a1a1a; --muted:#555; --line:#e5e5e5; --soft:#fbf5f5; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:"Segoe UI","Tahoma",system-ui,sans-serif; color:var(--ink); line-height:1.9; background:#f0f0f0; }
+  .page{ max-width:820px; margin:24px auto; background:#fff; padding:56px 64px; box-shadow:0 4px 24px rgba(0,0,0,.08); }
+  h1{ font-size:30px; color:var(--primary); line-height:1.35; margin-bottom:6px; }
+  h2{ font-size:21px; color:var(--primary); margin:34px 0 12px; padding-bottom:7px; border-bottom:2px solid var(--primary); }
+  h3{ font-size:16px; color:var(--ink); margin:18px 0 8px; }
+  p{ margin:8px 0; color:#222; }
+  .sub{ font-size:16px; color:var(--muted); margin-bottom:22px; }
+  .cover{ text-align:center; padding:40px 0 34px; border-bottom:3px double var(--primary); margin-bottom:10px; }
+  .cover .logo{ font-size:34px; font-weight:800; letter-spacing:2px; color:var(--primary); }
+  .cover .tag{ color:var(--muted); font-size:15px; margin-top:6px; }
+  .badge{ display:inline-block; background:var(--soft); color:var(--primary); border:1px solid var(--primary); border-radius:20px; padding:4px 16px; font-size:13px; font-weight:700; margin-top:16px; }
+  table{ width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; }
+  th,td{ border:1px solid var(--line); padding:9px 12px; text-align:right; vertical-align:top; }
+  th{ background:var(--soft); color:var(--primary); font-weight:700; }
+  tr:nth-child(even) td{ background:#fafafa; }
+  ul,ol{ margin:8px 28px; }
+  li{ margin:5px 0; }
+  code,pre{ font-family:"Consolas","Courier New",monospace; }
+  pre{ background:#1e1e1e; color:#e8e8e8; padding:16px 18px; border-radius:8px; overflow-x:auto; direction:ltr; text-align:left; font-size:12.5px; line-height:1.6; margin:12px 0; }
+  .meta-table td:first-child{ font-weight:700; color:var(--primary); width:38%; }
+  blockquote{ background:var(--soft); border-right:4px solid var(--primary); padding:12px 16px; margin:14px 0; border-radius:0 8px 8px 0; color:#333; font-size:14.5px; }
+  .ok{ color:#0a7d28; font-weight:700; }
+  hr{ border:none; border-top:1px solid var(--line); margin:26px 0; }
+  .foot{ text-align:center; color:var(--muted); font-size:13px; margin-top:30px; font-style:italic; }
+  .print-hint{ max-width:820px; margin:16px auto 0; background:#fff8e1; border:1px solid #f0d78a; border-radius:8px; padding:12px 18px; font-size:14px; color:#665100; text-align:center; }
+  @media print{
+    body{ background:#fff; }
+    .page{ box-shadow:none; margin:0; max-width:100%; padding:0 8mm; }
+    .print-hint{ display:none; }
+    h2{ page-break-after:avoid; }
+    table,pre,blockquote{ page-break-inside:avoid; }
+  }
+  @page{ size:A4; margin:16mm; }
+</style>
+</head>
+<body>
+
+<div class="print-hint">🖨️ لحفظ التقرير كملف PDF: اضغط <b>Ctrl + P</b> ← اختر <b>«حفظ كـ PDF» (Save as PDF)</b> ← حفظ.</div>
+
+<div class="page">
+
+  <div class="cover">
+    <div class="logo">IKAMETI</div>
+    <div class="tag">منصّة إلكترونية متعددة اللغات لخدمات الإقامة والاستشارات في تركيا</div>
+    <div class="badge">التقرير التقني — مشروع تخرّج جامعي</div>
+  </div>
+
+  <table class="meta-table">
+    <tr><td>اسم المشروع</td><td>IKAMETI — منصّة خدمات الإقامة في تركيا</td></tr>
+    <tr><td>نوع المشروع</td><td>مشروع تخرّج جامعي — تطبيق ويب</td></tr>
+    <tr><td>الموقع الحي</td><td>https://ikameti.com.tr</td></tr>
+    <tr><td>حالة المشروع</td><td><span class="ok">مكتمل ومنشور على الإنترنت ✅</span></td></tr>
+    <tr><td>مدة التطوير</td><td>17 يونيو 2026 — 11 يوليو 2026</td></tr>
+    <tr><td>اللغات المدعومة</td><td>8 لغات</td></tr>
+    <tr><td>إجمالي الملفات</td><td>168 ملف · 53 صفحة ويب</td></tr>
+    <tr><td>إدارة الإصدارات</td><td>Git + GitHub (63 إصدار)</td></tr>
+  </table>
+
+  <h2>1. الملخّص التنفيذي</h2>
+  <p><b>IKAMETI</b> منصّة ويب احترافية متعددة اللغات تقدّم خدمات استشارية متكاملة للإقامة والسكن والخدمات القانونية في تركيا. صُمّم المشروع لخدمة شريحة واسعة من المهاجرين والمقيمين من جنسيات مختلفة، لذلك يدعم <b>ثماني لغات</b> بواجهات تتكيّف تلقائياً مع اتجاه الكتابة (يمين-يسار ويسار-يمين).</p>
+  <p>يتكوّن النظام من <b>واجهة أمامية عامة</b> للزوّار، و<b>لوحة تحكم إدارية</b> متصلة بقاعدة بيانات سحابية لإدارة المحتوى والطلبات، مع تطبيق <b>معايير تحسين محركات البحث (SEO) الكاملة</b>، والنشر الفعلي على استضافة حقيقية بنطاق مخصّص.</p>
+
+  <h2>2. مشكلة المشروع والأهداف</h2>
+  <h3>المشكلة</h3>
+  <p>إجراءات الإقامة في تركيا معقّدة إدارياً، ومتغيّرة باستمرار، وموزّعة على جهات متعددة، ويصعب على المهاجر — خصوصاً غير الناطق بالتركية — متابعتها دون أخطاء قد تكلّفه الوقت أو رفض الطلب.</p>
+  <h3>الأهداف</h3>
+  <ul>
+    <li>بناء منصّة رقمية <b>تبسّط</b> خدمات الإقامة وتقدّمها بخطوات واضحة.</li>
+    <li><b>كسر حاجز اللغة</b> عبر دعم لغات متعددة تخدم الجاليات المستهدفة.</li>
+    <li>توفير <b>قناة تواصل ذكية</b> (نماذج + واتساب) بين العميل والفريق.</li>
+    <li>تمكين إدارة المحتوى و<b>متابعة الطلبات</b> عبر لوحة تحكم.</li>
+    <li>تطبيق <b>أفضل ممارسات تحسين محركات البحث</b> لتحقيق ظهور رقمي قوي.</li>
+  </ul>
+
+  <h2>3. الفئة المستهدفة</h2>
+  <p>المهاجرون والمقيمون والراغبون في الإقامة بتركيا من الجنسيات العربية والتركية والروسية والفارسية والأوزبكية والأفغانية والتركمانية والناطقة بالإنجليزية — من طلاب، ومستثمرين، وعائلات، ومقيمين جدد.</p>
+
+  <h2>4. التقنيات المستخدمة (Technology Stack)</h2>
+  <table>
+    <tr><th>الطبقة</th><th>التقنية</th><th>الاستخدام</th></tr>
+    <tr><td>الواجهة الأمامية</td><td>HTML5 · CSS3 · JavaScript (ES6+)</td><td>بناء الصفحات والتفاعلات بسرعة عالية</td></tr>
+    <tr><td>تعدد اللغات</td><td>نظام i18n مخصّص (JSON)</td><td>ترجمة ديناميكية حسب اللغة المختارة</td></tr>
+    <tr><td>قاعدة البيانات</td><td>Supabase (PostgreSQL)</td><td>تخزين المدوّنات والأخبار والطلبات سحابياً</td></tr>
+    <tr><td>الأمان</td><td>Row-Level Security (RLS)</td><td>سياسات صلاحيات على مستوى الصف</td></tr>
+    <tr><td>محرّر النصوص</td><td>Quill.js</td><td>محرّر غني لكتابة المقالات</td></tr>
+    <tr><td>الرسوم البيانية</td><td>Chart.js</td><td>إحصائيات لوحة التحكم</td></tr>
+    <tr><td>إدخال الهاتف</td><td>intl-tel-input</td><td>حقل هاتف دولي مع تحقق</td></tr>
+    <tr><td>التحليلات</td><td>Google Analytics 4</td><td>تتبّع الزوّار والسلوك</td></tr>
+    <tr><td>الاستضافة</td><td>Apache على Hostinger</td><td>استضافة + ملف .htaccess</td></tr>
+    <tr><td>إدارة الإصدارات</td><td>Git + GitHub</td><td>تتبّع التغييرات والنسخ الاحتياطي</td></tr>
+    <tr><td>النطاق و DNS</td><td>GoDaddy</td><td>إدارة نطاق ikameti.com.tr</td></tr>
+  </table>
+  <blockquote><b>ملاحظة معمارية:</b> اختير أسلوب <b>الموقع الثابت (Static / Jamstack)</b> مع منطق من جهة العميل + قاعدة بيانات سحابية، ما يوفّر سرعة عالية، وتكلفة منخفضة، وأماناً أعلى (لا خادم تطبيقات معرّض للاختراق).</blockquote>
+
+  <h2>5. البنية المعمارية للنظام</h2>
+  <pre>
+        المستخدم (المتصفح)
+        /                \
+ الواجهة العامة        لوحة التحكم (admin)
+ 53 صفحة / 8 لغات      - إدارة المدوّنة/الأخبار
+ - الويزارد            - متابعة الطلبات
+ - الأخبار/المدوّنة     - رسائل واتساب
+        \                /
+         \              /
+        Supabase (PostgreSQL + RLS)
+    categories · blogs · news
+    residency_submissions · reminder_submissions
+  </pre>
+
+  <h2>6. الميزات الرئيسية</h2>
+  <h3>6.1 نظام تعدد اللغات (i18n)</h3>
+  <ul>
+    <li>دعم <b>8 لغات</b>: الإنجليزية، العربية، التركية، الروسية، الفارسية، الأوزبكية، الدرّية، التركمانية.</li>
+    <li><b>تبديل فوري</b> للّغة دون إعادة تحميل، مع حفظ تفضيل المستخدم.</li>
+    <li>دعم <b>اتجاه الكتابة RTL/LTR</b> تلقائياً.</li>
+    <li>صفحات مُهيّأة لكل لغة (SEO) بروابط مستقلة لتحسين الفهرسة.</li>
+  </ul>
+  <h3>6.2 معالج طلب الإقامة (Wizard)</h3>
+  <p>معالج تفاعلي متعدد الخطوات يجمع بيانات العميل بواجهة سلسة مع مؤشر تقدّم، وقوائم منسدلة مخصّصة، وحالة تحميل عند الإرسال.</p>
+  <h3>6.3 نظام الأخبار</h3>
+  <p>شريط أخبار ديناميكي بارتفاع ثابت لتناسق الصفحة، مع خاصية "عرض المزيد"، وتبديل تلقائي، وترجمة لكل خبر.</p>
+  <h3>6.4 المدوّنة</h3>
+  <p>نظام مدوّنة متكامل مُدار من قاعدة البيانات، مع تصنيفات، وصور غلاف مخصّصة لكل لغة، وبيانات مُهيكلة (Schema) لكل مقال.</p>
+  <h3>6.5 خدمة التذكير + التكامل مع واتساب</h3>
+  <p>نموذج تذكير قبل انتهاء الإقامة (جمع عملاء محتملين)، وأزرار تواصل تفتح واتساب <b>برسالة جاهزة مُعبّأة تلقائياً بلغة العميل</b> تتضمّن اسمه وتفاصيل طلبه.</p>
+  <h3>6.6 بطاقات التسعير</h3>
+  <p>ثلاث باقات خدمات (مبتدئة / كاملة / حزمة الاستقرار) بأسعار وميزات شفّافة، مع خدمات إضافية اختيارية.</p>
+
+  <h2>7. لوحة التحكم الإدارية</h2>
+  <ul>
+    <li><b>إدارة المدوّنة:</b> إضافة/تعديل/حذف بمحرّر غني، مع ترجمة كل مقال في 7 لغات وصور غلاف مستقلة لكل لغة.</li>
+    <li><b>إدارة الأخبار:</b> نشر مع الترجمات والتحكم بإظهار التاريخ.</li>
+    <li><b>متابعة الطلبات:</b> عرض طلبات الإقامة والتذكير بنظام لوحة (Kanban) مع عدّاد الأيام المتبقية.</li>
+    <li><b>رسائل واتساب الذكية:</b> زر لكل طلب يفتح محادثة برسالة احترافية بلغة العميل.</li>
+    <li><b>الإحصائيات:</b> رسوم بيانية (Chart.js).</li>
+  </ul>
+
+  <h2>8. تصميم قاعدة البيانات</h2>
+  <p>قاعدة بيانات <b>PostgreSQL</b> عبر <b>Supabase</b>:</p>
+  <table>
+    <tr><th>الجدول</th><th>الوظيفة</th></tr>
+    <tr><td><code>categories</code></td><td>تصنيفات المدوّنة</td></tr>
+    <tr><td><code>blogs</code></td><td>المقالات + عمود <code>translations</code> (JSONB) للترجمات</td></tr>
+    <tr><td><code>news</code></td><td>الأخبار + الترجمات + التحكم بإظهار التاريخ</td></tr>
+    <tr><td><code>residency_submissions</code></td><td>طلبات الإقامة الواردة</td></tr>
+    <tr><td><code>reminder_submissions</code></td><td>طلبات خدمة التذكير</td></tr>
+  </table>
+  <h3>الأمان — سياسات RLS</h3>
+  <ul>
+    <li><b>قراءة عامة</b> للمحتوى المنشور فقط.</li>
+    <li><b>إدخال عام</b> للطلبات (الزائر يرسل فقط).</li>
+    <li><b>قراءة/تعديل/حذف</b> للمسؤول المُصادَق عليه فقط — الزائر لا يطّلع على بيانات العملاء.</li>
+  </ul>
+
+  <h2>9. تحسين محركات البحث (SEO)</h2>
+  <table>
+    <tr><th>العنصر</th><th>التطبيق</th></tr>
+    <tr><td>خريطة الموقع</td><td>sitemap.xml بـ 48 رابطاً مع بدائل اللغات</td></tr>
+    <tr><td>robots.txt</td><td>توجيه محركات البحث + رابط الخريطة</td></tr>
+    <tr><td>الروابط القانونية</td><td>Canonical لكل صفحة</td></tr>
+    <tr><td>hreflang</td><td>ربط نسخ اللغات الثماني + x-default</td></tr>
+    <tr><td>البيانات المهيكلة</td><td>Organization · WebSite · LocalBusiness · BlogPosting · Breadcrumb</td></tr>
+    <tr><td>Meta مترجمة</td><td>عناوين وأوصاف لكل لغة</td></tr>
+    <tr><td>Open Graph / Twitter</td><td>معاينات احترافية عند المشاركة</td></tr>
+    <tr><td>التحليلات والفهرسة</td><td>Google Analytics 4 + Search Console</td></tr>
+  </table>
+
+  <h2>10. الأداء والأمان</h2>
+  <ul>
+    <li><b>.htaccess:</b> فرض HTTPS، توحيد النطاق، ضغط GZIP، تخزين مؤقت ذكي، ورؤوس أمان.</li>
+    <li><b>صفحة خطأ 404</b> مخصّصة بهوية الموقع.</li>
+    <li><b>معمارية ثابتة</b> تقلّل أسطح الهجوم + <b>HTTPS</b> مفعّل.</li>
+    <li><b>فصل الصلاحيات</b> عبر RLS في قاعدة البيانات.</li>
+  </ul>
+
+  <h2>11. النشر والاستضافة</h2>
+  <ol>
+    <li>بناء نسخة نشر نظيفة تحتوي ملفات الإنتاج فقط.</li>
+    <li>رفعها على استضافة <b>Hostinger</b> (مجلد public_html).</li>
+    <li>ربط النطاق <b>ikameti.com.tr</b> المُدار عبر <b>GoDaddy</b> عبر خوادم الأسماء (DNS).</li>
+    <li>تفعيل HTTPS، وتوثيق الموقع في Search Console، وربط GA4.</li>
+    <li>الموقع يعمل مباشرة على الإنترنت. <span class="ok">✅</span></li>
+  </ol>
+
+  <h2>12. التحديات والحلول</h2>
+  <table>
+    <tr><th>التحدّي</th><th>الحل المُطبّق</th></tr>
+    <tr><td>دعم 8 لغات باتجاهات مختلفة</td><td>نظام i18n مخصّص + تنسيقات RTL/LTR ديناميكية</td></tr>
+    <tr><td>تناسق الأخبار مع اختلاف الطول</td><td>ارتفاع ثابت للبطاقة + خاصية "عرض المزيد"</td></tr>
+    <tr><td>وصول رسائل واتساب بشكل موثوق</td><td>api.whatsapp.com/send مع ترميز النص</td></tr>
+    <tr><td>حماية بيانات العملاء</td><td>سياسات RLS على مستوى الصف</td></tr>
+    <tr><td>تجنّب المحتوى المكرر</td><td>Canonical + hreflang لكل لغة</td></tr>
+    <tr><td>الظهور في البحث</td><td>منظومة SEO تقنية كاملة + Search Console</td></tr>
+  </table>
+
+  <h2>13. المخرجات والنتائج</h2>
+  <ul>
+    <li><span class="ok">✅</span> موقع <b>مباشر ومنشور</b> على نطاق حقيقي: ikameti.com.tr.</li>
+    <li><span class="ok">✅</span> دعم كامل لـ <b>8 لغات</b> مع تبديل فوري ودعم RTL.</li>
+    <li><span class="ok">✅</span> <b>لوحة تحكم</b> فعّالة متصلة بقاعدة بيانات سحابية.</li>
+    <li><span class="ok">✅</span> <b>منظومة SEO</b> كاملة وموثّقة في Search Console.</li>
+    <li><span class="ok">✅</span> <b>قنوات تواصل</b> ذكية (نماذج + واتساب تلقائي).</li>
+    <li><span class="ok">✅</span> شيفرة منظّمة ومُدارة بـ <b>Git</b> (63 إصداراً موثّقاً).</li>
+  </ul>
+
+  <h2>14. التطويرات المستقبلية المقترحة</h2>
+  <ul>
+    <li>نظام <b>تسجيل دخول للعملاء</b> لمتابعة حالة طلباتهم.</li>
+    <li><b>تحويل الصور إلى WebP</b> لتسريع التحميل على الجوال.</li>
+    <li>إنشاء <b>Google Business Profile</b> لتعزيز الظهور المحلي.</li>
+    <li><b>إشعارات تلقائية</b> عند اقتراب انتهاء الإقامة.</li>
+    <li>تطبيق <b>جوال (PWA)</b> يعمل دون اتصال.</li>
+  </ul>
+
+  <h2>15. الخاتمة</h2>
+  <p>يمثّل مشروع <b>IKAMETI</b> حلاً رقمياً متكاملاً يجمع بين واجهة استخدام حديثة متعددة اللغات، ونظام إدارة محتوى مرن، وبنية خلفية آمنة، ومنظومة تحسين محركات بحث احترافية — وقد تحوّل من فكرة إلى <b>منتج حقيقي منشور وقابل للاستخدام الفعلي على الإنترنت</b>. يعكس المشروع تطبيقاً عملياً لمفاهيم تطوير الويب الحديثة (Jamstack)، وأمن قواعد البيانات، والتدويل (i18n)، وتحسين محركات البحث، وإدارة دورة حياة البرمجيات عبر أنظمة التحكم بالإصدارات.</p>
+
+  <hr>
+  <p class="foot">تمّ إعداد هذا التقرير لتوثيق مشروع IKAMETI المقدّم كمشروع تخرّج جامعي.</p>
+
+</div>
+</body>
+</html>

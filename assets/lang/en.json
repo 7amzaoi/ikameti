@@ -20,7 +20,8 @@
     "title": "Your Gateway to Premium Residency & Housing",
     "subtitle": "Expert guidance for immigration, residency, and housing contracts. Trusted by thousands. Fast, professional, secure.",
     "cta_primary": "Get Started Now",
-    "cta_secondary": "Learn More"
+    "cta_secondary": "Learn More",
+    "disclaimer": "İkameti is a private consulting company, not a government entity. We provide support and advisory services to help you complete your procedures easily, while all official decisions are issued by the competent government authorities."
   },
   "services": {
     "title": "Our Core Services",
@@ -888,11 +889,5 @@
     "submitting": "Submitting...",
     "wa_intro": "Hello IKAMETI, I'm interested in the following optional services:",
     "wa_outro": "Could you please send me more details and pricing? Thank you."
-  },
-  "rotating_words": [
-    "Residency",
-    "Housing",
-    "Legal Services",
-    "Solutions"
-  ]
+  }
 }
