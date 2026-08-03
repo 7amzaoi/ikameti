@@ -3345,23 +3345,26 @@ html.rtl-mode #remind-modal #label-phone { text-align: right; }
 #remind-modal .iti__country-name { margin-right: 6px !important; margin-left: 0 !important; }
 
 /* ================================================
-   Hero disclaimer — permanent legal notice above the hero title.
-   Styled as clean hero text (white, no box) to match the hero copy;
-   a soft text-shadow keeps it legible over the image. RTL/LTR-neutral.
+   Hero disclaimer — permanent legal note at the BOTTOM of the hero.
+   Placed after the CTAs as subtle fine-print so the size hierarchy reads
+   cleanly (title → subtitle → buttons → note). A thin divider separates it
+   from the buttons. White + text-shadow for legibility; RTL/LTR-neutral.
    ================================================ */
 .hero-disclaimer {
-    max-width: 680px;
-    margin: 0 auto var(--space-6);
+    max-width: 620px;
+    margin: var(--space-10) auto 0;
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    font-size: 14.5px;
-    line-height: 1.85;
+    font-size: 13px;
+    line-height: 1.75;
     font-weight: 400;
     text-align: center;
-    opacity: 0.9;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    opacity: 0.8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 600px) {
-    .hero-disclaimer { font-size: 13px; line-height: 1.75; margin-bottom: var(--space-5); }
+    .hero-disclaimer { font-size: 12px; margin-top: var(--space-8); padding-top: var(--space-5); }
 }
 
 /* ================================================
