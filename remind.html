@@ -19,7 +19,17 @@
         body { background: #fff; }
         .lp-topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px clamp(16px, 4vw, 40px); border-bottom: 1px solid #eee; background: #fff; }
         .lp-topbar img { height: 46px; width: auto; display: block; }
-        .lp-lang { border: 1px solid #e5e7eb; border-radius: 10px; padding: 7px 12px; font-family: inherit; font-size: 13px; font-weight: 600; color: #333; background: #fff; cursor: pointer; }
+        /* Custom language dropdown (styled, not the OS select) */
+        .lp-lang-dd { position: relative; }
+        .lp-lang-btn { display: flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 8px 13px; background: #fff; font-family: inherit; font-size: 13px; font-weight: 700; color: #333; cursor: pointer; }
+        .lp-lang-btn:hover { border-color: var(--primary); }
+        .lp-lang-btn .caret { width: 15px; height: 15px; color: var(--primary); transition: transform .2s; }
+        .lp-lang-dd.open .lp-lang-btn .caret { transform: rotate(180deg); }
+        .lp-lang-menu { position: absolute; top: calc(100% + 6px); inset-inline-end: 0; margin: 0; padding: 6px; list-style: none; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.14); min-width: 160px; max-height: 320px; overflow-y: auto; z-index: 50; display: none; }
+        .lp-lang-dd.open .lp-lang-menu { display: block; }
+        .lp-lang-menu li { padding: 10px 13px; border-radius: 9px; cursor: pointer; font-size: 14px; color: #111827; transition: background .12s, color .12s; }
+        .lp-lang-menu li:hover { background: rgba(208,0,0,.06); }
+        .lp-lang-menu li.active { background: var(--primary); color: #fff; font-weight: 600; }
 
         /* HERO + FORM (primary conversion section) */
         .lp-hero { background: linear-gradient(135deg, #5a0000 0%, #b00000 55%, #d00000 100%); position: relative; overflow: hidden; }
@@ -81,16 +91,22 @@
     <!-- Minimal brand strip (logo + language only — no site nav) -->
     <div class="lp-topbar">
         <a href="index.html" aria-label="IKAMETI"><img src="assets/images/logo.png" alt="IKAMETI Unlimited"></a>
-        <select id="lp-lang" class="lp-lang" aria-label="Language">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-            <option value="tr">Türkçe</option>
-            <option value="ru">Русский</option>
-            <option value="fa">فارسی</option>
-            <option value="uz">Ўзбек</option>
-            <option value="af">دری</option>
-            <option value="tk">Türkmençe</option>
-        </select>
+        <div class="lp-lang-dd" id="lp-lang-dd">
+            <button type="button" class="lp-lang-btn" aria-haspopup="listbox" aria-expanded="false">
+                <span>🌐</span><span class="lp-lang-cur">English</span>
+                <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="lp-lang-menu" role="listbox">
+                <li data-lang="en">English</li>
+                <li data-lang="ar">العربية</li>
+                <li data-lang="tr">Türkçe</li>
+                <li data-lang="ru">Русский</li>
+                <li data-lang="fa">فارسی</li>
+                <li data-lang="uz">Ўзбек</li>
+                <li data-lang="af">دری</li>
+                <li data-lang="tk">Türkmençe</li>
+            </ul>
+        </div>
     </div>
 
     <!-- PRIMARY: headline + lead-capture form -->
@@ -131,43 +147,49 @@
                     </div>
                     <div class="lp-field">
                         <label data-i18n="common.nationality">Nationality</label>
-                        <select id="rp-nationality" required>
-                            <option value="" data-i18n="common.select_placeholder">-- Select --</option>
-                            <option value="Syria">🇸🇾 Syria</option>
-                            <option value="Iraq">🇮🇶 Iraq</option>
-                            <option value="Palestine">🇵🇸 Palestine</option>
-                            <option value="Egypt">🇪🇬 Egypt</option>
-                            <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
-                            <option value="Jordan">🇯🇴 Jordan</option>
-                            <option value="Lebanon">🇱🇧 Lebanon</option>
-                            <option value="Yemen">🇾🇪 Yemen</option>
-                            <option value="Sudan">🇸🇩 Sudan</option>
-                            <option value="Libya">🇱🇾 Libya</option>
-                            <option value="Morocco">🇲🇦 Morocco</option>
-                            <option value="Algeria">🇩🇿 Algeria</option>
-                            <option value="Tunisia">🇹🇳 Tunisia</option>
-                            <option value="Somalia">🇸🇴 Somalia</option>
-                            <option value="Kuwait">🇰🇼 Kuwait</option>
-                            <option value="UAE">🇦🇪 UAE</option>
-                            <option value="Qatar">🇶🇦 Qatar</option>
-                            <option value="Bahrain">🇧🇭 Bahrain</option>
-                            <option value="Oman">🇴🇲 Oman</option>
-                            <option value="Turkey">🇹🇷 Turkey</option>
-                            <option value="Russia">🇷🇺 Russia</option>
-                            <option value="Ukraine">🇺🇦 Ukraine</option>
-                            <option value="Iran">🇮🇷 Iran</option>
-                            <option value="Afghanistan">🇦🇫 Afghanistan</option>
-                            <option value="Uzbekistan">🇺🇿 Uzbekistan</option>
-                            <option value="Turkmenistan">🇹🇲 Turkmenistan</option>
-                            <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
-                            <option value="Kyrgyzstan">🇰🇬 Kyrgyzstan</option>
-                            <option value="Tajikistan">🇹🇯 Tajikistan</option>
-                            <option value="Azerbaijan">🇦🇿 Azerbaijan</option>
-                            <option value="Pakistan">🇵🇰 Pakistan</option>
-                            <option value="India">🇮🇳 India</option>
-                            <option value="Bangladesh">🇧🇩 Bangladesh</option>
-                            <option value="Other" data-i18n="common.nationality_other">🌍 Other</option>
-                        </select>
+                        <div class="c-select" data-cselect>
+                            <button type="button" class="c-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                                <span class="c-select__value" data-i18n="common.select_placeholder">-- Select --</span>
+                                <svg class="c-select__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <ul class="c-select__menu" role="listbox">
+                                <li class="c-select__option" role="option" data-value="Syria">Syria</li>
+                                <li class="c-select__option" role="option" data-value="Iraq">Iraq</li>
+                                <li class="c-select__option" role="option" data-value="Palestine">Palestine</li>
+                                <li class="c-select__option" role="option" data-value="Egypt">Egypt</li>
+                                <li class="c-select__option" role="option" data-value="Saudi Arabia">Saudi Arabia</li>
+                                <li class="c-select__option" role="option" data-value="Jordan">Jordan</li>
+                                <li class="c-select__option" role="option" data-value="Lebanon">Lebanon</li>
+                                <li class="c-select__option" role="option" data-value="Yemen">Yemen</li>
+                                <li class="c-select__option" role="option" data-value="Sudan">Sudan</li>
+                                <li class="c-select__option" role="option" data-value="Libya">Libya</li>
+                                <li class="c-select__option" role="option" data-value="Morocco">Morocco</li>
+                                <li class="c-select__option" role="option" data-value="Algeria">Algeria</li>
+                                <li class="c-select__option" role="option" data-value="Tunisia">Tunisia</li>
+                                <li class="c-select__option" role="option" data-value="Somalia">Somalia</li>
+                                <li class="c-select__option" role="option" data-value="Kuwait">Kuwait</li>
+                                <li class="c-select__option" role="option" data-value="UAE">UAE</li>
+                                <li class="c-select__option" role="option" data-value="Qatar">Qatar</li>
+                                <li class="c-select__option" role="option" data-value="Bahrain">Bahrain</li>
+                                <li class="c-select__option" role="option" data-value="Oman">Oman</li>
+                                <li class="c-select__option" role="option" data-value="Turkey">Turkey</li>
+                                <li class="c-select__option" role="option" data-value="Russia">Russia</li>
+                                <li class="c-select__option" role="option" data-value="Ukraine">Ukraine</li>
+                                <li class="c-select__option" role="option" data-value="Iran">Iran</li>
+                                <li class="c-select__option" role="option" data-value="Afghanistan">Afghanistan</li>
+                                <li class="c-select__option" role="option" data-value="Uzbekistan">Uzbekistan</li>
+                                <li class="c-select__option" role="option" data-value="Turkmenistan">Turkmenistan</li>
+                                <li class="c-select__option" role="option" data-value="Kazakhstan">Kazakhstan</li>
+                                <li class="c-select__option" role="option" data-value="Kyrgyzstan">Kyrgyzstan</li>
+                                <li class="c-select__option" role="option" data-value="Tajikistan">Tajikistan</li>
+                                <li class="c-select__option" role="option" data-value="Azerbaijan">Azerbaijan</li>
+                                <li class="c-select__option" role="option" data-value="Pakistan">Pakistan</li>
+                                <li class="c-select__option" role="option" data-value="India">India</li>
+                                <li class="c-select__option" role="option" data-value="Bangladesh">Bangladesh</li>
+                                <li class="c-select__option" role="option" data-value="Other" data-i18n="common.nationality_other">Other</li>
+                            </ul>
+                            <input type="hidden" name="nationality" id="rp-nationality" value="">
+                        </div>
                     </div>
                     <div class="rp-note">📬 <span data-i18n="common.remind_note">We will contact you 2 months before expiration</span></div>
                     <div class="rp-free" data-i18n="common.free_service">Free service</div>
@@ -234,14 +256,31 @@
     </div>
 
     <script>
-        // Compact language switcher (wired to i18n)
+        // Compact custom language dropdown (wired to i18n)
         (function () {
-            var ls = document.getElementById('lp-lang');
-            if (!ls) return;
-            ls.addEventListener('change', function () {
-                if (window.i18n && window.i18n.setLanguage) window.i18n.setLanguage(ls.value);
+            var dd = document.getElementById('lp-lang-dd');
+            if (!dd) return;
+            var btn = dd.querySelector('.lp-lang-btn');
+            var cur = dd.querySelector('.lp-lang-cur');
+            var items = dd.querySelectorAll('li');
+            var names = { en: 'English', ar: 'العربية', tr: 'Türkçe', ru: 'Русский', fa: 'فارسی', uz: 'Ўзбек', af: 'دری', tk: 'Türkmençe' };
+            btn.addEventListener('click', function (e) { e.stopPropagation(); dd.classList.toggle('open'); });
+            Array.prototype.forEach.call(items, function (li) {
+                li.addEventListener('click', function () {
+                    var l = li.getAttribute('data-lang');
+                    if (window.i18n && window.i18n.setLanguage) window.i18n.setLanguage(l);
+                    dd.classList.remove('open');
+                });
             });
-            function sync() { try { if (window.i18n && window.i18n.getCurrentLanguage) ls.value = window.i18n.getCurrentLanguage(); } catch (e) {} }
+            document.addEventListener('click', function () { dd.classList.remove('open'); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dd.classList.remove('open'); });
+            function sync() {
+                try {
+                    var l = (window.i18n && window.i18n.getCurrentLanguage) ? window.i18n.getCurrentLanguage() : 'en';
+                    cur.textContent = names[l] || 'English';
+                    Array.prototype.forEach.call(items, function (li) { li.classList.toggle('active', li.getAttribute('data-lang') === l); });
+                } catch (e) {}
+            }
             window.addEventListener('languageChanged', sync);
             window.addEventListener('i18nReady', sync);
             document.addEventListener('DOMContentLoaded', function () { setTimeout(sync, 300); });
