@@ -299,6 +299,12 @@
                     utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js'
                 });
                 phone.addEventListener('keypress', function (e) { if (e.key && e.key.length === 1 && !/[\d\s]/.test(e.key)) e.preventDefault(); });
+                // keep only digits/spaces and cap the total number of digits (E.164 max = 15)
+                phone.addEventListener('input', function () {
+                    var v = phone.value.replace(/[^\d\s]/g, '');
+                    if (v.replace(/\D/g, '').length > 15) v = v.replace(/\D/g, '').slice(0, 15);
+                    if (v !== phone.value) phone.value = v;
+                });
             }
             function t(k, d) { return (window.i18n && window.i18n.getTranslation && window.i18n.getTranslation(k)) || d; }
             var form = document.getElementById('remindFormPage');
@@ -314,6 +320,15 @@
                 var phoneNum = (iti && iti.getNumber && phone.value.trim()) ? iti.getNumber() : phone.value.trim();
                 if (!type || !expiry || !nationality || !phoneNum) {
                     err.textContent = t('common.error_required', 'All fields are required');
+                    err.style.display = 'block';
+                    return;
+                }
+                // Reject numbers that aren't valid for the selected country (too long / short)
+                var phoneOk = (iti && window.intlTelInputUtils && typeof iti.isValidNumber === 'function')
+                    ? iti.isValidNumber()
+                    : (phoneNum.replace(/\D/g, '').length >= 8 && phoneNum.replace(/\D/g, '').length <= 15);
+                if (!phoneOk) {
+                    err.textContent = t('common.error_phone', 'Please enter a valid phone number');
                     err.style.display = 'block';
                     return;
                 }
