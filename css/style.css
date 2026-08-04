@@ -2715,6 +2715,10 @@ section.bg-alt .card[style*="background: linear-gradient"] div:nth-child(3) {
 }
 .c-select__option:hover { background: rgba(208, 0, 0, 0.06); }
 .c-select__option.selected { background: var(--primary); color: #fff; font-weight: 600; }
+/* Search box inside a long custom dropdown (e.g. nationality) */
+.c-select__search-li { position: sticky; top: -6px; margin: -6px -6px 4px; padding: 8px 8px 6px; background: #fff; list-style: none; border-bottom: 1px solid var(--border-light); z-index: 1; }
+.c-select__search { width: 100%; padding: 9px 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 14px; font-family: inherit; color: var(--text-primary); outline: none; }
+.c-select__search:focus { border-color: var(--primary); }
 
 /* Wizard Navigation */
 .wizard-navigation {

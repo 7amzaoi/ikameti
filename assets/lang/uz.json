@@ -891,7 +891,8 @@
     "wa_outro": "Iltimos, batafsil ma'lumot va narxlarni yuboring. Rahmat.",
     "nationality": "Fuqarolik",
     "nationality_other": "🌍 Boshqa",
-    "remind_learn_more": "Ushbu xizmat haqida batafsil →"
+    "remind_learn_more": "Ushbu xizmat haqida batafsil →",
+    "search_placeholder": "Qidirish..."
   },
   "remind_page": {
     "hero_title": "Yashash ruxsatini yangilashni o‘tkazib yubormang",

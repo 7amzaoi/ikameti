@@ -891,7 +891,8 @@
     "wa_outro": "لطفاً جزئیات بیشتر و قیمت‌ها را برایم ارسال کنید. ممنون.",
     "nationality": "ملیت",
     "nationality_other": "🌍 سایر",
-    "remind_learn_more": "درباره این خدمت بیشتر بدانید ←"
+    "remind_learn_more": "درباره این خدمت بیشتر بدانید ←",
+    "search_placeholder": "جستجو..."
   },
   "remind_page": {
     "hero_title": "تمدید اقامت خود را هرگز از دست ندهید",

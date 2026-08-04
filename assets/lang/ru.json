@@ -891,7 +891,8 @@
     "wa_outro": "Не могли бы вы прислать подробности и цены? Спасибо.",
     "nationality": "Гражданство",
     "nationality_other": "🌍 Другое",
-    "remind_learn_more": "Подробнее об этой услуге →"
+    "remind_learn_more": "Подробнее об этой услуге →",
+    "search_placeholder": "Поиск..."
   },
   "remind_page": {
     "hero_title": "Не пропустите продление ВНЖ",

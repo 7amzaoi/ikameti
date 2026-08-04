@@ -891,7 +891,8 @@
     "wa_outro": "Could you please send me more details and pricing? Thank you.",
     "nationality": "Nationality",
     "nationality_other": "🌍 Other",
-    "remind_learn_more": "Learn more about this service →"
+    "remind_learn_more": "Learn more about this service →",
+    "search_placeholder": "Search..."
   },
   "remind_page": {
     "hero_title": "Never Miss Your Residency Renewal",

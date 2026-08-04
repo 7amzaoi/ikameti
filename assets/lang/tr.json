@@ -891,7 +891,8 @@
     "wa_outro": "Bana daha fazla bilgi ve fiyat gönderebilir misiniz? Teşekkürler.",
     "nationality": "Uyruk",
     "nationality_other": "🌍 Diğer",
-    "remind_learn_more": "Bu hizmet hakkında daha fazla →"
+    "remind_learn_more": "Bu hizmet hakkında daha fazla →",
+    "search_placeholder": "Ara..."
   },
   "remind_page": {
     "hero_title": "İkamet Yenilemenizi Asla Kaçırmayın",

@@ -217,14 +217,32 @@ if (document.readyState === 'loading') {
         var valueEl = root.querySelector('.c-select__value');
         var hidden = root.querySelector('input[type="hidden"]');
         var options = Array.prototype.slice.call(root.querySelectorAll('.c-select__option'));
+        var search = root.querySelector('.c-select__search');
         if (!trigger || !valueEl) return;
         if (valueEl.getAttribute('data-i18n')) valueEl.classList.add('is-placeholder');
+
+        // Optional search box: filters the options as you type.
+        function showAll() { options.forEach(function (o) { o.style.display = ''; }); }
+        function filter(q) {
+            q = (q || '').trim().toLowerCase();
+            options.forEach(function (o) {
+                o.style.display = (!q || o.textContent.toLowerCase().indexOf(q) !== -1) ? '' : 'none';
+            });
+        }
+        if (search) {
+            search.addEventListener('click', function (e) { e.stopPropagation(); });
+            search.addEventListener('input', function () { filter(search.value); });
+        }
 
         trigger.addEventListener('click', function (e) {
             e.stopPropagation();
             var isOpen = root.classList.contains('open');
             closeAll();
-            if (!isOpen) { root.classList.add('open'); trigger.setAttribute('aria-expanded', 'true'); }
+            if (!isOpen) {
+                root.classList.add('open');
+                trigger.setAttribute('aria-expanded', 'true');
+                if (search) { search.value = ''; showAll(); setTimeout(function () { search.focus(); }, 20); }
+            }
         });
 
         options.forEach(function (opt) {

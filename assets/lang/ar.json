@@ -914,7 +914,8 @@
     "wa_outro": "هل يمكنكم تزويدي بمزيد من التفاصيل والأسعار؟ شكرًا لكم.",
     "nationality": "الجنسية",
     "nationality_other": "🌍 أخرى",
-    "remind_learn_more": "اعرف المزيد عن هذه الخدمة ←"
+    "remind_learn_more": "اعرف المزيد عن هذه الخدمة ←",
+    "search_placeholder": "بحث..."
   },
   "remind_page": {
     "hero_title": "لا تفوّت موعد تجديد إقامتك",
