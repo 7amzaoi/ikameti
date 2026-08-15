@@ -19,7 +19,14 @@ class PageHandler {
         console.log('[PageHandler] Waiting for i18n to be ready...');
         
         for (let attempt = 0; attempt < maxAttempts; attempt++) {
-            if (window.i18n && typeof window.i18n.getTranslation === 'function') {
+            // The translation table must actually be populated, not merely the
+            // method present: translating against an empty map makes
+            // getTranslation() return the key, which then gets written into the
+            // page as visible text.
+            if (window.i18n
+                && typeof window.i18n.getTranslation === 'function'
+                && window.i18n.translations
+                && Object.keys(window.i18n.translations).length > 0) {
                 this.i18nReady = true;
                 console.log(`[PageHandler] i18n ready after ${attempt * delayMs}ms`);
                 return true;
@@ -116,7 +123,11 @@ class PageHandler {
     updateDocumentDirection(direction) {
         const html = document.documentElement;
         html.setAttribute('dir', direction);
-        html.lang = window.i18n.getCurrentLanguage();
+        // Use the public BCP 47 tag, not the internal code: writing the raw code
+        // here re-broke lang on the Dari pages ('af' is Afrikaans) right after
+        // i18n had set the correct 'fa-AF'. htmlLangTags is the single source.
+        const code = window.i18n.getCurrentLanguage();
+        html.lang = (window.i18n.htmlLangTags && window.i18n.htmlLangTags[code]) || code;
         console.log(`[PageHandler] Direction updated to: ${direction}`);
     }
 

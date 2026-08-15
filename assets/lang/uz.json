@@ -547,15 +547,23 @@
     }
   },
   "landing_page": {
+    "meta": {
+      "title": "Turkiyada yashash ruxsatnomasi 45 kunda | IKAMETI",
+      "description": "Turkiyada yashash ruxsatnomangiz uchun har bir hujjatni tayyorlaymiz, har bir uchrashuvni belgilaymiz va har bir bosqichni bajaramiz. 2500+ oila ma'qullangan, 98% muvaffaqiyat."
+    },
     "hero": {
-      "title": "O'zingizning ideal fuqarolik va uyni xavfsiz qiling",
-      "subtitle": "Har bir bosqichda sifatli maslahat. IKAMETI bilan fuqarolikni amalga oshirgan 5000+ oilani qo'shilishingizga tavsiya.",
+      "title": "Turkiyada yashash ruxsatnomangiz — 45 kunda ma'qullash",
+      "subtitle": "Har bir hujjatni tayyorlaymiz, har bir uchrashuvni belgilaymiz va har bir bosqichni o'z zimmamizga olamiz. 2500+ oila 98% muvaffaqiyat darajasi bilan ma'qullandi.",
       "badge_1": "✓ 98% Muvaffaqiyat stavkasi",
       "badge_2": "✓ 24/7 Yordamchi",
       "badge_3": "✓ Tez jarayon",
-      "highlights": "✓ 98% Muvaffaqiyat stavkasi • ✓ 24/7 Yordamchi • ✓ Tez jarayon",
+      "highlights": "✓ Bepul moslik tekshiruvi • ✓ Bir soat ichida javob • ✓ Yashirin to'lovlar yo'q",
       "apply_button": "Hozir arizala",
       "whatsapp_button": "WhatsApp orqali gaplashish"
+    },
+    "card_showcase": {
+      "title": "Yashash ruxsatnomangiz, bosqichma-bosqich",
+      "subtitle": "Arizadan tasdiqlangan ikamet kartasigacha sizni qanday olib borishimizni ko'rish uchun aylantiring."
     },
     "problem": {
       "title": "Siz duch keladigan muammo",
@@ -590,7 +598,8 @@
       "item_4": {
         "title": "Huquqiy himoya",
         "description": "Sertifikatsiyalangan advokatlar muvofiqlik ta'minini va sizning huquqlarini to'liq himoyalashni ta'minlaydi."
-      }
+      },
+      "by_numbers": "Raqamlarda"
     },
     "stats_box": {
       "title": "✨ Raqamlar asosida",
@@ -606,8 +615,14 @@
       },
       "clients": {
         "label": "Xursand mijozlar",
-        "value": "5000+",
+        "value": "2500+",
         "unit": "qoniqtirgan"
+      },
+      "chart": {
+        "us": "IKAMETI bilan",
+        "typical": "Yolg'iz o'zingiz",
+        "approved_of": "arizalar ma'qullanadi",
+        "growth": "Mijozlar o'sishi"
       }
     },
     "benefits": {
@@ -650,15 +665,18 @@
     },
     "testimonials": {
       "title": "Haqiqiy muvaffaqiyat hikoyalari",
-      "quote_1": "Ular butun jarayonni xotirjam qildilar. 6 haftada qabul qilinganman! Eng yaxshi qaror. Bugun yangi uyimda yashamoqchiman.",
-      "client_1_name": "Ahmed M.",
-      "client_1_location": "Dubai, BAA • Fuqarolik qabul qilindi",
-      "quote_2": "Kasb-hunarmand jamoa, aniq muloqot va ochiq narx. Ular hamma narsani juda yaxshi boshqardilar. Chuqur tavsiya qilaman!",
-      "client_2_name": "Sarah J.",
-      "client_2_location": "Istanbul, Turkiya • Uy-joy + fuqarolik",
-      "quote_3": "Har bir bosqichda menga yordam berdilar. Ularning tajribasi meni vaqt va pul to'qatdi. Shundayma minnatdor. Bu haqiqati.",
-      "client_3_name": "James T.",
-      "client_3_location": "London, Angliya • Fuqarolik qabul qilindi"
+      "quote_1": "O'zim ikki marta ariza berdim va ikkalasida ham rad javobini oldim. Hujjatlarimni qaytadan tayyorlab, navbat olishdi; kimlikni bir oydan kamroq vaqtda oldim.",
+      "client_1_name": "Omar K.",
+      "client_1_location": "Istanbul, Turkiya",
+      "quote_2": "Universitetga qabul qilingach, tibbiy sug'urta, qasamyodli tarjima va migratsiya navbatini o'zlari hal qilishdi. Talaba ruxsatnomam semestr boshlanishidan oldin tayyor bo'ldi.",
+      "client_2_name": "Lama A.",
+      "client_2_location": "Anqara, Turkiya",
+      "quote_3": "Istanbulga turar joysiz keldim. Kampus yaqinidagi talabalar turar joyidan rasmiy shartnoma va aniq narx bilan xona topib berishdi — yashirin komissiyasiz.",
+      "client_3_name": "Yusuf M.",
+      "client_3_location": "Istanbul, Turkiya",
+      "client_1_service": "Turistik yashash ruxsatnomasi",
+      "client_2_service": "Talaba yashash ruxsatnomasi",
+      "client_3_service": "Talabalar turar joyi"
     },
     "form": {
       "title": "Bepul maslahat boshlang",
@@ -719,6 +737,16 @@
         "description": "Uy shartnomalarida va fuqarolik shartnomalarida mavjud bo'lgan o'z huquqlaringiz va huquqiy himoyani tushunib oling."
       },
       "read_more_button": "Davomini o'qish"
+    },
+    "scroll_cue": "Aylantiring",
+    "whatsapp_float": "WhatsApp",
+    "whatsapp_aria": "WhatsApp orqali biz bilan bog'laning",
+    "ticker": {
+      "item_1": "98% ma'qullash darajasi",
+      "item_2": "2500+ oila ko'chib o'tdi",
+      "item_3": "O'rtacha 45 kunda ma'qullash",
+      "item_4": "Bir soat ichida javob",
+      "item_5": "Yashirin to'lovlar yo'q"
     }
   },
   "blog_articles": {

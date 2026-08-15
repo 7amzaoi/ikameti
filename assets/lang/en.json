@@ -547,15 +547,23 @@
     }
   },
   "landing_page": {
+    "meta": {
+      "title": "Turkish Residence Permit in 45 Days | IKAMETI",
+      "description": "We prepare every document, book every appointment and handle every step of your Turkish residence permit. 2,500+ families approved, 98% success rate."
+    },
     "hero": {
-      "title": "Secure Your Dream Residency & Home",
-      "subtitle": "Expert guidance through every step. Join 5000+ satisfied families who achieved their residency with IKAMETI.",
+      "title": "Your Turkish Residence Permit — Approved in 45 Days",
+      "subtitle": "We prepare every document, book every appointment, and handle every step. 2,500+ families approved, with a 98% success rate.",
       "badge_1": "✓ 98% Success Rate",
       "badge_2": "✓ 24/7 Support",
       "badge_3": "✓ Fast Processing",
-      "highlights": "✓ 98% Success Rate • ✓ 24/7 Support • ✓ Fast Processing",
+      "highlights": "✓ Free eligibility check • ✓ Reply within 1 hour • ✓ No hidden fees",
       "apply_button": "Apply Now",
       "whatsapp_button": "Chat on WhatsApp"
+    },
+    "card_showcase": {
+      "title": "Your Residence Permit, Step by Step",
+      "subtitle": "Scroll to see how we take you from application to an approved ikamet card."
     },
     "problem": {
       "title": "The Challenge You Face",
@@ -590,7 +598,8 @@
       "item_4": {
         "title": "Legal Protection",
         "description": "Certified lawyers ensure compliance and full protection of your rights."
-      }
+      },
+      "by_numbers": "By The Numbers"
     },
     "stats_box": {
       "title": "✨ By The Numbers",
@@ -606,8 +615,14 @@
       },
       "clients": {
         "label": "Happy Clients",
-        "value": "5000+",
+        "value": "2500+",
         "unit": "satisfied"
+      },
+      "chart": {
+        "us": "With IKAMETI",
+        "typical": "On your own",
+        "approved_of": "of applications approved",
+        "growth": "Client growth"
       }
     },
     "benefits": {
@@ -650,15 +665,18 @@
     },
     "testimonials": {
       "title": "Real Success Stories",
-      "quote_1": "They made the entire process stress-free. Approved in 6 weeks! Best decision I made. I'm now living my dream in my new home.",
-      "client_1_name": "Ahmed M.",
-      "client_1_location": "Dubai, UAE • Residency Approved",
-      "quote_2": "Professional team, clear communication, and transparent pricing. They handled everything perfectly. Highly recommended!",
-      "client_2_name": "Sarah J.",
-      "client_2_location": "Istanbul, Turkey • Housing + Residency",
-      "quote_3": "Supported me every step of the way. Their expertise saved me time and money. I'm so grateful. This is the real deal.",
-      "client_3_name": "James T.",
-      "client_3_location": "London, UK • Residency Approved"
+      "quote_1": "I applied twice on my own and was rejected both times. They rebuilt my file, booked the appointment, and I had my kimlik in under a month.",
+      "client_1_name": "Omar K.",
+      "client_1_location": "Istanbul, Türkiye",
+      "quote_2": "After my university acceptance they handled the health insurance, the sworn translations and the migration office appointment. My student permit was issued before term started.",
+      "client_2_name": "Lama A.",
+      "client_2_location": "Ankara, Türkiye",
+      "quote_3": "I landed in Istanbul with nowhere to stay. They found me a room in student housing near campus — registered contract, clear price, no hidden commission.",
+      "client_3_name": "Yusuf M.",
+      "client_3_location": "Istanbul, Türkiye",
+      "client_1_service": "Tourist Residence Permit",
+      "client_2_service": "Student Residence Permit",
+      "client_3_service": "Student Housing"
     },
     "form": {
       "title": "Start Your Free Consultation",
@@ -719,6 +737,16 @@
         "description": "Understand your rights and legal protections available in housing contracts and residency agreements."
       },
       "read_more_button": "Read More"
+    },
+    "scroll_cue": "Scroll",
+    "whatsapp_float": "WhatsApp",
+    "whatsapp_aria": "Chat with us on WhatsApp",
+    "ticker": {
+      "item_1": "98% approval rate",
+      "item_2": "2,500+ families relocated",
+      "item_3": "45 days average approval",
+      "item_4": "Replies within 1 hour",
+      "item_5": "No hidden fees"
     }
   },
   "blog_articles": {

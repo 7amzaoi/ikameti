@@ -547,15 +547,23 @@
     }
   },
   "landing_page": {
+    "meta": {
+      "title": "Türkiýede ýaşaýyş rugsatnamasy 45 günde | IKAMETI",
+      "description": "Türkiýedäki ýaşaýyş rugsatnamaňyz üçin her resminamany taýýarlaýarys, her duşuşygy belleýäris we her ädimi ýerine ýetirýäris. 2500+ maşgala tassyklandy, 98% üstünlik."
+    },
     "hero": {
-      "title": "Arzuwyňyzdaky ýaşaýşy we öýi üpjün ediň",
-      "subtitle": "Her ädimde hünärmen ýolbaşçylyk. IKAMETI bilen ýaşaýşyna ýeten 5000+ razy maşgala goşulyň.",
+      "title": "Türkiýedäki ýaşaýyş rugsatnamaňyz — 45 günde tassyklama",
+      "subtitle": "Her resminamany taýýarlaýarys, her duşuşygy belleýäris we her ädimi öz üstümize alýarys. 2500+ maşgala 98% üstünlik derejesi bilen tassyklandy.",
       "badge_1": "✓ 98% üstünlik derejesi",
       "badge_2": "✓ 24/7 goldaw",
       "badge_3": "✓ Çalt işlemek",
-      "highlights": "✓ 98% üstünlik derejesi • ✓ 24/7 goldaw • ✓ Çalt işlemek",
+      "highlights": "✓ Mugt laýyklyk barlagy • ✓ Bir sagatda jogap • ✓ Gizlin töleg ýok",
       "apply_button": "Häzir arza ber",
       "whatsapp_button": "WhatsApp-da söhbetdeş boluň"
+    },
+    "card_showcase": {
+      "title": "Ýaşaýyş rugsatnamaňyz, ädimme-ädim",
+      "subtitle": "Arzadan tassyklanan ikamet kartasyna çenli sizi nähili alyp barýandygymyzy görmek üçin aýlaň."
     },
     "problem": {
       "title": "Ýüzbe-ýüz bolýan kynçylygyňyz",
@@ -590,7 +598,8 @@
       "item_4": {
         "title": "Ýuridik gorag",
         "description": "Şahadatnamaly ýuristler laýyklygy we hukuklaryňyzyň doly goragyny üpjün edýär."
-      }
+      },
+      "by_numbers": "Sanlarda"
     },
     "stats_box": {
       "title": "✨ Sanlar bilen",
@@ -606,8 +615,14 @@
       },
       "clients": {
         "label": "Razy müşderiler",
-        "value": "5000+",
+        "value": "2500+",
         "unit": "razy"
+      },
+      "chart": {
+        "us": "IKAMETI bilen",
+        "typical": "Ýeke özüňiz",
+        "approved_of": "arza tassyklanýar",
+        "growth": "Müşderi ösüşi"
       }
     },
     "benefits": {
@@ -650,15 +665,18 @@
     },
     "testimonials": {
       "title": "Hakyky üstünlik taryhlary",
-      "quote_1": "Ähli işi dartgynsyz etdiler. 6 hepdede tassyklandy! Eden iň gowy kararym. Indi täze öýümde arzuwymy ýaşaýaryn.",
-      "client_1_name": "Ahmed M.",
-      "client_1_location": "Dubaý, BAE • Ýaşaýyş tassyklandy",
-      "quote_2": "Hünärli topar, aýdyň aragatnaşyk we aç-açan bahalar. Ähli zady kemçiliksiz etdiler. Ýürekden maslahat berýärin!",
-      "client_2_name": "Sara J.",
-      "client_2_location": "Stambul, Türkiýe • Öý-jaý + Ýaşaýyş",
-      "quote_3": "Her ädimde meni goldadylar. Olaryň tejribesi maňa wagt we pul tygşytlady. Örän minnetdar. Bu hakyky iş.",
-      "client_3_name": "James T.",
-      "client_3_location": "London, Angliýa • Ýaşaýyş tassyklandy"
+      "quote_1": "Iki gezek özüm ýüz tutdum we ikisinde-de ret edildi. Resminamalarymy täzeden taýýarlap, nobat aldylar; kimligi bir aýdan az wagtda aldym.",
+      "client_1_name": "Omar K.",
+      "client_1_location": "Stambul, Türkiýe",
+      "quote_2": "Uniwersitete kabul edilenimden soň saglyk ätiýaçlandyryşyny, kasamly terjimeleri we migrasiýa nobatyny olar çözdüler. Talyp rugsatnamam semestr başlamazdan öň taýýardy.",
+      "client_2_name": "Lama A.",
+      "client_2_location": "Ankara, Türkiýe",
+      "quote_3": "Stambula ýaşaýyş jaýsyz geldim. Kampusyň golaýyndaky talyp ýaşaýyş jaýyndan resmi şertnama we aýdyň baha bilen otag tapyp berdiler — gizlin komissiýasyz.",
+      "client_3_name": "Ýusup M.",
+      "client_3_location": "Stambul, Türkiýe",
+      "client_1_service": "Syýahatçylyk ýaşaýyş rugsatnamasy",
+      "client_2_service": "Talyp ýaşaýyş rugsatnamasy",
+      "client_3_service": "Talyp ýaşaýyş jaýy"
     },
     "form": {
       "title": "Mugt maslahatyňyzy başlaň",
@@ -719,6 +737,16 @@
         "description": "Öý-jaý şertnamalarynda we ýaşaýyş ylalaşyklarynda elýeterli hukuklaryňyzy we ýuridik goraglaryňyzy düşüniň."
       },
       "read_more_button": "Köpräk oka"
+    },
+    "scroll_cue": "Aýlaň",
+    "whatsapp_float": "WhatsApp",
+    "whatsapp_aria": "WhatsApp arkaly bize ýazyň",
+    "ticker": {
+      "item_1": "98% tassyklama derejesi",
+      "item_2": "2500+ maşgala göçdi",
+      "item_3": "Ortaça 45 günde tassyklama",
+      "item_4": "Bir sagadyň içinde jogap",
+      "item_5": "Gizlin töleg ýok"
     }
   },
   "blog_articles": {

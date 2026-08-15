@@ -547,15 +547,23 @@
     }
   },
   "landing_page": {
+    "meta": {
+      "title": "Türkiye İkamet İzni 45 Günde | IKAMETI",
+      "description": "Türkiye ikamet izniniz için her belgeyi hazırlıyor, her randevuyu alıyor ve her adımı yönetiyoruz. 2.500+ aile onaylandı, %98 başarı oranı."
+    },
     "hero": {
-      "title": "Rüya İkamet ve Evini Güvenle",
-      "subtitle": "Her adımda uzman rehberlik. IKAMETI ile ikametini başaran 5000+ memnun aileden birkaçı olun.",
+      "title": "Türkiye İkamet İzniniz — 45 Günde Onay",
+      "subtitle": "Her belgeyi hazırlıyor, her randevuyu alıyor ve her adımı biz yönetiyoruz. 2.500+ aile %98 başarı oranıyla onay aldı.",
       "badge_1": "✓ 98% Başarı Oranı",
       "badge_2": "✓ 24/7 Destek",
       "badge_3": "✓ Hızlı İşlem",
-      "highlights": "✓ 98% Başarı Oranı • ✓ 24/7 Destek • ✓ Hızlı İşlem",
+      "highlights": "✓ Ücretsiz uygunluk kontrolü • ✓ 1 saat içinde yanıt • ✓ Gizli ücret yok",
       "apply_button": "Şimdi Başvuru Yapın",
       "whatsapp_button": "WhatsApp'ta Sohbet Et"
+    },
+    "card_showcase": {
+      "title": "İkamet İzniniz, Adım Adım",
+      "subtitle": "Başvurudan onaylı ikamet kartına kadar sizi nasıl taşıdığımızı görmek için kaydırın."
     },
     "problem": {
       "title": "Karşı Karşıya Olduğunuz Zorluk",
@@ -590,7 +598,8 @@
       "item_4": {
         "title": "Yasal Koruma",
         "description": "Sertifikalı avukatlar uyumu sağlar ve haklarınızın tam korumasını sağlarlar."
-      }
+      },
+      "by_numbers": "Rakamlarla"
     },
     "stats_box": {
       "title": "✨ Rakamlarla",
@@ -606,8 +615,14 @@
       },
       "clients": {
         "label": "Mutlu Müşteri",
-        "value": "5000+",
+        "value": "2500+",
         "unit": "memnun"
+      },
+      "chart": {
+        "us": "IKAMETI ile",
+        "typical": "Kendi başınıza",
+        "approved_of": "başvuru onaylanıyor",
+        "growth": "Müşteri artışı"
       }
     },
     "benefits": {
@@ -650,15 +665,18 @@
     },
     "testimonials": {
       "title": "Gerçek Başarı Hikayeleri",
-      "quote_1": "Tüm süreci stressiz hale getirdiler. 6 hafta içinde onaylandı! En iyi karar. Şimdi rüya evimde yaşıyorum.",
-      "client_1_name": "Ahmed M.",
-      "client_1_location": "Dubai, BAE • İkamet Onaylandı",
-      "quote_2": "Profesyonel ekip, net iletişim ve şeffaf fiyatlandırma. Her şeyi kusursuz bir şekilde yönetmiştir. Önemle tavsiye edilir!",
-      "client_2_name": "Sarah J.",
-      "client_2_location": "İstanbul, Türkiye • Konut + İkamet",
-      "quote_3": "Her adımda benim desteklediler. Uzmanlığı zamandan ve paradan tasarruf sağladı. Çok minnettar. Bu gerçek mutabakat.",
-      "client_3_name": "James T.",
-      "client_3_location": "Londra, İngiltere • İkamet Onaylandı"
+      "quote_1": "İki kez kendim başvurdum, ikisinde de reddedildim. Dosyamı baştan hazırlayıp randevumu aldılar; kimliğim bir aydan kısa sürede elimdeydi.",
+      "client_1_name": "Ömer K.",
+      "client_1_location": "İstanbul, Türkiye",
+      "quote_2": "Üniversite kabulümden sonra sağlık sigortasını, yeminli tercümeleri ve göç idaresi randevusunu onlar hallettiler. Öğrenci iznim dönem başlamadan çıktı.",
+      "client_2_name": "Lama A.",
+      "client_2_location": "Ankara, Türkiye",
+      "quote_3": "İstanbul'a kalacak yerim olmadan geldim. Kampüse yakın bir öğrenci yurdunda kayıtlı sözleşme ve net fiyatla oda buldular — gizli komisyon yok.",
+      "client_3_name": "Yusuf M.",
+      "client_3_location": "İstanbul, Türkiye",
+      "client_1_service": "Turistik İkamet İzni",
+      "client_2_service": "Öğrenci İkamet İzni",
+      "client_3_service": "Öğrenci Yurdu"
     },
     "form": {
       "title": "Ücretsiz Danışmanlığınıza Başlayın",
@@ -719,6 +737,16 @@
         "description": "Konut sözleşmeleri ve ikamet anlaşmalarında mevcut haklarınızı ve yasal korumalarınızı anlayın."
       },
       "read_more_button": "Daha Fazla Oku"
+    },
+    "scroll_cue": "Kaydır",
+    "whatsapp_float": "WhatsApp",
+    "whatsapp_aria": "WhatsApp'tan bize yazın",
+    "ticker": {
+      "item_1": "%98 onay oranı",
+      "item_2": "2.500+ aile taşındı",
+      "item_3": "Ortalama 45 günde onay",
+      "item_4": "1 saat içinde yanıt",
+      "item_5": "Gizli ücret yok"
     }
   },
   "blog_articles": {

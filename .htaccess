@@ -45,7 +45,7 @@ ErrorDocument 404 /404.html
 #  - HTML: never cached, so content/price/translation edits show at once
 #  - CSS/JS: 1 day (short, because they are edited often)
 #  - Language JSON: 1 hour
-#  - Images/fonts: 1 year (rarely change; Supabase covers are unique URLs)
+#  - Images/fonts/video: 1 year (rarely change; Supabase covers are unique URLs)
 # ---------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
@@ -59,6 +59,10 @@ ErrorDocument 404 /404.html
   ExpiresByType image/svg+xml          "access plus 1 year"
   ExpiresByType image/x-icon           "access plus 1 year"
   ExpiresByType font/woff2             "access plus 1 year"
+  # The ikamet card clip is the single largest asset on the landing page and
+  # never changes; without this it was re-downloaded on every visit.
+  ExpiresByType video/mp4              "access plus 1 year"
+  ExpiresByType video/webm             "access plus 1 year"
 </IfModule>
 
 # ---------------------------------------------------------------------

@@ -1,0 +1,441 @@
+/* ================================================
+   IKAMET CARD SHOWCASE — scroll-driven pinned section
+   Uses only existing design tokens from css/style.css
+   ================================================ */
+
+/* css/style.css sets `scroll-behavior: smooth` on html (lines 106 and 2362).
+   GSAP documents this as incompatible with ScrollTrigger: the browser animates
+   scrollTop behind ScrollTrigger's back, so pin start/end resolve against a
+   scroll position that no longer matches reality and the pinned card latches on
+   while the hero is still on screen. This file loads after style.css, so the
+   same-specificity override below wins. */
+html {
+    scroll-behavior: auto;
+}
+
+/* --- Section shell -------------------------------------------------- */
+
+.ikamet-showcase {
+    padding: 0;
+    background-color: var(--white);
+    position: relative;
+    /* No `overflow: hidden` here: it would turn this section into the sticky
+       child's scrollport, which stops the pin from sticking. The card's travel
+       stays inside the container at every width, so nothing needs clipping. */
+}
+
+.ikamet-showcase__pin {
+    display: flex;
+    align-items: center;
+    padding: var(--space-12) 0;
+}
+
+/* `.has-js` is set by a synchronous script in <head>, so this geometry is in
+   place before the first paint rather than after card-showcase.js runs.
+   Previously the pin was laid out at its natural content height and then
+   collapsed to 100vh when the section was promoted, dragging every section
+   below it upward — the single largest layout shift on the page (0.099 of a
+   0.149 CLS at 375px). Holding the pinned height from the start makes that
+   promotion a no-op. A plain `min-height` cannot do this: the natural content
+   is TALLER than the viewport, so a minimum never binds.
+   Both fallback paths genuinely want auto height and opt back out below. */
+html.has-js .ikamet-showcase__pin {
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+html.has-js .ikamet-showcase.is-static .ikamet-showcase__pin {
+    height: auto;
+    padding: var(--space-12) 0;
+    overflow: visible;
+}
+
+/* Reduced motion never enters scroll-driven mode, so it should never pay the
+   reservation in the first place. */
+@media (prefers-reduced-motion: reduce) {
+    html.has-js .ikamet-showcase__pin {
+        height: auto;
+        padding: var(--space-12) 0;
+        overflow: visible;
+    }
+}
+
+/* GSAP pins this element with pinSpacing left ON, so ScrollTrigger inserts a
+   spacer that reserves the scroll distance. That is what keeps the card inside
+   its own band: with pinSpacing:false there was no spacer, so the fixed element
+   bled over the hero above and the next section below.
+   The section height stays `auto` — the spacer supplies the scroll room. */
+.ikamet-showcase.is-scroll-enabled .ikamet-showcase__pin {
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ikamet-showcase__inner {
+    width: 100%;
+}
+
+.ikamet-showcase__head {
+    margin-bottom: var(--space-8);
+}
+
+.ikamet-showcase__head h2 {
+    margin-bottom: var(--space-4);
+}
+
+.ikamet-showcase__subtitle {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: var(--lh-normal);
+    max-width: 620px;
+    margin: 0 auto var(--space-6);
+}
+
+/* --- Stage ---------------------------------------------------------- */
+
+.ikamet-showcase__stage {
+    position: relative;
+    min-height: 66vh;
+    --sc-x: 0;      /* -1 = toward inline-start, +1 = toward inline-end */
+    --sc-y: 0%;
+    --sc-dir: 1;    /* flipped to -1 by JS in RTL so motion mirrors */
+    --sc-shift: 45%;
+}
+
+/* --- Media (the rotating ikamet card) ------------------------------- */
+
+.ikamet-showcase__media {
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 50%;
+    width: min(52%, 600px);
+    aspect-ratio: 16 / 9;
+    transform:
+        translate(-50%, -50%)
+        translate(calc(var(--sc-x) * var(--sc-dir) * var(--sc-shift)), var(--sc-y));
+    transition: transform var(--transition-smooth);
+    will-change: transform;
+
+    /* Brand frame: the clip's white studio background is otherwise
+       indistinguishable from the white section behind it. */
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-primary);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* In RTL the base -50% centering offset must also flip */
+html[dir="rtl"] .ikamet-showcase__media {
+    transform:
+        translate(50%, -50%)
+        translate(calc(var(--sc-x) * var(--sc-dir) * var(--sc-shift)), var(--sc-y));
+}
+
+/* `:not(.ikamet-showcase__badge)` matters: without it this selector (0,1,1)
+   outranks .ikamet-showcase__badge (0,1,0) and the badge inherits
+   width/height:100% + object-fit:cover, blowing the logo up to fill the frame. */
+.ikamet-showcase__media video,
+.ikamet-showcase__media img:not(.ikamet-showcase__badge) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* The frame lives on the parent so the radius clips the video corners. */
+    background: transparent;
+    border-radius: inherit;
+}
+
+/* Logo mark sitting on the sparkle baked into the clip's lower-RIGHT corner.
+   The sparkle was measured on the poster frame at 90.5% across / 16.5% up of
+   a 1280x720 frame; the translate centres the badge on that exact point so its
+   size can change without moving it off the mark.
+   Physical `left`/`bottom` are deliberate, not logical properties: the sparkle
+   sits at a fixed spot inside the video, so the badge must NOT mirror in RTL.
+   Tune with `left` / `bottom`; resize with `width` alone. */
+.ikamet-showcase__badge {
+    position: absolute;
+    left: 90.5%;
+    bottom: 16.5%;
+    transform: translate(-50%, 50%);
+    width: 9%;
+    min-width: 40px;
+    max-width: 76px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+}
+
+/* --- Step text blocks ----------------------------------------------- */
+
+.ikamet-showcase__step {
+    position: absolute;
+    top: 50%;
+    width: min(40%, 400px);
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+    pointer-events: none;
+}
+
+.ikamet-showcase__step[data-side="start"] {
+    inset-inline-start: 0;
+    text-align: start;
+}
+
+.ikamet-showcase__step[data-side="end"] {
+    inset-inline-end: 0;
+    text-align: start;
+}
+
+.ikamet-showcase__step[data-side="center"] {
+    inset-inline-start: 50%;
+    top: auto;
+    bottom: 0;
+    width: min(70%, 600px);
+    text-align: center;
+    transform: translateX(-50%) translateY(16px);
+}
+
+html[dir="rtl"] .ikamet-showcase__step[data-side="center"] {
+    transform: translateX(50%) translateY(16px);
+}
+
+/* Enter/exit offsets, mirrored automatically via --sc-dir */
+.ikamet-showcase__step[data-side="start"] {
+    transform: translateY(-50%) translateX(calc(var(--sc-dir, 1) * -24px));
+}
+
+.ikamet-showcase__step[data-side="end"] {
+    transform: translateY(-50%) translateX(calc(var(--sc-dir, 1) * 24px));
+}
+
+.ikamet-showcase__step.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ikamet-showcase__step[data-side="start"].is-active,
+.ikamet-showcase__step[data-side="end"].is-active {
+    transform: translateY(-50%) translateX(0);
+}
+
+.ikamet-showcase__step[data-side="center"].is-active {
+    transform: translateX(-50%) translateY(0);
+}
+
+html[dir="rtl"] .ikamet-showcase__step[data-side="center"].is-active {
+    transform: translateX(50%) translateY(0);
+}
+
+/* Inline SVG line icons rather than emoji: emoji render differently on every
+   OS and cannot take the brand colour. `currentColor` on the stroke means the
+   icons inherit the colour set here. */
+.ikamet-showcase__icon {
+    color: var(--primary);
+    line-height: 0;
+    margin-bottom: var(--space-4);
+}
+
+.ikamet-showcase__icon svg {
+    width: 40px;
+    height: 40px;
+    /* Stays inline so the parent's text-align centres it on the final step
+       and on mobile, where the step blocks are centred. */
+    display: inline-block;
+    vertical-align: middle;
+    overflow: visible;
+}
+
+.ikamet-showcase__step h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: var(--space-3);
+}
+
+.ikamet-showcase__step p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Progress dots --------------------------------------------------- */
+
+.ikamet-showcase__progress {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+}
+
+.ikamet-showcase__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.ikamet-showcase__dot.is-active {
+    background-color: var(--primary);
+    width: 28px;
+    border-radius: 4px;
+}
+
+/* --- Static / fallback mode (no JS, no GSAP, reduced motion) --------- */
+
+.ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__stage {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__media {
+    position: relative;
+    inset-inline-start: auto;
+    top: auto;
+    width: min(100%, 600px);
+    transform: none;
+}
+
+html[dir="rtl"] .ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__media {
+    transform: none;
+}
+
+.ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__step,
+html[dir="rtl"] .ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__step {
+    position: relative;
+    inset-inline: auto;
+    top: auto;
+    bottom: auto;
+    width: min(100%, 620px);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__step.is-visible,
+html[dir="rtl"] .ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__step.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ikamet-showcase:not(.is-scroll-enabled) .ikamet-showcase__progress {
+    display: none;
+}
+
+/* --- Mobile: no horizontal travel, card on top, steps below ---------- */
+
+@media (max-width: 768px) {
+    .ikamet-showcase__stage {
+        --sc-shift: 0%;   /* kills left/right travel; card stays centered */
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--space-6);
+    }
+
+    .ikamet-showcase__media,
+    html[dir="rtl"] .ikamet-showcase__media {
+        position: relative;
+        inset-inline-start: auto;
+        top: auto;
+        width: 100%;
+        max-width: 480px;
+        transform: none;
+    }
+
+    /* [data-side] is used (not the bare class) so these match the specificity
+       of the desktop [data-side="..."] rules above — a media query adds none
+       of its own, so an equal-specificity, later-declared rule is what wins. */
+    .ikamet-showcase__step[data-side],
+    html[dir="rtl"] .ikamet-showcase__step[data-side] {
+        position: relative;
+        inset-inline: auto;
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        text-align: center;
+        transform: translateY(16px);
+    }
+
+    .ikamet-showcase__step[data-side].is-active,
+    html[dir="rtl"] .ikamet-showcase__step[data-side].is-active {
+        transform: translateY(0);
+    }
+
+    /* Only the active step occupies flow while pinned, so the pinned
+       viewport does not overflow on small screens. */
+    .ikamet-showcase.is-scroll-enabled .ikamet-showcase__step {
+        display: none;
+    }
+
+    .ikamet-showcase.is-scroll-enabled .ikamet-showcase__step.is-active {
+        display: block;
+    }
+
+    .ikamet-showcase__step h3 {
+        font-size: 20px;
+    }
+}
+
+/* --- Reduced motion -------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ikamet-showcase {
+        height: auto;
+    }
+
+    .ikamet-showcase__media,
+    .ikamet-showcase__step,
+    .ikamet-showcase__dot {
+        transition: none;
+    }
+}
+
+/* ================================================================
+   PARITY COMPENSATION
+
+   css/style.css:957 declares
+       section:nth-child(odd)  { background-color: var(--bg-base); }
+       section:nth-child(even) { background-color: var(--bg-alt); }
+   which has the same specificity as `section.bg-base` / `section.bg-alt`
+   (style.css:441/445) but comes later, so the alternating rhythm — not the
+   class — is what actually paints every section on this page.
+
+   Inserting this section shifts every later section by one position and would
+   invert all of those backgrounds. The rules below re-invert the siblings that
+   follow, so each existing section keeps the exact colour it had before.
+   `.bg-dark` / `.bg-gradient` are excluded so style.css:965 (`background-color:
+   unset`, which lets their gradient show) keeps winning.
+   ================================================================ */
+
+/* `nth-of-type` counts only <section> siblings, so inserting non-section
+   elements between them (the trust ticker div, the floating WhatsApp link, the
+   sticky CTA bar) can no longer flip the alternation the way the original
+   `nth-child` rule did. Section order is:
+     1 hero(dark)  2 showcase  3 problem  4 solution
+     5 benefits    6 process   7 testimonials  8 faq   9 final-cta(dark)
+   which reproduces the page's original colours exactly. */
+body > section:not(.bg-dark):not(.bg-gradient):nth-of-type(odd) {
+    background-color: var(--bg-base);
+}
+
+body > section:not(.bg-dark):not(.bg-gradient):nth-of-type(even) {
+    background-color: var(--bg-alt);
+}
+
+/* This section itself paints white regardless of its own parity. */
+#ikamet-showcase.ikamet-showcase {
+    background-color: var(--white);
+}

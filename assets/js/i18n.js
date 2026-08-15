@@ -25,6 +25,14 @@ class I18n {
       'af': 'دری',
       'tk': 'Türkmençe'
     };
+    /**
+     * Public BCP 47 tag written into <html lang> for each internal code.
+     * They differ only where the internal code is not a valid tag for the
+     * content: 'af' is Afrikaans, while these pages are Dari — 'fa-AF'.
+     * Everything downstream (file names, localStorage, the switcher) keeps
+     * using the short internal code.
+     */
+    this.htmlLangTags = { af: 'fa-AF' };
     this.currentLanguage = null;
     this.translations = {};
     this.defaultLanguage = 'en';
@@ -63,7 +71,14 @@ class I18n {
    */
   getDocumentLanguage() {
     const l = document.documentElement.getAttribute('lang');
-    return (l && this.languages.includes(l)) ? l : null;
+    if (!l) return null;
+    // Accept the public tag as well as the internal code, so a page declaring
+    // lang="fa-AF" still resolves to the 'af' translation file instead of
+    // failing this check and silently falling back to English.
+    const internal = Object.keys(this.htmlLangTags)
+      .find(code => this.htmlLangTags[code].toLowerCase() === l.toLowerCase());
+    if (internal) return internal;
+    return this.languages.includes(l) ? l : null;
   }
 
 
@@ -93,8 +108,8 @@ class I18n {
       // Save to localStorage
       localStorage.setItem('ikameti_language', lang);
       
-      // Update page language
-      document.documentElement.lang = lang;
+      // Update page language (public BCP 47 tag, not the internal code)
+      document.documentElement.lang = this.htmlLangTags[lang] || lang;
       document.documentElement.dir = this.translations.direction || 'ltr';
       
       // Translate all elements
@@ -139,6 +154,13 @@ class I18n {
    * Translate all elements with data-i18n attribute
    */
   translatePage() {
+    // Nothing loaded yet means getTranslation() can only return the key itself,
+    // which would overwrite good server-rendered copy with "some.dotted.key".
+    // Leaving the markup alone is always the better failure mode.
+    if (!this.translations || Object.keys(this.translations).length === 0) {
+      return;
+    }
+
     // Translate text content
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
@@ -413,9 +435,15 @@ class I18n {
   }
 }
 
-// Initialize i18n when DOM is ready
+// Initialize i18n when DOM is ready.
+// Guarded: this script is not deferred, so the block below already builds an
+// instance at parse time. Without the guard a SECOND instance replaced it on
+// DOMContentLoaded with an empty `translations` map, and every consumer that
+// translated in that window wrote raw keys ("landing_page.hero.title") into the
+// page until the refetch landed — a visible flash and the largest layout shift
+// on the landing page.
 document.addEventListener('DOMContentLoaded', () => {
-  window.i18n = new I18n();
+  if (!window.i18n) window.i18n = new I18n();
 });
 
 // Expose to window for global access

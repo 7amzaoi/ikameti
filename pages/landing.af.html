@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="af" data-i18n-root="true" dir="rtl">
+<html lang="fa-AF" data-i18n-root="true" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) — GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL51XPSZ0K"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PL51XPSZ0K');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Synchronous on purpose: card-showcase.css keys the pinned showcase
+         geometry off .has-js, and it has to be in place for the first paint or
+         the section resizes underneath the page once the script runs. -->
+    <script>document.documentElement.classList.add('has-js');</script>
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <link rel="apple-touch-icon" href="../assets/images/favicon.png">
-    <title>Premium Housing & Residency Solutions - IKAMETI</title>
-    <meta name="description" content="Secure your dream residency and home in Turkey with IKAMETI. Expert guidance, complete paperwork, 24/7 support and a 98% success rate.">
+    <!-- These six mirror landing_page.meta.title / .description and are swapped
+         per language by scripts/build_landing_locales.py — keep them in sync
+         with the `en` entry in assets/lang/en.json. -->
+    <title>اجازه اقامت ترکیه در ۴۵ روز | IKAMETI</title>
+    <meta name="description" content="ما هر سند را آماده می‌کنیم، هر ملاقات را تنظیم می‌کنیم و هر مرحله اجازه اقامت ترکیه شما را پیش می‌بریم. بیش از ۲۵۰۰ خانواده تأیید شده، نرخ موفقیت ۹۸٪.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ikameti.com.tr/pages/landing.af.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="IKAMETI">
-    <meta property="og:title" content="Premium Housing & Residency Solutions - IKAMETI">
-    <meta property="og:description" content="Expert guidance through every step of your Turkish residency journey.">
+    <meta property="og:title" content="اجازه اقامت ترکیه در ۴۵ روز | IKAMETI">
+    <meta property="og:description" content="ما هر سند را آماده می‌کنیم، هر ملاقات را تنظیم می‌کنیم و هر مرحله اجازه اقامت ترکیه شما را پیش می‌بریم. بیش از ۲۵۰۰ خانواده تأیید شده، نرخ موفقیت ۹۸٪.">
     <meta property="og:url" content="https://ikameti.com.tr/pages/landing.af.html">
     <meta property="og:image" content="https://ikameti.com.tr/assets/images/favicon.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Premium Housing & Residency Solutions - IKAMETI">
-    <meta name="twitter:description" content="Expert guidance through every step of your Turkish residency journey.">
+    <meta name="twitter:title" content="اجازه اقامت ترکیه در ۴۵ روز | IKAMETI">
+    <meta name="twitter:description" content="ما هر سند را آماده می‌کنیم، هر ملاقات را تنظیم می‌کنیم و هر مرحله اجازه اقامت ترکیه شما را پیش می‌بریم. بیش از ۲۵۰۰ خانواده تأیید شده، نرخ موفقیت ۹۸٪.">
     <meta name="twitter:image" content="https://ikameti.com.tr/assets/images/favicon.png">
     <meta name="theme-color" content="#d00000">
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../assets/css/i18n.css">
+    <link rel="stylesheet" href="../assets/css/card-showcase.css">
+    <link rel="stylesheet" href="../assets/css/landing-boost.css">
+    <!-- The reveals below animate the individual `translate`/`scale` properties,
+         not `transform`, so the no-JS guard has to reset those exact properties.
+         The showcase steps start at opacity:0 and are revealed by an observer in
+         card-showcase.js, so without JS all four step texts would never appear —
+         they are forced visible here, and the pin gives up its reserved height. -->
+    <noscript><style>
+      [data-reveal]{opacity:1!important;translate:none!important;scale:none!important}
+      .ikamet-showcase__step{opacity:1!important;transform:none!important}
+      .ikamet-showcase__pin{min-height:0!important}
+    </style></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,15 +58,61 @@
     }
     </script>
 
+    <!-- FAQ-SCHEMA-START — regenerated per language by scripts/build_landing_locales.py
+         from landing_page.faq.*; edit the questions there, never here. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "روند اقامت چقدر زمان می‌برد؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "به مجرد آماده شدن اسناد، بیشتر درخواست‌ها در جریان ۱۰ تا ۱۵ روز کاری تکمیل می‌شوند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هزینه آن چقدر است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "به نوع اقامت بستگی دارد. از همان آغاز یک قیمت روشن و مکمل به شما می‌دهیم — بدون هزینه پنهان."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا تأیید را تضمین می‌کنید؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "میزان موفقیت ما ۹۸٪ است. کارشناسان نخست پرونده شما را بررسی می‌کنند و تنها در صورت احتمال بلند تأیید ادامه می‌دهیم."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "کدام اسناد لازم است؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "معمولاً پاسپورت معتبر، سند سکونت، سند درآمد و بیمه صحی، و یک فهرست ویژه برای‌تان می‌فرستیم."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- FAQ-SCHEMA-END -->
+
   <link rel="alternate" hreflang="en" href="https://ikameti.com.tr/pages/landing.html">
   <link rel="alternate" hreflang="ar" href="https://ikameti.com.tr/pages/landing.ar.html">
   <link rel="alternate" hreflang="tr" href="https://ikameti.com.tr/pages/landing.tr.html">
   <link rel="alternate" hreflang="ru" href="https://ikameti.com.tr/pages/landing.ru.html">
   <link rel="alternate" hreflang="fa" href="https://ikameti.com.tr/pages/landing.fa.html">
   <link rel="alternate" hreflang="uz" href="https://ikameti.com.tr/pages/landing.uz.html">
-  <link rel="alternate" hreflang="af" href="https://ikameti.com.tr/pages/landing.af.html">
+  <link rel="alternate" hreflang="fa-AF" href="https://ikameti.com.tr/pages/landing.af.html">
   <link rel="alternate" hreflang="tk" href="https://ikameti.com.tr/pages/landing.tk.html">
-  <link rel="alternate" hreflang="x-default" href="https://ikameti.com.tr/pages/landing.ar.html">
+  <!-- x-default is the page served when no hreflang matches, so it must be the
+       language-neutral entry point, not one specific locale. -->
+  <link rel="alternate" hreflang="x-default" href="https://ikameti.com.tr/pages/landing.html">
   <meta property="og:locale" content="fa_AF">
 </head>
 <body>
@@ -103,7 +167,7 @@
                     </button>
                     <button role="menuitem" data-language-switch="tk" aria-label="Türkmençäni saýlaň">
                         <span class="flag-icon">🇹🇲</span>
-                        <span class="language-name">دری</span>
+                        <span class="language-name">Türkmençe</span>
                     </button>
                 </menu>
             </div>
@@ -126,13 +190,126 @@
     <section class="bg-dark hero-img hero-img-landing" style="min-height: 80vh; display: flex; align-items: center; padding: var(--space-16) 0;">
         <div class="container">
             <div style="max-width: 800px;">
-                <h1 class="text-white animate-slide-up" style="font-weight: 800; line-height: var(--lh-tight);" data-i18n="landing_page.hero.title">اقامت و خانه‌ی رویایی خود را تأمین کنید</h1>
-                <p class="text-white animate-slide-up" style="opacity: 0.9; font-size: 20px; line-height: var(--lh-normal); animation-delay: 0.1s; margin-top: var(--space-4);" data-i18n="landing_page.hero.subtitle">راهنمایی متخصصانه در هر مرحله. به 5000+ خانواده راضی بپیوندید که اقامت خود را با IKAMETI دریافت کردند.</p>
+                <h1 class="text-white animate-slide-up" style="font-weight: 800; line-height: var(--lh-tight);" data-i18n="landing_page.hero.title">اجازه اقامت ترکیه شما — تأیید در ۴۵ روز</h1>
+                <p class="text-white animate-slide-up" style="opacity: 0.9; font-size: 20px; line-height: var(--lh-normal); animation-delay: 0.1s; margin-top: var(--space-4);" data-i18n="landing_page.hero.subtitle">ما هر سند را آماده می‌کنیم، هر ملاقات را تنظیم می‌کنیم و هر مرحله را پیش می‌بریم. بیش از ۲۵۰۰ خانواده با نرخ موفقیت ۹۸٪ تأیید شدند.</p>
                 <div class="flex gap-4 flex-wrap" style="margin: var(--space-8) 0; animation: slideInUp 0.8s ease-out 0.2s backwards;">
-                    <a href="../contact.html" class="btn btn-cta btn-lg" data-i18n="landing_page.hero.apply_button">اکنون درخواست کنید</a>
-                    <a href="https://wa.me/905309052104" class="btn btn-white btn-lg" data-i18n="landing_page.hero.whatsapp_button">چت در واتس‌اپ</a>
+                    <a href="../contact.html" class="btn btn-cta btn-lg btn-shine btn-pulse" data-track="hero_apply" data-i18n="landing_page.hero.apply_button">اکنون درخواست کنید</a>
+                    <a href="https://wa.me/905309052104" class="btn btn-white btn-lg btn-shine" data-track="hero_whatsapp" data-i18n="landing_page.hero.whatsapp_button">چت در واتس‌اپ</a>
                 </div>
-                <p class="text-white animate-slide-up" style="opacity: 0.8; font-size: 15px; animation-delay: 0.3s;" data-i18n="landing_page.hero.highlights">✓ نرخ موفقیت 98% • ✓ پشتیبانی 24/7 • ✓ پردازش سریع</p>
+                <p class="text-white animate-slide-up" style="opacity: 0.8; font-size: 15px; animation-delay: 0.3s;" data-i18n="landing_page.hero.highlights">✓ ارزیابی رایگان • ✓ پاسخ در کمتر از یک ساعت • ✓ بدون فیس پنهان</p>
+            </div>
+        </div>
+            <div class="scroll-cue" aria-hidden="true">
+                <span data-i18n="landing_page.scroll_cue">اسکرول</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+    </section>
+
+    <!-- TRUST TICKER -->
+    <div class="trust-strip">
+        <div class="trust-strip__track">
+                    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_1">۹۸٪ نرخ تأیید</span></span>
+                    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_2">بیش از ۲۵۰۰ خانواده</span></span>
+                    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_3">تأیید به طور اوسط در ۴۵ روز</span></span>
+                    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_4">پاسخ در کمتر از یک ساعت</span></span>
+                    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_5">بدون فیس پنهان</span></span>
+                    <span class="trust-strip__item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_1">۹۸٪ نرخ تأیید</span></span>
+                    <span class="trust-strip__item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_2">بیش از ۲۵۰۰ خانواده</span></span>
+                    <span class="trust-strip__item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_3">تأیید به طور اوسط در ۴۵ روز</span></span>
+                    <span class="trust-strip__item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_4">پاسخ در کمتر از یک ساعت</span></span>
+                    <span class="trust-strip__item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="landing_page.ticker.item_5">بدون فیس پنهان</span></span>
+        </div>
+    </div>
+
+    <!-- IKAMET CARD SHOWCASE - scroll-driven pinned section -->
+    <section id="ikamet-showcase" class="ikamet-showcase" aria-labelledby="ikamet-showcase-title">
+        <div class="ikamet-showcase__pin">
+            <div class="container ikamet-showcase__inner">
+                <div class="section-title ikamet-showcase__head">
+                    <h2 id="ikamet-showcase-title" data-i18n="landing_page.card_showcase.title">اجازه اقامت شما، گام به گام</h2>
+                    <p class="ikamet-showcase__subtitle" data-i18n="landing_page.card_showcase.subtitle">برای دیدن اینکه چگونه شما را از درخواست تا کارت اقامت تأیید‌شده همراهی می‌کنیم، اسکرول کنید.</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="ikamet-showcase__stage">
+                    <div class="ikamet-showcase__media">
+                        <video
+                            data-src="../assets/videos/ikamet-card-rotation.mp4"
+                            poster="../assets/images/ikamet-card-poster.jpg"
+                            preload="metadata"
+                            muted
+                            playsinline
+                            webkit-playsinline
+                            disablepictureinpicture
+                            aria-hidden="true"></video>
+                        <img class="ikamet-showcase__badge"
+                             src="../assets/images/ikamet-badge.png"
+                             alt=""
+                             aria-hidden="true"
+                             loading="lazy"
+                             width="256" height="256">
+                    </div>
+
+                    <!-- Step 1: card inline-end, text inline-start -->
+                    <div class="ikamet-showcase__step" data-side="start" data-step="1">
+                        <div class="ikamet-showcase__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="10" cy="8" r="4"/>
+                                <path d="M2 21a8 8 0 0 1 13.292-6"/>
+                                <path d="m16 19 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="landing_page.solution.item_1.title">راهنمایی متخصصانه</h3>
+                        <p data-i18n="landing_page.solution.item_1.description">متخصصان 15+ ساله‌ی ما نیازمندی‌ها را ناوبری کنند، فرصت‌ها را پیدا کنند و اشتباهات پرهزینه‌ی جلوگیری کنند.</p>
+                    </div>
+
+                    <!-- Step 2: card inline-start, text inline-end -->
+                    <div class="ikamet-showcase__step" data-side="end" data-step="2">
+                        <div class="ikamet-showcase__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                <path d="m9 15 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="landing_page.solution.item_2.title">کاغذ‌بندی کامل</h3>
+                        <p data-i18n="landing_page.solution.item_2.description">ما تمام اسناد را آماده و ثبت می‌کنیم. بدون زحمت، بدون گیجی، بدون تأخیر.</p>
+                    </div>
+
+                    <!-- Step 3: card inline-end, text inline-start -->
+                    <div class="ikamet-showcase__step" data-side="start" data-step="3">
+                        <div class="ikamet-showcase__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11h3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6a9 9 0 0 1 18 0v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h3"/>
+                                <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="landing_page.solution.item_3.title">پشتیبانی 24/7</h3>
+                        <p data-i18n="landing_page.solution.item_3.description">مشاور شخصی شما به سرعت به سؤالات پاسخ داده و شما را در هر مرحله مطلع می‌کند.</p>
+                    </div>
+
+                    <!-- Step 4: card returns to centre, text centred below -->
+                    <div class="ikamet-showcase__step" data-side="center" data-step="4">
+                        <div class="ikamet-showcase__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                                <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                                <path d="M7 21h10"/>
+                                <path d="M12 3v18"/>
+                                <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="landing_page.solution.item_4.title">حمایت حقوقی</h3>
+                        <p data-i18n="landing_page.solution.item_4.description">وکیلان معتبر انطباق و حمایت کامل حقوق شما را تأمین می‌کنند.</p>
+                    </div>
+                </div>
+
+                <div class="ikamet-showcase__progress" aria-hidden="true">
+                    <span class="ikamet-showcase__dot is-active"></span>
+                    <span class="ikamet-showcase__dot"></span>
+                    <span class="ikamet-showcase__dot"></span>
+                    <span class="ikamet-showcase__dot"></span>
+                </div>
             </div>
         </div>
     </section>
@@ -141,23 +318,23 @@
     <section class="bg-base">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="section-title">
+                <div class="section-title" data-reveal="up">
                     <h2 data-i18n="landing_page.problem.title">چالشی که با آن روبرو هستید</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div class="grid grid-cols-3" style="gap: var(--space-8);">
-                    <div class="card stagger-item">
-                        <div style="font-size: 32px; margin-bottom: var(--space-4);">🔀</div>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="0">
+                        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></svg></div>
                         <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);" data-i18n="landing_page.problem.item_1.title">فرآیند پیچیده</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.problem.item_1.description">الزامات گیج‌کننده، کاغذ‌بندی در حال تغییر و مدت‌های نامشخص شما را استرس‌زده می‌کند.</p>
                     </div>
-                    <div class="card stagger-item">
-                        <div style="font-size: 32px; margin-bottom: var(--space-4);">💸</div>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="90">
+                        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
                         <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);" data-i18n="landing_page.problem.item_2.title">اشتباهات پرهزینه</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.problem.item_2.description">یک سند نادرست یا جلسه از دست‌رفته هزینه‌ی وقت، پول و اقامت رویایی شما را دارد.</p>
                     </div>
-                    <div class="card stagger-item">
-                        <div style="font-size: 32px; margin-bottom: var(--space-4);">😟</div>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="180">
+                        <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M9 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/><path d="m17 8 5 5"/><path d="m22 8-5 5"/></svg></div>
                         <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);" data-i18n="landing_page.problem.item_3.title">بدون پشتیبانی</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.problem.item_3.description">انجام آن به تنهایی شما را گیج، نگران و بدون کسی برای اعتماد برای راهنمایی می‌گذارد.</p>
                     </div>
@@ -170,17 +347,17 @@
     <section class="bg-alt">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="section-title">
+                <div class="section-title" data-reveal="up">
                     <h2 data-i18n="landing_page.solution.title">حل ما</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div class="grid grid-cols-2" style="gap: var(--space-8); align-items: center;">
-                    <div class="stagger-item">
-                        <h2 style="color: var(--primary); margin-bottom: var(--space-6); font-size: 28px; font-weight: 800;" data-i18n="landing_page.solution.main_heading">ما همه‌چیز را مدیریت می‌کنیم</h2>
+                    <div class="stagger-item" data-reveal="start">
+                        <h3 style="color: var(--primary); margin-bottom: var(--space-6); font-size: 28px; font-weight: 800; letter-spacing: -0.8px;" data-i18n="landing_page.solution.main_heading">ما همه‌چیز را مدیریت می‌کنیم</h3>
                         <div style="display: flex; flex-direction: column; gap: var(--space-4);">
                             <div style="border-bottom: 2px solid var(--bg-alt); padding-bottom: var(--space-4);">
-                                <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                                    <div style="color: var(--primary); font-size: 32px; flex-shrink: 0; line-height: 0.8;">👨‍💼</div>
+                                <div class="solution-item">
+                                    <div class="solution-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/><path d="M2 21a8 8 0 0 1 13.292-6"/><path d="m16 19 2 2 4-4"/></svg></div>
                                     <div>
                                         <h4 style="color: var(--text-primary); margin-bottom: var(--space-1); font-weight: 700; font-size: 16px;" data-i18n="landing_page.solution.item_1.title">راهنمایی متخصصانه</h4>
                                         <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;" data-i18n="landing_page.solution.item_1.description">متخصصان 15+ ساله‌ی ما نیازمندی‌ها را ناوبری کنند، فرصت‌ها را پیدا کنند و اشتباهات پرهزینه‌ی جلوگیری کنند.</p>
@@ -188,8 +365,8 @@
                                 </div>
                             </div>
                             <div style="border-bottom: 2px solid var(--bg-alt); padding-bottom: var(--space-4);">
-                                <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                                    <div style="color: var(--primary); font-size: 32px; flex-shrink: 0; line-height: 0.8;">📄</div>
+                                <div class="solution-item">
+                                    <div class="solution-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg></div>
                                     <div>
                                         <h4 style="color: var(--text-primary); margin-bottom: var(--space-1); font-weight: 700; font-size: 16px;" data-i18n="landing_page.solution.item_2.title">کاغذ‌بندی کامل</h4>
                                         <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;" data-i18n="landing_page.solution.item_2.description">ما تمام اسناد را آماده و ثبت می‌کنیم. بدون زحمت، بدون گیجی، بدون تأخیر.</p>
@@ -197,8 +374,8 @@
                                 </div>
                             </div>
                             <div style="border-bottom: 2px solid var(--bg-alt); padding-bottom: var(--space-4);">
-                                <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                                    <div style="color: var(--primary); font-size: 32px; flex-shrink: 0; line-height: 0.8;">📞</div>
+                                <div class="solution-item">
+                                    <div class="solution-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6a9 9 0 0 1 18 0v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h3"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg></div>
                                     <div>
                                         <h4 style="color: var(--text-primary); margin-bottom: var(--space-1); font-weight: 700; font-size: 16px;" data-i18n="landing_page.solution.item_3.title">پشتیبانی 24/7</h4>
                                         <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;" data-i18n="landing_page.solution.item_3.description">مشاور شخصی شما به سرعت به سؤالات پاسخ داده و شما را در هر مرحله مطلع می‌کند.</p>
@@ -206,8 +383,8 @@
                                 </div>
                             </div>
                             <div>
-                                <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
-                                    <div style="color: var(--primary); font-size: 32px; flex-shrink: 0; line-height: 0.8;">⚖️</div>
+                                <div class="solution-item">
+                                    <div class="solution-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
                                     <div>
                                         <h4 style="color: var(--text-primary); margin-bottom: var(--space-1); font-weight: 700; font-size: 16px;" data-i18n="landing_page.solution.item_4.title">حمایت حقوقی</h4>
                                         <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;" data-i18n="landing_page.solution.item_4.description">وکیلان معتبر انطباق و حمایت کامل حقوق شما را تأمین می‌کنند.</p>
@@ -216,25 +393,68 @@
                             </div>
                         </div>
                     </div>
-                    <div class="stagger-item">
-                        <div style="background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-primary);">
-                            <h3 style="color: white; margin-bottom: var(--space-6); font-size: 22px; font-weight: 800;" data-i18n="landing_page.solution.by_numbers">✨ By The Numbers</h3>
-                            <div style="display: flex; flex-direction: column; gap: var(--space-5);">
-                                <div style="border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: var(--space-4);">
-                                    <p style="font-size: 12px; color: rgba(255, 255, 255, 0.75); margin-bottom: var(--space-1); letter-spacing: 0.8px; text-transform: uppercase; font-weight: 600;" data-i18n="landing_page.stats_box.approval_time.label">زمان به تأیید</p>
-                                    <p style="font-size: 40px; font-weight: 900; color: white; line-height: 1;">45</p>
-                                    <p style="font-size: 13px; color: rgba(255, 255, 255, 0.8); margin-top: var(--space-1);" data-i18n="landing_page.stats_box.approval_time.unit">روز متوسط</p>
+                    <div class="stagger-item" data-reveal="end">
+                        <div class="stats-panel">
+                            <h3 class="stats-heading" style="margin-bottom: var(--space-6); font-size: 22px; font-weight: 800;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><span data-i18n="landing_page.solution.by_numbers">در اعداد</span></h3>
+                            <div class="stats-panel__list">
+
+                                <div class="stat" tabindex="0">
+                                    <p class="stat__label" data-i18n="landing_page.stats_box.approval_time.label">زمان به تأیید</p>
+                                    <p class="stat__value"><span class="count-up" data-count-to="45">45</span></p>
+                                    <p class="stat__unit" data-i18n="landing_page.stats_box.approval_time.unit">روز متوسط</p>
+                                    <div class="stat__chart">
+                                        <div class="stat__chart-inner">
+                                            <div class="stat__chart-pad">
+                                                <div class="bar-row">
+                                                    <span class="bar-row__label" data-i18n="landing_page.stats_box.chart.us">با IKAMETI</span>
+                                                    <span class="bar-row__track"><span class="bar-row__fill" style="--w: 50%;"></span></span>
+                                                    <span class="bar-row__val">45</span>
+                                                </div>
+                                                <div class="bar-row bar-row--muted">
+                                                    <span class="bar-row__label" data-i18n="landing_page.stats_box.chart.typical">به تنهایی</span>
+                                                    <span class="bar-row__track"><span class="bar-row__fill" style="--w: 100%;"></span></span>
+                                                    <span class="bar-row__val">90</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div style="border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: var(--space-4);">
-                                    <p style="font-size: 12px; color: rgba(255, 255, 255, 0.75); margin-bottom: var(--space-1); letter-spacing: 0.8px; text-transform: uppercase; font-weight: 600;" data-i18n="landing_page.stats_box.success_rate.label">نرخ موفقیت</p>
-                                    <p style="font-size: 40px; font-weight: 900; color: white; line-height: 1;">98%</p>
-                                    <p style="font-size: 13px; color: rgba(255, 255, 255, 0.8); margin-top: var(--space-1);" data-i18n="landing_page.stats_box.success_rate.unit">موافقت</p>
+
+                                <div class="stat" tabindex="0">
+                                    <p class="stat__label" data-i18n="landing_page.stats_box.success_rate.label">نرخ موفقیت</p>
+                                    <p class="stat__value"><span class="count-up" data-count-to="98" data-count-suffix="%">98%</span></p>
+                                    <p class="stat__unit" data-i18n="landing_page.stats_box.success_rate.unit">موافقت</p>
+                                    <div class="stat__chart">
+                                        <div class="stat__chart-inner">
+                                            <div class="stat__chart-pad donut-wrap">
+                                                <svg class="donut" viewBox="0 0 42 42" aria-hidden="true">
+                                                    <circle class="donut__track" cx="21" cy="21" r="15.9155" fill="none" stroke-width="4"/>
+                                                    <circle class="donut__value" cx="21" cy="21" r="15.9155" fill="none" stroke-width="4" stroke-linecap="round" transform="rotate(-90 21 21)"/>
+                                                </svg>
+                                                <p class="donut-caption"><strong>98%</strong> <span data-i18n="landing_page.stats_box.chart.approved_of">از درخواست‌ها تأیید می‌شود</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p style="font-size: 12px; color: rgba(255, 255, 255, 0.75); margin-bottom: var(--space-1); letter-spacing: 0.8px; text-transform: uppercase; font-weight: 600;" data-i18n="landing_page.stats_box.clients.label">مشتریان راضی</p>
-                                    <p style="font-size: 40px; font-weight: 900; color: white; line-height: 1;">5000+</p>
-                                    <p style="font-size: 13px; color: rgba(255, 255, 255, 0.8); margin-top: var(--space-1);" data-i18n="landing_page.stats_box.clients.unit">راضی</p>
+
+                                <div class="stat" tabindex="0">
+                                    <p class="stat__label" data-i18n="landing_page.stats_box.clients.label">مشتریان راضی</p>
+                                    <p class="stat__value"><span class="count-up" data-count-to="2500" data-count-suffix="+">2500+</span></p>
+                                    <p class="stat__unit" data-i18n="landing_page.stats_box.clients.unit">راضی</p>
+                                    <div class="stat__chart">
+                                        <div class="stat__chart-inner">
+                                            <div class="stat__chart-pad">
+                                                <svg class="spark" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true">
+                                                    <path class="spark__area" d="M0 38 L24 33 L48 26 L72 17 L96 9 L120 3 L120 44 L0 44 Z"/>
+                                                    <path class="spark__line" pathLength="100" d="M0 38 L24 33 L48 26 L72 17 L96 9 L120 3"/>
+                                                    <circle class="spark__dot" cx="118" cy="3" r="3"/>
+                                                </svg>
+                                                <p class="spark-caption"><span>2021</span><span data-i18n="landing_page.stats_box.chart.growth">رشد مشتریان</span><span>2025</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -247,29 +467,29 @@
     <section class="bg-base">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="section-title">
+                <div class="section-title" data-reveal="up">
                     <h2 data-i18n="landing_page.benefits.title">شما چه دریافت می‌کنید</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div class="grid grid-cols-4" style="gap: var(--space-8);">
-                    <div class="card stagger-item" style="text-align: center;">
-                        <div style="font-size: 48px; margin-bottom: var(--space-4);">⏱️</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3);" data-i18n="landing_page.benefits.item_1.title">پردازش سریع</h4>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="270" style="text-align: center;">
+                        <div class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4"/><path d="M12 14 15 11"/><path d="M12 6a8 8 0 1 0 0 16 8 8 0 0 0 0-16"/></svg></div>
+                        <h3 style="color: var(--primary); margin-bottom: var(--space-3); font-size: 20px; font-weight: 600; letter-spacing: -0.3px;" data-i18n="landing_page.benefits.item_1.title">پردازش سریع</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.benefits.item_1.description">متوسط 45 روز از مشاوره تا موافقت</p>
                     </div>
-                    <div class="card stagger-item" style="text-align: center;">
-                        <div style="font-size: 48px; margin-bottom: var(--space-4);">💰</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3);" data-i18n="landing_page.benefits.item_2.title">قیمت‌گذاری شفاف</h4>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="0" style="text-align: center;">
+                        <div class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg></div>
+                        <h3 style="color: var(--primary); margin-bottom: var(--space-3); font-size: 20px; font-weight: 600; letter-spacing: -0.3px;" data-i18n="landing_page.benefits.item_2.title">قیمت‌گذاری شفاف</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.benefits.item_2.description">بدون هزینه‌های پنهان. دقیقاً بدانید چه می‌پردازید</p>
                     </div>
-                    <div class="card stagger-item" style="text-align: center;">
-                        <div style="font-size: 48px; margin-bottom: var(--space-4);">🔒</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3);" data-i18n="landing_page.benefits.item_3.title">100% محفوظ</h4>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="90" style="text-align: center;">
+                        <div class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                        <h3 style="color: var(--primary); margin-bottom: var(--space-3); font-size: 20px; font-weight: 600; letter-spacing: -0.3px;" data-i18n="landing_page.benefits.item_3.title">100% محفوظ</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.benefits.item_3.description">امنیت سطح سازمانی و حمایت حقوقی</p>
                     </div>
-                    <div class="card stagger-item" style="text-align: center;">
-                        <div style="font-size: 48px; margin-bottom: var(--space-4);">🎯</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3);" data-i18n="landing_page.benefits.item_4.title">نتایج تضمینی</h4>
+                    <div class="card stagger-item card-interactive" data-reveal="up" data-reveal-delay="180" style="text-align: center;">
+                        <div class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20"/><path d="M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12"/><path d="M12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg></div>
+                        <h3 style="color: var(--primary); margin-bottom: var(--space-3); font-size: 20px; font-weight: 600; letter-spacing: -0.3px;" data-i18n="landing_page.benefits.item_4.title">نتایج تضمینی</h3>
                         <p style="font-size: 15px;" data-i18n="landing_page.benefits.item_4.description">نرخ موفقیت 98% با روش مجرب</p>
                     </div>
                 </div>
@@ -281,30 +501,38 @@
     <section class="bg-alt">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="section-title">
+                <div class="section-title" data-reveal="up">
                     <h2 data-i18n="landing_page.process.title">فرآیند 4 مرحله‌ای</h2>
                     <div class="accent-line"></div>
                 </div>
-                <div class="grid grid-cols-4" style="gap: var(--space-6);">
-                    <div class="card stagger-item">
-                        <div style="background: linear-gradient(135deg, var(--primary-light), var(--background)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); font-size: 40px;">📋</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3); text-align: center;" data-i18n="landing_page.process.step_1.title">مرحله 1</h4>
-                        <p style="font-size: 15px; text-align: center;" data-i18n="landing_page.process.step_1.description">مشاوره‌ی رایگان برای درک هدف و واجد‌شرایط بودن شما</p>
+                <div class="steps">
+                    <div class="step-card" data-reveal="up" data-reveal-delay="0">
+                        <div class="step-card__medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg><span class="step-card__num">1</span></div>
+                        <div class="step-card__body">
+                            <h3 class="step-card__title" data-i18n="landing_page.process.step_1.title">مرحله 1</h3>
+                            <p class="step-card__desc" data-i18n="landing_page.process.step_1.description">مشاوره‌ی رایگان برای درک هدف و واجد‌شرایط بودن شما</p>
+                        </div>
                     </div>
-                    <div class="card stagger-item">
-                        <div style="background: linear-gradient(135deg, var(--primary-light), var(--background)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); font-size: 40px;">🔍</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3); text-align: center;" data-i18n="landing_page.process.step_2.title">مرحله 2</h4>
-                        <p style="font-size: 15px; text-align: center;" data-i18n="landing_page.process.step_2.description">بررسی متخصصانه و توصیه‌ی بهترین حل</p>
+                    <div class="step-card" data-reveal="up" data-reveal-delay="160">
+                        <div class="step-card__medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3a8 8 0 1 0 0 16 8 8 0 0 0 0-16"/><path d="m8 11 2 2 4-4"/><path d="m21 21-4.3-4.3"/></svg><span class="step-card__num">2</span></div>
+                        <div class="step-card__body">
+                            <h3 class="step-card__title" data-i18n="landing_page.process.step_2.title">مرحله 2</h3>
+                            <p class="step-card__desc" data-i18n="landing_page.process.step_2.description">بررسی متخصصانه و توصیه‌ی بهترین حل</p>
+                        </div>
                     </div>
-                    <div class="card stagger-item">
-                        <div style="background: linear-gradient(135deg, var(--primary-light), var(--background)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); font-size: 40px;">✍️</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3); text-align: center;" data-i18n="landing_page.process.step_3.title">مرحله 3</h4>
-                        <p style="font-size: 15px; text-align: center;" data-i18n="landing_page.process.step_3.description">ما تمام اسناد را برای شما آماده و ثبت می‌کنیم</p>
+                    <div class="step-card" data-reveal="up" data-reveal-delay="320">
+                        <div class="step-card__medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg><span class="step-card__num">3</span></div>
+                        <div class="step-card__body">
+                            <h3 class="step-card__title" data-i18n="landing_page.process.step_3.title">مرحله 3</h3>
+                            <p class="step-card__desc" data-i18n="landing_page.process.step_3.description">ما تمام اسناد را برای شما آماده و ثبت می‌کنیم</p>
+                        </div>
                     </div>
-                    <div class="card stagger-item">
-                        <div style="background: linear-gradient(135deg, var(--primary-light), var(--background)); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4); font-size: 40px;">🎉</div>
-                        <h4 style="color: var(--primary); margin-bottom: var(--space-3); text-align: center;" data-i18n="landing_page.process.step_4.title">مرحله 4</h4>
-                        <p style="font-size: 15px; text-align: center;" data-i18n="landing_page.process.step_4.description">موافقت و پشتیبانی مستمر جابه‌جایی</p>
+                    <div class="step-card" data-reveal="up" data-reveal-delay="480">
+                        <div class="step-card__medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span class="step-card__num">4</span></div>
+                        <div class="step-card__body">
+                            <h3 class="step-card__title" data-i18n="landing_page.process.step_4.title">مرحله 4</h3>
+                            <p class="step-card__desc" data-i18n="landing_page.process.step_4.description">موافقت و پشتیبانی مستمر جابه‌جایی</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,62 +543,77 @@
     <section class="bg-base">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="section-title">
+                <div class="section-title" data-reveal="up">
                     <h2 data-i18n="landing_page.testimonials.title">داستان‌های موفقیت واقعی</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div class="grid grid-cols-3" style="gap: var(--space-8);">
-                    <div class="card stagger-item">
-                        <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-4); color: var(--primary); font-size: 14px;">⭐⭐⭐⭐⭐</div>
-                        <p style="font-size: 15px; line-height: 1.7; margin-bottom: var(--space-6); color: var(--text-secondary);" data-i18n="landing_page.testimonials.quote_1">آنها تمام فرآیند را بدون استرس کردند. در 6 هفته موافقت! بهترین تصمیمی که گرفتم. اکنون در خانه‌ی رویایی خود زندگی می‌کنم.</p>
-                        <div>
-                            <p style="font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-1);" data-i18n="landing_page.testimonials.client_1_name">احمد م.</p>
-                            <p style="font-size: 14px; color: var(--text-tertiary);" data-i18n="landing_page.testimonials.client_1_location">دوبی، امارات متحده عربی • اقامت موافقت</p>
+                    <article class="tcard" data-reveal="up" data-reveal-delay="0">
+                        <svg class="tcard__mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M4 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+                        <div class="tcard__stars" role="img" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg></div>
+                        <p class="tcard__text" data-i18n="landing_page.testimonials.quote_1">دو بار خودم درخواست دادم و هر دو بار رد شد. دوسیه‌ام را از نو ترتیب کردند و وقت ملاقات گرفتند؛ کیملیک را در کمتر از یک ماه به دست آوردم.</p>
+                        <div class="tcard__person">
+                            <span class="tcard__avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></svg></span>
+                            <div class="tcard__id">
+                                <div class="tcard__name"><span data-i18n="landing_page.testimonials.client_1_name">عمر خ.</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="tcard__verified"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                                <p class="tcard__meta" data-i18n="landing_page.testimonials.client_1_location">استانبول، ترکیه</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card stagger-item">
-                        <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-4); color: var(--primary); font-size: 14px;">⭐⭐⭐⭐⭐</div>
-                        <p style="font-size: 15px; line-height: 1.7; margin-bottom: var(--space-6); color: var(--text-secondary);" data-i18n="landing_page.testimonials.quote_2">تیم حرفه‌ای، ارتباط روشن و قیمت‌گذاری شفاف. آنها همه‌چیز را بطور کامل مدیریت کردند. بسیار توصیه می‌کنم!</p>
-                        <div>
-                            <p style="font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-1);" data-i18n="landing_page.testimonials.client_2_name">سارا ج.</p>
-                            <p style="font-size: 14px; color: var(--text-tertiary);" data-i18n="landing_page.testimonials.client_2_location">استانبول، ترکیه • مسکن + اقامت</p>
+                        <span class="tcard__chip" data-i18n="landing_page.testimonials.client_1_service">اقامت توریستی</span>
+                    </article>
+                    <article class="tcard" data-reveal="up" data-reveal-delay="130">
+                        <svg class="tcard__mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M4 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+                        <div class="tcard__stars" role="img" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg></div>
+                        <p class="tcard__text" data-i18n="landing_page.testimonials.quote_2">پس از پذیرش پوهنتون، بیمه صحی، ترجمه رسمی و وقت اداره مهاجرت را انجام دادند. اقامت محصلی‌ام پیش از آغاز سمستر صادر شد.</p>
+                        <div class="tcard__person">
+                            <span class="tcard__avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></svg></span>
+                            <div class="tcard__id">
+                                <div class="tcard__name"><span data-i18n="landing_page.testimonials.client_2_name">لمی ع.</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="tcard__verified"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                                <p class="tcard__meta" data-i18n="landing_page.testimonials.client_2_location">آنکارا، ترکیه</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card stagger-item">
-                        <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-4); color: var(--primary); font-size: 14px;">⭐⭐⭐⭐⭐</div>
-                        <p style="font-size: 15px; line-height: 1.7; margin-bottom: var(--space-6); color: var(--text-secondary);" data-i18n="landing_page.testimonials.quote_3">در هر مرحله از من حمایت کردند. تخصص‌شان وقت و پول من را صرفه‌جویی کرد. من بسیار سپاسگزارم. این واقعی است.</p>
-                        <div>
-                            <p style="font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-1);" data-i18n="landing_page.testimonials.client_3_name">جیمز ت.</p>
-                            <p style="font-size: 14px; color: var(--text-tertiary);" data-i18n="landing_page.testimonials.client_3_location">لندن، انگلستان • اقامت موافقت</p>
+                        <span class="tcard__chip" data-i18n="landing_page.testimonials.client_2_service">اقامت محصلی</span>
+                    </article>
+                    <article class="tcard" data-reveal="up" data-reveal-delay="260">
+                        <svg class="tcard__mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M4 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+                        <div class="tcard__stars" role="img" aria-label="5 / 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.26l-5.9 3.1 1.12-6.57L2.45 9.14l6.6-.96z"/></svg></div>
+                        <p class="tcard__text" data-i18n="landing_page.testimonials.quote_3">بدون جای بودوباش وارد استانبول شدم. اتاقی در لیلیه محصلان نزدیک پوهنتون با قرارداد ثبت‌شده و قیمت روشن پیدا کردند — بدون کمیشن پنهان.</p>
+                        <div class="tcard__person">
+                            <span class="tcard__avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></svg></span>
+                            <div class="tcard__id">
+                                <div class="tcard__name"><span data-i18n="landing_page.testimonials.client_3_name">یوسف م.</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="tcard__verified"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                                <p class="tcard__meta" data-i18n="landing_page.testimonials.client_3_location">استانبول، ترکیه</p>
+                            </div>
                         </div>
-                    </div>
+                        <span class="tcard__chip" data-i18n="landing_page.testimonials.client_3_service">لیلیه محصلان</span>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- APPLICATION FORM SECTION -->
+    <!-- FAQ SECTION — mirrored into the FAQPage JSON-LD in <head> at build time -->
     <section class="bg-base landing-faq" id="faq" style="padding: var(--space-16) 0;">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-reveal="up">
                 <h2 data-i18n="landing_page.faq.title">سوالات متداول</h2>
                 <p style="color: var(--text-secondary); font-size: 16px; margin-top: var(--space-4);" data-i18n="landing_page.faq.subtitle">پاسخ‌های سریع پیش از تماس با ما.</p>
                 <div class="accent-line"></div>
             </div>
             <div class="faq-list" style="max-width: 760px; margin: 0 auto;">
-                <details class="faq-item">
+                <details class="faq-item" data-reveal="up">
                     <summary><span data-i18n="landing_page.faq.q1">روند اقامت چقدر زمان می‌برد؟</span><span class="faq-icon" aria-hidden="true"></span></summary>
                     <div class="faq-answer"><p data-i18n="landing_page.faq.a1">به مجرد آماده شدن اسناد، بیشتر درخواست‌ها در جریان ۱۰ تا ۱۵ روز کاری تکمیل می‌شوند.</p></div>
                 </details>
-                <details class="faq-item">
+                <details class="faq-item" data-reveal="up">
                     <summary><span data-i18n="landing_page.faq.q2">هزینه آن چقدر است؟</span><span class="faq-icon" aria-hidden="true"></span></summary>
                     <div class="faq-answer"><p data-i18n="landing_page.faq.a2">به نوع اقامت بستگی دارد. از همان آغاز یک قیمت روشن و مکمل به شما می‌دهیم — بدون هزینه پنهان.</p></div>
                 </details>
-                <details class="faq-item">
+                <details class="faq-item" data-reveal="up">
                     <summary><span data-i18n="landing_page.faq.q3">آیا تأیید را تضمین می‌کنید؟</span><span class="faq-icon" aria-hidden="true"></span></summary>
                     <div class="faq-answer"><p data-i18n="landing_page.faq.a3">میزان موفقیت ما ۹۸٪ است. کارشناسان نخست پرونده شما را بررسی می‌کنند و تنها در صورت احتمال بلند تأیید ادامه می‌دهیم.</p></div>
                 </details>
-                <details class="faq-item">
+                <details class="faq-item" data-reveal="up">
                     <summary><span data-i18n="landing_page.faq.q4">کدام اسناد لازم است؟</span><span class="faq-icon" aria-hidden="true"></span></summary>
                     <div class="faq-answer"><p data-i18n="landing_page.faq.a4">معمولاً پاسپورت معتبر، سند سکونت، سند درآمد و بیمه صحی، و یک فهرست ویژه برای‌تان می‌فرستیم.</p></div>
                 </details>
@@ -379,17 +622,36 @@
     </section>
 
     <!-- FINAL CTA SECTION -->
-    <section class="bg-dark" style="padding: var(--space-16) 0;">
+    <!-- .landing-final-cta is the hook landing-boost.js uses to retract the
+         sticky bar before it covers these two buttons. -->
+    <section class="bg-dark landing-final-cta" style="padding: var(--space-16) 0;">
         <div class="container text-center">
             <h2 style="color: white; margin-bottom: var(--space-4); font-size: 44px; font-weight: 800;" data-i18n="landing_page.final_cta.title">آماده‌ی عمل هستید؟</h2>
             <p style="color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto; font-size: 18px; line-height: 1.6;" data-i18n="landing_page.final_cta.description">اقامت و خانه‌ی ایده‌آل شما منتظر است. امروز شروع کنیم.</p>
             <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
-                <a href="../contact.html" class="btn btn-primary" style="font-size: 16px; padding: 14px 28px; font-weight: 700;" data-i18n="landing_page.final_cta.apply_button">اکنون درخواست کنید</a>
+                <a href="../contact.html" class="btn btn-primary btn-shine" data-track="final_apply" style="font-size: 16px; padding: 14px 28px; font-weight: 700;" data-i18n="landing_page.final_cta.apply_button">اکنون درخواست کنید</a>
                 <a href="https://wa.me/905309052104?text=Hi%20IKAMETI%2C%20I%20want%20to%20learn%20more%20about%20your%20residency%20services" target="_blank" rel="noopener" class="btn btn-white" style="font-size: 16px; padding: 14px 28px; font-weight: 700;" data-i18n="landing_page.final_cta.whatsapp_button">با ما در واتس‌اپ تماس بگیرید</a>
             </div>
             <p style="color: rgba(255, 255, 255, 0.6); margin-top: var(--space-8); font-size: 14px;" data-i18n="landing_page.final_cta.note">پاسخ در عرض 1 ساعت • بدون هرزنامه</p>
         </div>
     </section>
+
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="wa-float" href="https://wa.me/905309052104" target="_blank" rel="noopener"
+       data-track="float_whatsapp" data-i18n-aria="landing_page.whatsapp_aria" aria-label="در واتساپ با ما صحبت کنید">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <span class="wa-float__label" data-i18n="landing_page.whatsapp_float">واتساپ</span>
+    </a>
+
+    <!-- STICKY MOBILE CTA BAR -->
+    <div class="cta-bar">
+        <a class="cta-bar__primary" href="../contact.html" data-track="bar_apply"
+           data-i18n="landing_page.hero.apply_button">اکنون درخواست کنید</a>
+        <a class="cta-bar__wa" href="https://wa.me/905309052104" target="_blank" rel="noopener" data-track="bar_whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span data-i18n="landing_page.whatsapp_float">واتساپ</span>
+        </a>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -413,8 +675,8 @@
                     <ul>
                         <li><a href="landing.html" data-i18n="footer.housing_solutions">حل‌های مسکن</a></li>
                         <li><a href="../about.html" data-i18n="footer.residency_programs">برنامه‌های اقامت</a></li>
-                        <li><a href="#" data-i18n="footer.legal_consultation">مشاوره‌ی حقوقی</a></li>
-                        <li><a href="#" data-i18n="footer.support">پشتیبانی</a></li>
+                        <li><a href="../contact.html" data-i18n="footer.legal_consultation">مشاوره‌ی حقوقی</a></li>
+                        <li><a href="../contact.html" data-i18n="footer.support">پشتیبانی</a></li>
                     </ul>
                 </div>
                 <div>
@@ -422,8 +684,8 @@
                     <ul>
                         <li><a href="tel:+905309052104">+90 530 905 21 04</a></li>
                         <li><a href="mailto:info@ikameti.com">info@ikameti.com</a></li>
-                        <li><a href="https://wa.me/905309052104" target="_blank">WhatsApp</a></li>
-                        <li><a href="https://instagram.com/ikameti_tr" target="_blank">Instagram</a></li>
+                        <li><a href="https://wa.me/905309052104" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/ikameti_tr" target="_blank" rel="noopener">Instagram</a></li>
                     </ul>
                 </div>
             </div>
@@ -473,21 +735,17 @@
             }, observerOptions);
 
             document.querySelectorAll('.stagger-item').forEach(el => observer.observe(el));
-
-            // Form handling
-            const form = document.querySelector('form');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const name = form.querySelector('input[type="text"]').value;
-                    const phone = form.querySelector('input[type="tel"]').value;
-                    alert('Thank you, ' + name + '! We will contact you shortly at ' + phone);
-                    form.reset();
-                });
-            }
         });
     </script>
-    <script src="../assets/js/i18n.js?v=20260712a"></script>
-    <script src="../js/page-handler.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script defer src="../assets/js/card-showcase.js"></script>
+    <!-- Version bumped with the i18n fix (duplicate instance / empty-table
+         translation pass). .htaccess caches JS for a day, so without a new
+         query string returning visitors would keep the old file — and the raw
+         translation-key flash with it — for up to 24h after deploy. -->
+    <script src="../assets/js/i18n.js?v=20260815"></script>
+    <script defer src="../assets/js/landing-boost.js"></script>
+    <script src="../js/page-handler.js?v=20260815"></script>
 </body>
 </html>
